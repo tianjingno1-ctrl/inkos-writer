@@ -30,12 +30,12 @@ import {
 import { buildPipelineConfig, findProjectRoot, loadConfig, log, logError } from "../utils.js";
 
 export const shortCommand = new Command("short")
-  .description("Commercial short fiction workflow");
+  .description("Short fiction production workflow");
 
 shortCommand
   .command("run")
-  .description("Run a commercial short fiction chain from a direction")
-  .requiredOption("--direction <text>", "Commercial direction, e.g. 女频短篇 婚姻背叛 证据反杀")
+  .description("Run a short fiction chain from a direction")
+  .requiredOption("--direction <text>", "Story direction, e.g. 女频短篇 婚姻背叛 证据反杀")
   .option("--reference <path>", "Optional reference notes/text")
   .option("--story-id <id>", "Output story id under shorts/")
   .option("--out-dir <path>", "Output directory", "shorts")
@@ -253,7 +253,6 @@ shortCommand
         log(`Final: ${payload.finalMarkdownPath}`);
         log(`Sales package: ${payload.salesPackagePath}`);
         log(formatCoverStatus(payload.coverImagePath, payload.coverError));
-        log("Benchmark: not used");
       }
     } catch (e) {
       logCommandError("Short run failed", e, opts.json);
