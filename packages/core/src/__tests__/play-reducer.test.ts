@@ -129,31 +129,36 @@ describe("applyPlayMutation", () => {
     });
   });
 
-  it("rejects edges that point at missing entities before writing anything", () => {
+  it("skips edges that point at missing entities (fail-open) while applying the rest of the turn (C3)", () => {
     const db = new FakePlayDB();
 
-    expect(() => applyPlayMutation({
+    const result = applyPlayMutation({
       db,
       mutation: {
         eventId: "evt-2",
         turn: 2,
         actionKind: "do",
+        entities: { upsert: [
+          { id: "lin", type: "actor", label: "林远" },
+          { id: "clerk", type: "actor", label: "账房先生" },
+        ] },
         edges: {
-          upsert: [{
-            id: "bad-edge",
-            fromId: "missing",
-            type: "knows",
-            toId: "also-missing",
-            validFromEventId: "evt-2",
-            sourceEventId: "evt-2",
-          }],
+          upsert: [
+            // valid: both endpoints exist this turn
+            { id: "good-edge", fromId: "lin", type: "怀疑", toId: "clerk", validFromEventId: "evt-2", sourceEventId: "evt-2" },
+            // dangling: must be skipped, NOT crash the turn (which used to wipe everything)
+            { id: "bad-edge", fromId: "lin", type: "knows", toId: "ghost", validFromEventId: "evt-2", sourceEventId: "evt-2" },
+          ],
         },
       },
       rawInput: "调查",
-    })).toThrow(/missing entity/i);
+    });
 
-    expect(db.events).toHaveLength(0);
-    expect(db.edges.size).toBe(0);
+    expect(result.event.id).toBe("evt-2");
+    expect(db.events).toHaveLength(1);          // turn was NOT wiped
+    expect(db.entities.size).toBe(2);           // entities applied
+    expect(db.edges.get("good-edge")?.toId).toBe("clerk"); // valid edge kept
+    expect(db.edges.has("bad-edge")).toBe(false);          // dangling edge dropped
   });
 
   it("rejects evidence status regressions", () => {

@@ -173,14 +173,47 @@ function backfillUpsertIds(container: unknown, prefix: string, labelKey: string)
 // that the model writes the relationship (from/type/to) but routinely omits — so
 // every proposed relationship got dropped and never reached the panel. Backfill the
 // id and the two event refs from this turn's event so the relationship survives.
-function backfillEdges(container: unknown, eventId: string): unknown {
+// Map each entity's label AND id to its id, so an edge can reference an endpoint
+// by the entity's name (the model's natural choice) and still resolve.
+function buildLabelToId(entities: unknown): Map<string, string> {
+  const map = new Map<string, string>();
+  const c = entities as { upsert?: unknown };
+  if (!Array.isArray(c?.upsert)) return map;
+  for (const item of c.upsert) {
+    if (!item || typeof item !== "object" || Array.isArray(item)) continue;
+    const o = item as Record<string, unknown>;
+    const id = typeof o.id === "string" ? o.id.trim() : "";
+    const label = typeof o.label === "string" ? o.label.trim() : "";
+    if (!id) continue;
+    map.set(id, id);
+    if (label) map.set(label, id);
+  }
+  return map;
+}
+
+// Alternate keys models routinely use for relationships instead of the schema's
+// fromId/type/toId. Mapping them rescues edges that would otherwise be dropped.
+const EDGE_KEY_ALIASES: ReadonlyArray<readonly [string, string]> = [
+  ["from", "fromId"], ["source", "fromId"], ["subject", "fromId"],
+  ["to", "toId"], ["target", "toId"], ["object", "toId"],
+  ["relation", "type"], ["rel", "type"], ["kind", "type"], ["relationship", "type"],
+];
+
+function backfillEdges(container: unknown, eventId: string, labelToId: Map<string, string>): unknown {
   if (!container || typeof container !== "object" || Array.isArray(container)) return container;
   const c = container as Record<string, unknown>;
   if (!Array.isArray(c.upsert)) return c;
   const hasText = (v: unknown): v is string => typeof v === "string" && v.trim().length > 0;
+  const resolve = (v: unknown): unknown => (hasText(v) && labelToId.has(v.trim()) ? labelToId.get(v.trim()) : v);
   c.upsert = c.upsert.map((item, i) => {
     if (!item || typeof item !== "object" || Array.isArray(item)) return item;
     const o = { ...(item as Record<string, unknown>) };
+    for (const [alias, canonical] of EDGE_KEY_ALIASES) {
+      if (!hasText(o[canonical]) && hasText(o[alias])) o[canonical] = o[alias];
+    }
+    // Endpoints given by entity label (or id) resolve to the entity's id.
+    o.fromId = resolve(o.fromId);
+    o.toId = resolve(o.toId);
     if (!hasText(o.id)) o.id = slugifyId("edge", o.type, i);
     if (!hasText(o.validFromEventId)) o.validFromEventId = eventId;
     if (!hasText(o.sourceEventId)) o.sourceEventId = eventId;
@@ -200,7 +233,7 @@ function normalizePlayMutation(value: unknown): unknown {
   const eventId = typeof v.eventId === "string" && v.eventId.trim() ? v.eventId : "evt-0";
   v.entities = backfillUpsertIds(v.entities, "ent", "label");
   v.stateSlots = backfillUpsertIds(v.stateSlots, "slot", "label");
-  v.edges = backfillEdges(v.edges, eventId);
+  v.edges = backfillEdges(v.edges, eventId, buildLabelToId(v.entities));
   return v;
 }
 

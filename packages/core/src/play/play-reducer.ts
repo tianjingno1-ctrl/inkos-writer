@@ -69,8 +69,15 @@ export function applyPlayMutation(input: ApplyPlayMutationInput): ApplyPlayMutat
       for (const edge of mutation.edges.expire) {
         input.db.expireEdge(edge.edgeId, edge.validUntilEventId);
       }
+      // Relationship edges are fail-open: a single edge that points at an entity
+      // we never saw is skipped, not allowed to crash the whole turn (which used
+      // to wipe an entire turn's mutations and leave the relationship panel empty).
+      const upsertedEntityIds = new Set(mutation.entities.upsert.map((e) => e.id));
+      const endpointExists = (id: string): boolean => upsertedEntityIds.has(id) || input.db.getEntity(id) !== null;
       for (const edge of mutation.edges.upsert) {
-        input.db.upsertEdge(edge);
+        if (endpointExists(edge.fromId) && endpointExists(edge.toId)) {
+          input.db.upsertEdge(edge);
+        }
       }
       for (const slot of mutation.stateSlots.upsert) {
         input.db.upsertStateSlot(normalizeStateSlot(slot));
@@ -101,14 +108,8 @@ function validateMutation(db: PlayReducerDB, mutation: ReturnType<typeof PlayMut
   const upsertedEntityIds = new Set(mutation.entities.upsert.map((entity) => entity.id));
   const entityExists = (entityId: string): boolean => upsertedEntityIds.has(entityId) || db.getEntity(entityId) !== null;
 
-  for (const edge of mutation.edges.upsert) {
-    if (!entityExists(edge.fromId)) {
-      throw new Error(`Play mutation references missing entity in edge ${edge.id}: ${edge.fromId}`);
-    }
-    if (!entityExists(edge.toId)) {
-      throw new Error(`Play mutation references missing entity in edge ${edge.id}: ${edge.toId}`);
-    }
-  }
+  // NB: relationship edges are validated fail-open at apply time (a dangling
+  // edge is skipped, not thrown) so one bad ref can't wipe the whole turn.
 
   for (const slot of mutation.stateSlots.upsert) {
     if (slot.ownerEntityId && !entityExists(slot.ownerEntityId)) {

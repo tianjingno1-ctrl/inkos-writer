@@ -218,6 +218,28 @@ describe("play models", () => {
     expect(mutation.edges.upsert[0]?.id).toBe("edge_good");
   });
 
+  it("rescues relationship edges: maps alias keys (from/to/relation) and resolves label endpoints to ids (C3)", () => {
+    const mutation = PlayMutationSchema.parse({
+      eventId: "evt-9",
+      turn: 9,
+      actionKind: "say",
+      entities: [
+        { id: "actor_zhouye", type: "actor", label: "周野", status: "警觉", updatedEventId: "evt-9" },
+        { type: "actor", label: "账房先生", status: "心虚", updatedEventId: "evt-9" }, // id backfilled
+      ],
+      // Model used the common alias keys + referenced endpoints by NAME, not id.
+      edges: [
+        { from: "周野", relation: "怀疑", to: "账房先生" },
+      ],
+    });
+    expect(mutation.edges.upsert).toHaveLength(1);
+    const edge = mutation.edges.upsert[0];
+    expect(edge?.type).toBe("怀疑");
+    expect(edge?.fromId).toBe("actor_zhouye");           // name -> existing id
+    expect(edge?.toId).toBe("ent_账房先生");              // name -> backfilled id
+    expect(edge?.validFromEventId).toBe("evt-9");         // temporal fields backfilled
+  });
+
   it("backfills a missing id from the label so a labeled entity/slot survives instead of vanishing", () => {
     const mutation = PlayMutationSchema.parse({
       eventId: "evt-7",
