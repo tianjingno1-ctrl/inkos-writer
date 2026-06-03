@@ -4,7 +4,7 @@ import type { Theme } from "../hooks/use-theme";
 import type { TFunction } from "../hooks/use-i18n";
 import { useI18n } from "../hooks/use-i18n";
 import { useColors } from "../hooks/use-colors";
-import { FileInput, BookCopy, Feather } from "lucide-react";
+import { FileInput, BookCopy, Feather, BookMarked, Wand2 } from "lucide-react";
 
 interface BookSummary {
   readonly id: string;
@@ -13,7 +13,7 @@ interface BookSummary {
 
 interface Nav { toDashboard: () => void }
 
-type Tab = "chapters" | "canon" | "fanfic";
+type Tab = "chapters" | "canon" | "fanfic" | "spinoff" | "imitation";
 
 export function ImportManager({ nav, theme, t, initialTab }: { nav: Nav; theme: Theme; t: TFunction; initialTab?: Tab }) {
   const c = useColors(theme);
@@ -38,6 +38,18 @@ export function ImportManager({ nav, theme, t, initialTab }: { nav: Nav; theme: 
   const [ffMode, setFfMode] = useState("canon");
   const [ffGenre, setFfGenre] = useState("other");
   const [ffLang, setFfLang] = useState(lang);
+
+  // Spinoff (番外) state
+  const [spTitle, setSpTitle] = useState("");
+  const [spParent, setSpParent] = useState("");
+  const [spDirection, setSpDirection] = useState("");
+
+  // Imitation (仿写) state
+  const [imTitle, setImTitle] = useState("");
+  const [imRef, setImRef] = useState("");
+  const [imIdea, setImIdea] = useState("");
+  const [imGenre, setImGenre] = useState("other");
+  const [imLang, setImLang] = useState(lang);
 
   useEffect(() => {
     if (initialTab) {
@@ -96,10 +108,46 @@ export function ImportManager({ nav, theme, t, initialTab }: { nav: Nav; theme: 
     setLoading(false);
   };
 
+  const handleSpinoffInit = async () => {
+    if (!spTitle.trim() || !spParent) return;
+    setLoading(true);
+    setStatus("");
+    try {
+      const data = await fetchJson<{ bookId?: string }>("/spinoff/init", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title: spTitle, parentBookId: spParent, direction: spDirection || undefined }),
+      });
+      setStatus(`${t("import.spinoffDone")}: ${data.bookId}`);
+    } catch (e) {
+      setStatus(`Error: ${e instanceof Error ? e.message : String(e)}`);
+    }
+    setLoading(false);
+  };
+
+  const handleImitationInit = async () => {
+    if (!imTitle.trim() || !imRef.trim() || !imIdea.trim()) return;
+    setLoading(true);
+    setStatus("");
+    try {
+      const data = await fetchJson<{ bookId?: string }>("/imitation/init", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title: imTitle, referenceText: imRef, storyIdea: imIdea, genre: imGenre, language: imLang }),
+      });
+      setStatus(`${t("import.imitationDone")}: ${data.bookId}`);
+    } catch (e) {
+      setStatus(`Error: ${e instanceof Error ? e.message : String(e)}`);
+    }
+    setLoading(false);
+  };
+
   const tabs: { id: Tab; label: string; icon: React.ReactNode }[] = [
     { id: "chapters", label: t("import.chapters"), icon: <FileInput size={14} /> },
     { id: "canon", label: t("import.canon"), icon: <BookCopy size={14} /> },
     { id: "fanfic", label: t("import.fanfic"), icon: <Feather size={14} /> },
+    { id: "spinoff", label: t("import.spinoff"), icon: <BookMarked size={14} /> },
+    { id: "imitation", label: t("import.imitation"), icon: <Wand2 size={14} /> },
   ];
 
   return (
@@ -208,6 +256,65 @@ export function ImportManager({ nav, theme, t, initialTab }: { nav: Nav; theme: 
             <button onClick={handleFanficInit} disabled={loading || !ffTitle.trim() || !ffText.trim()}
               className={`px-4 py-2 text-sm rounded-lg ${c.btnPrimary} disabled:opacity-30`}>
               {loading ? t("import.creating") : t("import.fanfic")}
+            </button>
+          </>
+        )}
+
+        {tab === "spinoff" && (
+          <>
+            <p className="text-xs text-muted-foreground">{t("import.spinoffHint")}</p>
+            <input type="text" value={spTitle} onChange={(e) => setSpTitle(e.target.value)}
+              placeholder={t("import.spinoffTitle")}
+              className="w-full px-3 py-2 rounded-lg bg-secondary/30 border border-border text-sm"
+            />
+            <select value={spParent} onChange={(e) => setSpParent(e.target.value)}
+              className="w-full px-3 py-2 rounded-lg bg-secondary/30 border border-border text-sm">
+              <option value="">{t("import.selectParent")}</option>
+              {booksData?.books.map((b) => <option key={b.id} value={b.id}>{b.title}</option>)}
+            </select>
+            <textarea value={spDirection} onChange={(e) => setSpDirection(e.target.value)} rows={5}
+              placeholder={t("import.spinoffDirection")}
+              className="w-full px-3 py-2 rounded-lg bg-secondary/30 border border-border text-sm resize-none"
+            />
+            <button onClick={handleSpinoffInit} disabled={loading || !spTitle.trim() || !spParent}
+              className={`px-4 py-2 text-sm rounded-lg ${c.btnPrimary} disabled:opacity-30`}>
+              {loading ? t("import.creating") : t("import.spinoff")}
+            </button>
+          </>
+        )}
+
+        {tab === "imitation" && (
+          <>
+            <p className="text-xs text-muted-foreground">{t("import.imitationHint")}</p>
+            <input type="text" value={imTitle} onChange={(e) => setImTitle(e.target.value)}
+              placeholder={t("import.imitationTitle")}
+              className="w-full px-3 py-2 rounded-lg bg-secondary/30 border border-border text-sm"
+            />
+            <div className="grid grid-cols-2 gap-3">
+              <select value={imGenre} onChange={(e) => setImGenre(e.target.value)}
+                className="px-3 py-2 rounded-lg bg-secondary/30 border border-border text-sm">
+                <option value="other">Other</option>
+                <option value="xuanhuan">玄幻</option>
+                <option value="urban">都市</option>
+                <option value="xianxia">仙侠</option>
+              </select>
+              <select value={imLang} onChange={(e) => setImLang(e.target.value as "zh" | "en")}
+                className="px-3 py-2 rounded-lg bg-secondary/30 border border-border text-sm">
+                <option value="zh">中文</option>
+                <option value="en">English</option>
+              </select>
+            </div>
+            <textarea value={imIdea} onChange={(e) => setImIdea(e.target.value)} rows={4}
+              placeholder={t("import.imitationIdea")}
+              className="w-full px-3 py-2 rounded-lg bg-secondary/30 border border-border text-sm resize-none"
+            />
+            <textarea value={imRef} onChange={(e) => setImRef(e.target.value)} rows={8}
+              placeholder={t("import.imitationRef")}
+              className="w-full px-3 py-2 rounded-lg bg-secondary/30 border border-border text-sm resize-none font-mono"
+            />
+            <button onClick={handleImitationInit} disabled={loading || !imTitle.trim() || !imRef.trim() || !imIdea.trim()}
+              className={`px-4 py-2 text-sm rounded-lg ${c.btnPrimary} disabled:opacity-30`}>
+              {loading ? t("import.creating") : t("import.imitation")}
             </button>
           </>
         )}

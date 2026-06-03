@@ -169,6 +169,18 @@ const strings = {
   "import.pasteMaterial": { zh: "粘贴原作文本/设定/角色资料...", en: "Paste source material..." },
   "import.importing": { zh: "导入中...", en: "Importing..." },
   "import.creating": { zh: "创建中...", en: "Creating..." },
+  "import.spinoff": { zh: "番外创作", en: "Side-story" },
+  "import.spinoffHint": { zh: "选一本已有书做正传，系统生成一本独立番外书：继承其角色与世界设定，但讲一个不进主线的侧篇故事。", en: "Pick an existing book as the canon; a standalone side-story book is generated — it inherits the cast and world but tells a side plot outside the main line." },
+  "import.spinoffTitle": { zh: "番外标题", en: "Side-story title" },
+  "import.selectParent": { zh: "选择正传母书...", en: "Select parent book..." },
+  "import.spinoffDirection": { zh: "番外方向（可选）：聚焦哪个角色 / 哪条支线 / 什么 what-if...", en: "Side-story direction (optional): which character / subplot / what-if..." },
+  "import.spinoffDone": { zh: "番外已创建", en: "Side-story created" },
+  "import.imitation": { zh: "仿写创作", en: "Imitation" },
+  "import.imitationHint": { zh: "给一段参考作品文本 + 你的原创故事梗概，系统建一本模仿该文风的原创新书。", en: "Give a reference text + your own story idea; a new original book is created in that writing style." },
+  "import.imitationTitle": { zh: "新书标题", en: "New book title" },
+  "import.imitationIdea": { zh: "你的原创故事梗概（写什么）...", en: "Your original story idea (what it's about)..." },
+  "import.imitationRef": { zh: "粘贴参考作品文本（仿其文风，不抄其情节）...", en: "Paste reference text to imitate its style (not its plot)..." },
+  "import.imitationDone": { zh: "仿写新书已创建", en: "Imitation book created" },
 
   // Radar
   "radar.title": { zh: "市场雷达", en: "Market Radar" },

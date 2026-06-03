@@ -75,7 +75,7 @@ interface Nav {
   toLogs: () => void;
   toGenres: () => void;
   toStyle: () => void;
-  toImport: (tab?: "chapters" | "canon" | "fanfic") => void;
+  toImport: (tab?: "chapters" | "canon" | "fanfic" | "spinoff" | "imitation") => void;
   toRadar: () => void;
   toDoctor: () => void;
 }
@@ -282,8 +282,8 @@ export function Sidebar({ nav, activePage, sse, t }: {
             <CreateItem icon={<BookPlus size={14} />} label={t("nav.createNovel")} active={activePage === "book-create"} onClick={handleOpenBookCreate} />
             <CreateItem icon={<ScrollText size={14} />} label={t("nav.createShort")} onClick={() => launchProjectMode("short")} />
             <CreateItem icon={<Feather size={14} />} label={t("nav.createFanfic")} onClick={() => nav.toImport("fanfic")} />
-            <CreateItem icon={<BookCopy size={14} />} label={t("nav.createSpinoff")} onClick={() => nav.toImport("canon")} />
-            <CreateItem icon={<Wand2 size={14} />} label={t("nav.createImitation")} onClick={nav.toStyle} />
+            <CreateItem icon={<BookCopy size={14} />} label={t("nav.createSpinoff")} onClick={() => nav.toImport("spinoff")} />
+            <CreateItem icon={<Wand2 size={14} />} label={t("nav.createImitation")} onClick={() => nav.toImport("imitation")} />
             <CreateItem icon={<FileInput size={14} />} label={t("nav.createContinuation")} onClick={() => nav.toImport("chapters")} />
             <CreateItem icon={<GitBranch size={14} />} label={t("nav.createBranching")} onClick={() => launchProjectMode("play", "guided")} />
             <CreateItem icon={<Gamepad2 size={14} />} label={t("nav.createFree")} onClick={() => launchProjectMode("play", "open")} />
