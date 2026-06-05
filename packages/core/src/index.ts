@@ -272,10 +272,6 @@ export type {
 } from "./interaction/session-transcript-schema.js";
 export { routeInteractionRequest } from "./interaction/request-router.js";
 export {
-  routeNaturalLanguageIntent,
-  type NaturalLanguageRoutingContext,
-} from "./interaction/nl-router.js";
-export {
   processProjectInteractionRequest,
 } from "./interaction/project-control.js";
 export { createInteractionToolsFromDeps } from "./interaction/project-tools.js";
