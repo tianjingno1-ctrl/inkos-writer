@@ -246,6 +246,10 @@ vi.mock("@actalk/inkos-core", async (importOriginal) => {
     loadProjectSession: loadProjectSessionMock,
     resolveSessionActiveBook: resolveSessionActiveBookMock,
     runAgentSession: runAgentSessionMock,
+    createSubAgentTool: actual.createSubAgentTool,
+    createShortFictionRunTool: actual.createShortFictionRunTool,
+    createGenerateCoverTool: actual.createGenerateCoverTool,
+    createPlayStartTool: actual.createPlayStartTool,
     PlayRunner: MockPlayRunner,
     ConsolidatorAgent: MockConsolidatorAgent,
     PlayStore: actual.PlayStore,
@@ -2531,7 +2535,18 @@ describe("createStudioServer daemon lifecycle", () => {
     );
   });
 
-  it("forwards confirmed actionPayload into runAgentSession", async () => {
+  it("executes confirmed create-book action directly without asking the chat model to call tools", async () => {
+    loadBookSessionMock.mockResolvedValueOnce({
+      sessionId: "agent-session-1",
+      bookId: null,
+      sessionKind: "book-create",
+      title: null,
+      messages: [],
+      events: [],
+      draftRounds: [],
+      createdAt: 1,
+      updatedAt: 1,
+    });
     const { createStudioServer } = await import("./server.js");
     const app = createStudioServer(cloneProjectConfig() as never, root);
 
@@ -2558,24 +2573,70 @@ describe("createStudioServer daemon lifecycle", () => {
     });
 
     expect(response.status).toBe(200);
-    expect(runAgentSessionMock).toHaveBeenCalledWith(
+    expect(runAgentSessionMock).not.toHaveBeenCalled();
+    expect(initBookMock).toHaveBeenCalledWith(
       expect.objectContaining({
-        sessionKind: "book-create",
+        id: "夜间派送",
+        title: "夜间派送",
+        genre: "urban",
+        platform: "tomato",
+        targetChapters: 100,
+        chapterWordCount: 2600,
+        language: "zh",
+      }),
+      { externalContext: "创建《夜间派送》，番茄，100章以内。" },
+    );
+    await expect(response.json()).resolves.toMatchObject({
+      session: { activeBookId: "夜间派送" },
+    });
+  });
+
+  it("executes confirmed play-start action directly without asking the chat model to call tools", async () => {
+    const playSession = {
+      sessionId: "play-session-1",
+      bookId: null,
+      sessionKind: "play",
+      playMode: "open",
+      title: null,
+      messages: [],
+      events: [],
+      draftRounds: [],
+      createdAt: 1,
+      updatedAt: 1,
+    };
+    loadBookSessionMock.mockResolvedValueOnce(playSession).mockResolvedValueOnce(playSession);
+    const { createStudioServer } = await import("./server.js");
+    const app = createStudioServer(cloneProjectConfig() as never, root);
+
+    const response = await app.request("http://localhost/api/v1/agent", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        instruction: "确认启动旧档案馆之夜。",
+        sessionId: "play-session-1",
+        sessionKind: "play",
         actionSource: "button",
-        requestedIntent: "create_book",
+        requestedIntent: "play_start",
         actionPayload: {
-          createBook: {
-            title: "夜间派送",
-            genre: "urban",
-            platform: "tomato",
-            targetChapters: 100,
-            chapterWordCount: 2600,
-            language: "zh",
+          playStart: {
+            title: "旧档案馆之夜",
+            premise: "我是城郊旧档案馆夜班保安，暴雨夜收到写着我名字的借阅卡。",
+            mode: "open",
+            initialScene: "暴雨敲着铁皮门，封存档案箱压在门口。",
+            suggestedActions: ["把箱子拖进值班室", "查看借阅卡背面"],
           },
         },
       }),
-      "创建《夜间派送》，番茄，100章以内。",
-    );
+    });
+
+    expect(response.status).toBe(200);
+    expect(runAgentSessionMock).not.toHaveBeenCalled();
+    await expect(response.json()).resolves.toMatchObject({
+      response: expect.stringContaining("Interactive world"),
+      session: { sessionId: "play-session-1", sessionKind: "play" },
+    });
+    const world = JSON.parse(await readFile(join(root, "worlds", "play-session-1", "world.json"), "utf-8")) as { title: string; mode: string };
+    expect(world).toMatchObject({ title: "旧档案馆之夜", mode: "open" });
   });
 
   it("routes write-next button instructions directly to the shared writer pipeline", async () => {

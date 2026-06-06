@@ -63,6 +63,10 @@ import {
   inferLanguage,
   type ActionPayload,
   type ActionSource,
+  createGenerateCoverTool,
+  createPlayStartTool,
+  createShortFictionRunTool,
+  createSubAgentTool,
   type ResolvedModel,
   type PipelineConfig,
   type PlayMode,
@@ -596,6 +600,168 @@ interface CollectedToolExec {
   stages?: Array<{ label: string; status: "pending" | "completed" }>;
   startedAt: number;
   completedAt?: number;
+}
+
+function isConfirmedProductionAction(args: {
+  readonly actionSource: ActionSource;
+  readonly requestedIntent?: RequestedIntent;
+}): boolean {
+  return (args.actionSource === "button" || args.actionSource === "slash")
+    && (
+      args.requestedIntent === "create_book"
+      || args.requestedIntent === "short_run"
+      || args.requestedIntent === "play_start"
+      || args.requestedIntent === "generate_cover"
+    );
+}
+
+function requirePayloadText(value: string | undefined, message: string): string {
+  const text = value?.trim();
+  if (!text) {
+    throw new ApiError(400, "CONFIRMED_ACTION_PAYLOAD_INCOMPLETE", message);
+  }
+  return text;
+}
+
+function toolResultText(result: unknown): string {
+  const text = extractToolError(result).trim();
+  return text || "已完成。";
+}
+
+async function executeConfirmedProductionAction(args: {
+  readonly pipeline: PipelineRunner;
+  readonly root: string;
+  readonly sessionId: string;
+  readonly streamSessionId: string;
+  readonly instruction: string;
+  readonly requestedIntent: RequestedIntent;
+  readonly actionPayload?: ActionPayload;
+  readonly playMode?: PlayMode;
+}): Promise<CollectedToolExec> {
+  const id = `direct-${args.requestedIntent}-${Date.now().toString(36)}`;
+  const actionPayload = args.actionPayload;
+  let tool: ReturnType<typeof createSubAgentTool>
+    | ReturnType<typeof createShortFictionRunTool>
+    | ReturnType<typeof createGenerateCoverTool>
+    | ReturnType<typeof createPlayStartTool>;
+  let params: Record<string, unknown>;
+  let agent: string | undefined;
+
+  if (args.requestedIntent === "create_book") {
+    const payload = actionPayload?.createBook;
+    const title = requirePayloadText(payload?.title, "确认建书缺少书名，请重新生成确认卡。");
+    tool = createSubAgentTool(args.pipeline, null, args.root, { actionPayload });
+    agent = "architect";
+    params = {
+      agent,
+      instruction: args.instruction,
+      title,
+      ...(payload?.genre ? { genre: payload.genre } : {}),
+      ...(payload?.platform ? { platform: payload.platform } : {}),
+      ...(payload?.language ? { language: payload.language } : {}),
+      ...(payload?.targetChapters ? { targetChapters: payload.targetChapters } : {}),
+      ...(payload?.chapterWordCount ? { chapterWordCount: payload.chapterWordCount } : {}),
+    };
+  } else if (args.requestedIntent === "short_run") {
+    const payload = actionPayload?.shortRun;
+    const direction = payload?.direction?.trim() || args.instruction.trim();
+    if (!direction) throw new ApiError(400, "CONFIRMED_ACTION_PAYLOAD_INCOMPLETE", "确认短篇缺少方向，请重新生成确认卡。");
+    tool = createShortFictionRunTool(args.pipeline, args.root, { actionPayload });
+    params = {
+      direction,
+      ...(payload?.reference ? { reference: payload.reference } : {}),
+      ...(payload?.storyId ? { storyId: payload.storyId } : {}),
+      ...(payload?.chapters ? { chapters: payload.chapters } : {}),
+      ...(payload?.charsPerChapter ? { charsPerChapter: payload.charsPerChapter } : {}),
+      ...(payload?.cover !== undefined ? { cover: payload.cover } : {}),
+    };
+  } else if (args.requestedIntent === "generate_cover") {
+    const payload = actionPayload?.generateCover;
+    const title = requirePayloadText(payload?.title, "确认生成封面缺少标题，请重新生成确认卡。");
+    tool = createGenerateCoverTool(args.root, { actionPayload });
+    params = {
+      title,
+      ...(payload?.intro ? { intro: payload.intro } : {}),
+      ...(payload?.sellingPoints ? { sellingPoints: payload.sellingPoints } : {}),
+      ...(payload?.coverPrompt ? { coverPrompt: payload.coverPrompt } : {}),
+      ...(payload?.outputDir ? { outputDir: payload.outputDir } : {}),
+    };
+  } else if (args.requestedIntent === "play_start") {
+    const payload = actionPayload?.playStart;
+    const title = requirePayloadText(payload?.title, "确认启动互动世界缺少标题，请重新生成确认卡。");
+    tool = createPlayStartTool(args.root, args.sessionId, args.playMode, { actionPayload });
+    params = {
+      title,
+      ...(payload?.premise ? { premise: payload.premise } : {}),
+      ...(payload?.mode ? { mode: payload.mode } : {}),
+      ...(payload?.initialScene ? { initialScene: payload.initialScene } : {}),
+      ...(payload?.suggestedActions ? { suggestedActions: payload.suggestedActions } : {}),
+    };
+  } else {
+    throw new ApiError(400, "UNSUPPORTED_CONFIRMED_ACTION", `Unsupported confirmed action: ${args.requestedIntent}`);
+  }
+
+  const exec: CollectedToolExec = {
+    id,
+    tool: tool.name,
+    agent,
+    label: resolveToolLabel(tool.name, agent),
+    status: "running",
+    args: params,
+    stages: agent ? PIPELINE_STAGES[agent]?.map(label => ({ label, status: "pending" as const })) : undefined,
+    startedAt: Date.now(),
+  };
+
+  broadcast("tool:start", {
+    sessionId: args.streamSessionId,
+    id,
+    tool: tool.name,
+    args: params,
+    stages: exec.stages?.map(stage => stage.label),
+  });
+
+  try {
+    const result = await tool.execute(
+      id,
+      params as never,
+      undefined,
+      (partialResult) => {
+        broadcast("tool:update", {
+          sessionId: args.streamSessionId,
+          tool: tool.name,
+          partialResult,
+        });
+      },
+    );
+    exec.status = "completed";
+    exec.completedAt = Date.now();
+    exec.result = toolResultText(result);
+    exec.details = (result as { details?: unknown } | undefined)?.details;
+    exec.stages = exec.stages?.map(stage => ({ ...stage, status: "completed" as const }));
+    broadcast("tool:end", {
+      sessionId: args.streamSessionId,
+      id,
+      tool: tool.name,
+      result,
+      details: exec.details,
+      isError: false,
+    });
+    return exec;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    const result = { content: [{ type: "text", text: message }] };
+    exec.status = "error";
+    exec.completedAt = Date.now();
+    exec.error = message;
+    broadcast("tool:end", {
+      sessionId: args.streamSessionId,
+      id,
+      tool: tool.name,
+      result,
+      isError: true,
+    });
+    throw error;
+  }
 }
 
 interface StudioBookListSummary {
@@ -3090,6 +3256,97 @@ export function createStudioServer(initialConfig: ProjectConfig, root: string) {
         currentConfig: config,
         sessionIdForSSE: bookSession.sessionId,
       }));
+
+      if (requestedIntent && isConfirmedProductionAction({ actionSource, requestedIntent })) {
+        const pendingBookId = requestedIntent === "create_book" && actionPayload?.createBook?.title
+          ? deriveBookIdFromTitle(actionPayload.createBook.title)
+          : null;
+        if (pendingBookId) {
+          bookCreateStatus.set(pendingBookId, { status: "creating" });
+          broadcast("book:creating", {
+            bookId: pendingBookId,
+            title: actionPayload?.createBook?.title ?? pendingBookId,
+            sessionId: streamSessionId,
+          });
+        }
+
+        try {
+          const exec = await executeConfirmedProductionAction({
+            pipeline,
+            root,
+            sessionId: bookSession.sessionId,
+            streamSessionId,
+            instruction,
+            requestedIntent,
+            actionPayload,
+            ...(playMode ? { playMode } : {}),
+          });
+
+          let createdBookId: string | null = null;
+          if (exec.tool === "sub_agent" && exec.agent === "architect" && exec.status === "completed") {
+            createdBookId = resolveCreatedBookIdFromToolExecs([exec]);
+            if (createdBookId) {
+              try {
+                const migratedSession = await migrateBookSession(root, bookSession.sessionId, createdBookId);
+                if (migratedSession) {
+                  bookSession = migratedSession;
+                }
+              } catch (e) {
+                if (!(e instanceof SessionAlreadyMigratedError)) {
+                  throw e;
+                }
+              }
+              const book = await loadStudioBookListSummary(state, createdBookId).catch(() => undefined);
+              bookCreateStatus.delete(createdBookId);
+              broadcast("book:created", {
+                bookId: createdBookId,
+                sessionId: bookSession.sessionId,
+                ...(book ? { book } : {}),
+              });
+            }
+          }
+
+          const responseText = exec.result ?? "已完成。";
+          await appendManualSessionMessages(root, bookSession.sessionId, [{
+            role: "assistant",
+            content: [{ type: "text", text: responseText }],
+            api: "anthropic-messages",
+            provider: configuredEntry?.service ?? reqService ?? config.llm.provider,
+            model: reqModel ?? config.llm.model,
+            usage: {
+              input: 0,
+              output: 0,
+              cacheRead: 0,
+              cacheWrite: 0,
+              totalTokens: 0,
+              cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0, total: 0 },
+            },
+            stopReason: "toolUse",
+            timestamp: Date.now(),
+          }], instruction, { sessionKind });
+          await refreshBookSessionFromTranscript();
+          broadcast("agent:complete", { instruction, activeBookId: createdBookId ?? agentBookId, sessionId: bookSession.sessionId, sessionKind });
+          return c.json({
+            response: responseText,
+            session: {
+              sessionId: bookSession.sessionId,
+              sessionKind,
+              ...(createdBookId ?? agentBookId ? { activeBookId: createdBookId ?? agentBookId } : {}),
+            },
+          });
+        } catch (error) {
+          const message = error instanceof Error ? error.message : String(error);
+          if (pendingBookId) {
+            bookCreateStatus.set(pendingBookId, { status: "error", error: message });
+            broadcast("book:error", { bookId: pendingBookId, sessionId: streamSessionId, error: message });
+          }
+          broadcast("agent:error", { instruction, activeBookId: agentBookId, sessionId: bookSession.sessionId, sessionKind, error: message });
+          return c.json({
+            error: { code: "AGENT_ACTION_FAILED", message },
+            response: message,
+          }, 502);
+        }
+      }
 
       if (shouldRunDirectWriteNext({ instruction, agentBookId, sessionKind, actionSource, requestedIntent })) {
         const directWriteBookId = agentBookId;
