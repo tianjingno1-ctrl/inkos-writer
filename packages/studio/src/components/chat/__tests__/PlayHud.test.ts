@@ -62,6 +62,28 @@ describe("PlayHud buildView", () => {
     expect(view?.holdings.map((row) => row.label)).toEqual([]);
   });
 
+  it("only treats actor_player holding edges as the player's inventory", () => {
+    const view = buildView({
+      currentState: { turn: 1, mode: "guided", premise: "查一个旧站台。" },
+      graph: {
+        entities: [
+          { id: "actor_mechanic", type: "actor", label: "临时维修员", status: "警觉" },
+          { id: "ticket", type: "item", label: "旧车票", status: "已收起" },
+          { id: "key", type: "item", label: "铜钥匙", status: "已收起" },
+        ],
+        edges: [
+          { id: "edge-wrong-holder", fromId: "actor_mechanic", type: "持有", toId: "ticket", value: { role: "holding" } },
+          { id: "edge-player-holder", fromId: "actor_player", type: "持有", toId: "key", value: { role: "holding" } },
+        ],
+        stateSlots: [],
+        events: [],
+      },
+    });
+
+    expect(view?.holdings.map((row) => row.label)).toEqual(["铜钥匙"]);
+    expect(view?.facing.map((row) => row.label)).toEqual(["临时维修员", "旧车票"]);
+  });
+
   it("uses semantic relation roles and suppresses duplicate status labels", () => {
     const view = buildView({
       currentState: { turn: 1, mode: "open", premise: "查一个旧站台。" },

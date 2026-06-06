@@ -79,6 +79,48 @@ describe("play agents", () => {
     expect(system).toContain("不得复用");
   });
 
+  it("treats actor_player as the reserved player id in the Chinese mutator prompt", async () => {
+    const agent = new PlayWorldMutatorAgent(ctx);
+    const chat = vi.spyOn(agent as unknown as { chat: PlayWorldMutatorAgent["chat"] }, "chat").mockResolvedValue({
+      content: JSON.stringify({ eventId: "evt-1", turn: 1, actionKind: "look" }),
+    } as never);
+
+    await agent.proposeMutation({
+      turn: 1,
+      input: "我检查背包里的车票",
+      action: { actionKind: "look", intent: "检查车票" },
+      context: "当前实体名册：actor_player [actor]: 临时维修员",
+      language: "zh",
+    });
+
+    const messages = chat.mock.calls[0]?.[0] as ReadonlyArray<{ readonly role: string; readonly content: string }>;
+    const system = messages.find((message) => message.role === "system")?.content ?? "";
+    expect(system).toContain("actor_player");
+    expect(system).toContain("固定保留字");
+    expect(system).toContain("绝不要把它改成");
+  });
+
+  it("treats actor_player as the reserved player id in the English mutator prompt", async () => {
+    const agent = new PlayWorldMutatorAgent(ctx);
+    const chat = vi.spyOn(agent as unknown as { chat: PlayWorldMutatorAgent["chat"] }, "chat").mockResolvedValue({
+      content: JSON.stringify({ eventId: "evt-1", turn: 1, actionKind: "look" }),
+    } as never);
+
+    await agent.proposeMutation({
+      turn: 1,
+      input: "I check the ticket in my bag.",
+      action: { actionKind: "look", intent: "check the ticket" },
+      context: "Entity roster: actor_player [actor]: night mechanic",
+      language: "en",
+    });
+
+    const messages = chat.mock.calls[0]?.[0] as ReadonlyArray<{ readonly role: string; readonly content: string }>;
+    const system = messages.find((message) => message.role === "system")?.content ?? "";
+    expect(system).toContain("The player entity id is fixed");
+    expect(system).toContain("actor_player");
+    expect(system).toContain("Never rename this id");
+  });
+
   it("renders the applied state as prose plus suggested actions", async () => {
     const agent = new PlaySceneRendererAgent(ctx);
     vi.spyOn(agent as unknown as { chat: PlaySceneRendererAgent["chat"] }, "chat").mockResolvedValue({
