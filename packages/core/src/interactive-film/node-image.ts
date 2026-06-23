@@ -1,5 +1,5 @@
 import { writeFile, mkdir } from "node:fs/promises";
-import { join, dirname } from "node:path";
+import { join, dirname, relative, isAbsolute } from "node:path";
 import { generateImageFromPrompt, resolveCoverGenerationRequest } from "../pipeline/short-fiction-runner.js";
 import type { StoryNode } from "./graph-schema.js";
 import type { StoryGraphDelta } from "./delta.js";
@@ -32,6 +32,10 @@ export async function generateNodeImage(params: {
   const { buffer, extension } = await params.deps.generateImage(prompt, size);
   const assetRef = nodeImageRelPath(params.projectId, params.node.id, extension);
   const abs = join(params.projectRoot, assetRef);
+  const rel = relative(params.projectRoot, abs);
+  if (!rel || rel.startsWith("..") || isAbsolute(rel)) {
+    throw new Error(`unsafe node id for image path: ${params.node.id}`);
+  }
   await mkdir(dirname(abs), { recursive: true });
   await writeFile(abs, buffer);
   return { assetRef, delta: buildSetImageRefDelta(params.node, prompt, assetRef) };

@@ -1,7 +1,7 @@
 import { describe, expect, it, beforeEach, afterEach } from "vitest";
-import { mkdtemp, rm, readFile } from "node:fs/promises";
+import { mkdtemp, rm, readFile, access } from "node:fs/promises";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { join, dirname } from "node:path";
 import { generateNodeImage, buildSetImageRefDelta, nodeImageRelPath, type NodeImageDeps } from "../interactive-film/node-image.js";
 import { StoryNodeSchema } from "../interactive-film/graph-schema.js";
 import { StoryGraphDeltaSchema } from "../interactive-film/delta.js";
@@ -34,6 +34,20 @@ describe("generateNodeImage", () => {
   it("throws when there is no prompt or sceneDesc", async () => {
     const node = StoryNodeSchema.parse({ id: "s", type: "start", choices: [] });
     await expect(generateNodeImage({ projectRoot: root, projectId: "p", node, deps: stub })).rejects.toThrow();
+  });
+
+  it("rejects a node id containing path-traversal segments that escape projectRoot", async () => {
+    // The nodeId is embedded at depth 4: interactive-films/<projectId>/assets/nodes/<nodeId>.png
+    // Five leading ".." segments step out of all four prefix dirs plus projectRoot itself.
+    const maliciousId = "../../../../../escape";
+    const node = StoryNodeSchema.parse({ id: maliciousId, type: "start", sceneDesc: "x", choices: [] });
+    await expect(
+      generateNodeImage({ projectRoot: root, projectId: "p", node, deps: stub })
+    ).rejects.toThrow(/unsafe/i);
+    // Verify no file was written outside root (parent of the tmp dir should not
+    // contain escape.png — the guard must throw before any write occurs)
+    const escapedPath = join(dirname(root), "escape.png");
+    await expect(access(escapedPath)).rejects.toThrow();
   });
 
   it("buildSetImageRefDelta produces a node upsert preserving other fields", () => {
