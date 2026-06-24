@@ -54,6 +54,7 @@ import type { ActionPayload, ActionSource, RequestedIntent } from "../interactio
 import type { ContextCompressionCallback } from "../models/context-compression.js";
 import { assertSafeBookId } from "../utils/book-id.js";
 import { PlayStore } from "../play/play-store.js";
+import { isLlmStubEnabled, stubAgentStream } from "./llm-stub.js";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -889,6 +890,7 @@ async function runAgentSessionUnlocked(
         return convertAgentMessagesForModel(messages, model);
       },
       streamFn: (streamModel, context, options) => {
+        if (isLlmStubEnabled()) return stubAgentStream(streamModel, context);
         if (terminalToolResultTail) {
           terminalToolResultTail = false;
           return localAssistantStopStream(streamModel);
