@@ -8,6 +8,7 @@ import type {
   AssistantMessage,
   AssistantMessageEventStream,
   Context as PiContext,
+  ImageContent,
   Message,
   SimpleStreamOptions,
   ToolResultMessage,
@@ -97,6 +98,8 @@ export interface AgentSessionConfig {
   onEvent?: (event: AgentEvent) => void;
   /** Optional listener for context compression lifecycle events. */
   onContextCompression?: ContextCompressionCallback;
+  /** Attachments uploaded with this user turn. Text is injected as protected user context; images use pi-ai ImageContent. */
+  attachments?: ReadonlyArray<AgentSessionAttachment>;
 }
 
 export interface AgentSessionResult {
@@ -106,6 +109,19 @@ export interface AgentSessionResult {
   messages: AgentMessage[];
   /** Upstream model error surfaced by pi-agent-core, if the final assistant turn failed. */
   errorMessage?: string;
+}
+
+export interface AgentSessionAttachment {
+  readonly id: string;
+  readonly filename: string;
+  readonly mimeType: string;
+  readonly size: number;
+  readonly storedPath?: string;
+  readonly text?: string;
+  readonly image?: {
+    readonly data: string;
+    readonly mimeType: string;
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -241,6 +257,46 @@ function sessionQueueKey(projectRoot: string, sessionId: string): string {
 
 function agentCacheKey(projectRoot: string, sessionId: string): string {
   return sessionQueueKey(projectRoot, sessionId);
+}
+
+function buildAttachmentUserBlock(attachments: ReadonlyArray<AgentSessionAttachment> | undefined, language: string): string {
+  if (!attachments?.length) return "";
+  const isEn = language === "en";
+  const lines = [
+    isEn
+      ? "\n\n## Uploaded Files (host-provided, user-authorized)"
+      : "\n\n## 用户上传文件（宿主已接收，用户授权本轮使用）",
+  ];
+  for (const attachment of attachments) {
+    lines.push(`\n### ${attachment.filename}`);
+    lines.push(`- id: ${attachment.id}`);
+    lines.push(`- mime: ${attachment.mimeType || "application/octet-stream"}`);
+    lines.push(`- size: ${attachment.size}`);
+    if (attachment.storedPath) lines.push(`- stored_path: ${attachment.storedPath}`);
+    if (attachment.text) {
+      lines.push(isEn ? "\nContent:" : "\n内容：");
+      lines.push("```");
+      lines.push(attachment.text);
+      lines.push("```");
+    } else if (attachment.image) {
+      lines.push(isEn ? "- image: attached as multimodal input" : "- 图片：已作为多模态输入附加");
+    } else {
+      lines.push(isEn
+        ? "- content: stored only; no extractor is available for this MIME type yet"
+        : "- 内容：已保存；当前 MIME 类型暂未配置文本抽取器");
+    }
+  }
+  return lines.join("\n");
+}
+
+function attachmentImages(attachments: ReadonlyArray<AgentSessionAttachment> | undefined): ImageContent[] {
+  return (attachments ?? [])
+    .filter((attachment) => attachment.image)
+    .map((attachment) => ({
+      type: "image",
+      data: attachment.image!.data,
+      mimeType: attachment.image!.mimeType,
+    }));
 }
 
 function guardedStreamSimple<TApi extends Api>(
@@ -978,6 +1034,9 @@ async function runAgentSessionUnlocked(
 
   cached.lastActive = Date.now();
   const { agent } = cached;
+  const attachmentBlock = buildAttachmentUserBlock(config.attachments, language);
+  const promptMessage = attachmentBlock ? `${userMessage}${attachmentBlock}` : userMessage;
+  const promptImages = attachmentImages(config.attachments);
 
   // ----- Prepare transcript persistence -----
   const requestId = randomUUID();
@@ -990,7 +1049,7 @@ async function runAgentSessionUnlocked(
     seq,
     timestamp: Date.now(),
     sessionKind,
-    input: userMessage,
+    input: promptMessage,
   }));
 
   let parentUuid: string | null = null;
@@ -1059,7 +1118,11 @@ async function runAgentSessionUnlocked(
   let errorMessage: string | undefined;
 
   try {
-    await agent.prompt(userMessage);
+    if (promptImages.length > 0) {
+      await agent.prompt(promptMessage, promptImages);
+    } else {
+      await agent.prompt(promptMessage);
+    }
 
     finalAssistant = lastAssistantMessage(agent.state.messages);
     errorMessage = assistantErrorMessage(finalAssistant);
@@ -1128,4 +1191,17 @@ export function evictAgentCache(sessionId: string): boolean {
     deleted = true;
   }
   return deleted;
+}
+
+/** Abort an active cached pi-agent session and evict it from cache. */
+export function abortAgentSession(projectRoot: string, sessionId: string): boolean {
+  let aborted = false;
+  for (const [key, entry] of agentCache) {
+    if (entry.projectRoot !== projectRoot || entry.sessionId !== sessionId) continue;
+    entry.agent.abort();
+    entry.agent.clearAllQueues?.();
+    agentCache.delete(key);
+    aborted = true;
+  }
+  return aborted;
 }
