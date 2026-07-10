@@ -17,6 +17,11 @@ const SERVICE_QUICK_LINKS: Record<string, ReadonlyArray<ServiceQuickLink>> = {
     { label: "API 文档", href: "https://kkaiapi.com/docs" },
     { label: "模型/价格", href: "https://kkaiapi.com/models" },
   ],
+  kie: [
+    { label: "API Key", href: "https://kie.ai/api-key" },
+    { label: "文档", href: "https://docs.kie.ai/" },
+    { label: "模型/价格", href: "https://kie.ai/market" },
+  ],
   moonshot: [
     { label: "开放平台", href: "https://platform.kimi.com?aff=inkos" },
   ],

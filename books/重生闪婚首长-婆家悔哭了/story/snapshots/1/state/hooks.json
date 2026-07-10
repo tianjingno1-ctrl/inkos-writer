@@ -1,0 +1,104 @@
+{
+  "hooks": [
+    {
+      "hookId": "H003",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "分家现场举证",
+      "payoffTiming": "near-term",
+      "notes": "无"
+    },
+    {
+      "hookId": "H004",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "村干部公开打脸现场",
+      "payoffTiming": "near-term",
+      "notes": "无"
+    },
+    {
+      "hookId": "H005",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "林晚棠刚到军属院站稳脚跟时",
+      "payoffTiming": "mid-arc",
+      "notes": "无"
+    },
+    {
+      "hookId": "H006",
+      "startChapter": 0,
+      "type": "情感",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "林晚棠和霍景深双向表白时",
+      "payoffTiming": "mid-arc",
+      "notes": "无"
+    },
+    {
+      "hookId": "H007",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "敌特收网行动",
+      "payoffTiming": "slow-burn",
+      "notes": "[H002]"
+    },
+    {
+      "hookId": "H008",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "全书收尾",
+      "payoffTiming": "endgame",
+      "notes": "[H001]"
+    },
+    {
+      "hookId": "conflict-大队治保主任-王德福出面刁-难林晚棠",
+      "startChapter": 1,
+      "type": "conflict",
+      "status": "open",
+      "lastAdvancedChapter": 1,
+      "expectedPayoff": "大队治保主任王德福出面刁难林晚棠，被林晚棠反击打脸",
+      "payoffTiming": "immediate",
+      "notes": "章尾陆建国声称要找大队治保主任王德福来收拾林晚棠，预示着下一阶段的冲突"
+    },
+    {
+      "hookId": "H001",
+      "startChapter": 1,
+      "type": "剧情",
+      "status": "progressing",
+      "lastAdvancedChapter": 1,
+      "expectedPayoff": "林晚棠和婆家彻底撕破脸时分家现场",
+      "payoffTiming": "near-term",
+      "notes": "第一章交代了林晚棠前世被陈桂英锁在柴房冻死、病死并被卖阴婚的真相，确立了复仇基调"
+    },
+    {
+      "hookId": "H002",
+      "startChapter": 1,
+      "type": "剧情",
+      "status": "progressing",
+      "lastAdvancedChapter": 1,
+      "expectedPayoff": "霍景深清剿敌特任务收尾",
+      "payoffTiming": "slow-burn",
+      "notes": "第一章通过闪回交代了霍景深在苇子河边被救、在溶洞中因清剿敌特任务需要与林晚棠闪婚的背景"
+    },
+    {
+      "hookId": "plot-林晚棠利用缝-在贴身褂子内-兜里的两本婚",
+      "startChapter": 1,
+      "type": "plot",
+      "status": "open",
+      "lastAdvancedChapter": 1,
+      "expectedPayoff": "林晚棠利用缝在贴身褂子内兜里的两本婚书和武装部机要室电话纸条反制陆家",
+      "payoffTiming": "near-term",
+      "notes": "第一章交代了林晚棠贴身藏有与霍景深的婚书及武装部联系电话，这是她目前最大的底牌"
+    }
+  ]
+}

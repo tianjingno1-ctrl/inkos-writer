@@ -1,0 +1,22 @@
+{
+  "avgSentenceLength": 12.5,
+  "sentenceLengthStdDev": 9.6,
+  "avgParagraphLength": 18,
+  "paragraphLengthRange": {
+    "min": 3,
+    "max": 129
+  },
+  "vocabularyDiversity": 0.309,
+  "topPatterns": [
+    "苏晚...(10次)",
+    "林薇...(9次)",
+    "傅景...(9次)",
+    "【叮...(5次)",
+    "\"傅...(4次)"
+  ],
+  "rhetoricalFeatures": [
+    "短句节奏(28处)"
+  ],
+  "sourceName": "快穿：软妹炮灰把疯批男主钓疯了",
+  "analyzedAt": "2026-07-02T09:46:51.354Z"
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "number": 1,
+    "title": "嫁人第七天",
+    "status": "ready-for-review",
+    "wordCount": 2313,
+    "createdAt": "2026-07-08T11:30:00.000Z",
+    "updatedAt": "2026-07-08T11:30:00.000Z"
+  },
+  {
+    "number": 2,
+    "title": "烈属招牌不好使了",
+    "status": "ready-for-review",
+    "wordCount": 2839,
+    "createdAt": "2026-07-09T09:30:29.941Z",
+    "updatedAt": "2026-07-09T09:30:29.941Z",
+    "auditIssues": [
+      "[info] 第2章开篇提及林晚棠贴身藏的另一样物品是「霍景深救了她爹之后武装部开的政审证明纸条」，与第1章设定冲突：第1章明确另一张纸是霍景深留下的武装部联系电话纸条，且无霍景深救林晚棠父亲的相关剧情，属于笔误。",
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：H001（近期，可回收）。",
+      "[warning] 本章新开了 3 个伏笔，但没有回收任何旧债。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2839,
+      "postWriterNormalizeCount": 2839,
+      "postReviseCount": 0,
+      "finalCount": 2839,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 36862,
+      "completionTokens": 11974,
+      "totalTokens": 48836
+    }
+  }
+]

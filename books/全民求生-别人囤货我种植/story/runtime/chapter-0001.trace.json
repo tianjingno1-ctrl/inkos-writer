@@ -1,0 +1,31 @@
+{
+  "chapter": 1,
+  "plannerInputs": [
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\全民求生-别人囤货我种植\\story\\author_intent.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\全民求生-别人囤货我种植\\story\\current_focus.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\全民求生-别人囤货我种植\\story\\outline\\story_frame.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\全民求生-别人囤货我种植\\story\\outline\\volume_map.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\全民求生-别人囤货我种植\\story\\chapter_summaries.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\全民求生-别人囤货我种植\\story\\book_rules.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\全民求生-别人囤货我种植\\story\\current_state.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\全民求生-别人囤货我种植\\story\\pending_hooks.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\全民求生-别人囤货我种植\\story\\memory.db"
+  ],
+  "composerInputs": [
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\全民求生-别人囤货我种植\\story\\runtime\\chapter-0001.intent.md"
+  ],
+  "selectedSources": [
+    "runtime/chapter_memo",
+    "story/current_focus.md",
+    "story/current_state.md",
+    "story/outline/story_frame.md",
+    "story/outline/volume_map.md",
+    "runtime/hook_debt#H003",
+    "story/pending_hooks.md#H002",
+    "story/pending_hooks.md#H024",
+    "story/pending_hooks.md#H013",
+    "story/pending_hooks.md#H001",
+    "story/pending_hooks.md#H003"
+  ],
+  "notes": []
+}

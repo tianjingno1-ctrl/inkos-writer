@@ -177,6 +177,30 @@ describe("groupChronologically", () => {
     });
   });
 
+  it("renders short fiction text artifacts when cover was not generated", () => {
+    const exec = makeExec({
+      id: "short-no-cover",
+      tool: "short_fiction_run",
+      label: "短篇生产",
+      details: {
+        kind: "short_fiction_created",
+        storyId: "demo-story",
+        finalMarkdownPath: "shorts/demo-story/final/full.md",
+        salesPackagePath: "shorts/demo-story/final/sales-package.md",
+        coverPromptPath: "shorts/demo-story/final/cover-prompt.md",
+        coverError: "cover service not configured",
+      },
+    });
+
+    const html = renderToStaticMarkup(React.createElement(ToolExecutionSteps, { executions: [exec] }));
+
+    expect(html).toContain("短篇已生成");
+    expect(html).toContain("正文");
+    expect(html).toContain("shorts/demo-story/final/full.md");
+    expect(html).toContain("简介卖点");
+    expect(html).toContain("封面未生成");
+  });
+
   it("extracts and renders interactive-film creation artifacts", () => {
     const exec = makeExec({
       id: "interactive-film-1",

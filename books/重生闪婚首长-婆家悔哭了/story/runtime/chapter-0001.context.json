@@ -1,0 +1,105 @@
+{
+  "chapter": 1,
+  "selectedContext": [
+    {
+      "source": "runtime/chapter_memo",
+      "reason": "Carry the planner's chapter memo into governed writing.",
+      "excerpt": "goal=重生林晚棠砸碎暖水瓶反抗婆家，揭示与霍景深的闪婚婚书。 | golden-opening=true | ## 当前任务\n林晚棠重生回到嫁给陆家老二第七天，在灶房面对婆婆陈桂英的咒骂和小叔子陆建国的索要时，当场砸碎暖水瓶拒绝做饭，退回柴房闩门。本章核心冲突事件为“砸暖水瓶”，须展现同场三方视角：林晚棠是“重活一世绝不再忍，要用最烈的手段立规矩”；陈桂英是“向来听话的软包子怎么敢掀桌子，是不是要造反”；陆建国是“这疯女人别把开水溅到我身上，以后谁给我弄烟弄票”。\n\n## 读者此刻在等什么\n1) 读者期待重生女主如何反击恶毒婆家，不再当受气包。\n2) 本章完全兑现“重生第一枪”的物理反击，同时通过闪回交代她已经与军官领证，制造“婆家以为她嫁了穷光蛋，实际丈夫是首长”的信息差期待。\n\n## 该兑现的 / 暂不掀的\n- 该兑现：林晚棠性格的彻底转变 → 兑现到直接砸碎暖水瓶、冷脸对峙，彻底撕破脸。\n- 暂不掀：霍景深的首长身份与护短行动 → 本章仅在闪回中交代领证，男主本人暂不露面，留到第 4 章。## 日常/过渡承担什么任务\n[开篇灶房场景] → 通过陈桂英数落稀粥太稀、陆建国理所当然索要布票的细节，展现陆家日常对女主的极限压榨，引出女主前世病死柴房的恨意。\n[闪回领证场景] → 交代女主在河边救下霍景深与小周、因政审需要紧急在公社领证的硬逻辑，带出婚书与武装部电话纸条这两个关键物证。\n\n## 关键抉择过三连问\n- 主角本章最关键的一次选择：当众砸碎陆家唯一的暖水瓶，拒绝做早饭并退回柴房。\n  - 为什么这么做？重活一世，她明白越忍让死得越快，必须用最直观的破坏性动作打破陆家的心理优势。\n  - 符合当前利益吗？符合，立刻停止被无偿劳役，用强硬态度为自己争取谈判空间。\n  - 符合他的人设吗？符合，她性格刚直、嘴利，重活一世绝不委曲求全。\n- 对手/配角本章最关键的一次选择：陈桂英在林晚棠砸瓶子后没有立刻动手，而是拉着陆建国在门外咒骂，并计划去找大队治保主任王德福。\n  - 为什么这么做？被林晚棠突如其来的狠劲震慑，且心疼暖水瓶，决定用村里宗族规矩和干部身份来压人。\n  - 符合当前利益吗？符合，当场动手容易吃亏，用大队部的权力施压更能保住面子和利益。\n  - 符合他的人设吗？符合，欺软怕硬，习惯用孝道和村规道德绑架他人。\n\n## 章尾必须发生的改变\n- 信息改变：林晚棠不再逆来顺受，陆家母子意识到她变成了一个敢砸东西的“疯子”。\n- 关系改变：林晚棠与陆家从“压迫与顺从”变为“公开对峙”，林晚棠退守柴房，物理隔绝陆家人的骚扰。\n\n## 本章 hook 账\nopen:\n- [new] H001 前世林晚棠在柴房病死被卖阴婚 || 理由：开篇交代重生动机，确立对陆家的复仇基调。\n- [new] H002 霍景深真实职级与政审任务 || 理由：交代闪婚背景，为后续首长出场护短埋下伏笔。\n- [new] H003 婆婆贪占的彩礼与工分 || 理由：为后续林晚棠讨回财产、彻底分家做准备。\n- [new] H004 村干部王德福与婆家的勾连 || 理由：由陆建国章尾的叫嚣引出，为第3章公社打脸做铺垫。\n\nadvance:\n（无，本章为起始章）\n\nresolve:\n（无，本章为起始章）\n\ndefer:\n（无，本章为起始章）\n\n## 不要做\n- 绝对不要让霍景深在本章真人出场，只能出现在林晚棠的闪回记忆中。\n- 绝对不要写翌日的话术大战，砸瓶子后林晚棠必须立刻回柴房闩门，将后续冲突留到第 2 章。\n- 绝对不要出现任何空间、灵泉或系统等超自然设定。\n- 绝对不要让林晚棠展现超出普通人范畴的武力（如格斗技巧），反击仅限于砸物宣泄。"
+    },
+    {
+      "source": "story/current_focus.md",
+      "reason": "Current task focus for this chapter.",
+      "excerpt": "| 章 | 状态 | 核心任务 |"
+    },
+    {
+      "source": "story/audit_drift.md",
+      "reason": "Carry forward audit drift guidance from the previous chapter without polluting hard state facts.",
+      "excerpt": "> 第1章审计发现以下问题，下一章写作时必须避免："
+    },
+    {
+      "source": "story/current_state.md",
+      "reason": "Preserve hard state facts referenced by the active chapter brief or hard constraints.",
+      "excerpt": "| 字段 | 值 |"
+    },
+    {
+      "source": "story/outline/story_frame.md",
+      "reason": "Preserve canon constraints referenced by the active chapter brief or hard constraints.",
+      "excerpt": "这本书要讲的是一个被旧观念和恶婆家按在泥里磋磨致死的年轻姑娘，重生回到命运拐点后，撕掉“受气包儿媳”的标签，不妥协不内耗，靠前世记忆、爽利性子选对人生伴侣，把一地鸡毛的烂日子过成被人捧着的好日子的故事。命题极其直白：当所有人都默认你该忍气吞声当牛做马时，敢翻脸、敢选不一样的路，就能挣出属于自己的甜。基调是爽利解气的，带着七零年代乡村的烟火气和军婚的踏实感，甜宠不悬浮，打脸不拖沓，完全适配听书用户的情绪需求。本书主角是林晚棠，完整弧线详见 roles/主要角色/林晚棠.md。"
+    },
+    {
+      "source": "story/outline/volume_map.md",
+      "reason": "Anchor the default planning node for this chapter.",
+      "excerpt": "全书共4卷，情绪曲线完全贴合下沉用户的爽点需求：第一卷是重生开局的扬眉吐气篇，前半段压得狠，婆家的磋磨、村支书的偏心都往林晚棠身上砸，后半段爽点密集，从第一次硬怼婆婆、当众打脸村支书，到霍景深露面护短、分家拿钱、办随军手续，情绪一路走高，全程没有憋屈的长段落；第二卷是军属院立足的甜宠升温篇，刚到部队的陌生感、其他军属的闲言碎语、婆家追上门的撒泼是小压抑点，每次都很快被霍景深的护短、林晚棠的反杀化解，甜宠情节占比提升，整体情绪是暖而爽的；第三卷是事业起步的暗线收网篇，林晚棠考供销社编制、和霍景深感情双向奔赴是暖线，陆建国的小动作、敌特的渗透是紧绷线，爽点和甜宠交织，情绪稳中有升；第四卷是圆满收尾篇，所有旧怨了结，婆家得到报应，两个人补办婚礼，情绪全程温暖圆满。"
+    },
+    {
+      "source": "runtime/hook_debt#H001",
+      "reason": "含原始种子文本的叙事债务简报。",
+      "excerpt": "H001（剧情，备忘引用旧债，已开0章） | 读者承诺：林晚棠和婆家彻底撕破脸时分家现场 | 种于第1章：ch1 嫁人第七天 - 林晚棠重生回到嫁入陆家第七天，在灶房拒绝陈桂英和陆建国的无理要求，当众砸碎陆家唯一的暖水瓶，并以告发虐待军属威胁陈桂英，随后退回柴房落锁；闪回交代了七天前救下霍景深并秘密领证的军婚背景。"
+    },
+    {
+      "source": "runtime/hook_debt#H002",
+      "reason": "含原始种子文本的叙事债务简报。",
+      "excerpt": "H002（剧情，备忘引用旧债，已开0章） | 读者承诺：霍景深清剿敌特任务收尾 | 种于第1章：ch1 嫁人第七天 - 林晚棠重生回到嫁入陆家第七天，在灶房拒绝陈桂英和陆建国的无理要求，当众砸碎陆家唯一的暖水瓶，并以告发虐待军属威胁陈桂英，随后退回柴房落锁；闪回交代了七天前救下霍景深并秘密领证的军婚背景。"
+    },
+    {
+      "source": "story/current_state.md#当前冲突",
+      "reason": "Relevant current-state fact retrieved for the current chapter goal.",
+      "excerpt": "当前冲突 | 林晚棠与陈桂英、陆建国的正面冲突爆发，与大队治保主任王德福的潜在冲突即将到来"
+    },
+    {
+      "source": "story/current_state.md#当前目标",
+      "reason": "Relevant current-state fact retrieved for the current chapter goal.",
+      "excerpt": "当前目标 | 在柴房暂避，利用军婚身份与陆家周旋，准备清算旧账"
+    },
+    {
+      "source": "story/current_state.md#主角状态",
+      "reason": "Relevant current-state fact retrieved for the current chapter goal.",
+      "excerpt": "主角状态 | 重生归来，满怀恨意但保持理智，退守柴房落锁，身体因用力咬牙导致牙龈轻微渗血"
+    },
+    {
+      "source": "story/current_state.md#当前限制",
+      "reason": "Relevant current-state fact retrieved for the current chapter goal.",
+      "excerpt": "当前限制 | 暂居陆家，需防范陈桂英后续使坏及大队治保主任王德福的刁难"
+    },
+    {
+      "source": "story/pending_hooks.md#H001",
+      "reason": "Carry forward unresolved hooks that match the chapter focus.",
+      "excerpt": "剧情 | progressing | 林晚棠和婆家彻底撕破脸时分家现场 | near-term | 第一章交代了林晚棠前世被陈桂英锁在柴房冻死、病死并被卖阴婚的真相，确立了复仇基调"
+    },
+    {
+      "source": "story/pending_hooks.md#plot-林晚棠利用缝-在贴身褂子内-兜里的两本婚",
+      "reason": "Carry forward unresolved hooks that match the chapter focus.",
+      "excerpt": "plot | open | 林晚棠利用缝在贴身褂子内兜里的两本婚书和武装部机要室电话纸条反制陆家 | near-term | 第一章交代了林晚棠贴身藏有与霍景深的婚书及武装部联系电话，这是她目前最大的底牌"
+    },
+    {
+      "source": "story/pending_hooks.md#H002",
+      "reason": "Carry forward unresolved hooks that match the chapter focus.",
+      "excerpt": "剧情 | progressing | 霍景深清剿敌特任务收尾 | slow-burn | 第一章通过闪回交代了霍景深在苇子河边被救、在溶洞中因清剿敌特任务需要与林晚棠闪婚的背景"
+    },
+    {
+      "source": "story/pending_hooks.md#conflict-大队治保主任-王德福出面刁-难林晚棠",
+      "reason": "Carry forward unresolved hooks that match the chapter focus.",
+      "excerpt": "conflict | open | 大队治保主任王德福出面刁难林晚棠，被林晚棠反击打脸 | immediate | 章尾陆建国声称要找大队治保主任王德福来收拾林晚棠，预示着下一阶段的冲突"
+    },
+    {
+      "source": "story/pending_hooks.md#H003",
+      "reason": "Carry forward unresolved hooks that match the chapter focus.",
+      "excerpt": "剧情 | open | 分家现场举证 | near-term | 无"
+    },
+    {
+      "source": "story/pending_hooks.md#H004",
+      "reason": "Carry forward unresolved hooks that match the chapter focus.",
+      "excerpt": "剧情 | open | 村干部公开打脸现场 | near-term | 无"
+    },
+    {
+      "source": "story/pending_hooks.md#H005",
+      "reason": "Carry forward unresolved hooks that match the chapter focus.",
+      "excerpt": "剧情 | open | 林晚棠刚到军属院站稳脚跟时 | mid-arc | 无"
+    },
+    {
+      "source": "story/pending_hooks.md#H006",
+      "reason": "Carry forward unresolved hooks that match the chapter focus.",
+      "excerpt": "情感 | open | 林晚棠和霍景深双向表白时 | mid-arc | 无"
+    }
+  ]
+}

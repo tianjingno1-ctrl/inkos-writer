@@ -1,0 +1,40 @@
+{
+  "chapter": 1,
+  "plannerInputs": [
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\author_intent.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\current_focus.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\outline\\story_frame.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\outline\\volume_map.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\chapter_summaries.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\book_rules.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\current_state.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\pending_hooks.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\memory.db"
+  ],
+  "composerInputs": [
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\runtime\\chapter-0001.intent.md"
+  ],
+  "selectedSources": [
+    "runtime/chapter_memo",
+    "story/current_focus.md",
+    "story/audit_drift.md",
+    "story/current_state.md",
+    "story/outline/story_frame.md",
+    "story/outline/volume_map.md",
+    "runtime/hook_debt#H001",
+    "runtime/hook_debt#H002",
+    "story/current_state.md#当前冲突",
+    "story/current_state.md#当前目标",
+    "story/current_state.md#主角状态",
+    "story/current_state.md#当前限制",
+    "story/pending_hooks.md#H001",
+    "story/pending_hooks.md#plot-林晚棠利用缝-在贴身褂子内-兜里的两本婚",
+    "story/pending_hooks.md#H002",
+    "story/pending_hooks.md#conflict-大队治保主任-王德福出面刁-难林晚棠",
+    "story/pending_hooks.md#H003",
+    "story/pending_hooks.md#H004",
+    "story/pending_hooks.md#H005",
+    "story/pending_hooks.md#H006"
+  ],
+  "notes": []
+}

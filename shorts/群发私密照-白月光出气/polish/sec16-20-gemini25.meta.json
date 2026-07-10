@@ -1,0 +1,9 @@
+{
+  "usage": {
+    "completion_tokens": 7939,
+    "prompt_tokens": 3399,
+    "total_tokens": 11338
+  },
+  "model": "gemini-2.5-pro",
+  "elapsed_ms": 14587
+}

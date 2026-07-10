@@ -503,7 +503,9 @@ const SubAgentParams = Type.Object({
     Type.Literal("reviser"),
     Type.Literal("exporter"),
   ]),
-  instruction: Type.String({ description: "Natural language instruction for the sub-agent. For reviser, this is passed as the one-off revision brief." }),
+  instruction: Type.Optional(Type.String({
+    description: "Natural language instruction for the sub-agent. Required for architect; optional for writer/auditor/reviser/exporter when agent-specific params are provided.",
+  })),
   bookId: Type.Optional(Type.String({
     description: "Optional book ID. In active-book sessions, omit it to use the current active book; if provided, it must match the current active book. For architect creation, this optionally sets the new book ID.",
   })),
@@ -570,6 +572,25 @@ const ArchitectCreateSubAgentParams = Type.Object({
   chapterWordCount: Type.Optional(Type.Number({ description: "Confirmed per-chapter length in the book's native unit. Default: 3000 zh, 2000 en" })),
 });
 
+function defaultSubAgentInstruction(agent: string, chapterNumber?: number): string {
+  switch (agent) {
+    case "writer":
+      return "Write the next chapter.";
+    case "auditor":
+      return chapterNumber != null
+        ? `Audit chapter ${chapterNumber}.`
+        : "Audit the latest chapter.";
+    case "reviser":
+      return chapterNumber != null
+        ? `Revise chapter ${chapterNumber}.`
+        : "Revise the latest chapter.";
+    case "exporter":
+      return "Export the book.";
+    default:
+      return "";
+  }
+}
+
 function prepareSubAgentArguments(args: unknown): SubAgentParamsType {
   if (!args || typeof args !== "object" || Array.isArray(args)) {
     return args as SubAgentParamsType;
@@ -582,6 +603,14 @@ function prepareSubAgentArguments(args: unknown): SubAgentParamsType {
       prepared.platform = platform;
     } else {
       delete prepared.platform;
+    }
+  }
+  const agent = typeof prepared.agent === "string" ? prepared.agent : "";
+  const chapterNumber = typeof prepared.chapterNumber === "number" ? prepared.chapterNumber : undefined;
+  if (typeof prepared.instruction !== "string" || prepared.instruction.trim().length === 0) {
+    const fallback = defaultSubAgentInstruction(agent, chapterNumber);
+    if (fallback) {
+      prepared.instruction = fallback;
     }
   }
   return prepared as SubAgentParamsType;
@@ -609,7 +638,9 @@ export function createSubAgentTool(
       _signal?: AbortSignal,
       onUpdate?: AgentToolUpdateCallback,
     ): Promise<AgentToolResult<unknown>> {
-      const { agent, instruction, bookId, title, chapterNumber, genre, platform, language, targetChapters, chapterWordCount, revise, feedback, mode, format, approvedOnly } = params;
+      const prepared = prepareSubAgentArguments(params);
+      const { agent, bookId, title, chapterNumber, genre, platform, language, targetChapters, chapterWordCount, revise, feedback, mode, format, approvedOnly } = prepared;
+      const instruction = prepared.instruction?.trim() ?? "";
 
       const progress = (msg: string) => {
         onUpdate?.(textResult(msg));
@@ -628,6 +659,9 @@ export function createSubAgentTool(
 
         switch (agent) {
           case "architect": {
+            if (!instruction) {
+              return textResult("Error: instruction is required for the architect agent.");
+            }
             const createBookPayload = options.actionPayload?.createBook;
             if (revise) {
               if (!activeBookId) {
@@ -767,12 +801,13 @@ export function createSubAgentTool(
           case "exporter": {
             const targetBookId = resolveToolBookId("exporter", bookId, activeBookId);
             if (!projectRoot) return textResult("Error: exporter requires projectRoot.");
-            const inferredFormat = format ?? (/epub/i.test(instruction)
+            const instructionText = instruction ?? "";
+            const inferredFormat = format ?? (/epub/i.test(instructionText)
               ? "epub"
-              : /markdown|\bmd\b/i.test(instruction)
+              : /markdown|\bmd\b/i.test(instructionText)
                 ? "md"
                 : "txt");
-            const exportApprovedOnly = approvedOnly ?? /approved|已通过|通过章节/.test(instruction);
+            const exportApprovedOnly = approvedOnly ?? /approved|已通过|通过章节/.test(instructionText);
             const state = new StateManager(projectRoot);
             const result = await writeExportArtifact(state, targetBookId, {
               format: inferredFormat,

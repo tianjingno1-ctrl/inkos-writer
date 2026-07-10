@@ -23,7 +23,8 @@ import {
   type ShortFictionReference,
   type ShortFictionSalesPackage,
 } from "../agents/short-fiction.js";
-import { coverSecretKey, resolveCoverProviderPreset, type CoverProviderPreset } from "../llm/cover-providers.js";
+import { coverSecretKey, resolveCoverProviderPreset, resolveCoverApiKeyFromEnv, type CoverProviderPreset } from "../llm/cover-providers.js";
+import { generateKieCover } from "../llm/kie-cover.js";
 import { loadSecrets } from "../llm/secrets.js";
 import { safeChildPath } from "../utils/path-safety.js";
 
@@ -518,6 +519,9 @@ export async function generateImageFromPrompt(
     const payload = await generateGeminiCover(request, prompt);
     return { buffer: Buffer.from(payload.base64, "base64"), extension: payload.extension };
   }
+  if (request.api === "kie") {
+    return generateKieCover(request, prompt, size);
+  }
   if (request.api === "images") {
     return generateImagesCover(request, prompt, size);
   }
@@ -626,7 +630,7 @@ async function resolveProjectCoverApiKey(root: string, service: string): Promise
   const secrets = await loadSecrets(root);
   return secrets.services[coverSecretKey(service)]?.apiKey
     || secrets.services[service]?.apiKey
-    || process.env[`${service.replace(/[^a-zA-Z0-9]/g, "_").toUpperCase()}_API_KEY`]
+    || resolveCoverApiKeyFromEnv(service)
     || "";
 }
 

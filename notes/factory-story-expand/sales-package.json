@@ -1,0 +1,25 @@
+{
+  "title": "全网看我：螺丝女工干翻天才前男友",
+  "intro": "所有人都笑我写错「扭矩」、恋爱脑倒贴，是只会拧螺丝的底层废物。可没人知道，这错字是我故意留的溯源烙印。上辈子渣男靠偷我的核心参数登顶行业巅峰……重生回到被当众羞辱的颁奖现场，我蹲在星河车间23号工位，拧的从来不是普通零件——是他偷来的荣光、骗来的前途、装出来的天才人设。",
+  "sellingPoints": [
+    "重生打脸",
+    "螺丝女工逆袭",
+    "错字溯源烙印",
+    "23号工位",
+    "全网直播炸机铁证"
+  ],
+  "coverPrompt": "notes/factory-story-expand/cover-prompt.md",
+  "platformNotes": {
+    "platform": "番茄小说",
+    "chapterCount": 10,
+    "coverSize": "600×800（3:4 竖版，已强制裁切校验）",
+    "uploadTitleRecommended": "全网看我：螺丝女工干翻天才前男友"
+  },
+  "assets": {
+    "manuscript": "notes/temp-revised-story-final.md",
+    "uploadTxt": "notes/全网看我-螺丝女工干翻天才前男友.txt",
+    "cover": "notes/factory-story-expand/cover.png",
+    "coverFanqie": "notes/factory-story-expand/cover-fanqie-600x800.png",
+    "coverPrompt": "notes/factory-story-expand/cover-prompt.md"
+  }
+}

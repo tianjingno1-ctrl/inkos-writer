@@ -281,34 +281,73 @@ function ScriptStoryboardResultPreview({ exec, onOpenFilmStudio }: { exec: ToolE
 }
 
 function ShortFictionResultPreview({ exec }: { exec: ToolExecution }) {
+  const openProjectArtifact = useChatStore((s) => s.openProjectArtifact);
   if (!["short_fiction_run", "generate_cover"].includes(exec.tool) || exec.status !== "completed") return null;
   const details = getGeneratedArtifactDetails(exec);
   const coverPath = details?.coverImagePath ?? extractResultPath(exec.result, "Cover image");
   const coverError = details?.coverError ?? extractResultPath(exec.result, "Cover image reason");
-  if (!coverPath || !/\.(png|jpe?g|webp)$/iu.test(coverPath)) {
-    if (!coverError) return null;
-    return (
-      <div className="mx-3 mb-3 mt-1 rounded-xl border border-destructive/20 bg-destructive/5 px-3 py-2 text-xs text-destructive">
-        封面未生成：{coverError}
-      </div>
-    );
-  }
+  const hasCover = Boolean(coverPath && /\.(png|jpe?g|webp)$/iu.test(coverPath));
 
-  const coverUrl = buildApiUrl(`/project/files/${encodeProjectPath(coverPath)}`);
-  if (!coverUrl) return null;
-  const title = details?.title ?? details?.storyId ?? "短篇封面";
+  const finalMarkdownPath = details?.finalMarkdownPath ?? extractResultPath(exec.result, "Final");
+  const salesPackagePath = details?.salesPackagePath ?? extractResultPath(exec.result, "Sales package");
+  const coverPromptPath = details?.coverPromptPath ?? extractResultPath(exec.result, "Cover prompt");
+  const maybeRows: Array<readonly [string, string] | null> = [
+    finalMarkdownPath ? ["正文", finalMarkdownPath] : null,
+    salesPackagePath ? ["简介卖点", salesPackagePath] : null,
+    coverPromptPath ? ["封面提示词", coverPromptPath] : null,
+  ];
+  const rows = maybeRows.filter((row): row is readonly [string, string] => Boolean(row));
+
+  if (!hasCover && rows.length === 0 && !coverError) return null;
+
+  const title = details?.title ?? details?.storyId ?? "短篇";
+  const heading = details?.kind === "cover_generated" ? "封面已生成" : "短篇已生成";
+  const coverUrl = hasCover && coverPath
+    ? buildApiUrl(`/project/files/${encodeProjectPath(coverPath)}`)
+    : null;
 
   return (
-    <div className="mx-3 mb-3 mt-1 overflow-hidden rounded-xl border border-border/40 bg-background/70">
-      <img
-        src={coverUrl}
-        alt={title}
-        className="block max-h-[360px] w-full object-contain bg-muted/20"
-        loading="lazy"
-      />
-      <div className="border-t border-border/40 px-3 py-2 text-[11px] text-muted-foreground break-all">
-        {coverPath}
-      </div>
+    <div className="mx-3 mb-3 mt-1 rounded-xl border border-primary/20 bg-primary/5 px-3 py-2.5">
+      {(details?.kind === "short_fiction_created" || rows.length > 0) && (
+        <div className="text-[16px] leading-6 font-semibold text-primary">{heading}</div>
+      )}
+      {coverUrl && (
+        <div className={`overflow-hidden rounded-xl border border-border/40 bg-background/70${rows.length > 0 || coverError ? " mt-3" : ""}`}>
+          <img
+            src={coverUrl}
+            alt={title}
+            className="block max-h-[360px] w-full object-contain bg-muted/20"
+            loading="lazy"
+          />
+          <div className="border-t border-border/40 px-3 py-2 text-[11px] text-muted-foreground break-all">
+            {coverPath}
+          </div>
+        </div>
+      )}
+      {coverError && !hasCover && (
+        <div className={`text-xs text-destructive${rows.length > 0 ? " mt-2 rounded-lg border border-destructive/20 bg-destructive/5 px-3 py-2" : ""}`}>
+          封面未生成：{coverError}
+        </div>
+      )}
+      {rows.length > 0 && (
+        <div className={`space-y-1.5${coverUrl || coverError ? " mt-2" : ""}`}>
+          {rows.map(([label, path]) => (
+            <button
+              key={label}
+              type="button"
+              onClick={() => openProjectArtifact(path)}
+              className="group flex w-full items-start justify-between gap-3 rounded-lg border border-transparent px-2 py-1.5 text-left transition hover:border-primary/25 hover:bg-background/65"
+            >
+              <span className="min-w-0 text-[13px] leading-5 text-muted-foreground break-all">
+                <span className="font-medium text-foreground">{label}：</span>{path}
+              </span>
+              <span className="mt-0.5 shrink-0 rounded-md border border-primary/25 bg-primary/10 px-1.5 py-0.5 text-[11px] font-semibold text-primary opacity-80 transition group-hover:opacity-100">
+                查看
+              </span>
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

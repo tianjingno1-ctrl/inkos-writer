@@ -1329,7 +1329,8 @@ export class PipelineRunner {
           : undefined,
       });
 
-      if (preRevision.blockingCount === 0 && preRevision.aiTellCount === 0) {
+      const explicitRevisionMode = mode !== "auto" && mode !== "spot-fix";
+      if (!explicitRevisionMode && preRevision.blockingCount === 0 && preRevision.aiTellCount === 0) {
         return {
           chapterNumber: targetChapter,
           wordCount: countChapterLength(content, countingMode),
@@ -1439,7 +1440,7 @@ export class PipelineRunner {
       const shouldApplyRevision = blockingDidNotWorsen
         && criticalDidNotWorsen
         && aiDidNotWorsen
-        && (improvedBlocking || improvedAITells);
+        && (explicitRevisionMode || improvedBlocking || improvedAITells);
 
       if (!shouldApplyRevision) {
         const remainingIssues = effectivePostRevision.revisionBlockingIssues

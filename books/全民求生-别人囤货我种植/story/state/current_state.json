@@ -1,0 +1,53 @@
+{
+  "chapter": 1,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "当前位置",
+      "object": "苏蔓：城西槐溪路花店；裴行：城北新发地超市废墟仓库",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "主角状态",
+      "object": "苏蔓：轻微脱水，精神高度紧张，掌心有木刺轻伤，已绑定园丁系统并获得第一颗豌豆种子；裴行：状态完好，高度警惕，持有自制短矛",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "苏蔓：利用第一颗豌豆种子抵御即将破门而入的变异体，死守花店；裴行：守住超市据点，寻找时机寻找失去联络的妹妹",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "全城通讯瘫痪（无信号），外界秩序崩溃，变异体游荡，苏蔓的花店玻璃门已出现裂纹且门锁变形",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "敌方：丧尸化变异体（花店门外有一只，超市仓库外有低吼声）；友方：无（各自孤立求生中）",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "苏蔓与破门变异体的生死倒计时冲突；裴行与外界失联、被困仓库的生存冲突",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    }
+  ]
+}

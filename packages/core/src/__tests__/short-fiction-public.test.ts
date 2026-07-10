@@ -171,6 +171,41 @@ describe("public short-fiction chain", () => {
     }
   });
 
+  it("resolves kie cover generation from project config and KIE_API_KEY env", async () => {
+    const root = await mkdtemp(join(tmpdir(), "inkos-short-cover-kie-"));
+    process.env.KIE_API_KEY = "kie-test-key";
+    try {
+      await writeFile(join(root, "inkos.json"), JSON.stringify({
+        name: "cover-test",
+        version: "0.1.0",
+        language: "zh",
+        llm: {
+          provider: "openai",
+          service: "kkaiapi",
+          configSource: "studio",
+          baseUrl: "https://api.kkaiapi.com/v1",
+          apiKey: "",
+          model: "deepseek-v4-flash",
+          cover: {
+            service: "kie",
+            model: "gpt-image-2-text-to-image",
+          },
+        },
+        notify: [],
+      }, null, 2), "utf-8");
+
+      await expect(resolveCoverGenerationRequest({ root })).resolves.toMatchObject({
+        api: "kie",
+        baseUrl: "https://api.kie.ai",
+        model: "gpt-image-2-text-to-image",
+        apiKey: "kie-test-key",
+      });
+    } finally {
+      delete process.env.KIE_API_KEY;
+      await rm(root, { recursive: true, force: true });
+    }
+  });
+
   it("extracts OpenAI-compatible image generation URLs and base64 payloads", () => {
     expect(extractImagesGenerationImage({
       data: [{ url: "https://api.kkaiapi.com/files/img_abc123.png" }],

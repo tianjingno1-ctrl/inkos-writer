@@ -1,0 +1,26 @@
+{
+  "usage": {
+    "prompt_tokens": 558,
+    "completion_tokens": 1808,
+    "total_tokens": 2366,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "text_tokens": 558,
+      "audio_tokens": 0,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "text_tokens": 387,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 1421
+    },
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  },
+  "model": "gemini-2.5-pro",
+  "elapsed_ms": 13248
+}

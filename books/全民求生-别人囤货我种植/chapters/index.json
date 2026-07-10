@@ -1,0 +1,33 @@
+[
+  {
+    "number": 1,
+    "title": "第一颗种子",
+    "status": "ready-for-review",
+    "wordCount": 2020,
+    "createdAt": "2026-07-09T09:57:00.672Z",
+    "updatedAt": "2026-07-09T20:45:00.000Z",
+    "auditIssues": [
+      "[info] P1–P3 修订：补体感、合并绑定 UI、强化不退反种；紧急 0/3 留 ch2 开篇解释。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2020,
+      "postWriterNormalizeCount": 2020,
+      "postReviseCount": 0,
+      "finalCount": 2020,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 28138,
+      "completionTokens": 16635,
+      "totalTokens": 44773
+    }
+  }
+]

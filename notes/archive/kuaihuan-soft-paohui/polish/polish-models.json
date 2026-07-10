@@ -1,0 +1,52 @@
+{
+  "provider": "omniroute",
+  "apiBase": "https://ark.cn-beijing.volces.com/api/v3",
+  "disabled": [
+    "doubao-seed-2-0-pro-260215",
+    "doubao-seed-2-1-pro-260628"
+  ],
+  "_note": "provider=omniroute 时走本机 OmniRoute；API Key 见 OMNROUTE_API_KEY 或 ~/.config/omniroute/api-key。切回直连方舟：provider 改为 ark",
+  "models": {
+    "turbo": "doubao-seed-2-1-turbo-260628",
+    "mini": "doubao-seed-2-0-mini-260215",
+    "pro": "doubao-seed-2-1-pro-260628",
+    "character": "doubao-seed-character-260628",
+    "evolving": "doubao-seed-evolving",
+    "kimi": "kimi-k2-250905",
+    "glm": "glm-5-2-260617"
+  },
+  "omniroute": {
+    "apiBase": "http://127.0.0.1:20128/v1",
+    "apiKeyFile": "~/.config/omniroute/api-key",
+    "modelMap": {
+      "turbo": "doubao/doubao-seed-2-1-turbo-260628",
+      "character": "doubao/doubao-seed-character-260628",
+      "glm": "volcengine/glm-5-2-260617",
+      "mini": "doubao/doubao-seed-2-0-mini-260215",
+      "pro": "doubao/doubao-seed-2-1-pro-260628",
+      "evolving": "doubao/doubao-seed-evolving",
+      "kimi": "volcengine/kimi-k2-250905"
+    }
+  },
+  "inkos": {
+    "service": "custom",
+    "default": "turbo",
+    "overrides": {
+      "writer": "turbo",
+      "auditor": "glm",
+      "reviser": "glm",
+      "architect": "turbo",
+      "chapter-analyzer": "turbo",
+      "radar": "mini"
+    }
+  },
+  "polish": {
+    "instruction": "改为番茄女频快穿甜爽文风。保留【叮！】系统弹窗数字与剧情走向。保留文中「X点好感」分档标注；肢体距离须与好感档位一致（低好感不搂怀揉脸喂嘴边，高好感才可系安全带攥手腰后虚护）。",
+    "rotation": ["glm", "turbo", "character", "turbo"],
+    "keyChapters": {
+      "chapters": [31, 32, 37, 38, 39, 40],
+      "models": ["glm", "turbo"]
+    },
+    "delayMs": 2000
+  }
+}

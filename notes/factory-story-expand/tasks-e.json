@@ -1,0 +1,19 @@
+{
+  "master": "temp-revised-story-final.md",
+  "work": "work/final-latest.md",
+  "targetHan": 8500,
+  "tasks": [
+    { "id": "E01", "status": "done", "point": "围观学生搜论文+第十七页" },
+    { "id": "E02", "status": "done", "point": "笔试面试双第一+粉身碎骨章末钩" },
+    { "id": "E03", "status": "done", "point": "工友嘲笑→噤声→鼓掌" },
+    { "id": "E04", "status": "done", "point": "公屏三连击后工友改口" },
+    { "id": "E05", "status": "done", "point": "签约那天跪求复合" },
+    { "id": "E06", "status": "done", "point": "赵主任变脸+办公室反应" },
+    { "id": "E07", "status": "done", "point": "红毯媒体+董事闲语" },
+    { "id": "E08", "status": "done", "point": "应力倒计时+屏息" },
+    { "id": "E09", "status": "done", "point": "四张铁证逐条+弹幕" },
+    { "id": "E10", "status": "done", "point": "董事撤合作意向" },
+    { "id": "E11", "status": "done", "point": "回23号工位继续拧轴" },
+    { "id": "E12", "status": "done", "point": "扳手哐当+三分糖回忆" }
+  ]
+}

@@ -581,12 +581,17 @@ export function isTransientLLMHttpError(error: unknown): boolean {
   return statusHit || phraseHit;
 }
 
+function isEmptyLLMResponseError(error: unknown): boolean {
+  return collectErrorText(error).includes("LLM returned empty response");
+}
+
 function isRetryableLLMError(error: unknown): boolean {
   // PartialResponseError = 流在生成中途被掐断（网关切长连接等）。重试会完整
   // 重新生成一次，比把半截内容当成功交付（截断的章节/设定文件）要正确。
   return error instanceof PartialResponseError
     || isTransientLLMTransportError(error)
-    || isTransientLLMHttpError(error);
+    || isTransientLLMHttpError(error)
+    || isEmptyLLMResponseError(error);
 }
 
 async function withTransientLLMRetry<T>(
@@ -1202,6 +1207,22 @@ export async function chatCompletion(
     // 注意：中断的流（PartialResponseError）不再"打捞"半截内容当成功返回——
     // 那会产出写到一半就结束的章节/设定文件。重试由 withTransientLLMRetry
     // 负责（完整重新生成）；重试耗尽后如实抛错。
+    if (
+      client.stream
+      && (options?.retry ?? true)
+      && isEmptyLLMResponseError(error)
+    ) {
+      try {
+        return await chatCompletion(
+          { ...client, stream: false },
+          model,
+          messages,
+          { ...options, retry: false },
+        );
+      } catch (fallbackError) {
+        throw wrapLLMError(fallbackError, errorCtx);
+      }
+    }
     throw wrapLLMError(error, errorCtx);
   }
 }

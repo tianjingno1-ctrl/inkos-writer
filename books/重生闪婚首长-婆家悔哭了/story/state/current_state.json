@@ -1,0 +1,53 @@
+{
+  "chapter": 1,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "林晚棠与陈桂英、陆建国的正面冲突爆发，与大队治保主任王德福的潜在冲突即将到来",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "霍景深（名义上的军婚丈夫，暂未到场）",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "在柴房暂避，利用军婚身份与陆家周旋，准备清算旧账",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前位置",
+      "object": "陆家柴房",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "暂居陆家，需防范陈桂英后续使坏及大队治保主任王德福的刁难",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "主角状态",
+      "object": "重生归来，满怀恨意但保持理智，退守柴房落锁，身体因用力咬牙导致牙龈轻微渗血",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    }
+  ]
+}

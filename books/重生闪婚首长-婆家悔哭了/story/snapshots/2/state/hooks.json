@@ -1,0 +1,148 @@
+{
+  "hooks": [
+    {
+      "hookId": "H001",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "deferred",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "林晚棠和婆家彻底撕破脸时分家现场",
+      "payoffTiming": "near-term",
+      "notes": "前世林晚棠被婆家磋磨致死、还被定阴婚卖钱的真相",
+      "dependsOn": [],
+      "paysOffInArc": "第1卷中段",
+      "coreHook": true,
+      "halfLifeChapters": 10,
+      "promoted": true
+    },
+    {
+      "hookId": "H005",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "deferred",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "林晚棠刚到军属院站稳脚跟时",
+      "payoffTiming": "mid-arc",
+      "notes": "原婆家追到部队军属院撒泼闹事",
+      "dependsOn": [],
+      "paysOffInArc": "第2卷中段",
+      "coreHook": false,
+      "halfLifeChapters": 30,
+      "promoted": false
+    },
+    {
+      "hookId": "H006",
+      "startChapter": 0,
+      "type": "情感",
+      "status": "deferred",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "林晚棠和霍景深双向表白时",
+      "payoffTiming": "mid-arc",
+      "notes": "霍景深当年闪婚其实第一眼就看上了林晚棠，不是完全为了任务",
+      "dependsOn": [],
+      "paysOffInArc": "第3卷前段",
+      "coreHook": true,
+      "halfLifeChapters": 30,
+      "promoted": true
+    },
+    {
+      "hookId": "H008",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "deferred",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "全书收尾",
+      "payoffTiming": "endgame",
+      "notes": "原婆家彻底落魄，陈桂英在村口当众悔哭的场景",
+      "dependsOn": [
+        "H001"
+      ],
+      "paysOffInArc": "第4卷末",
+      "coreHook": false,
+      "halfLifeChapters": 80,
+      "promoted": true
+    },
+    {
+      "hookId": "H002",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "deferred",
+      "lastAdvancedChapter": 2,
+      "expectedPayoff": "霍景深清剿敌特任务收尾",
+      "payoffTiming": "mid-arc",
+      "notes": "霍景深真实职级是守备营营长，政审是为了清剿地方敌特的秘密",
+      "dependsOn": [],
+      "paysOffInArc": "第3卷中段",
+      "coreHook": true,
+      "halfLifeChapters": 30,
+      "promoted": true
+    },
+    {
+      "hookId": "H003",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "progressing",
+      "lastAdvancedChapter": 2,
+      "expectedPayoff": "分家现场举证",
+      "payoffTiming": "near-term",
+      "notes": "本章陈桂英亲口承认私吞林晚棠120元彩礼及180个工分，林晚棠拿到实锤证据"
+    },
+    {
+      "hookId": "H004",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "progressing",
+      "lastAdvancedChapter": 2,
+      "expectedPayoff": "村干部公开打脸现场",
+      "payoffTiming": "near-term",
+      "notes": "本章陈桂英亲口承认已提前和王支书打好招呼要污蔑林晚棠骗婚，林晚棠拿到二者徇私勾结的实锤"
+    },
+    {
+      "hookId": "H007",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "deferred",
+      "lastAdvancedChapter": 2,
+      "expectedPayoff": "敌特收网行动",
+      "payoffTiming": "slow-burn",
+      "notes": "陆建国和敌特分子有勾结，帮着传递情报的证据",
+      "dependsOn": [
+        "H002"
+      ],
+      "paysOffInArc": "第3卷末",
+      "coreHook": true,
+      "halfLifeChapters": 60,
+      "promoted": true
+    },
+    {
+      "hookId": "conflict-揭晓陈桂英后-续是否会继续-针对林晚棠使",
+      "startChapter": 2,
+      "type": "conflict",
+      "status": "open",
+      "lastAdvancedChapter": 2,
+      "expectedPayoff": "揭晓陈桂英后续是否会继续针对林晚棠使坏",
+      "payoffTiming": "near-term",
+      "notes": "陈桂英被怼退后放狠话，偷听大队部通知后幸灾乐祸，明确还会针对林晚棠"
+    },
+    {
+      "hookId": "mystery-揭晓王支书传-唤林晚棠的真-实目的",
+      "startChapter": 2,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 2,
+      "expectedPayoff": "揭晓王支书传唤林晚棠的真实目的",
+      "payoffTiming": "immediate",
+      "notes": "李长根传达王支书要求林晚棠次日上午去大队部的通知，李长根欲言又止暗示事由不善，陈桂英偷听后幸灾乐祸"
+    },
+    {
+      "hookId": "plot-揭晓霍景深来-信的具体内容-邮递员携带盖",
+      "startChapter": 2,
+      "type": "plot",
+      "status": "open",
+      "lastAdvancedChapter": 2,
+      "expectedPayoff": "揭晓霍景深来信的具体内容",
+      "payoffTiming": "immediate",
+      "notes": "邮递员携带盖有部队红戳的信件即将送达林晚棠，呼应前世信件被陈桂英扣下的伏笔"
+    }
+  ]
+}

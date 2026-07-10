@@ -1,0 +1,60 @@
+---
+description: 每轮回复末尾固定汇报模型来源、模型名与 token 用量
+alwaysApply: true
+---
+
+# 模型用量汇报（每轮必报）
+
+**每一轮回复末尾**必须附上「模型用量」小节。无 LLM 调用时也要写一行说明「本轮无 LLM 调用」。
+
+## 来源分类（固定枚举）
+
+| 来源 | 含义 |
+|------|------|
+| **Cursor Agent** | 当前 Cursor 对话里的 Agent 直接推理（含子 Agent Task） |
+| **InkOS 面板** | 用户通过 InkOS Studio UI 触发的写章/Agent（本轮 Agent 未代操时标「未参与，用户自行操作」） |
+| **InkOS CLI/脚本** | `inkos` 命令或 `scripts/*.mjs` 等走 `@actalk/inkos-core` 的 `chatCompletion` |
+| **独立接口** | `notes/`、`shorts/` 等脚本直接 `fetch` 第三方 API（未走 InkOS core） |
+| **独立 Skill** | 通过 Cursor Skill 调外部服务（如 `volcengine-ark`、`huohua-novel-creation`） |
+
+同一轮多次调用：按来源分行列出，不要合并成一行。
+
+## 必须字段
+
+每条调用记录：
+
+- **来源**（上表之一）
+- **模型**（完整 ID，如 `doubao-seed-2-0-lite-260215`；Cursor 写 `Auto` 或系统给出的 slug）
+- **Prompt tokens**
+- **Completion tokens**
+- **Total tokens**
+
+## Token 怎么拿
+
+1. **独立接口 / volcengine-ark**：API 响应 `usage` 字段（`prompt_tokens`/`completion_tokens`/`total_tokens` 或 `input_tokens`/`output_tokens`）。调用后解析并记录，不要猜。
+2. **InkOS CLI/脚本**：若脚本或日志输出 `usage`，原样引用；否则在汇报里标「未返回 usage」。
+3. **Cursor Agent**：Cursor 不向 Agent 暴露精确 token；写 **「不可用（Cursor 未暴露）」**，不要编造数字。
+4. **huohua-novel-creation**：素材检索 API，非 LLM；模型列写 **「—（检索 API）」**，token 列写 **「—」**。
+5. **InkOS 面板（未参与）**：模型/token 均写 **「—（未参与）」**。
+
+## 回复末尾格式（固定）
+
+```markdown
+---
+## 模型用量
+
+| 来源 | 模型 | Prompt | Completion | Total |
+|------|------|--------|------------|-------|
+| Cursor Agent | Auto | 不可用 | 不可用 | 不可用 |
+| 独立 Skill · volcengine-ark | doubao-seed-2-0-lite-260215 | 1234 | 567 | 1801 |
+
+**本轮合计（可统计部分）**：Prompt 1234 · Completion 567 · Total 1801
+```
+
+- 仅一行时也保留表格。
+- 有可统计 token 时加「本轮合计」；全部不可统计则写「本轮合计：无可统计项」。
+- 不要省略此节，也不要把它藏进折叠块。
+
+## 子 Agent / 并行调用
+
+Task 子 Agent 若使用了模型，在其结果汇总后一并列入上表（来源仍按实际路径标注，子 Agent 默认 **Cursor Agent**）。

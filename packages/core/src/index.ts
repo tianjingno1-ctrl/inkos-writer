@@ -415,6 +415,9 @@ export { loadSecrets, saveSecrets, getServiceApiKey, type SecretsFile } from "./
 export {
   COVER_PROVIDER_PRESETS,
   coverSecretKey,
+  coverApiKeyEnvName,
+  resolveCoverApiKeyFromEnv,
+  hasStoredCoverApiKey,
   resolveCoverProviderPreset,
   type CoverProviderId,
   type CoverProviderPreset,

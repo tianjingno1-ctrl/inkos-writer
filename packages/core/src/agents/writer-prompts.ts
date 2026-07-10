@@ -686,11 +686,11 @@ function buildNarrativePersonRule(bookRules: BookRules | null, language: "zh" | 
   if (language === "en") {
     return person === "first"
       ? "## Narrative person (hard constraint)\nWrite this book entirely in FIRST person (the protagonist's inner viewpoint). Do NOT slip into third person or an omniscient narrator — this overrides genre convention and your default."
-      : "## Narrative person (hard constraint)\nWrite this book in THIRD person.";
+      : "## Narrative person (hard constraint)\nWrite in THIRD person **limited** (tight to the protagonist's viewpoint). Do NOT use omniscient narration, god's-eye cuts, parallel scenes the POV character cannot witness, or information the POV character could not know yet.";
   }
   return person === "first"
     ? "## 叙事人称（硬约束）\n本书必须全程使用第一人称（主角内心视角）叙述，禁止切换到第三人称或全知视角——此约束优先于题材惯例与你的默认倾向。"
-    : "## 叙事人称（硬约束）\n本书使用第三人称叙述。";
+    : "## 叙事人称（硬约束）\n本书使用第三人称**限知**叙述（紧贴主角视角），禁止全知旁白、上帝视角、平行切场景、或揭露主角当下不可能知道的信息——此约束优先于题材惯例与你的默认倾向。";
 }
 
 /**
@@ -803,7 +803,7 @@ function buildPreWriteChecklist(book: BookConfig, gp: GenreProfile): string {
     `${idx++}. 【主线偏离检查】本章是否推进了主线目标？支线是否在2-3章内与核心目标关联？`,
     `${idx++}. 【爽点节奏检查】最近3-5章内是否有小爽点落地？读者的"情绪缺口"是否在积累或释放？`,
     `${idx++}. 【人设崩塌检查】角色行为是否与已建立的性格标签一致？有无无铺垫的突然转变？`,
-    `${idx++}. 【视角检查】本章视角是否清晰？同场景内说话人物是否控制在3人以内？`,
+    `${idx++}. 【视角检查】本章视角是否清晰？是否全程限知、未开上帝视角？同场景内说话人物是否控制在3人以内？`,
     `${idx++}. 如果任何问题答不上来，先补逻辑链，再写正文`,
   );
 

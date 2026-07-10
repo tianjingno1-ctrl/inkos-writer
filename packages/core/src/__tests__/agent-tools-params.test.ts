@@ -43,7 +43,7 @@ describe("SubAgentParams schema", () => {
     expect(props.format.description).toMatch(/exporter/i);
   });
 
-  it("normalizes platform aliases before sub_agent schema validation", () => {
+  it("normalizes platform aliases before sub_agent schema validation", async () => {
     const prepared = tool.prepareArguments?.({
       agent: "architect",
       instruction: "创建一本番茄都市文",
@@ -72,6 +72,15 @@ describe("SubAgentParams schema", () => {
     expect(() => validateToolArguments(tool as any, {
       name: "sub_agent",
       arguments: blankPlatform,
+    } as any)).not.toThrow();
+  });
+
+  it("accepts auditor calls without instruction when chapterNumber is provided", () => {
+    const prepared = tool.prepareArguments?.({ agent: "auditor", chapterNumber: 4 });
+    expect(prepared).toMatchObject({ agent: "auditor", chapterNumber: 4, instruction: "Audit chapter 4." });
+    expect(() => validateToolArguments(tool as any, {
+      name: "sub_agent",
+      arguments: { agent: "auditor", chapterNumber: 4 },
     } as any)).not.toThrow();
   });
 });
@@ -180,6 +189,13 @@ describe("auditor agent — rich return value", () => {
     expect(text).toContain("[warning]");
     expect(text).toContain("[critical]");
     expect(text).toContain("Pacing too fast");
+  });
+
+  it("audits without an explicit instruction", async () => {
+    const auditDraftMock = vi.fn(async () => ({ chapterNumber: 4, passed: true, issues: [] }));
+    const tool = createSubAgentTool({ auditDraft: auditDraftMock } as any, "my-book");
+    await tool.execute("tc2", { agent: "auditor", bookId: "my-book", chapterNumber: 4 });
+    expect(auditDraftMock).toHaveBeenCalledWith("my-book", 4);
   });
 });
 

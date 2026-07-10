@@ -1,0 +1,72 @@
+{
+  "hooks": [
+    {
+      "hookId": "H001",
+      "startChapter": 0,
+      "type": "世界状态",
+      "status": "resolved",
+      "lastAdvancedChapter": 1,
+      "expectedPayoff": "1",
+      "payoffTiming": "immediate",
+      "notes": "初始状态已在第1章完全展开，末世降临，苏蔓在花店，系统已绑定"
+    },
+    {
+      "hookId": "H002",
+      "startChapter": 1,
+      "type": "系统",
+      "status": "open",
+      "lastAdvancedChapter": 1,
+      "expectedPayoff": "2",
+      "payoffTiming": "immediate",
+      "notes": "园丁系统已绑定，苏蔓获得“第一颗豌豆种子”，等待在第2章种下"
+    },
+    {
+      "hookId": "H003",
+      "startChapter": 2,
+      "type": "战斗",
+      "status": "open",
+      "lastAdvancedChapter": 1,
+      "expectedPayoff": "2",
+      "payoffTiming": "immediate",
+      "notes": "玻璃门开裂，苏蔓退往后院，为第2章种下第一株豌豆藤、抵挡变异体做好了铺垫"
+    },
+    {
+      "hookId": "H013",
+      "startChapter": 60,
+      "type": "世界观",
+      "status": "open",
+      "lastAdvancedChapter": 1,
+      "expectedPayoff": "60",
+      "payoffTiming": "slow-burn",
+      "notes": "系统的种子来源线索，本章系统首次提及“异种能量入侵”与“生机值流失”"
+    },
+    {
+      "hookId": "H024",
+      "startChapter": 180,
+      "type": "世界观",
+      "status": "open",
+      "lastAdvancedChapter": 1,
+      "expectedPayoff": "180",
+      "payoffTiming": "endgame",
+      "notes": "证明不依赖系统也能维持城运转，本章老陈和苏蔓尚未接触，土壤变死土背景已成立"
+    },
+    {
+      "hookId": "章节",
+      "startChapter": 0,
+      "type": "出场人物",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "伏笔动态",
+      "notes": "章节类型"
+    },
+    {
+      "hookId": "第1章",
+      "startChapter": 0,
+      "type": "苏蔓、裴行",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "激活H002（系统绑定与种子获得）、H003（战斗危机铺垫），推进H013（世界观异能入侵）",
+      "notes": "引入/开局"
+    }
+  ]
+}

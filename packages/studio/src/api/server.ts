@@ -56,6 +56,8 @@ import {
   type PlayImageSettings,
   Scheduler,
   coverSecretKey,
+  hasStoredCoverApiKey,
+  resolveCoverApiKeyFromEnv,
   resolveCoverProviderPreset,
   SessionKindSchema,
   isExplicitWriteChapterCommand,
@@ -2963,14 +2965,13 @@ export function createStudioServer(initialConfig: ProjectConfig, root: string, o
     const llm = (config.llm as Record<string, unknown> | undefined) ?? {};
     const cover = normalizeCoverConfig(llm.cover);
     const secrets = await loadSecrets(root);
-    const keyFor = (service: string): boolean =>
-      Boolean(secrets.services[coverSecretKey(service)]?.apiKey || secrets.services[service]?.apiKey);
+    const keyFor = (service: string): boolean => hasStoredCoverApiKey(service, secrets);
     // "Configured" = a cover service is selected AND has a key, OR a cover
     // endpoint is provided via env (the CLI/power-user path). This is the gate
     // for the Play auto-illustration toggles.
     const envConfigured = Boolean(
       (process.env.INKOS_COVER_BASE_URL || process.env.INKOS_COVER_ENDPOINT)
-      && (process.env.INKOS_COVER_API_KEY || keyFor("kkaiapi")),
+      && (process.env.INKOS_COVER_API_KEY || keyFor("kkaiapi") || keyFor("kie")),
     );
     const configured = Boolean(cover?.service && keyFor(cover.service)) || envConfigured;
     return c.json({
@@ -3015,7 +3016,7 @@ export function createStudioServer(initialConfig: ProjectConfig, root: string, o
       return c.json({ error: "Unsupported cover service" }, 400);
     }
     const secrets = await loadSecrets(root);
-    return c.json({ apiKey: secrets.services[coverSecretKey(service)]?.apiKey ?? "" });
+    return c.json({ apiKey: secrets.services[coverSecretKey(service)]?.apiKey ?? resolveCoverApiKeyFromEnv(service) });
   });
 
   app.put("/api/v1/cover/secret/:service", async (c) => {

@@ -1,0 +1,85 @@
+layers:
+  - id: L1
+    name: hard_facts
+    precedence: 100
+    scope: global
+  - id: L2
+    name: author_intent
+    precedence: 80
+    scope: book
+  - id: L3
+    name: planning
+    precedence: 60
+    scope: arc
+  - id: L4
+    name: current_task
+    precedence: 70
+    scope: local
+sections:
+  hard:
+    - story_frame
+    - current_state
+    - book_rules
+    - roles
+  soft:
+    - author_intent
+    - current_focus
+    - volume_map
+  diagnostic:
+    - anti_ai_checks
+    - continuity_audit
+    - style_regression_checks
+overrideEdges:
+  - from: L4
+    to: L3
+    allowed: true
+    scope: current_chapter
+  - from: L4
+    to: L2
+    allowed: false
+    scope: current_chapter
+  - from: L4
+    to: L1
+    allowed: false
+    scope: current_chapter
+activeOverrides:
+  - from: L4
+    to: L3
+    target: chapter:1/mustAvoid
+    reason: 群戏/战斗/生活：配角与世界须真实运转，禁止工具人、禁止「主角出场才开机」；见 `story_frame.md` 与 `.cursor/rules/moshi…
+  - from: L4
+    to: L3
+    target: chapter:1/mustAvoid
+    reason: 开篇大段囤货清单
+  - from: L4
+    to: L3
+    target: chapter:1/mustAvoid
+    reason: 女主只会哭等保护
+  - from: L4
+    to: L3
+    target: chapter:1/mustAvoid
+    reason: 植物只当背景不写守家战斗
+  - from: L4
+    to: L3
+    target: chapter:1/mustAvoid
+    reason: 城镇感过早出现，仅限中后期第四卷起
+  - from: L4
+    to: L3
+    target: chapter:1/mustAvoid
+    reason: 无铺垫的高潮和巧合推进
+  - from: L4
+    to: L3
+    target: chapter:1/styleEmphasis
+    reason: '**地基**：architect 已落盘（foundation 完整）'
+  - from: L4
+    to: L3
+    target: chapter:1/styleEmphasis
+    reason: '**蓝图**：`notes/moshi-zhiwu-bootstrap/` — LOCK + 细纲 1–3 + ch01 写作指令'
+  - from: L4
+    to: L3
+    target: chapter:1/styleEmphasis
+    reason: '**当前**：第 1 章「第一颗种子」— 对照 `细纲_第001章.md` + `CH01-03-LOCK.md`'
+  - from: L4
+    to: L3
+    target: chapter:1/styleEmphasis
+    reason: '**书名**：《全民求生：别人囤货我种植》'

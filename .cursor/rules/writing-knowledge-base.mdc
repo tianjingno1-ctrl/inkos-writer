@@ -1,0 +1,121 @@
+---
+description: 维护写作知识库；自然语言反馈也触发记录；提示词必须绑定场景；写书/改稿时自动判断
+globs: notes/writing-kb/**,notes/research/**,shorts/**,novels/**,inbox/**
+alwaysApply: false
+---
+
+# 写作知识库维护
+
+用户在 `shorts/`、`novels/` 下写小说、改稿，或从 `inbox/` 导入新书时，**主动维护** `notes/writing-kb/`。
+
+**默认开启推断记录**：用户不必说「记一下」「留着」等关键词；从自然反馈判断该不该写、写到哪里。
+
+---
+
+## 推断记录（优先于关键词）
+
+### 何时写 observations/recent-operations.md
+
+完成一轮**完整或分段**写作/改稿操作后，追加一条「操作链」：
+- 触发、逐步操作、工具、用户手动胶水、摩擦、是否 sync state
+- 跨书重复步骤 → 同步更新 `synthesis/project-adjustment-backlog.md`
+
+### 何时写 session-log
+
+完成一轮有意义的写作/改稿操作，或用户表达摩擦/满意/不满时，**静默追加** `session-log/YYYY-MM-DD.md`（不必等用户说「记一下」）。
+
+### 何时写 prompts/retained.md（场景 + 提示词）
+
+用户**认可本次修改/写法**时，必须把 **场景** 和 **提示词/策略** 绑在一起写入，不能只抄一句 prompt。
+
+**认可信号（示例，不限于此）**：
+- 「这章不错」「这次改得好」「可以了」「定稿」「就这样」「比 InkOS 那版好」
+- 「这个提示词针对这次修改到位」
+- 「以后这类都这样改」
+
+**写入时必须包含的字段**（见 `prompts/retained.md` 模板）：
+- **场景**：书名、章节、任务（写章/润色/局部重写/整章重写/改对话/去 AI 味…）
+- **问题**：改之前缺什么、用户抱怨什么（用用户原话）
+- **上下文范围**：只正文 / +brief / +state / +角色卡 / 模型（豆包等）
+- **做法**：用户原话指令 + Agent 实际执行的 prompt 摘要（可引用对话）
+- **结果**：用户哪句话表示认可
+- **标签**：`#书名` `#类型` `#润色` 等
+- **可复用条件**：什么情况下再套这条（「章末钩子弱时」「对话太 AI 时」）
+
+**否定信号** → 写入 `prompts/retained.md` 底部 **「避免」** 或 session，同样要带场景：
+- 「还是不对」「太 AI 了」「改坏了」「上下文发太多反而差」
+
+### 何时写 phrases/常用改稿说法.md
+
+用户用口语描述改法且表达满意或「以后都这样」：
+- 「对话再狠一点」「别那么解释性」「火葬场再慢点」
+
+### 何时写 books/ / genres/
+
+- 本书特有偏好、工具选择、摩擦 → `books/<书名>.md`
+- 跨书共性 → `genres/<类型>.md`
+
+### 何时写 ab-test/log.md
+
+对比 InkOS vs Cursor，或用户明确偏好某一侧，或 infer  from「InkOS 写的更好/你改的更好」。
+
+### 何时写 materials/spark-cache.md
+
+用户认可某桥段/参考/火花检索结果，或说「这个素材好」「以后写 XX 用这段」。
+
+### 何时写 research/题材验证
+
+试写完成且用户表达「这题材能写/不想写了/手感如何」。
+
+### 仍需用户明确才做的（不推断）
+
+- **「可以总结了」** → `synthesis/workflow-patterns.md`（读 observations + session + backlog）
+- **「总结 A/B」** → `synthesis/ab-conclusion.md`
+
+---
+
+## 关键词（仍有效，与推断并存）
+
+| 用户说 | 动作 |
+|--------|------|
+| 记一下 | 强制追加 session（即使用户没说满意/不满） |
+| 这条提示词留着 | 强制写入 retained（仍须带场景） |
+| 沉淀素材 | 火花 → spark-cache |
+| 题材验证记一下 | 更新验证清单 |
+
+---
+
+## 火花素材 · Agent 判断
+
+1. 写章/改稿：先读 `materials/spark-cache.md` 按标签匹配
+2. 不够：huohua-novel-creation skill
+3. 用户认可或 infer 素材有用 → spark-cache + 场景
+4. 改稿仍少上下文；不把全书规则塞进润色 prompt
+
+## 题材验证 · Agent 判断
+
+开书读 research；试写完成且用户有结论时更新验证记录。
+
+## session 每条最少
+
+- 书名、章节、工具（InkOS/Cursor/豆包）
+- 用户原话
+- 摩擦或满意点
+- state 是否同步
+
+## 沉淀规则
+
+- 认可且可复用 → `prompts/retained.md`（**场景绑定**）
+- 重复步骤 → 日后 synthesis
+- 本书 / 类型 → books / genres
+
+## 不要
+
+- 不要只记 prompt 不记场景
+- 不要编造用户没说的认可
+- 每次写入后 **不必打断用户** 汇报「已记录」；可在本轮任务结束时一句带过，或用户问再说
+- 不要改 `shorts/` 正文，除非用户明确要求
+
+## 索引
+
+有新增书/类型/总结时更新 `notes/writing-kb/INDEX.md`。

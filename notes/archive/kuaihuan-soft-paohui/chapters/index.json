@@ -1,0 +1,1239 @@
+[
+  {
+    "number": 1,
+    "title": "疯批霸总那个戏精软妹（1）",
+    "status": "audit-failed",
+    "wordCount": 2207,
+    "createdAt": "2026-07-02T09:48:06.082Z",
+    "updatedAt": "2026-07-06T09:44:59.910Z",
+    "auditIssues": [
+      "[critical] memo 明确要求「章尾必须发生的改变」包含三项：信息改变（苏晚掌握原主记忆+即将霸凌剧情）、物理改变（系统面板激活可见）、权力改变（获得系统支持与躺赢积分机制）。成稿兑现了前两项，但第三项「权力改变」仅体现为被动接收系统任务，缺少苏晚主动确认「拥有改写原主死局的可能性」这一关键心理转变。她在章尾只是「已经有了主意」，但没有明确展现「我现在有能力/资源去改变这一切」的权力感知。",
+      "[critical] memo 要求「苏晚本章最关键的一次选择：接受系统任务，决定不按原主路线硬刚，而是用软萌人设反向操作」，并通过「关键抉择三连问」确认动机、利益、人设一致性。成稿中苏晚做出了这个选择（在楼梯口装柔弱），但缺少明确的内心决策过程。她只是「腹诽，面上却半分没露」，读者看不到她为什么选择装弱而非其他策略（比如直接揭穿、或向管家求助）。三连问的推理过程完全缺失，导致这个关键选择显得本能化而非战略化。",
+      "[warning] memo 声明在 open 中新增伏笔「傅景深何时登场、会如何对苏晚出手」和「林薇薇明天的栽赃计划具体是什么」，但成稿中这两个悬念的埋设强度不足。傅景深只在玄关远景出现一次，苏晚「今天不能和他正面接触」的决定缺少足够的悬念张力（读者不知道为什么必须等到明天）；林薇薇的栽赃计划虽然通过系统提示和原主记忆交代了，但章尾苏晚「已经有了主意」过于笼统，读者不清楚她具体打算怎么反击，悬念钩子不够锋利。",
+      "[warning] 成稿中苏晚化解推人危机后，系统奖励+5积分，但爽点落地不够实在。一是积分数值太小（5/1000000），进度条几乎看不见移动；二是奖励发放时没有配合苏晚的情绪反应或内心吐槽，导致这个「首次危机化解」的成就感被数字冲淡了。对比 memo 中 hook-6「苏晚内心吐槽系统好感度才5分也太抠了」的设定，这里完全没有类似的反差笑点来强化爽感。",
+      "[warning] 成稿前半段「穿越眩晕→系统激活→接收记忆→楼梯危机」节奏紧凑，但化解危机后到章尾的过渡段（林薇薇扶她出门→站在大门外看系统面板→回忆明天计划→看傅家灯光）节奏突然松弛，连续4段都是苏晚单方面的内心活动或系统信息展示，缺少新的冲突刺激或悬念升级。读者刚被楼梯推人的紧张感抓住，紧接着进入了一段偏静态的信息消化期,容易产生「刚爽完就停下来喘气」的疲软感。",
+      "[info] 高疲劳词出现:「一股」(后颈突然传来一股大力)、「不禁」虽未直接出现但「半分没露」「没有半分委屈」中「半分」重复使用。AI标记词「瞬间」出现2次(「眼眶瞬间泛起血色」「下一秒」),密度未超标但需注意。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2596,
+      "postWriterNormalizeCount": 0,
+      "postReviseCount": 2207,
+      "finalCount": 2207,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    }
+  },
+  {
+    "number": 2,
+    "title": "疯批霸总那个戏精软妹（2）",
+    "status": "ready-for-review",
+    "wordCount": 2877,
+    "createdAt": "2026-07-02T09:49:25.959Z",
+    "updatedAt": "2026-07-06T09:56:58.335Z",
+    "auditIssues": [
+      "[info] AI标记词密度略高:全文3216字中出现'忽然'3次、'居然'2次、'唰地'2次,平均每1072字1次,接近warning阈值(每3000字1次)。虽未超标但需注意控制。",
+      "[info] 苏晚内心OS中有一处跳出场景:'戏演得差不多了,该收网了'——虽然符合白切黑人设,但memo要求'不要跳出来讲规则',这句略显总结性,可更贴近当前情境。",
+      "[info] 傅景深出现到离开的段落节奏略显仓促:从教室门口→扣腕→递协议→留号码→转身走,整个过程不到200字,与前面栽赃反杀的详细铺陈(约2000字)形成节奏落差。虽然memo要求'部分兑现'不掀开动机,但当前写法让这个关键转折点略显匆忙。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2408,
+      "postWriterNormalizeCount": 0,
+      "postReviseCount": 2877,
+      "finalCount": 2877,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    }
+  },
+  {
+    "number": 3,
+    "title": "疯批霸总那个戏精软妹（3）",
+    "status": "imported",
+    "wordCount": 3288,
+    "createdAt": "2026-07-02T09:50:40.706Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": []
+  },
+  {
+    "number": 4,
+    "title": "疯批霸总那个戏精软妹（4）",
+    "status": "imported",
+    "wordCount": 4780,
+    "createdAt": "2026-07-02T09:52:09.933Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": []
+  },
+  {
+    "number": 5,
+    "title": "疯批霸总那个戏精软妹（5）",
+    "status": "imported",
+    "wordCount": 2781,
+    "createdAt": "2026-07-02T09:53:29.316Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": []
+  },
+  {
+    "number": 6,
+    "title": "疯批霸总那个戏精软妹（6）",
+    "status": "ready-for-review",
+    "wordCount": 4159,
+    "createdAt": "2026-07-03T12:04:16.418Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 本章出现2次AI高频词「仿佛」，字数约6000字刚好卡在阈值线，无实质影响",
+      "[warning] 最近3章章节类型持续停留在“爽点推进、任务更新、冲突升级”，长篇节奏可能开始固化。",
+      "[warning] 最近标题持续围绕“傅总”命名（当前窗口命中3次），命名开始坍缩。",
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：新伏笔-林薇薇父亲挪用资助款（中程，可回收）。",
+      "[warning] 本章新开了 2 个伏笔，但没有回收任何旧债。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2298,
+      "postWriterNormalizeCount": 2298,
+      "postReviseCount": 0,
+      "finalCount": 2298,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 48131,
+      "completionTokens": 13037,
+      "totalTokens": 61168
+    }
+  },
+  {
+    "number": 7,
+    "title": "疯批霸总那个戏精软妹（7）",
+    "status": "ready-for-review",
+    "wordCount": 3935,
+    "createdAt": "2026-07-03T12:12:59.841Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 本章苏晚白切黑反差人设、傅景深护短疯批人设均表现到位，可在后续章节适当补充傅景深记忆碎片闪回的细节，进一步强化二人灵魂羁绊的铺垫"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2902,
+      "postWriterNormalizeCount": 2902,
+      "postReviseCount": 0,
+      "finalCount": 2902,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 49321,
+      "completionTokens": 11297,
+      "totalTokens": 60618
+    }
+  },
+  {
+    "number": 8,
+    "title": "疯批霸总那个戏精软妹（8）",
+    "status": "ready-for-review",
+    "wordCount": 3443,
+    "createdAt": "2026-07-03T12:21:16.334Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 章尾顾明山出场缺乏前置铺垫，略显突兀"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2354,
+      "postWriterNormalizeCount": 2354,
+      "postReviseCount": 0,
+      "finalCount": 2354,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 46514,
+      "completionTokens": 11590,
+      "totalTokens": 58104
+    }
+  },
+  {
+    "number": 9,
+    "title": "疯批霸总那个戏精软妹（9）",
+    "status": "ready-for-review",
+    "wordCount": 3232,
+    "createdAt": "2026-07-03T16:02:51.454Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 本章出现傅景深好感度从80升至85的设定，但未同步说明原80为阶段性任务满值、当前好感度上限已解锁至100，可能导致读者产生认知困惑。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2820,
+      "postWriterNormalizeCount": 2820,
+      "postReviseCount": 0,
+      "finalCount": 2820,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 47003,
+      "completionTokens": 13038,
+      "totalTokens": 60041
+    }
+  },
+  {
+    "number": 10,
+    "title": "疯批霸总那个戏精软妹（10）",
+    "status": "ready-for-review",
+    "wordCount": 3217,
+    "createdAt": "2026-07-03T16:10:48.717Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 文中出现与前章重复的比喻表述「软得像棉花糖」变体，章尾「好戏，才刚刚开场」与第7章章尾「好戏，这就开场了」句式高度相似，存在轻度词汇/句式重复风险",
+      "[info] 当前连续4章（6-9章）均为爽点/冲突推进类章节，本章为过渡后效章，后续若间隔过久未安排新冲突可能导致读者期待感回落",
+      "[warning] 章节标题\"遇绑架装柔弱摇人？软妹躺赢定搬家行程！\"已自动调整为\"苏晚\"。",
+      "[warning] 最近3章章节类型持续停留在“爽点兑现章、剧情推进章”，长篇节奏可能开始固化。",
+      "[warning] 最近标题持续围绕“躺赢”命名（当前窗口命中3次），命名开始坍缩。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2707,
+      "postWriterNormalizeCount": 2707,
+      "postReviseCount": 0,
+      "finalCount": 2707,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 45266,
+      "completionTokens": 12004,
+      "totalTokens": 57270
+    }
+  },
+  {
+    "number": 11,
+    "title": "疯批霸总那个戏精软妹（11）",
+    "status": "ready-for-review",
+    "wordCount": 3679,
+    "createdAt": "2026-07-03T16:19:46.337Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 最近4章（第8-11章）均为爽点兑现+剧情推进类型，爽点密度较高，存在轻微的审美疲劳风险",
+      "[warning] 最近4章章节类型持续停留在“爽点兑现章、剧情推进章”，长篇节奏可能开始固化。",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中3次），命名开始坍缩。",
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：冲突伏笔-林薇薇后续报复（近期，已逾期）。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2654,
+      "postWriterNormalizeCount": 2654,
+      "postReviseCount": 0,
+      "finalCount": 2654,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 49081,
+      "completionTokens": 11471,
+      "totalTokens": 60552
+    }
+  },
+  {
+    "number": 12,
+    "title": "疯批霸总那个戏精软妹（12）",
+    "status": "ready-for-review",
+    "wordCount": 2831,
+    "createdAt": "2026-07-04T02:11:06.402Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 章尾对林薇薇出场的处理在系统提示基础上增加了已进入傅家大门、正向客厅走来的视觉化描写，略超出memo原定的「仅提示抵达门外报备」的要求，但未违反「不许林薇薇本章闯进来闹事」的禁令，反而强化了章末悬念",
+      "[warning] 章节标题\"露胎记引张妈吐实锤？软妹躺拿书房权限！\"已自动调整为\"苏晚\"。",
+      "[warning] 最近4章章节类型持续停留在“爽点兑现章、剧情推进章”，长篇节奏可能开始固化。",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。",
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：conflict-顾明山的后续-绑架计划被苏-晚和傅景深联（近期，可回收）。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2592,
+      "postWriterNormalizeCount": 2592,
+      "postReviseCount": 0,
+      "finalCount": 2592,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 51067,
+      "completionTokens": 12456,
+      "totalTokens": 63523
+    }
+  },
+  {
+    "number": 13,
+    "title": "疯批霸总那个戏精软妹（13）",
+    "status": "ready-for-review",
+    "wordCount": 3828,
+    "createdAt": "2026-07-04T02:20:28.294Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[warning] 近期连续6章（第8-13章）均为「爽、甜、紧绷/爽点兑现章、剧情推进章」类型，长时间停留在强冲突爽点释放模式，缺乏过渡/喘息章节调剂，容易造成读者审美疲劳。章节类型序列：8:爽点兑现/剧情推进 |9:爽点兑现/剧情推进 |10:爽点兑现/剧情推进 |11:爽点兑现/剧情推进 |12:爽点兑现/剧情推进 |13:爽点兑现/剧情推进",
+      "[info] 支线「顾明山的后续绑架计划」最近一次推进为第11章苏晚发挑衅短信公开对立，截至第13章已连续2章未出现实质进展，暂时处于沉寂状态",
+      "[warning] 章节标题\"上门栽赃带假证据？软妹借疯批赶人！\"已自动调整为\"苏晚窝\"。",
+      "[warning] 最近4章章节类型持续停留在“爽点兑现章、剧情推进章”，长篇节奏可能开始固化。",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。",
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：conflict-顾明山的后续-绑架计划被苏-晚和傅景深联（近期，可回收）。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2635,
+      "postWriterNormalizeCount": 2635,
+      "postReviseCount": 0,
+      "finalCount": 2635,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 48772,
+      "completionTokens": 11249,
+      "totalTokens": 60021
+    }
+  },
+  {
+    "number": 14,
+    "title": "疯批霸总那个戏精软妹（14）",
+    "status": "ready-for-review",
+    "wordCount": 2742,
+    "createdAt": "2026-07-04T02:29:14.370Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 近期第9-14章连续6章均为爽点兑现/剧情推进类章节，爽点密集但无喘息过渡段，长期延续同类型易引发读者审美疲劳",
+      "[warning] 最近4章章节类型持续停留在“爽点兑现章、剧情推进章”，长篇节奏可能开始固化。",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2693,
+      "postWriterNormalizeCount": 2693,
+      "postReviseCount": 0,
+      "finalCount": 2693,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 49639,
+      "completionTokens": 12918,
+      "totalTokens": 62557
+    }
+  },
+  {
+    "number": 15,
+    "title": "疯批霸总那个戏精软妹（15）",
+    "status": "ready-for-review",
+    "wordCount": 2896,
+    "createdAt": "2026-07-04T05:31:50.647Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[warning] 近期连续6章（第10-15章）均为「爽、甜、紧绷」属性的爽点兑现/剧情推进章，章节类型同质化明显，长期维持同一种叙事模式易拉平整体节奏，消耗读者情绪阈值",
+      "[info] 本章「软乎乎」一词累计出现4次，属于高频重复表述，供Polisher优化参考",
+      "[warning] 章节标题\"转身撞见疯批？软妹拿坠定反击！\"已自动调整为\"苏晚\"。",
+      "[warning] 最近4章章节类型持续停留在“爽点兑现章、剧情推进章”，长篇节奏可能开始固化。",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。",
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：conflict-顾明山的后续-绑架计划被苏-晚和傅景深联（近期，已逾期）。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2584,
+      "postWriterNormalizeCount": 2584,
+      "postReviseCount": 0,
+      "finalCount": 2584,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 49502,
+      "completionTokens": 14112,
+      "totalTokens": 63614
+    }
+  },
+  {
+    "number": 16,
+    "title": "疯批霸总那个戏精软妹（16）",
+    "status": "ready-for-review",
+    "wordCount": 3405,
+    "createdAt": "2026-07-04T05:40:04.039Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[warning] 主角累计躺赢积分数值存在矛盾：第15章结尾累计积分为7700，本章完成T014支线进度奖励500积分、回收H003伏笔奖励300积分，合计应更新为8500，成稿中误写为8200，与前文状态不一致。",
+      "[info] 本章高疲劳词、AI标记词密度为0，符合规范要求，无需修改。",
+      "[warning] 章节标题\"带记者演假道歉？软妹套话拿实锤！\"已自动调整为\"傅景\"。",
+      "[warning] 最近4章章节类型持续停留在“爽点兑现章、剧情推进章”，长篇节奏可能开始固化。",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。",
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：关系伏笔-傅景深对苏晚好感度（近期，已逾期）、conflict-顾明山的后续-绑架计划被苏-晚和傅景深联（近期，已逾期）、world-rule-剧情偏移度进-一步扩大-原书剧情彻底（近期，已逾期）。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2571,
+      "postWriterNormalizeCount": 2571,
+      "postReviseCount": 0,
+      "finalCount": 2571,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 50074,
+      "completionTokens": 12126,
+      "totalTokens": 62200
+    }
+  },
+  {
+    "number": 17,
+    "title": "疯批霸总那个戏精软妹（17）",
+    "status": "ready-for-review",
+    "wordCount": 3074,
+    "createdAt": "2026-07-04T05:48:29.837Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 文中出现1次高疲劳词「不敢置信」，符合每3000字不超过1次的密度要求，仅供Polisher优化参考。",
+      "[warning] 最近4章章节类型持续停留在“爽点兑现章、剧情推进章”，长篇节奏可能开始固化。",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2791,
+      "postWriterNormalizeCount": 2791,
+      "postReviseCount": 0,
+      "finalCount": 2791,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 49071,
+      "completionTokens": 15115,
+      "totalTokens": 64186
+    }
+  },
+  {
+    "number": 18,
+    "title": "疯批霸总那个戏精软妹（18）",
+    "status": "ready-for-review",
+    "wordCount": 3039,
+    "createdAt": "2026-07-04T06:33:53.582Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[warning] 本章系统提示傅景深好感度当前为70/100，与第17章明确标注的「傅景深好感度100/100触发专属保护机制」的既定状态冲突，存在数值矛盾",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。",
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：mystery-查明林薇薇顶-替苏晚资助名-额的完整隐情（中程，可回收）。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2445,
+      "postWriterNormalizeCount": 2445,
+      "postReviseCount": 0,
+      "finalCount": 2445,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 49563,
+      "completionTokens": 9733,
+      "totalTokens": 59296
+    }
+  },
+  {
+    "number": 19,
+    "title": "疯批霸总那个戏精软妹（19）",
+    "status": "ready-for-review",
+    "wordCount": 3452,
+    "createdAt": "2026-07-04T06:43:24.589Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 前文设定苏晚脚踝未愈，本章描写苏晚行走场景时未呼应该设定，细节连贯性略有不足",
+      "[warning] 章节标题\"当众放U盘爆黑料？软妹递锤送他进局子！\"已自动调整为\"京大\"。",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2732,
+      "postWriterNormalizeCount": 2732,
+      "postReviseCount": 0,
+      "finalCount": 2732,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 47183,
+      "completionTokens": 15215,
+      "totalTokens": 62398
+    }
+  },
+  {
+    "number": 20,
+    "title": "疯批霸总那个戏精软妹（20）",
+    "status": "ready-for-review",
+    "wordCount": 2874,
+    "createdAt": "2026-07-04T06:52:12.167Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 苏晚躲在傅景深身后装娇软的细节可进一步丰富，强化人设反差感，该调整归Polisher处理，不影响结构合规性",
+      "[info] 全文约3200字，无违规高疲劳/AI标记词，仅非高疲劳词「瞬间」出现3次，存在轻微重复可能，供Polisher参考",
+      "[warning] 章节标题\"遭持械绑架围堵？软妹躲疯批身后躺赢！\"已自动调整为\"傍晚\"。",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2322,
+      "postWriterNormalizeCount": 2322,
+      "postReviseCount": 0,
+      "finalCount": 2322,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 44940,
+      "completionTokens": 11074,
+      "totalTokens": 56014
+    }
+  },
+  {
+    "number": 21,
+    "title": "疯批霸总那个戏精软妹（21）",
+    "status": "ready-for-review",
+    "wordCount": 1997,
+    "createdAt": "2026-07-04T07:10:59.181Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[warning] 前文明确设定苏晚颈侧胎记为浅粉色月牙形，与傅家翡翠坠的月牙纹路对应，本章错误描述为淡粉色桃花胎记，与既有设定冲突",
+      "[warning] 第20章匿名彩信中的福利院背景为南城郊区福利院，本章傅景深提及的童年福利院为城西福利院，地点设定不一致",
+      "[info] 本章承接第20章迈巴赫后座的场景，未提及车辆行驶、下车的过渡情节，直接跳转至傅家老宅门口，场景切换略生硬",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2260,
+      "postWriterNormalizeCount": 2260,
+      "postReviseCount": 0,
+      "finalCount": 2260,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 44921,
+      "completionTokens": 12912,
+      "totalTokens": 57833
+    }
+  },
+  {
+    "number": 22,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "疯批榜一那个心机编导（1）"
+  },
+  {
+    "number": 23,
+    "title": "疯批榜一那个心机编导（2）",
+    "status": "ready-for-review",
+    "wordCount": 3772,
+    "createdAt": "2026-07-04T08:52:58.272Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[warning] 本章开篇直接跳转至乘车前往直播间的场景，与上一章结尾停留在星野直播总部18层化妆间的内容衔接略显生硬，场景跳转缺乏必要过渡逻辑",
+      "[info] 本章补全原主曾是女团成员、被构陷雪藏的前情，但未说明该经历与上一章提及的「勤工俭学当沈野助理」身份的关联，部分读者可能产生困惑",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。",
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：mystery-查明林薇薇顶-替苏晚资助名-额的完整隐情（中程，已逾期）。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2973,
+      "postWriterNormalizeCount": 2973,
+      "postReviseCount": 0,
+      "finalCount": 2973,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 43040,
+      "completionTokens": 12207,
+      "totalTokens": 55247
+    }
+  },
+  {
+    "number": 24,
+    "title": "疯批榜一那个心机编导（3）",
+    "status": "ready-for-review",
+    "wordCount": 3202,
+    "createdAt": "2026-07-04T09:00:56.393Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[warning] 本章全文约4800字，共出现2次AI标记高疲劳词「猛地」，超出每3000字最多1次的密度要求，易增加AI写作痕迹。",
+      "[warning] 检测到极端暴力词：\"活剥\"×1",
+      "[warning] 章节标题\"当场堵交易抓现行？软妹躺赢收实锤！\"已自动调整为\"苏晚窝\"。",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。",
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：mystery-查明林薇薇顶-替苏晚资助名-额的完整隐情（中程，已逾期）。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2668,
+      "postWriterNormalizeCount": 2668,
+      "postReviseCount": 0,
+      "finalCount": 2668,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 51062,
+      "completionTokens": 10155,
+      "totalTokens": 61217
+    }
+  },
+  {
+    "number": 25,
+    "title": "疯批榜一那个心机编导（4）",
+    "status": "ready-for-review",
+    "wordCount": 2397,
+    "createdAt": "2026-07-04T09:28:18.127Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 本章memo的Arc Context字段误写入第一世界卷纲节点内容（苏晚完成豪门虐文炮灰逆袭，傅景深好感100/100，累计积分30000，【本世界·完】），与当前第二世界的剧情背景不符，属于memo笔误，不影响成稿内容。",
+      "[info] 第一世界的林薇薇栽赃、傅景深好感度、原书男主顾言泽等支线已沉寂超过3章（自第21章第一世界完结后未提及），符合完结支线的沉寂状态，无剧情偏差。",
+      "[warning] 章节标题\"撞见破解加密文件？软妹装怕涨疯批好感！\"已自动调整为\"沈氏\"。",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。",
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：冲突伏笔-林薇薇后续报复（近期，已逾期）、mystery-查明林薇薇顶-替苏晚资助名-额的完整隐情（中程，已逾期）。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2623,
+      "postWriterNormalizeCount": 2623,
+      "postReviseCount": 0,
+      "finalCount": 2623,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 47633,
+      "completionTokens": 13704,
+      "totalTokens": 61337
+    }
+  },
+  {
+    "number": 26,
+    "title": "疯批榜一那个心机编导（5）",
+    "status": "audit-failed",
+    "wordCount": 2620,
+    "createdAt": "2026-07-04T09:38:53.615Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 傅景深好感度培养、林薇薇栽赃打脸等上一世界关联支线已沉寂超过20章，本章仅通过凶手供词提及开学典礼相关伏笔，暂未实质推进",
+      "[critical] memo 在 advance/resolve 里声明要处理 conflict-揭晓林茶发送加密短信的，但正文没有对应的落地动作",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2699,
+      "postWriterNormalizeCount": 2699,
+      "postReviseCount": 0,
+      "finalCount": 2699,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 77564,
+      "completionTokens": 22662,
+      "totalTokens": 100226
+    }
+  },
+  {
+    "number": 27,
+    "title": "疯批榜一那个心机编导（6）",
+    "status": "ready-for-review",
+    "wordCount": 2416,
+    "createdAt": "2026-07-04T09:50:43.827Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 系统临时修正上一章数值波动的段落表述稍显生硬，可适当优化过渡逻辑，避免读者产生数值跳脱感",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2389,
+      "postWriterNormalizeCount": 2514,
+      "postReviseCount": 2514,
+      "finalCount": 2514,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 70669,
+      "completionTokens": 15592,
+      "totalTokens": 86261
+    }
+  },
+  {
+    "number": 28,
+    "title": "疯批榜一那个心机编导（7）",
+    "status": "ready-for-review",
+    "wordCount": 2223,
+    "createdAt": "2026-07-04T10:05:21.830Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 第27章正文未明确落地「苏晚整理行李时撞见傅景深现身」的情节，本章开篇提及「前半小时她刚收拾完行李转头就撞见人站在楼梯口」缺少对应前文支撑，易让读者产生跳跃感",
+      "[info] H012林薇薇栽赃支线已连续6章无推进，当前处于defer状态，建议后续章节根据节奏安排适时回收",
+      "[warning] 章节标题\"两疯批暗地较劲？软妹躺赢定战袍！\"已自动调整为\"苏晚捧\"。",
+      "[warning] 最近标题持续围绕“软妹”命名（当前窗口命中4次），命名开始坍缩。",
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：H012（中程，已逾期）、H026（中程，陈旧）。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 3038,
+      "postWriterNormalizeCount": 3096,
+      "postReviseCount": 3096,
+      "finalCount": 3096,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 78323,
+      "completionTokens": 19155,
+      "totalTokens": 97478
+    }
+  },
+  {
+    "number": 29,
+    "title": "疯批榜一那个心机编导（8）",
+    "status": "ready-for-review",
+    "wordCount": 1717,
+    "createdAt": "2026-07-04T10:15:02.679Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 章尾沈野与傅景深同时拎着草莓冰淇淋上门的情节，缺少两人什么时候外出购买的过渡铺垫，逻辑上略感突兀",
+      "[warning] 章节标题\"故意泄露假设计？两疯批抢蛋糕当众掐架！\"已自动调整为\"盛夏\"。",
+      "[warning] 最近标题持续围绕“疯批”命名（当前窗口命中3次），命名开始坍缩。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2742,
+      "postWriterNormalizeCount": 2742,
+      "postReviseCount": 0,
+      "finalCount": 2742,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 52130,
+      "completionTokens": 15149,
+      "totalTokens": 67279
+    }
+  },
+  {
+    "number": 30,
+    "title": "疯批榜一那个心机编导（9）",
+    "status": "ready-for-review",
+    "wordCount": 1694,
+    "createdAt": "2026-07-04T10:23:57.380Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 文中「瞬间」表述出现频次略高，不属于规则明确标记的高疲劳词范围，仅作Polisher优化参考",
+      "[warning] 最近标题持续围绕“疯批”命名（当前窗口命中3次），命名开始坍缩。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 3397,
+      "postWriterNormalizeCount": 3397,
+      "postReviseCount": 0,
+      "finalCount": 3397,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 58661,
+      "completionTokens": 12504,
+      "totalTokens": 71165
+    }
+  },
+  {
+    "number": 31,
+    "title": "疯批榜一那个心机编导（10）",
+    "status": "ready-for-review",
+    "wordCount": 1632,
+    "createdAt": "2026-07-04T11:44:38.673Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[info] 风格强调项要求本章落地「软糖工作室（舞美+野烬视觉）」设定，当前成稿未提及该内容"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2731,
+      "postWriterNormalizeCount": 2731,
+      "postReviseCount": 0,
+      "finalCount": 2731,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 44436,
+      "completionTokens": 10325,
+      "totalTokens": 54761
+    }
+  },
+  {
+    "number": 32,
+    "title": "疯批榜一那个心机编导（11）",
+    "status": "ready-for-review",
+    "wordCount": 2282,
+    "createdAt": "2026-07-04T11:52:00.000Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [
+      "below soft min"
+    ],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 1178,
+      "postWriterNormalizeCount": 1178,
+      "postReviseCount": 0,
+      "finalCount": 1178,
+      "normalizeApplied": false,
+      "lengthWarning": true
+    },
+    "tokenUsage": {
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "totalTokens": 0
+    }
+  },
+  {
+    "number": 33,
+    "title": "疯批榜一那个心机编导（12）",
+    "status": "audit-failed",
+    "wordCount": 1087,
+    "createdAt": "2026-07-04T12:44:28.343Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[critical] 积分数值严重不一致。第32章结尾明确写道「累计50200/1000000」，但第33章系统提示为「当前积分41200」，与上一章末尾差了9000积分。按正文逻辑50200+3000（线索回收奖励）应为53200，而非41200。状态卡积分链也标注Ch33=52200，与正文41200同样不符。这是跨章连续性的硬伤，读者会直接发现积分倒退。",
+      "[warning] 好感度增加量与当前值不匹配。32章结尾沈野好感度为90/100，33章系统提示「沈野好感度+12，当前95/100」，但90+12=102≠95。实际应为+5（90→95）。+12的数值可能误用了83（31章好感）作为基数计算。",
+      "[warning] 信息重复：第32章结尾小周已在书房向沈野汇报「查到了秃鹫在南城的新落脚点」，但33章中沈野再次主动问小周「秃鹫的落脚点查到了吗？」，小周回答「查到了，在南城郊区的一个废弃仓库里」。同一信息在两章中被当作首次汇报处理，时间线衔接出现矛盾。32章结尾的书房场景与33章的车库场景如果发生在同一晚，沈野不应再重复询问已知信息。",
+      "[warning] 小周内心独白突兀切入：「他们家沈总什么时候碰过女人的手？别说碰了，连靠近三米之内都要冷着脸把人赶走，现在居然主动握人家小姑娘的手？」——前文一直跟随苏晚视角，此处突然切到小周的内心评价，缺乏过渡标记，读者会感到视角跳跃。",
+      "[info] 本章作为32章爆发后的后效章，功能完整：展示了爆发影响（赵坤身份确认）、推进了线索（沈父案）、埋了新hook（旧照、傅景深登门）。但沈野在章尾突然回忆「在京大校门口看到苏晚蹲在地上喂流浪猫」——这个初遇场景此前未在任何章节中建立过，属于首次出现却以回忆形式呈现，读者会困惑这是什么时候发生的事。",
+      "[info] 「指尖」一词在本章出现频率较高（约8次以上），「冷下来/冷了」也反复出现。属文笔层面问题，不计入结构评分，供Polisher参考。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 3249,
+      "postWriterNormalizeCount": 3249,
+      "postReviseCount": 0,
+      "finalCount": 3249,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 58313,
+      "completionTokens": 46733,
+      "totalTokens": 105046
+    }
+  },
+  {
+    "number": 34,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "疯批榜一那个心机编导（13）"
+  },
+  {
+    "number": 35,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "疯批榜一那个心机编导（14）"
+  },
+  {
+    "number": 36,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "疯批榜一那个心机编导（15）"
+  },
+  {
+    "number": 37,
+    "title": "偏执学神那个戏精贫困生（1）",
+    "status": "ready-for-review",
+    "wordCount": 2419,
+    "createdAt": "2026-07-04T13:00:26.674Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[warning] 跨章积分数字矛盾。第36章结尾已明确写出'躺赢积分68200'（含系统报数'距离一百万退休还差331800'），且主线任务奖励标为10000；第37章又从38200起算，结算明细合计30000跳到68200，且主线任务奖励变为12000。两章对同一笔结算的基数、奖励拆分和时序表述不一致，读者会产生'上一章已经到68200了，这章怎么又从38200开始算'的困惑。",
+      "[info] 原文'只有四个字：别乱跑'——'别乱跑'实际为三个字，属事实性笔误。此为文笔/校对层面问题，不计入结构扣分，供 Polisher 修正。",
+      "[info] 本章为世界切换过渡章，节奏波形完整（蓄压→信息释放→新蓄压），章尾hook有效。但结算段落信息密度较高、节奏偏快，新世界原主记忆以大段叙述呈现，读者吸收压力较大。作为过渡章可接受，仅作记录。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2419,
+      "postWriterNormalizeCount": 2419,
+      "postReviseCount": 0,
+      "finalCount": 2419,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 45436,
+      "completionTokens": 38829,
+      "totalTokens": 84265
+    }
+  },
+  {
+    "number": 38,
+    "title": "偏执学神那个戏精贫困生（2）",
+    "status": "audit-failed",
+    "wordCount": 3122,
+    "createdAt": "2026-07-04T13:20:29.411Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [
+      "[warning] 陆烬给手下发消息写'查高一（3）班苏晚'，但第37章原主记忆明确交代苏晚是'市一中高二的转学生'，陆烬本人也被标注为高二学生。年级信息前后矛盾，会导致读者对苏晚年级产生混淆。",
+      "[info] AI标记词'猛地'在本章出现4次（'肩膀猛地一抖'、'手猛地顿在半空'、'猛地缩回手'、'苏晚猛地抬头'），约2800字内密度超过每3000字1次的阈值。供Polisher参考替换。",
+      "[info] 章尾从苏晚视角硬切到夏梦瑶视角（梧桐树下打电话）再硬切到陆烬视角（楼梯间查怀表），最后切回苏晚（收到短信），三次视角转换均无过渡句衔接。虽然这些场景是memo要求的open hook所必需的，但硬切略显生硬。",
+      "[critical] memo 在 advance/resolve 里声明要处理 mystery-揭开灰色-别乱跑-窗口的，但正文没有对应的落地动作"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 3122,
+      "postWriterNormalizeCount": 3122,
+      "postReviseCount": 0,
+      "finalCount": 3122,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 77309,
+      "completionTokens": 48097,
+      "totalTokens": 125406
+    }
+  },
+  {
+    "number": 39,
+    "title": "偏执学神那个戏精贫困生（3）",
+    "status": "draft",
+    "wordCount": 0,
+    "createdAt": "2026-07-04T15:02:00.000Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 0,
+      "postWriterNormalizeCount": 0,
+      "postReviseCount": 0,
+      "finalCount": 0,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    }
+  },
+  {
+    "number": 40,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "偏执学神那个戏精贫困生（4）"
+  },
+  {
+    "number": 41,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "偏执学神那个戏精贫困生（5）"
+  },
+  {
+    "number": 42,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "偏执学神那个戏精贫困生（6）"
+  },
+  {
+    "number": 43,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "偏执学神那个戏精贫困生（7）"
+  },
+  {
+    "number": 44,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "偏执学神那个戏精贫困生（8）"
+  },
+  {
+    "number": 45,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "偏执学神那个戏精贫困生（9）"
+  },
+  {
+    "number": 46,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "偏执学神那个戏精贫困生（10）"
+  },
+  {
+    "number": 47,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "偏执学神那个戏精贫困生（11）"
+  },
+  {
+    "number": 48,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "偏执学神那个戏精贫困生（12）"
+  },
+  {
+    "number": 49,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "偏执学神那个戏精贫困生（13）"
+  },
+  {
+    "number": 50,
+    "status": "imported",
+    "wordCount": 0,
+    "createdAt": "2026-07-06T06:58:14.363Z",
+    "updatedAt": "2026-07-06T07:00:16.541Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "title": "偏执学神那个戏精贫困生（14）"
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "chapter": 2,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "林晚棠与陈桂英公开对立，与徇私的村支书王德福的冲突即将爆发",
+      "validFromChapter": 2,
+      "validUntilChapter": null,
+      "sourceChapter": 2
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "生产队长李长根对林晚棠持同情态度",
+      "validFromChapter": 2,
+      "validUntilChapter": null,
+      "sourceChapter": 2
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "次日去大队部清算旧账，拿到霍景深的部队来信",
+      "validFromChapter": 2,
+      "validUntilChapter": null,
+      "sourceChapter": 2
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前位置",
+      "object": "陆家院子/院门口",
+      "validFromChapter": 2,
+      "validUntilChapter": null,
+      "sourceChapter": 2
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "暂居陆家需提防陈桂英后续使坏，应对王德福的徇私刁难",
+      "validFromChapter": 2,
+      "validUntilChapter": null,
+      "sourceChapter": 2
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "主角状态",
+      "object": "林晚棠持有合法婚书、政审证明，拿到陈桂英私吞120元彩礼、180个工分及勾结王支书污蔑自己骗婚的实锤，与陈桂英彻底撕破脸",
+      "validFromChapter": 2,
+      "validUntilChapter": null,
+      "sourceChapter": 2
+    }
+  ]
+}

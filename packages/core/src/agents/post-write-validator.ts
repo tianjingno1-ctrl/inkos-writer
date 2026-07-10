@@ -76,6 +76,20 @@ const COLLECTIVE_SHOCK_PATTERNS = [
   /(?:全场|一片)[，,]?(?:寂静|哗然|沸腾|震动)/,
 ];
 
+/** 全知/上帝视角旁白（限知 POV 书籍禁止） */
+const OMNISCIENT_POV_PATTERNS: ReadonlyArray<{ readonly pattern: RegExp; readonly label: string }> = [
+  { pattern: /与此同时[，,]/, label: "与此同时（平行切场景）" },
+  { pattern: /在(?:遥远的|另一|别处|那头)/, label: "异地平行叙述" },
+  { pattern: /(?:她|他|他们|众人)不知道的是/, label: "她/他不知道的是" },
+  { pattern: /殊不知/, label: "殊不知" },
+  { pattern: /没有人知道|无人知晓|没人知道/, label: "没有人知道" },
+  { pattern: /(?:许多|多年|数年)之后/, label: "多年以后式旁白" },
+  { pattern: /镜头(?:转向|切到|拉近|对准)/, label: "镜头转向（编剧视角）" },
+  { pattern: /全知(?:视角|叙述|旁白)/, label: "全知视角" },
+  { pattern: /上帝视角/, label: "上帝视角" },
+  { pattern: /读者[，,]?(?:可能|应该|也许|不难)/, label: "对读者说话" },
+];
+
 // --- Validator ---
 
 export function validatePostWrite(
@@ -298,7 +312,64 @@ export function validatePostWrite(
   const personViolation = detectNarrativePersonDrift(content, bookRules);
   if (personViolation) violations.push(personViolation);
 
+  // 13. Omniscient / god's-eye narrator slips (limited POV books)
+  const omniscientViolation = detectOmniscientPOV(content, bookRules, isEnglish);
+  if (omniscientViolation) violations.push(omniscientViolation);
+
   return violations;
+}
+
+function detectOmniscientPOV(
+  content: string,
+  bookRules: BookRules | null,
+  isEnglish: boolean,
+): PostWriteViolation | null {
+  if (isEnglish) return null;
+
+  for (const { pattern, label } of OMNISCIENT_POV_PATTERNS) {
+    const match = content.match(pattern);
+    if (!match) continue;
+    return {
+      rule: "禁止上帝视角",
+      severity: "error",
+      description: `出现全知/上帝视角旁白："${match[0]}"（${label}）`,
+      suggestion:
+        "删掉旁白式预告或平行切场景，只写 POV 角色当下能看见、听见、能推断的内容；他人内心用表情、动作、台词外化。",
+    };
+  }
+
+  const protagonist = bookRules?.protagonist?.name?.trim();
+  if (protagonist) {
+    const otherInnerThought = detectOtherCharacterInnerThought(content, protagonist);
+    if (otherInnerThought) {
+      return {
+        rule: "禁止上帝视角",
+        severity: "error",
+        description: `写了他人的内心活动，超出限知视角："${otherInnerThought}"`,
+        suggestion: "改成 POV 角色能观察到的外在反应（表情、动作、台词），或改成 POV 角色的猜测（「她看上去像在盘算」）。",
+      };
+    }
+  }
+
+  return null;
+}
+
+function detectOtherCharacterInnerThought(content: string, protagonistName: string): string | null {
+  const sentences = content
+    .split(/(?<=[。！？!?])|\n+/)
+    .map((sentence) => sentence.trim())
+    .filter(Boolean);
+
+  const innerPattern = /^([\u4e00-\u9fff]{2,4})(?:心里|心中|脑子里|暗自|暗暗)(?:想|道|盘算|琢磨|嘀咕)/;
+
+  for (const sentence of sentences) {
+    const match = sentence.match(innerPattern);
+    if (!match) continue;
+    const subject = match[1] ?? "";
+    if (!subject || subject.includes(protagonistName)) continue;
+    return sentence.length > 48 ? `${sentence.slice(0, 47)}…` : sentence;
+  }
+  return null;
 }
 
 function detectNarrativePersonDrift(

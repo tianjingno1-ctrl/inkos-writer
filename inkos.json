@@ -1,0 +1,69 @@
+{
+  "name": "inkos",
+  "version": "0.1.0",
+  "language": "zh",
+  "llm": {
+    "provider": "custom",
+    "service": "custom:k",
+    "configSource": "studio",
+    "baseUrl": "https://juziapi.xin/v1",
+    "model": "[K]claude-sonnet-5",
+    "apiFormat": "chat",
+    "stream": true,
+    "services": [
+      {
+        "service": "custom",
+        "name": "apifast",
+        "baseUrl": "https://api.apifast.tech/v1",
+        "temperature": 0.7,
+        "apiFormat": "chat",
+        "stream": true
+      },
+      {
+        "service": "custom",
+        "name": "omniroute-local",
+        "baseUrl": "http://127.0.0.1:20128/v1",
+        "temperature": 0.7,
+        "apiFormat": "chat",
+        "stream": true
+      },
+      {
+        "service": "volcengine",
+        "temperature": 0.7,
+        "apiFormat": "chat",
+        "stream": true
+      },
+      {
+        "service": "custom",
+        "name": "claude",
+        "baseUrl": "https://juziapi.xin/v1",
+        "temperature": 0.7,
+        "apiFormat": "chat",
+        "stream": true
+      },
+      {
+        "service": "custom",
+        "name": "k",
+        "baseUrl": "https://juziapi.xin/v1",
+        "temperature": 0.7,
+        "apiFormat": "chat",
+        "stream": true
+      }
+    ],
+    "defaultModel": "[K]claude-sonnet-5",
+    "temperature": 0.7,
+    "cover": {
+      "service": "kkaiapi",
+      "model": "gpt-image-2"
+    }
+  },
+  "notify": [],
+  "inputGovernanceMode": "v2",
+  "daemon": {
+    "schedule": {
+      "radarCron": "0 */6 * * *",
+      "writeCron": "*/15 * * * *"
+    },
+    "maxConcurrentBooks": 3
+  }
+}

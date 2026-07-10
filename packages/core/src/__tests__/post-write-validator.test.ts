@@ -128,6 +128,38 @@ describe("validatePostWrite", () => {
     expect(findRule(result, "禁止句式")!.severity).toBe("error");
   });
 
+  it("detects omniscient narrator patterns (禁止上帝视角)", () => {
+    const content = "林晚棠关上门。与此同时，大队部里，王德福正在打算盘。";
+    const thirdRules = BookRulesSchema.parse({
+      narrativePerson: "third",
+      protagonist: { name: "林晚棠" },
+    });
+    const result = validatePostWrite(content, baseProfile, thirdRules);
+    const violation = findRule(result, "禁止上帝视角");
+    expect(violation).toBeDefined();
+    expect(violation!.severity).toBe("error");
+  });
+
+  it("detects named non-protagonist inner thought as omniscient slip", () => {
+    const content = "林晚棠站在院里。陈桂英心里盘算着怎么找王德福告她。";
+    const thirdRules = BookRulesSchema.parse({
+      narrativePerson: "third",
+      protagonist: { name: "林晚棠" },
+    });
+    const result = validatePostWrite(content, baseProfile, thirdRules);
+    expect(findRule(result, "禁止上帝视角")).toBeDefined();
+  });
+
+  it("does not flag limited POV inference from observable behavior", () => {
+    const content = "林晚棠站在院里。陈桂英脸色一阵红一阵白，攥着帕子不肯说话。";
+    const thirdRules = BookRulesSchema.parse({
+      narrativePerson: "third",
+      protagonist: { name: "林晚棠" },
+    });
+    const result = validatePostWrite(content, baseProfile, thirdRules);
+    expect(findRule(result, "禁止上帝视角")).toBeUndefined();
+  });
+
   it("detects dash '——'", () => {
     const content = "他走了过去——然后停下来。";
     const result = validatePostWrite(content, baseProfile, null);

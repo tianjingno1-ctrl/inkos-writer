@@ -1,0 +1,8 @@
+{
+  "usage": {
+    "completion_tokens": 5274,
+    "prompt_tokens": 1441,
+    "total_tokens": 6715
+  },
+  "task": "quotes"
+}
