@@ -37,14 +37,14 @@ alwaysApply: true
 - 用户明确说「直接做」「不用确认」「你看着办」
 - 用户消息本身就是对上一版方案的确认（「就按你说的」「第一步合并 volume_map」）
 
-## 本书（游戏入侵）示例
+## 本书（年代军婚）示例
 
 用户：「帮我修第 1 章」
 
 应先回复方案，例如：
-- 用 `reviser --mode polish` + Seed 2.1 Pro
-- 删赵满囤、去禁用词、内心改算账
-- 不动 ch1 LOCK 数值
+- 用 `reviser --mode polish` + Gemini 2.5 Pro
+- 极短段排版、双引号、活世界侧写
+- 不动 ch1 LOCK 节拍与年代设定
 - 问：是否执行
 
 用户确认后再跑 `revise chapter`。

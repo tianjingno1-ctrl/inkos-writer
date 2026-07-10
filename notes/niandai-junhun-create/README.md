@@ -1,6 +1,6 @@
 # 《重生闪婚首长，婆家悔哭了》→ InkOS 写作流程
 
-> **对齐**：《游戏入侵》阶段 5 滚动写章流程 + 极短段定稿习惯  
+> **流程**：阶段 5 滚动写章 + 极短段定稿习惯  
 > **bookId**：`重生闪婚首长-婆家悔哭了`  
 > **节拍权威**：`CH01-04-LOCK.md` + `brief.md`
 
@@ -57,16 +57,6 @@ npx inkos write next <bookId> --base-url https://api.apifast.tech/v1 --model gem
 | 文风定调 | `books/…/story/style_guide.md` 顶部 |
 | 书级禁写 | `books/…/story/book_rules.md` |
 | 当前进度 | `books/…/story/current_focus.md` |
-
-## 与《游戏入侵》对齐项
-
-| 游戏入侵 | 本书 |
-|----------|------|
-| `CH01-03-LOCK.md` | `CH01-04-LOCK.md` |
-| `game-invasion-chapter-format.mdc` | `niandai-junhun-chapter-format.mdc` |
-| 极短段 + 手机阅读 | 同（无系统 UI 块） |
-| plan → write → 手改 → audit → approve | 同 |
-| `current_focus` 记定稿章 + 格式规范 | 同 |
 
 ## 本书特有
 
