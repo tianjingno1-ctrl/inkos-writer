@@ -3100,6 +3100,32 @@ describe("createStudioServer daemon lifecycle", () => {
     );
   }, 60_000);
 
+  it("returns BOOK_BUSY when direct write-next collides with an active write", async () => {
+    const lockError = 'Book "demo-book" is locked by an active InkOS write. Wait for it to finish or stop the running task, then retry.';
+    writeNextChapterMock.mockRejectedValueOnce(Object.assign(new Error(lockError), { code: "BOOK_BUSY" }));
+    const { createStudioServer } = await import("./server.js");
+    const app = createStudioServer(cloneProjectConfig() as never, root);
+
+    const response = await app.request("http://localhost/api/v1/agent", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        instruction: "继续",
+        activeBookId: "demo-book",
+        sessionId: "agent-session-1",
+        sessionKind: "book",
+        actionSource: "quick-action",
+        requestedIntent: "write_next",
+      }),
+    });
+
+    expect(response.status).toBe(409);
+    await expect(response.json()).resolves.toMatchObject({
+      error: { code: "BOOK_BUSY", message: lockError },
+      response: lockError,
+    });
+  });
+
   it("does not direct-run write-next from ordinary free text", async () => {
     const { createStudioServer } = await import("./server.js");
     const app = createStudioServer(cloneProjectConfig() as never, root);
@@ -3857,6 +3883,34 @@ describe("createStudioServer daemon lifecycle", () => {
     expect(json.error.message).toContain("missing YAML frontmatter delimiters");
     expect(json.error.message).not.toMatch(/kkaiapi/i);
     expect(json.response).toBe(json.error.message);
+    expect(chatCompletionMock).not.toHaveBeenCalled();
+  });
+
+  it("returns an active book write lock as BOOK_BUSY instead of a provider error", async () => {
+    const lockError = 'Book "demo-book" is locked by an active InkOS write (pid:123). Wait for it to finish or stop the running task, then retry. Stale locks are recovered automatically.';
+    runAgentSessionMock.mockResolvedValueOnce({
+      responseText: "",
+      errorMessage: lockError,
+      messages: [{ role: "assistant", content: [], stopReason: "error", errorMessage: lockError }],
+    });
+
+    const { createStudioServer } = await import("./server.js");
+    const app = createStudioServer(cloneProjectConfig() as never, root);
+    const response = await app.request("http://localhost/api/v1/agent", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        instruction: "检查当前写作状态",
+        activeBookId: "demo-book",
+        sessionId: "agent-session-lock",
+      }),
+    });
+
+    expect(response.status).toBe(409);
+    await expect(response.json()).resolves.toEqual({
+      error: { code: "BOOK_BUSY", message: lockError },
+      response: lockError,
+    });
     expect(chatCompletionMock).not.toHaveBeenCalled();
   });
 

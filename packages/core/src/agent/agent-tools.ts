@@ -615,6 +615,21 @@ function prepareSubAgentArguments(args: unknown): SubAgentParamsType {
   return prepared as SubAgentParamsType;
 }
 
+function runPipelineWithAbortSignal<T>(
+  pipeline: PipelineRunner,
+  signal: AbortSignal | undefined,
+  task: () => Promise<T>,
+): Promise<T> {
+  // PipelineRunner owns the async cancellation scope. The fallback keeps
+  // lightweight embedders/test doubles source-compatible.
+  const runner = pipeline as PipelineRunner & {
+    runWithAbortSignal?: <R>(activeSignal: AbortSignal | undefined, activeTask: () => Promise<R>) => Promise<R>;
+  };
+  return runner.runWithAbortSignal
+    ? runner.runWithAbortSignal(signal, task)
+    : task();
+}
+
 export function createSubAgentTool(
   pipeline: PipelineRunner,
   activeBookId: string | null,
@@ -672,7 +687,11 @@ export function createSubAgentTool(
               }
               const targetBookId = resolveToolBookId("architect", bookId, activeBookId);
               progress(`Revising foundation for "${targetBookId}"...`);
-              await pipeline.reviseFoundation(targetBookId, feedback ?? instruction);
+              await runPipelineWithAbortSignal(
+                pipeline,
+                _signal,
+                () => pipeline.reviseFoundation(targetBookId, feedback ?? instruction),
+              );
               progress(`Foundation revised for "${targetBookId}".`);
               return textResult(
                 sessionIsZh
@@ -693,20 +712,24 @@ export function createSubAgentTool(
             const now = new Date().toISOString();
             const resolvedLanguage = createBookPayload?.language ?? language ?? inferLanguage(instruction);
             progress(`Starting architect for book "${id}"...`);
-            await pipeline.initBook(
-              {
-                id,
-                title: resolvedTitle,
-                genre: createBookPayload?.genre ?? genre ?? "general",
-                platform: normalizePlatformOrOther(createBookPayload?.platform ?? platform),
-                language: resolvedLanguage as any,
-                status: "outlining" as any,
-                targetChapters: createBookPayload?.targetChapters ?? targetChapters ?? 200,
-                chapterWordCount: createBookPayload?.chapterWordCount ?? chapterWordCount ?? defaultChapterLength(resolvedLanguage),
-                createdAt: now,
-                updatedAt: now,
-              },
-              { externalContext: instruction },
+            await runPipelineWithAbortSignal(
+              pipeline,
+              _signal,
+              () => pipeline.initBook(
+                {
+                  id,
+                  title: resolvedTitle,
+                  genre: createBookPayload?.genre ?? genre ?? "general",
+                  platform: normalizePlatformOrOther(createBookPayload?.platform ?? platform),
+                  language: resolvedLanguage as any,
+                  status: "outlining" as any,
+                  targetChapters: createBookPayload?.targetChapters ?? targetChapters ?? 200,
+                  chapterWordCount: createBookPayload?.chapterWordCount ?? chapterWordCount ?? defaultChapterLength(resolvedLanguage),
+                  createdAt: now,
+                  updatedAt: now,
+                },
+                { externalContext: instruction },
+              ),
             );
             progress(`Architect finished — book "${id}" foundation created.`);
             return textResult(
@@ -718,7 +741,11 @@ export function createSubAgentTool(
           case "writer": {
             const targetBookId = resolveToolBookId("writer", bookId, activeBookId);
             progress(`Writing next chapter for "${targetBookId}"...`);
-            const result = await pipeline.writeNextChapter(targetBookId, chapterWordCount);
+            const result = await runPipelineWithAbortSignal(
+              pipeline,
+              _signal,
+              () => pipeline.writeNextChapter(targetBookId, chapterWordCount),
+            );
             progress(`Writer finished chapter for "${targetBookId}".`);
             const resultStatus = (result as any).status;
             const wordCount = (result as any).wordCount ?? "unknown";
@@ -743,7 +770,11 @@ export function createSubAgentTool(
           case "auditor": {
             const targetBookId = resolveToolBookId("auditor", bookId, activeBookId);
             progress(`Auditing chapter ${chapterNumber ?? "latest"} for "${targetBookId}"...`);
-            const audit = await pipeline.auditDraft(targetBookId, chapterNumber);
+            const audit = await runPipelineWithAbortSignal(
+              pipeline,
+              _signal,
+              () => pipeline.auditDraft(targetBookId, chapterNumber),
+            );
             progress(`Audit complete for "${targetBookId}".`);
             const issueLines = (audit.issues ?? [])
               .map((i: any) => `[${i.severity}] ${i.description}`)
@@ -758,7 +789,11 @@ export function createSubAgentTool(
             const targetBookId = resolveToolBookId("reviser", bookId, activeBookId);
             const resolvedMode: ReviseMode = (mode as ReviseMode) ?? "spot-fix";
             progress(`Revising "${targetBookId}" chapter ${chapterNumber ?? "latest"} in ${resolvedMode} mode...`);
-            const result = await pipeline.reviseDraft(targetBookId, chapterNumber, resolvedMode, instruction);
+            const result = await runPipelineWithAbortSignal(
+              pipeline,
+              _signal,
+              () => pipeline.reviseDraft(targetBookId, chapterNumber, resolvedMode, instruction),
+            );
             const applied = result.applied !== false;
             const resultChapter = result.chapterNumber ?? chapterNumber;
             const details = {
@@ -1166,12 +1201,16 @@ export function createImportChaptersTool(
       const chapters = await loadChaptersFromPath(resolvedSourcePath, params.splitPattern);
 
       onUpdate?.(textResult(`Found ${chapters.length} chapter(s); importing into "${targetBookId}"...`));
-      const result = await pipeline.importChapters({
-        bookId: targetBookId,
-        chapters,
-        resumeFrom: params.resumeFrom,
-        importMode: params.importMode,
-      });
+      const result = await runPipelineWithAbortSignal(
+        pipeline,
+        _signal,
+        () => pipeline.importChapters({
+          bookId: targetBookId,
+          chapters,
+          resumeFrom: params.resumeFrom,
+          importMode: params.importMode,
+        }),
+      );
 
       const regeneratedFoundation = (params.resumeFrom ?? 1) === 1;
       return textResult(

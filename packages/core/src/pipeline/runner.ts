@@ -1,3 +1,4 @@
+import { AsyncLocalStorage } from "node:async_hooks";
 import type { LLMClient, OnStreamProgress } from "../llm/provider.js";
 import { chatCompletion, createLLMClient } from "../llm/provider.js";
 import type { Logger } from "../utils/logger.js";
@@ -412,11 +413,31 @@ export class PipelineRunner {
   private readonly state: StateManager;
   private readonly config: PipelineConfig;
   private readonly agentClients = new Map<string, LLMClient>();
+  private readonly operationContext = new AsyncLocalStorage<{ readonly signal?: AbortSignal }>();
   private memoryIndexFallbackWarned = false;
 
   constructor(config: PipelineConfig) {
     this.config = config;
     this.state = new StateManager(config.projectRoot);
+  }
+
+  async runWithAbortSignal<T>(
+    signal: AbortSignal | undefined,
+    task: () => Promise<T>,
+  ): Promise<T> {
+    signal?.throwIfAborted();
+    return this.operationContext.run({ signal }, async () => {
+      signal?.throwIfAborted();
+      return task();
+    });
+  }
+
+  private currentAbortSignal(): AbortSignal | undefined {
+    return this.operationContext.getStore()?.signal;
+  }
+
+  private throwIfOperationAborted(): void {
+    this.currentAbortSignal()?.throwIfAborted();
   }
 
   private localize(language: LengthLanguage, messages: { zh: string; en: string }): string {
@@ -651,6 +672,7 @@ export class PipelineRunner {
       bookId,
       logger: this.config.logger?.child(agent),
       onStreamProgress: this.config.onStreamProgress,
+      signal: this.currentAbortSignal(),
     };
   }
 
@@ -1641,6 +1663,7 @@ export class PipelineRunner {
   // ---------------------------------------------------------------------------
 
   async writeNextChapter(bookId: string, wordCount?: number, temperatureOverride?: number): Promise<ChapterPipelineResult> {
+    this.throwIfOperationAborted();
     const releaseLock = await this.state.acquireBookLock(bookId);
     try {
       return await this._writeNextChapterLocked(bookId, wordCount, temperatureOverride, this.config.externalContext);
@@ -1673,6 +1696,7 @@ export class PipelineRunner {
     temperatureOverride?: number,
     externalContext?: string,
   ): Promise<ChapterPipelineResult> {
+    this.throwIfOperationAborted();
     await this.state.ensureControlDocuments(bookId);
     const book = await this.state.loadBookConfig(bookId);
     const bookDir = this.state.bookDir(bookId);
@@ -1721,6 +1745,7 @@ export class PipelineRunner {
       ...(wordCount ? { wordCountOverride: wordCount } : {}),
       ...(temperatureOverride ? { temperatureOverride } : {}),
     });
+    this.throwIfOperationAborted();
     const writerCount = countChapterLength(output.content, lengthSpec.countingMode);
 
     // Token usage accumulator
@@ -1808,6 +1833,7 @@ export class PipelineRunner {
       preAuditNormalizedWordCount = reviewResult.preAuditNormalizedWordCount;
     }
 
+    this.throwIfOperationAborted();
     // 3b. Lightweight per-chapter promotion pass — check if any hooks should
     // be promoted based on advanced_count derived from chapter_summaries.
     // Runs BEFORE persistence so the reviewer of the NEXT chapter sees the
@@ -1832,6 +1858,7 @@ export class PipelineRunner {
       }
     }
 
+    this.throwIfOperationAborted();
     // 4. Save the final chapter and truth files from a single persistence source
     this.logStage(stageLanguage, { zh: "落盘最终章节", en: "persisting final chapter" });
     this.logStage(stageLanguage, { zh: "生成最终真相文件", en: "rebuilding final truth files" });
@@ -2439,7 +2466,7 @@ Base the analysis on the text's actual features, not generalities. Support each 
         const response = await chatCompletion(this.config.client, this.config.model, [
           { role: "system", content: styleSystemPrompt },
           { role: "user", content: styleUserPrompt },
-        ], { temperature: 0.3 });
+        ], { temperature: 0.3, signal: this.currentAbortSignal() });
         qualitativeGuide = response.content.trim()
           ? response.content
           : this.buildDeterministicStyleGuide(profile, {
@@ -2642,7 +2669,7 @@ ${emotions}
 ## 正传角色矩阵
 ${matrix}`,
       },
-    ], { temperature: 0.3 });
+    ], { temperature: 0.3, signal: this.currentAbortSignal() });
 
     // Append deterministic meta block (LLM may hallucinate timestamps)
     const metaBlock = [
@@ -2700,6 +2727,7 @@ ${matrix}`,
    * Step 2: Sequentially replay each chapter through ChapterAnalyzer to build truth files.
    */
   async importChapters(input: ImportChaptersInput): Promise<ImportChaptersResult> {
+    this.throwIfOperationAborted();
     const releaseLock = await this.state.acquireBookLock(input.bookId);
     try {
       const book = await this.state.loadBookConfig(input.bookId);
@@ -2731,6 +2759,7 @@ ${matrix}`,
               targetChapters: book.targetChapters,
             })
           : await architect.generateFoundationFromImport(book, foundationSource);
+        this.throwIfOperationAborted();
         await architect.writeFoundationFiles(
           bookDir,
           foundation,
@@ -2768,6 +2797,7 @@ ${matrix}`,
       let importedCount = 0;
 
       for (let i = startFrom - 1; i < input.chapters.length; i++) {
+        this.throwIfOperationAborted();
         const ch = input.chapters[i]!;
         const chapterNumber = i + 1;
         const governedInput = await this.prepareWriteInput(book, bookDir, chapterNumber);
@@ -2788,6 +2818,7 @@ ${matrix}`,
           contextPackage: governedInput.contextPackage,
           ruleStack: governedInput.ruleStack,
         });
+        this.throwIfOperationAborted();
 
         const chapterWordCount = countChapterLength(ch.content, countingMode);
         const persistedOutput: WriteChapterOutput = {

@@ -592,11 +592,12 @@ function isRetryableLLMError(error: unknown): boolean {
 
 async function withTransientLLMRetry<T>(
   run: () => Promise<T>,
-  options?: { readonly enabled?: boolean },
+  options?: { readonly enabled?: boolean; readonly signal?: AbortSignal },
 ): Promise<T> {
   const enabled = options?.enabled ?? true;
   let lastError: unknown;
   for (let attempt = 0; attempt <= TRANSIENT_LLM_RETRIES; attempt++) {
+    options?.signal?.throwIfAborted();
     try {
       return await run();
     } catch (error) {
@@ -610,10 +611,29 @@ async function withTransientLLMRetry<T>(
       }
       // Back off before retrying — immediate re-fire on a 429/503 just makes it
       // worse. Linear is enough for a 2-retry budget (~0.8s, ~1.6s).
-      await new Promise((resolve) => setTimeout(resolve, 800 * (attempt + 1)));
+      await abortableDelay(800 * (attempt + 1), options?.signal);
     }
   }
   throw lastError;
+}
+
+async function abortableDelay(delayMs: number, signal?: AbortSignal): Promise<void> {
+  if (!signal) {
+    await new Promise((resolveDelay) => setTimeout(resolveDelay, delayMs));
+    return;
+  }
+  signal.throwIfAborted();
+  await new Promise<void>((resolveDelay, rejectDelay) => {
+    const timer = setTimeout(() => {
+      signal.removeEventListener("abort", onAbort);
+      resolveDelay();
+    }, delayMs);
+    const onAbort = () => {
+      clearTimeout(timer);
+      rejectDelay(signal.reason ?? new Error("LLM request aborted"));
+    };
+    signal.addEventListener("abort", onAbort, { once: true });
+  });
 }
 
 function shouldUseNativeCustomTransport(client: LLMClient): boolean {
@@ -843,6 +863,7 @@ async function chatCompletionViaCustomAnthropicCompatible(
   resolved: { readonly temperature: number; readonly maxTokens: number; readonly extra: Record<string, unknown> },
   onStreamProgress?: OnStreamProgress,
   onTextDelta?: (text: string) => void,
+  signal?: AbortSignal,
 ): Promise<LLMResponse> {
   const baseUrl = client._piModel?.baseUrl ?? "";
   const errorCtx = { baseUrl, model, service: client.service };
@@ -870,6 +891,7 @@ async function chatCompletionViaCustomAnthropicCompatible(
       ...(client._piModel?.headers ?? {}),
     }) ?? { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
+    signal,
   }, client.proxyUrl);
 
   if (!response.ok) {
@@ -952,10 +974,11 @@ async function chatCompletionViaCustomOpenAICompatible(
   resolved: { readonly temperature: number; readonly maxTokens: number; readonly extra: Record<string, unknown> },
   onStreamProgress?: OnStreamProgress,
   onTextDelta?: (text: string) => void,
+  signal?: AbortSignal,
   allowSystemRoleFallback = true,
 ): Promise<LLMResponse> {
   if (client.provider === "anthropic") {
-    return chatCompletionViaCustomAnthropicCompatible(client, model, messages, resolved, onStreamProgress, onTextDelta);
+    return chatCompletionViaCustomAnthropicCompatible(client, model, messages, resolved, onStreamProgress, onTextDelta, signal);
   }
   const baseUrl = client._piModel?.baseUrl ?? "";
   const headers = buildCustomHeaders(client);
@@ -979,6 +1002,7 @@ async function chatCompletionViaCustomOpenAICompatible(
       method: "POST",
       headers,
       body: JSON.stringify(payload),
+      signal,
     }, client.proxyUrl);
     if (!response.ok) {
       throw wrapLLMError(new Error(await readErrorResponse(response)), errorCtx);
@@ -1073,6 +1097,7 @@ async function chatCompletionViaCustomOpenAICompatible(
     method: "POST",
     headers,
     body: JSON.stringify(payload),
+    signal,
   }, client.proxyUrl);
   if (!response.ok) {
     const detail = await readErrorResponse(response);
@@ -1084,6 +1109,7 @@ async function chatCompletionViaCustomOpenAICompatible(
         resolved,
         onStreamProgress,
         onTextDelta,
+        signal,
         false,
       );
     }
@@ -1192,6 +1218,7 @@ export async function chatCompletion(
     readonly webSearch?: boolean;
     readonly onStreamProgress?: OnStreamProgress;
     readonly onTextDelta?: (text: string) => void;
+    readonly signal?: AbortSignal;
     // Diagnostics / connectivity checks want a fast pass-or-fail — set false to
     // skip the transient 502/503/429 retry+backoff (e.g. the doctor probe).
     readonly retry?: boolean;
@@ -1210,11 +1237,13 @@ export async function chatCompletion(
   };
   const onStreamProgress = options?.onStreamProgress;
   const onTextDelta = options?.onTextDelta;
+  const signal = options?.signal;
   const errorCtx = { baseUrl: client._piModel?.baseUrl ?? "(unknown)", model, service: client.service };
 
   try {
     return await withTransientLLMRetry(
       async () => {
+        signal?.throwIfAborted();
         assertWithinContextWindow({
           piModel: resolvePiModel(client, model),
           model,
@@ -1222,13 +1251,13 @@ export async function chatCompletion(
           reservedOutputTokens: resolved.maxTokens,
         });
         if (shouldUseNativeCustomTransport(client)) {
-          return chatCompletionViaCustomOpenAICompatible(client, model, messages, resolved, onStreamProgress, onTextDelta);
+          return chatCompletionViaCustomOpenAICompatible(client, model, messages, resolved, onStreamProgress, onTextDelta, signal);
         }
-        return chatCompletionViaPiAi(client, model, messages, resolved, onStreamProgress, onTextDelta);
+        return chatCompletionViaPiAi(client, model, messages, resolved, onStreamProgress, onTextDelta, signal);
       },
       // Retrying after UI text deltas have been emitted can duplicate visible
       // text; callers can also opt out (e.g. fast-fail diagnostics).
-      { enabled: (options?.retry ?? true) && !onTextDelta },
+      { enabled: (options?.retry ?? true) && !onTextDelta, signal },
     );
   } catch (error) {
     // 注意：中断的流（PartialResponseError）不再"打捞"半截内容当成功返回——
@@ -1284,6 +1313,7 @@ async function chatCompletionViaPiAi(
   resolved: { readonly temperature: number; readonly maxTokens: number; readonly extra: Record<string, unknown> },
   onStreamProgress?: OnStreamProgress,
   onTextDelta?: (text: string) => void,
+  signal?: AbortSignal,
 ): Promise<LLMResponse> {
   const piModel = resolvePiModel(client, model);
   const context = toPiContext(messages);
@@ -1292,6 +1322,7 @@ async function chatCompletionViaPiAi(
     maxTokens: resolved.maxTokens,
     apiKey: client._apiKey,
     headers: mergeUserAgent(piModel.headers),
+    signal,
   };
 
   if (!client.stream) {

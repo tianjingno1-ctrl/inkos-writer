@@ -1137,11 +1137,14 @@ function validateAgentActionExecution(args: {
   return undefined;
 }
 
-type AgentFailureKind = "llm" | "internal" | "unknown";
+type AgentFailureKind = "busy" | "llm" | "internal" | "unknown";
 
 function classifyAgentFailure(message: string): AgentFailureKind {
   const text = message.trim();
   if (!text) return "unknown";
+  if (/BookWriteLockError|locked by an active InkOS write|BOOK_BUSY/i.test(text)) {
+    return "busy";
+  }
   if (
     /API\s*返回|上游|upstream|Bad Gateway|temporarily unavailable|rate limit|quota|API Key|unauthorized|forbidden|无法连接到 API|fetch failed|ECONNREFUSED|ENOTFOUND|ETIMEDOUT|LLM returned empty response|Provider finish_reason|reasoning_content/i.test(text)
   ) {
@@ -1158,8 +1161,11 @@ function classifyAgentFailure(message: string): AgentFailureKind {
 function formatAgentFailure(
   message: string,
   lang: StudioLanguage = "zh",
-): { readonly code: string; readonly message: string; readonly status: 500 | 502 } {
+): { readonly code: string; readonly message: string; readonly status: 409 | 500 | 502 } {
   const kind = classifyAgentFailure(message);
+  if (kind === "busy") {
+    return { code: "BOOK_BUSY", message, status: 409 };
+  }
   if (kind === "llm") {
     return { code: "AGENT_LLM_ERROR", message, status: 502 };
   }
@@ -1171,6 +1177,16 @@ function formatAgentFailure(
     };
   }
   return { code: "AGENT_ERROR", message, status: 500 };
+}
+
+function formatAgentActionFailure(
+  message: string,
+  lang: StudioLanguage,
+): { readonly code: string; readonly message: string; readonly status: 409 | 502 } {
+  const failure = formatAgentFailure(message, lang);
+  return failure.code === "BOOK_BUSY"
+    ? { code: failure.code, message: failure.message, status: 409 }
+    : { code: "AGENT_ACTION_FAILED", message, status: 502 };
 }
 
 interface CollectedToolExec {
@@ -4464,6 +4480,7 @@ export function createStudioServer(initialConfig: ProjectConfig, root: string, o
           });
         } catch (error) {
           const message = error instanceof Error ? error.message : String(error);
+          const failure = formatAgentActionFailure(message, language);
           if (pendingBookId) {
             bookCreateStatus.set(pendingBookId, { status: "error", error: message });
             broadcast("book:error", { bookId: pendingBookId, sessionId: streamSessionId, error: message });
@@ -4481,9 +4498,9 @@ export function createStudioServer(initialConfig: ProjectConfig, root: string, o
           }
           broadcast("agent:error", { instruction, activeBookId: agentBookId, sessionId: bookSession.sessionId, sessionKind, error: message });
           return c.json({
-            error: { code: "AGENT_ACTION_FAILED", message },
-            response: message,
-          }, 502);
+            error: { code: failure.code, message: failure.message },
+            response: failure.message,
+          }, failure.status);
         }
       }
 
@@ -4574,6 +4591,7 @@ export function createStudioServer(initialConfig: ProjectConfig, root: string, o
           });
         } catch (error) {
           const message = error instanceof Error ? error.message : String(error);
+          const failure = formatAgentActionFailure(message, language);
           const toolResult = { content: [{ type: "text", text: message }] };
           const exec: CollectedToolExec = {
             id: toolCallId,
@@ -4604,9 +4622,9 @@ export function createStudioServer(initialConfig: ProjectConfig, root: string, o
           await refreshBookSessionFromTranscript().catch(() => undefined);
           broadcast("agent:error", { instruction, activeBookId: agentBookId, sessionId: bookSession.sessionId, sessionKind, error: message });
           return c.json({
-            error: { code: "AGENT_ACTION_FAILED", message },
-            response: message,
-          }, 502);
+            error: { code: failure.code, message: failure.message },
+            response: failure.message,
+          }, failure.status);
         }
       }
 
