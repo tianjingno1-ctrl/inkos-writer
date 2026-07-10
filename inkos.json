@@ -65,5 +65,14 @@
       "writeCron": "*/15 * * * *"
     },
     "maxConcurrentBooks": 3
+  },
+  "modelOverrides": {
+    "architect": {
+      "model": "gemini-2.5-pro",
+      "baseUrl": "https://api.apifast.tech/v1",
+      "provider": "custom",
+      "apiKeyEnv": "INKOS_APIFAST_KEY",
+      "stream": false
+    }
   }
 }
