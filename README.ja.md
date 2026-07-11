@@ -3,7 +3,7 @@
   <img src="assets/inkos-text.svg" width="240" height="65" alt="InkOS">
 </p>
 
-<h1 align="center">Story Creation &amp; Translation AI Agent<br><sub>長編・短編小説、脚本、インタラクティブ影遊、IP コンテンツ、多言語翻訳のための創作 AI Agent システム</sub></h1>
+<h1 align="center">Story Creation AI Agent<br><sub>長編・短編小説、脚本、インタラクティブ影遊、IP コンテンツ、多言語翻訳のための創作 AI Agent システム</sub></h1>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@actalk/inkos"><img src="https://img.shields.io/npm/v/@actalk/inkos.svg?color=cb3837&logo=npm" alt="npm version"></a>

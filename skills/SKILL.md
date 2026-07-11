@@ -5,7 +5,7 @@ version: 2.6.0
 metadata: { "openclaw": { "emoji": "📖", "requires": { "bins": ["inkos", "node"], "env": ["OPENAI_API_KEY"] }, "primaryEnv": "OPENAI_API_KEY", "homepage": "https://github.com/Narcooo/inkos", "install": [{ "id": "npm", "kind": "node", "package": "@actalk/inkos", "label": "Install InkOS (npm)" }] } }
 ---
 
-# InkOS - Story Creation & Translation AI Agent
+# InkOS - Story Creation AI Agent
 
 InkOS is a story creation and multilingual translation AI agent for long-form novels, short fiction, scripts, storyboards, interactive-film projects, fan works, continuations, covers, open-world / branching interactive play, and long-document localization. Prefer the Studio Chat / action-surface workflow for natural-language requests: the model proposes or invokes typed actions, InkOS executes them, and completion is derived from real tool results and files, not from prose claims.
 
