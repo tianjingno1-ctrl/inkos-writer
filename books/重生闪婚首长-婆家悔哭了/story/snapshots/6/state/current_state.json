@@ -1,0 +1,53 @@
+{
+  "chapter": 6,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "县城平静下的暗流（送信人身份、王德福的担忧）",
+      "validFromChapter": 6,
+      "validUntilChapter": null,
+      "sourceChapter": 6
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "霍景深, 小周, 老李（武装部干事）；待办对接王德福",
+      "validFromChapter": 5,
+      "validUntilChapter": null,
+      "sourceChapter": 5
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "安全抵达部队驻地",
+      "validFromChapter": 6,
+      "validUntilChapter": null,
+      "sourceChapter": 6
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前位置",
+      "object": "县城火车站（前往部队途中）",
+      "validFromChapter": 6,
+      "validUntilChapter": null,
+      "sourceChapter": 6
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "霍景深已提前离开，需独自应对可能的旅途变数",
+      "validFromChapter": 6,
+      "validUntilChapter": null,
+      "sourceChapter": 6
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "主角状态",
+      "object": "警惕且独立，持有工分回执与随军证明",
+      "validFromChapter": 6,
+      "validUntilChapter": null,
+      "sourceChapter": 6
+    }
+  ]
+}

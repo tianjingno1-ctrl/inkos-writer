@@ -1,40 +1,77 @@
 {
   "chapter": 1,
   "plannerInputs": [
-    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\author_intent.md",
-    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\current_focus.md",
-    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\outline\\story_frame.md",
-    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\outline\\volume_map.md",
-    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\chapter_summaries.md",
-    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\book_rules.md",
-    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\current_state.md",
-    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\pending_hooks.md",
-    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\memory.db"
+    "C:\\Users\\w\\Projects\\inkos-writer\\books\\重生闪婚首长-婆家悔哭了\\story\\author_intent.md",
+    "C:\\Users\\w\\Projects\\inkos-writer\\books\\重生闪婚首长-婆家悔哭了\\story\\current_focus.md",
+    "C:\\Users\\w\\Projects\\inkos-writer\\books\\重生闪婚首长-婆家悔哭了\\story\\outline\\story_frame.md",
+    "C:\\Users\\w\\Projects\\inkos-writer\\books\\重生闪婚首长-婆家悔哭了\\story\\outline\\volume_map.md",
+    "C:\\Users\\w\\Projects\\inkos-writer\\books\\重生闪婚首长-婆家悔哭了\\story\\chapter_summaries.md",
+    "C:\\Users\\w\\Projects\\inkos-writer\\books\\重生闪婚首长-婆家悔哭了\\story\\book_rules.md",
+    "C:\\Users\\w\\Projects\\inkos-writer\\books\\重生闪婚首长-婆家悔哭了\\story\\current_state.md",
+    "C:\\Users\\w\\Projects\\inkos-writer\\books\\重生闪婚首长-婆家悔哭了\\story\\pending_hooks.md",
+    "C:\\Users\\w\\Projects\\inkos-writer\\books\\重生闪婚首长-婆家悔哭了\\story\\memory.db"
   ],
   "composerInputs": [
-    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\runtime\\chapter-0001.intent.md"
+    "C:\\Users\\w\\Projects\\inkos-writer\\books\\重生闪婚首长-婆家悔哭了\\story\\runtime\\chapter-0001.intent.md"
   ],
   "selectedSources": [
     "runtime/chapter_memo",
     "story/current_focus.md",
+    "story/author_intent.md",
     "story/audit_drift.md",
     "story/current_state.md",
-    "story/outline/story_frame.md",
-    "story/outline/volume_map.md",
-    "runtime/hook_debt#H001",
-    "runtime/hook_debt#H002",
-    "story/current_state.md#当前冲突",
-    "story/current_state.md#当前目标",
-    "story/current_state.md#主角状态",
-    "story/current_state.md#当前限制",
-    "story/pending_hooks.md#H001",
-    "story/pending_hooks.md#plot-林晚棠利用缝-在贴身褂子内-兜里的两本婚",
-    "story/pending_hooks.md#H002",
-    "story/pending_hooks.md#conflict-大队治保主任-王德福出面刁-难林晚棠",
-    "story/pending_hooks.md#H003",
-    "story/pending_hooks.md#H004",
-    "story/pending_hooks.md#H005",
-    "story/pending_hooks.md#H006"
+    "story/outline/story_frame.md#主题与基调",
+    "story/outline/story_frame.md#核心冲突-对手定性-前台-后台双层故事",
+    "story/outline/story_frame.md#后台线-敌特-权重-下沉盘适配",
+    "story/outline/story_frame.md#世界观底色",
+    "story/outline/story_frame.md#终局方向-全书-objective",
+    "story/outline/volume_map.md#各卷主题与情绪曲线",
+    "story/outline/volume_map.md#卷间钩子与回收承诺",
+    "story/outline/volume_map.md#各卷-okr",
+    "story/outline/volume_map.md#卷尾必须发生的改变",
+    "story/outline/volume_map.md#节奏原则"
   ],
+  "usedSkills": [
+    "longform-writing"
+  ],
+  "promptPacks": [
+    "longform.writer",
+    "longform.reviser",
+    "longform.auditor"
+  ],
+  "contextNeeds": [
+    "author-intent",
+    "current-focus",
+    "chapter-memo",
+    "story-frame",
+    "volume-map",
+    "active-hooks",
+    "episodic-memory"
+  ],
+  "contextTiers": {
+    "protectedSources": [
+      "runtime/chapter_memo",
+      "story/current_focus.md",
+      "story/author_intent.md",
+      "story/audit_drift.md",
+      "story/current_state.md",
+      "story/outline/story_frame.md#主题与基调",
+      "story/outline/story_frame.md#核心冲突-对手定性-前台-后台双层故事",
+      "story/outline/story_frame.md#后台线-敌特-权重-下沉盘适配",
+      "story/outline/story_frame.md#世界观底色",
+      "story/outline/story_frame.md#终局方向-全书-objective",
+      "story/outline/volume_map.md#各卷主题与情绪曲线",
+      "story/outline/volume_map.md#卷间钩子与回收承诺",
+      "story/outline/volume_map.md#各卷-okr",
+      "story/outline/volume_map.md#卷尾必须发生的改变",
+      "story/outline/volume_map.md#节奏原则"
+    ],
+    "compressibleSources": []
+  },
+  "tokenBudget": {
+    "protectedTokens": 7835,
+    "compressibleTokens": 0,
+    "totalSelectedTokens": 7835
+  },
   "notes": []
 }

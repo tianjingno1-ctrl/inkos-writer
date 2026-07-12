@@ -45,7 +45,9 @@ npx inkos write next <bookId> --base-url https://api.apifast.tech/v1 --model gem
 4. inkos write next 重生闪婚首长-婆家悔哭了 --context "…"
 5. 手改定稿：极短段 · 双引号 · 活世界侧写
 6. inkos audit 重生闪婚首长-婆家悔哭了 N
-7. 满意 → inkos review approve … N → 下一章
+7. 满意 → inkos review approve … N
+8. **定章名**（正文定稿后再取；占位可用 `第N章`；ch1 时间锚除外）→ 同步 `index.json` · `chapter_summaries.md`
+9. 下一章
 ```
 
 ## 格式与规则文件

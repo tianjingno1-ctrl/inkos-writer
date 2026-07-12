@@ -335,6 +335,24 @@ ${prose}`;
     expect(result.content).toBe("正常的章节内容，这里是完整的正文。");
   });
 
+  it("parses Gemini-style tags without spaces before closing ===", () => {
+    const raw = `=== PRE_WRITE_CHECK ===
+自检完成
+
+=== CHAPTER_TITLE ===
+嫁人第七天
+
+=== CHAPTER_CONTENT===
+1976年七月，柴房里煤油灯噼啪响。
+
+林晚棠把野菜剁进搪瓷盆。`;
+
+    const result = parseCreativeOutput(1, raw);
+    expect(result.title).toBe("嫁人第七天");
+    expect(result.content).toContain("1976年七月");
+    expect(result.content).not.toContain("CHAPTER_CONTENT");
+  });
+
   it("counts creative output with the shared helper when a counting mode is supplied", () => {
     const raw = `=== CHAPTER_TITLE ===
 English Chapter

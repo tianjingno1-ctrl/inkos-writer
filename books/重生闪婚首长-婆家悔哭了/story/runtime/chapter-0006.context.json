@@ -1,0 +1,115 @@
+{
+  "chapter": 6,
+  "selectedContext": [
+    {
+      "source": "runtime/chapter_memo",
+      "reason": "Carry the planner's chapter-specific memo into writing and review.",
+      "excerpt": "goal=办妥爹名下 180 个陪嫁工分的划转，让王德福私域认怂，并以归队提前的急讯开启随军启程 | ## 当前任务\n林晚棠在县武装部办事处监督王德福在工分划转书上盖章，随后霍景深接到命令需提前归队。\n\n## 读者此刻在等什么\n1) 读者期待林晚棠爹留下的 180 个陪嫁工分能否顺利划转，王德福是否还会使绊子。\n2) 本章完全兑现工分划转，让王德福在军人威压下彻底认怂，并用“归队提前”制造新的紧迫感。\n\n## 该兑现的 / 暂不掀的\n- 该兑现：180 个陪嫁工分划转手续 → 彻底办妥，王德福当面盖章，折算为落户凭证。\n- 暂不掀：霍景深在河边的秘密任务 → 仅通过“急讯提前”施加外部压力，留到随军路上逐步揭示。\n\n## 日常/过渡承担什么任务\n- [01-05段] → 交代清晨在招待所食堂吃早饭，林晚棠与霍景深的互动，展现两人相处中细微的体贴与默契。- [15-20段] → 王德福盖章后私下向霍景深递烟讨好、打听消息被拒，通过其畏惧心理反衬霍景深的威慑力。\n\n## 关键抉择过三连问\n- 主角本章最关键的一次选择：林晚棠坚持要当场看着王德福把公章盖在红字正中，并由老李签字画押。\n  - 为什么这么做？防止红旗大队事后以“印章模糊”或“程序不合规”为由赖账。\n  - 符合当前利益吗？符合，这是她爹的血汗钱，也是她带去部队的立足资本。\n  - 符合他的人设吗？符合她“拎得清、刚直、绝不吃亏”的性格底色。\n- 对手/配角本章最关键的一次选择：王德福选择大清早亲自送章过来，并对林晚棠哈腰道歉。\n  - 为什么这么做？昨晚武装部的电话让他意识到霍景深的背景不是他能惹得起的，怕丢了官职。\n  - 符合当前利益吗？符合，破财消灾，用工分换取自己在公社的安稳。\n  - 符合他的人设吗？符合他欺软怕硬、精明算计的村干部性格。\n\n## 章尾必须发生的改变\n- 信息改变：林晚棠得知归队时间提前，随军出发时间从大后天缩短到当天下午。\n- 物理改变：180 个工分账目彻底从红旗大队剥离，变成林晚棠手上的合法资产凭证。\n\n## 本章 hook 账\nopen:\n- [new] H007 \"部队急讯背后的危机\" || 理由：霍景深突然接到紧急召回命令，暗示随军前方有未知的风暴。\n- [new] H008 \"王德福提起的陆家异动\" || 理由：王德福盖章后嘀咕陆家昨晚闹翻了天，暗示陈桂英不会善罢甘休。\n\nadvance:\n- mystery-揭示霍景深在-河边出现的真-实目标及敌特 → 霍景深接到部队急讯，面色严峻，归队时间提前（progressing → pressured）\n\nresolve:\n- H003\"180陪嫁工分划转\" → 王德福当面盖章，爹的血汗账彻底结清（clear）\n\ndefer:\n- mystery-揭示霍景深从-吉普车副驾驶-拿出的贴着红 →本章不动，理由：包裹还在行李中，到部队后再揭开。\n\n## 不要做\n- 不要写林晚棠对王德福产生同情或放过他，必须公事公办，不留任何模糊空间。\n- 不要让霍景深在办事处长篇大论，他只需通过军人的威严和简洁的命令施压。\n- 不要出现任何超越1976 年政策的金融划转方式，必须是手写盖章的工分转账凭证。- 不要切到陆家视角去写陈桂英在村里怎么骂街，完全由王德福口中或女主视角带出。"
+    },
+    {
+      "source": "story/current_focus.md",
+      "reason": "Carry the next-chapter steering and short-horizon focus.",
+      "excerpt": "# 当前聚焦\r\n\r\n## 近期进度\r\n\r\n| 批次 | 状态 | 说明 |\r\n|------|------|------|\r\n| **A 地基审计** | ✅ 完成 | LOCK/时间轴/audit_baseline |\r\n| **B ch1–4 重跑** | ✅ 完成 | draft→手改→audit→approve 全部通过 |\r\n| **C ch5 定稿** | ✅ 完成 | 正文锁定 · approved |\r\n\r\n| 章 | 标题 | 状态 |\r\n|----|------|------|\r\n| 1 | 嫁人第七天 | approved |\r\n| 2 | 烈属招牌不好使了 | approved |\r\n| 3 | 大队部见 | approved |\r\n| 4 | 首长到村 | approved |\r\n| 5 | 县城一夜 | approved |\r\n\r\n## 下一步\r\n\r\n1. **写 ch6**：接 ch5 · 明早王德福盖章 · 章末钩子 **C**（霍景深接部队急讯，归队时间提前）\r\n2. 卷级审计（批次 D）可在 ch6–10 写完后做\r\n\r\n## 写作约束\r\n\r\n- 节拍：ch5 正文为接章权威；180 陪嫁工分本日划转；七天折抵 ch5 已确认\r\n- 四定律见 `book_rules.md`\r\n- ch1–4 节拍：`notes/niandai-junhun-create/CH01-04-LOCK.md`"
+    },
+    {
+      "source": "story/author_intent.md",
+      "reason": "Bind long-horizon user intent and prevent model defaults from overriding the book direction.",
+      "excerpt": "# brief-for-architect · 重生闪婚首长军婚书\r\n\r\n> **任务**：从零生成完整地基（story_frame / volume_map / roles / book_rules / pending_hooks）。  \r\n> **权威约束**：本 brief + `CH01-04-LOCK.md` + `book_rules-draft.md` + `roles-draft.md` 优先级高于自由发挥。\r\n\r\n---\r\n\r\n## 基础信息\r\n\r\n- **书名**：《重生闪婚首长，婆家悔哭了》\r\n- **bookId**：`重生闪婚首长-婆家悔哭了`\r\n- **平台**：番茄女生\r\n- **题材**：七零年代 · 重生 · 婆媳/婆家 · 闪婚军婚 · 先婚后爱甜宠 · 世情壳\r\n- **篇幅**：80–120 万字，单章 2500–3500 字（听书友好）\r\n- **POV**：第三人称限知女主林晚棠\r\n- **目标读者**：35–55 岁下沉女性；婆媳/婚姻痛点、爱听书杀时间\r\n\r\n---\r\n\r\n## 核心卖点（一句话）\r\n\r\n「这一世我不忍了」+「嫁对人了，首长护短」——改命与被宠双爽。\r\n\r\n---\r\n\r\n## 对标与已验证结构（来自扫榜拆解）\r\n\r\n数据来源：`oh-story-exp/扫榜/番茄女频_年代军婚世情_20260708/黄金三章对照拆解.md`\r\n\r\n| 对标书 | 在读 | 本书取什么 |\r\n|--------|------|------------|\r\n| 《重生嫁人16天，我将婆家闹翻天》 | 46.9 万 | 嫁人第 N 天时间锚；第 1 章章末物理反击；第 3 章村干部 público 打脸 |\r\n| 《灵泉空间，荒年带娃找首长爹认亲》 | 44.8 万 | 霍骁式首长人设（被讹诈但不渣、后来护短）；先婚后爱回忆立人设 |\r\n\r\n**组合公式**：《16天》的 público 打脸时机 + 《灵泉空间》的首长爹系宠 —— **闪婚放书名，正文第 1 章闪回讲清；首长第 3 章末来信/电话，第 4 章本人露面护短。**\r\n\r\n---\r\n\r\n## 硬性设定（不可违反）\r\n\r\n### 金手指\r\n\r\n- **无空间、无灵泉、无系统**\r\n- 女主优势 = 重生记忆 + 性格转变 + 话术/一次狠活（武力中等，不靠咏春卸骨）\r\n\r\n### 闪婚理由（已定 B1）\r\n\r\n- **救人 + 政审窗口**：林晚棠在河边救下霍景深及其勤务兵小周；武装部干事协查规定「干部进村入户须登记家庭关系，未婚单独入村公社另批至少耽误三天」，霍景深三日后必须归队\r\n- 未婚干部入村易引闲话、妨碍查案；公社后院民政+武装部**当场办证**\r\n- 林晚棠动机：陆家当晚就要锁柴房门，闪婚是**合法脱身**\r\n- 双方于县武装部/公社登记处领证，手续合规\r\n- 陆家（卖身那家）以为她「嫁差了、丢人、没彩礼」\r\n\r\n### 感情线\r\n\r\n- 双洁；先婚后爱；爹系首长**只护她一人**\r\n- 禁止纯虐女主；甜宠从第 4 章首长露面后开始给明确反馈\r\n- 禁止男主前三章本人出场（仅闪回、第 3 章末来信/电话）\r\n\r\n### 娃线\r\n\r\n- **不要萌宝**（C1 已定）：不加养崽线，避免标签堆叠\r\n\r\n### 标签边界\r\n\r\n- **要**：重生、婆媳、虐渣打脸、先婚后爱、军婚/随军、双洁\r\n- **不要**：空间、灵泉、真千金、萌宝、系统\r\n\r\n---\r\n\r\n## ch1–4 已定节拍（禁止 architect 修改）\r\n\r\n详见 `notes/niandai-junhun-create/CH01-04-LOCK.md`。\r\n\r\n摘要：\r\n\r\n| 章 | 功能 | 爽点 |\r\n|----|------|------|\r\n| 1 | 受气日常 → 重生嫁人第 7 天 → 闪婚闪回（救人+政审）→ 章末第一次硬反击 | 代入 + 首击 |\r\n| 2 | 婆婆道德绑架 + 话术反杀 → 埋村干部/部队要来 | 私域打脸 + 蓄力 |\r\n| 3 | 村干部 público 场指控 → 当众举证 → 章末首长来信/电话 | público 打脸 + 安全感钩子 |\r\n| 4 | 首长本人露面 + 当众护短 + 第一次甜宠反馈 | 爹系宠落地 |\r\n\r\n---\r\n\r\n## 时代锚（七零）\r\n\r\n- **时间**：1976 年，嫁人第 7 天（与书名一致）\r\n- story_frame 须织入：物价（煤油灯、工分、布票）、政策语感（成分、烈士属、公社/大队）、军改前夕部队政审\r\n- book_rules 须写清年代限制（法律、婚姻、军婚手续不可穿帮）\r\n\r\n---\r\n\r\n## 主要角色（architect 可扩写，不可改核心）\r\n\r\n见 `roles-draft.md`。核心四人：\r\n\r\n- **林晚棠**（女主）：受气包儿媳 → 重生后不软，话术 + 一次狠活\r\n- **霍景深**（男主）：糙汉首长，少言护短，先婚后爱\r\n- **陈桂英**（婆婆）：道德绑架型，用烈士属/分家/彩礼话术\r\n- **陆建国**（陆家小叔子）：吸血型，要钱要粮\r\n\r\n---\r\n\r\n## volume_map 要求\r\n\r\n第一卷（约 1–30 章）须覆盖：\r\n\r\n1. ch1–4：黄金开篇（见 LOCK）\r\n2. ch5–10：与陆家分家/脱离控制线；村干部二次来犯；首长寄物资/派人\r\n3. ch11–20：随军手续；军属院初适应；陆家追到部队闹（第二次 público 打脸）\r\n4. ch21–30：霍景深职级揭晓；林晚棠在军属圈立足；陆家悔哭伏笔\r\n\r\n节奏原则：2–3 章一个小爽点；章章有硬结果； público 打脸每 10 章至少一次。\r\n\r\n---\r\n\r\n## pending_hooks 要求\r\n\r\n建书态全部 `open`，startChapter=0。建议包含：\r\n\r\n| 建议 ID | 内容 |\r\n|---------|------|\r\n| H001 | 前世林晚棠如何惨死（陆家磋磨/阴婚卖钱） |\r\n| H002 | 霍景深真实职级与政审任务 |\r\n| H003 | 陈桂英侵吞的陪嫁工分/进门所得证据（180 陪嫁工分爹名下 + 七天工分） |\r\n| H004 | 村干部与婆家的利益勾连 |\r\n| H005 | 随军后陆家追到部队 |\r\n| H006 | 霍景深为何当年被「讹诈」结婚却后来真心 |\r\n\r\n---\r\n\r\n## architect 禁止\r\n\r\n- 添加空间/灵泉/系统/萌宝\r\n- 修改 ch1–4 LOCK 事件链\r\n- 让男主前 3 章本人出场\r\n- 前三章只受气不打脸\r\n- 闪婚理由写成狗血误会（必须救人+政审硬理由）"
+    },
+    {
+      "source": "story/audit_drift.md",
+      "reason": "Carry forward audit drift guidance from the previous chapter without polluting hard state facts.",
+      "excerpt": "# 审计纠偏\n\n## 审计纠偏（自动生成，下一章写作前参照）\n\n> 第5章审计发现以下问题，下一章写作时必须避免：\n> - [critical] 设定冲突: 工分数据与前章产生严重逻辑断层。第3章及第4章明确提到林晚棠拿回的是‘187个工分’的折现（23.4元），且第4章结尾林晚棠宣言‘再无瓜葛’。但在第5章中，老李称这187个工分只是‘七天进门工分’（逻辑不通，7天不可能有187分），并引出另一笔‘180个陪嫁工分’。这导致读者对主角到底拿回了多少财产、是否已经彻底清账产生认知混乱。\n> - [warning] 节奏检查: 爽点重复且边际效用递减。第4章的高潮是‘拿回工分、当众打脸、坐车离去’，第5章再次使用‘追讨工分’作为冲突点，且解决方式依然是‘霍景深/小周施压+王德福认怂’，情节结构与上一章高度雷同，缺乏新鲜感。"
+    },
+    {
+      "source": "story/current_state.md",
+      "reason": "Preserve hard state facts referenced by the active chapter brief or hard constraints.",
+      "excerpt": "# 当前状态\n\n| 字段 | 值 |\n| --- | --- |\n| 当前章节 | 6 |\n| 当前位置 | 县城火车站（前往部队途中） |\n| 主角状态 | 警惕且独立，持有工分回执与随军证明 |\n| 当前目标 | 安全抵达部队驻地 |\n| 当前限制 | 霍景深已提前离开，需独自应对可能的旅途变数 |\n| 当前敌我 | 霍景深, 小周, 老李（武装部干事）；待办对接王德福 |\n| 当前冲突 | 县城平静下的暗流（送信人身份、王德福的担忧） |"
+    },
+    {
+      "source": "story/outline/story_frame.md#核心冲突-对手定性-前台-后台双层故事",
+      "reason": "Preserve world rules, core conflict, tone, and non-negotiable canon anchors relevant to the task.",
+      "excerpt": "## 核心冲突、对手定性、前台/后台双层故事\n核心矛盾是两种生存逻辑的对撞：林晚棠信奉“我的日子我做主，谁欺负我我就怼回去”，而以陈桂英为代表的旧秩序信奉“儿媳就得听婆家教唆，女人嫁出去就是婆家的私产”，两者从林晚棠重生的第一秒就注定要彻底撕破脸。显性对手是陈桂英母子，拿烈属身份当免死金牌，贪得无厌要吸干林晚棠的血汗；结构性对手是七零年代乡村默认的“婆权大于天”的陋俗，以及徇私护短的村治生态，所有人都觉得林晚棠反抗婆家是大逆不道。\n前台故事是读者每章能直接摸到的爽点链：林晚棠刚重生的头7天就硬怼婆家、当众打脸徇私的村干部、拿到首长的护短承诺、分家拿回血汗钱、随军去部队、在军属院立足、击退追到部队撒泼的婆家、靠自己的能力找到工作，每3章一个小爽点，每10章一次公开打脸，所有情绪都有落地的出口。后台故事是藏在所有冲突背后的暗线：霍景深那次紧急政审，本质是部队在清剿混进地方的边境敌特残留，当时林晚棠救的勤务兵身上带着关键情报，霍景深急着领证除了政审要求，也有打掩护、保护救命恩人的考量；而陈桂英的小儿子陆建国早就被敌特分子收买，婆家三番五次找林晚棠的麻烦，背后也有敌特想破坏军属声誉、干扰霍景深任务的推手——每一次前台的撒泼闹事，都可以有后台暗线齿轮转动，但**前台永远以打脸与甜宠为主，后台不得抢戏**。"
+    },
+    {
+      "source": "story/outline/story_frame.md#世界观底色",
+      "reason": "Preserve world rules, core conflict, tone, and non-negotiable canon anchors relevant to the task.",
+      "excerpt": "## 世界观底色\n故事锚定在1976年的南方丘陵公社，所有细节都贴合时代逻辑：工分是硬通货，布票、糖票比钱还金贵，夜里照明靠煤油灯，大队的事村支书说了算但没人敢惹穿军装的人，军婚受法律严格保护，破坏军婚要坐牢，烈士家属有优待但不能拿着名头讹人，政审极其严格，个人身份档案跟着人走一辈子。没有任何超自然金手指，林晚棠的所有优势都来自前世活过一世的记忆，知道婆家什么时候要作妖，知道霍景深的为人和未来的发展，会干农活、嘴皮子爽利、真被惹急了敢拼命，没有凭空来的武功、物资或者预知未来的系统。全书采用第三人称限知女主视角，所有叙事都围绕林晚棠的所见所闻展开，不跳上帝视角，不提前剧透读者女主不知道的信息。"
+    },
+    {
+      "source": "story/outline/story_frame.md#终局方向-全书-objective",
+      "reason": "Preserve world rules, core conflict, tone, and non-negotiable canon anchors relevant to the task.",
+      "excerpt": "## 终局方向 + 全书 Objective\n最后一个镜头是大年三十的傍晚，林晚棠穿着霍景深给她买的藏青色呢子大衣，站在部队家属院的门口接刚出任务回来的霍景深，远处陈桂英穿着打补丁的破棉袄，缩着脖子想混进家属院讨好处，被哨兵直接拦在警戒线外，她手里攥着刚拿到的供销社正式职工录用通知书，兜里揣着霍景深给她留的奶糖，回头笑的时候霍景深伸手给她拢了拢被风吹散的围巾，细碎的雪落在两个人的肩头，连风都是暖的。全书 Objective：林晚棠从被婆家磋磨致死的受气包，成为受部队认可的优秀军属、有正式编制的供销社职工，让作恶的陆家彻底落魄悔不当初，和霍景深相守过上安稳踏实的好日子。"
+    },
+    {
+      "source": "story/outline/volume_map.md#各卷主题与情绪曲线",
+      "reason": "Select the current arc/chapter planning section without injecting the entire long outline.",
+      "excerpt": "### 各卷主题与情绪曲线\n全书共4卷，情绪曲线完全贴合下沉用户的爽点需求：第一卷是重生开局的扬眉吐气篇，前半段压得狠，婆家的磋磨、村支书的偏心都往林晚棠身上砸，后半段爽点密集，从第一次硬怼婆婆、当众打脸村支书，到霍景深露面护短、分家拿钱、办随军手续，情绪一路走高，全程没有憋屈的长段落；第二卷是军属院立足的甜宠升温篇，刚到部队的陌生感、其他军属的闲言碎语、婆家追上门的撒泼是小压抑点，每次都很快被霍景深的护短、林晚棠的反杀化解，甜宠情节占比提升，整体情绪是暖而爽的；第三卷是事业起步的暗线收网篇，林晚棠考供销社编制、和霍景深感情双向奔赴是暖线，陆建国的小动作、敌特的渗透是紧绷线，爽点和甜宠交织，情绪稳中有升；第四卷是圆满收尾篇，所有旧怨了结，婆家得到报应，两个人补办婚礼，情绪全程温暖圆满。\n\n> **章级细纲**：第一卷 ch1–30 见 `outline/vol1_chapters.md`。ch3 **计划**完成 público 身份核实与口头分家定调；ch4 定义为「首长露面 + 甜宠 + 分家落地」，不重复大队部 público。\n\n> **敌特线**：卷1–2 仅伏笔（见 story_frame 后台线权重）；卷3 升为主线之一；禁止卷1 开谍战专章。"
+    },
+    {
+      "source": "story/chapter_summaries.md#recent_titles",
+      "reason": "Keep recent title history visible to avoid repetitive chapter naming.",
+      "excerpt": "5: 县城一夜 | 4: 首长到村 | 3: 大队部见 | 2: 烈属招牌不好使了 | 1: 嫁人第七天"
+    },
+    {
+      "source": "story/chapter_summaries.md#recent_mood_type_trail",
+      "reason": "Keep recent mood and chapter-type cadence visible before writing the next chapter.",
+      "excerpt": "5: 踏实/期待 / 过渡章 | 4: 极度舒适/甜宠护短 / 爆发章 | 3: 极度舒适/反杀爽快 / 爆发章 | 2: 紧绷与反击 / 推进章 | 1: 压抑转爆发 / 开篇章"
+    },
+    {
+      "source": "story/chapters#recent_endings",
+      "reason": "Show how recent chapters ended so the writer avoids structural repetition (e.g. 3 consecutive collapse endings).",
+      "excerpt": "ch3: 远处黄土路上，卡车引擎的轰鸣声隐隐传来，越来越近。 | ch4: 重活一世，她终于嫁对了人。 | ch5: 这一次，再也没人能把她拽回那座吃人的陆家，拽回那扇漏风的破柴门。"
+    },
+    {
+      "source": "story/current_state.md#当前冲突",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "当前冲突 | 县城平静下的暗流（送信人身份、王德福的担忧）"
+    },
+    {
+      "source": "story/current_state.md#当前目标",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "当前目标 | 安全抵达部队驻地"
+    },
+    {
+      "source": "story/current_state.md#主角状态",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "主角状态 | 警惕且独立，持有工分回执与随军证明"
+    },
+    {
+      "source": "story/current_state.md#当前限制",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "当前限制 | 霍景深已提前离开，需独自应对可能的旅途变数"
+    },
+    {
+      "source": "story/chapter_summaries.md#3",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "大队部见 | 林晚棠在大队部出示军婚证，王德福通过公社电话核实后态度巨变，当众念出林晚棠的187个工分账目，逼陈桂英答应归还；林晚棠宣布分家，随后接到霍景深约定接她的电话，回到住处收拾好证件和账本等待出发。 | 林晚棠彻底脱离陆家控制，拿回工分承诺与账本证件；王德福与陈桂英彻底吃瘪并产生恐惧；随军接人倒计时开启。 | H001 resolved, H003 resolved, H004resolved, H002 advanced"
+    },
+    {
+      "source": "story/chapter_summaries.md#4",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "首长到村 | 霍景深乘吉普车高调到达红旗大队，当众给林晚棠披大衣、喂奶糖。小周以军婚条例和派出所强制执行警告陈桂英，逼其当场退还林晚棠187个工分折算的23.4元及布票粮票。林晚棠宣布与陆家再无瓜葛，坐上吉普车随霍景深离村。 | 林晚棠彻底脱离陆家并拿回全部工分财产，与霍景深正式踏上随军之路；陆家威信扫地、彻底吃瘪。 | H002 resolved"
+    },
+    {
+      "source": "story/chapter_summaries.md#5",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "县城一夜 | 二人抵达县城武装部招待所；老李核对随军手续，确认七天进门工分折抵已过，爹名下180陪嫁工分须大队盖章划转。小周连夜电话王德福，约定明早八点带章来办事处；随军定大后天七点半集合。霍景深楼下守夜，林晚棠终得踏实入睡。 | 空间转入县城；随军日期落定；180工分划转进入最后一步；林与霍关系由护短转入同行备手续。 | H003 advanced, H006 deferred"
+    },
+    {
+      "source": "story/pending_hooks.md#mystery-揭示霍景深在-河边出现的真-实目标及敌特",
+      "reason": "Preserve active hook evidence and hook debt that the current chapter must honor.",
+      "excerpt": "mystery | progressing | 揭示大队部电话线沉默背后预示的更大风暴（敌特/公社调查风波） | mid-arc | 林晚棠走后，大队部的电话线显得格外沉默，暗示王德福或陆家背后仍有未完的风暴与暗流。"
+    },
+    {
+      "source": "story/pending_hooks.md#mystery-揭示霍景深从-吉普车副驾驶-拿出的贴着红",
+      "reason": "Preserve active hook evidence and hook debt that the current chapter must honor.",
+      "excerpt": "mystery | progressing | 揭示霍景深从吉普车副驾驶拿出的贴着红封条的牛皮纸长条包裹的来历与用途 | near-term | 霍景深在路过陆家柴门时特意拿出此包裹，分量不轻且贴着红封条，透着神秘与严肃，陈桂英见之眼皮狂跳。"
+    },
+    {
+      "source": "story/pending_hooks.md#character-调查出给陈桂-英送信的神秘-人身份",
+      "reason": "Preserve active hook evidence and hook debt that the current chapter must honor.",
+      "excerpt": "character | open | 调查出给陈桂英送信的神秘人身份 | mid-arc | 霍景深电报中提到的关键人物，是连接陆家与敌特线的纽带。"
+    }
+  ]
+}

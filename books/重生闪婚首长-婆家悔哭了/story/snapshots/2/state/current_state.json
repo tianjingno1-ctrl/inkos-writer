@@ -4,7 +4,7 @@
     {
       "subject": "protagonist",
       "predicate": "当前冲突",
-      "object": "林晚棠与陈桂英公开对立，与徇私的村支书王德福的冲突即将爆发",
+      "object": "林晚棠 vs 陈桂英/陆建国（关于工分与人身自由的决裂）",
       "validFromChapter": 2,
       "validUntilChapter": null,
       "sourceChapter": 2
@@ -12,7 +12,7 @@
     {
       "subject": "protagonist",
       "predicate": "当前敌我",
-      "object": "生产队长李长根对林晚棠持同情态度",
+      "object": "霍景深（合法丈夫，即将汇合）",
       "validFromChapter": 2,
       "validUntilChapter": null,
       "sourceChapter": 2
@@ -20,7 +20,7 @@
     {
       "subject": "protagonist",
       "predicate": "当前目标",
-      "object": "次日去大队部清算旧账，拿到霍景深的部队来信",
+      "object": "明日大队部公审中彻底脱离陆家",
       "validFromChapter": 2,
       "validUntilChapter": null,
       "sourceChapter": 2
@@ -28,7 +28,7 @@
     {
       "subject": "protagonist",
       "predicate": "当前位置",
-      "object": "陆家院子/院门口",
+      "object": "陆家柴房",
       "validFromChapter": 2,
       "validUntilChapter": null,
       "sourceChapter": 2
@@ -36,7 +36,7 @@
     {
       "subject": "protagonist",
       "predicate": "当前限制",
-      "object": "暂居陆家需提防陈桂英后续使坏，应对王德福的徇私刁难",
+      "object": "陆家母子联合村支书王德福的恶意构陷",
       "validFromChapter": 2,
       "validUntilChapter": null,
       "sourceChapter": 2
@@ -44,7 +44,7 @@
     {
       "subject": "protagonist",
       "predicate": "主角状态",
-      "object": "林晚棠持有合法婚书、政审证明，拿到陈桂英私吞120元彩礼、180个工分及勾结王支书污蔑自己骗婚的实锤，与陈桂英彻底撕破脸",
+      "object": "冷静从容，底牌在手",
       "validFromChapter": 2,
       "validUntilChapter": null,
       "sourceChapter": 2

@@ -1,0 +1,148 @@
+{
+  "hooks": [
+    {
+      "hookId": "H005",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "deferred",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "林晚棠刚到军属院站稳脚跟时",
+      "payoffTiming": "mid-arc",
+      "notes": "陆家追到部队军属院撒泼闹事",
+      "dependsOn": [],
+      "paysOffInArc": "第2卷中段",
+      "coreHook": false,
+      "halfLifeChapters": 30,
+      "promoted": false
+    },
+    {
+      "hookId": "H006",
+      "startChapter": 0,
+      "type": "情感",
+      "status": "deferred",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "林晚棠和霍景深双向表白时",
+      "payoffTiming": "mid-arc",
+      "notes": "霍景深当年闪婚其实第一眼就看上了林晚棠，不是完全为了任务",
+      "dependsOn": [],
+      "paysOffInArc": "第3卷前段",
+      "coreHook": true,
+      "halfLifeChapters": 30,
+      "promoted": true
+    },
+    {
+      "hookId": "H007",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "deferred",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "敌特收网行动",
+      "payoffTiming": "slow-burn",
+      "notes": "陆建国和敌特分子有勾结，帮着传递情报的证据",
+      "dependsOn": [
+        "H002"
+      ],
+      "paysOffInArc": "第3卷末",
+      "coreHook": true,
+      "halfLifeChapters": 60,
+      "promoted": true
+    },
+    {
+      "hookId": "H008",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "deferred",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "全书收尾",
+      "payoffTiming": "endgame",
+      "notes": "陆家彻底落魄，陈桂英在村口当众悔哭的场景",
+      "dependsOn": [
+        "H001"
+      ],
+      "paysOffInArc": "第4卷末",
+      "coreHook": false,
+      "halfLifeChapters": 80,
+      "promoted": true
+    },
+    {
+      "hookId": "H001",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "resolved",
+      "lastAdvancedChapter": 3,
+      "expectedPayoff": "林晚棠与陆家彻底撕破脸时分家现场",
+      "payoffTiming": "near-term",
+      "notes": "本章通过闪回详细描述了前世被陆家卖给老鳏夫冻死荒山的惨状，强化了复仇动机。",
+      "dependsOn": [],
+      "paysOffInArc": "第1卷中段",
+      "coreHook": true,
+      "halfLifeChapters": 10,
+      "promoted": true
+    },
+    {
+      "hookId": "H003",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "resolved",
+      "lastAdvancedChapter": 3,
+      "expectedPayoff": "分家现场举证",
+      "payoffTiming": "near-term",
+      "notes": "陈桂英明确提出索要林父名下的180个工分，林晚棠贴身藏匿账本，冲突焦点明确。",
+      "dependsOn": [],
+      "paysOffInArc": "第1卷中段",
+      "coreHook": false,
+      "halfLifeChapters": 10,
+      "promoted": false
+    },
+    {
+      "hookId": "H004",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "resolved",
+      "lastAdvancedChapter": 3,
+      "expectedPayoff": "村干部公开打脸现场",
+      "payoffTiming": "near-term",
+      "notes": "陈桂英连夜去找村支书王德福，策划明日公审，林晚棠已获悉此情报。",
+      "dependsOn": [],
+      "paysOffInArc": "第1卷前段",
+      "coreHook": false,
+      "halfLifeChapters": 10,
+      "promoted": false
+    },
+    {
+      "hookId": "H002",
+      "startChapter": 0,
+      "type": "剧情",
+      "status": "resolved",
+      "lastAdvancedChapter": 4,
+      "expectedPayoff": "霍景深本人到达并接走林晚棠",
+      "payoffTiming": "immediate",
+      "notes": "闪回交代了霍景深因‘紧急政审任务’需要合法身份而闪婚，并承诺第七天（即今天）回来接人。",
+      "dependsOn": [],
+      "paysOffInArc": "第3卷中段",
+      "coreHook": true,
+      "halfLifeChapters": 30,
+      "promoted": true
+    },
+    {
+      "hookId": "mystery-揭示霍景深在-河边出现的真-实目标及敌特",
+      "startChapter": 1,
+      "type": "mystery",
+      "status": "progressing",
+      "lastAdvancedChapter": 3,
+      "expectedPayoff": "揭示大队部电话线沉默背后预示的更大风暴（敌特/公社调查风波）",
+      "payoffTiming": "mid-arc",
+      "notes": "林晚棠走后，大队部的电话线显得格外沉默，暗示王德福或陆家背后仍有未完的风暴与暗流。"
+    },
+    {
+      "hookId": "mystery-揭示霍景深从-吉普车副驾驶-拿出的贴着红",
+      "startChapter": 4,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 4,
+      "expectedPayoff": "揭示霍景深从吉普车副驾驶拿出的贴着红封条的牛皮纸长条包裹的来历与用途",
+      "payoffTiming": "near-term",
+      "notes": "霍景深在路过陆家柴门时特意拿出此包裹，分量不轻且贴着红封条，透着神秘与严肃，陈桂英见之眼皮狂跳。"
+    }
+  ]
+}

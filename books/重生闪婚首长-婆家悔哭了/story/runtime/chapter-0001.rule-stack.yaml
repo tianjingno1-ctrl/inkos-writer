@@ -45,16 +45,36 @@ overrideEdges:
 activeOverrides:
   - from: L4
     to: L3
-    target: chapter:1/styleEmphasis
-    reason: 极短段、手机阅读；**每个叙述段落后空一行**
+    target: chapter:1/mustAvoid
+    reason: 禁止上帝视角、全知旁白、平行切场景、提前剧透女主不知道的信息
+  - from: L4
+    to: L3
+    target: chapter:1/mustAvoid
+    reason: 禁止男主前3章本人出场，仅允许闪回、第3章末出现来信/电话
+  - from: L4
+    to: L3
+    target: chapter:1/mustAvoid
+    reason: 禁止虐女主，所有女主受的气必须在3章内打脸回去
+  - from: L4
+    to: L3
+    target: chapter:1/mustAvoid
+    reason: 禁止将闪婚理由改成狗血误会，必须是救人+政审的硬理由
+  - from: L4
+    to: L3
+    target: chapter:1/mustAvoid
+    reason: 禁止出现不符合1976年代的物品、政策，不许穿帮
   - from: L4
     to: L3
     target: chapter:1/styleEmphasis
-    reason: 对话：**中文双引号** `""`（ch1 直角引号待统一）
+    reason: 节拍权威：`notes/niandai-junhun-create/CH01-04-LOCK.md`
   - from: L4
     to: L3
     target: chapter:1/styleEmphasis
-    reason: 正文禁写「第一章」等破墙序号
+    reason: 四定律见 `book_rules.md`
+  - from: L4
+    to: L3
+    target: chapter:1/styleEmphasis
+    reason: 手搓备份：`notes/niandai-junhun-create/archive/pre-gemini-rerun-20260710/`
   - from: L4
     to: L3
     target: chapter:1/styleEmphasis

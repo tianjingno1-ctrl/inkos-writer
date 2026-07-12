@@ -1,0 +1,81 @@
+layers:
+  - id: L1
+    name: hard_facts
+    precedence: 100
+    scope: global
+  - id: L2
+    name: author_intent
+    precedence: 80
+    scope: book
+  - id: L3
+    name: planning
+    precedence: 60
+    scope: arc
+  - id: L4
+    name: current_task
+    precedence: 70
+    scope: local
+sections:
+  hard:
+    - story_frame
+    - current_state
+    - book_rules
+    - roles
+  soft:
+    - author_intent
+    - current_focus
+    - volume_map
+  diagnostic:
+    - anti_ai_checks
+    - continuity_audit
+    - style_regression_checks
+overrideEdges:
+  - from: L4
+    to: L3
+    allowed: true
+    scope: current_chapter
+  - from: L4
+    to: L2
+    allowed: false
+    scope: current_chapter
+  - from: L4
+    to: L1
+    allowed: false
+    scope: current_chapter
+activeOverrides:
+  - from: L4
+    to: L3
+    target: chapter:7/mustAvoid
+    reason: 禁止上帝视角、全知旁白、平行切场景、提前剧透女主不知道的信息
+  - from: L4
+    to: L3
+    target: chapter:7/mustAvoid
+    reason: 禁止男主前3章本人出场，仅允许闪回、第3章末出现来信/电话
+  - from: L4
+    to: L3
+    target: chapter:7/mustAvoid
+    reason: 禁止虐女主，所有女主受的气必须在3章内打脸回去
+  - from: L4
+    to: L3
+    target: chapter:7/mustAvoid
+    reason: 禁止将闪婚理由改成狗血误会，必须是救人+政审的硬理由
+  - from: L4
+    to: L3
+    target: chapter:7/mustAvoid
+    reason: 禁止出现不符合1976年代的物品、政策，不许穿帮
+  - from: L4
+    to: L3
+    target: chapter:7/styleEmphasis
+    reason: 节拍：ch5–6 正文为接章权威；方案 A 分离启程
+  - from: L4
+    to: L3
+    target: chapter:7/styleEmphasis
+    reason: 四定律见 `book_rules.md`
+  - from: L4
+    to: L3
+    target: chapter:7/styleEmphasis
+    reason: ch1–4 节拍：`notes/niandai-junhun-create/CH01-04-LOCK.md`
+  - from: L4
+    to: L3
+    target: chapter:7/styleEmphasis
+    reason: '**书名**：《重生闪婚首长，婆家悔哭了》'

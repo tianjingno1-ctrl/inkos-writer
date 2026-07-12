@@ -10,18 +10,25 @@ export interface CreativeOutput {
   readonly preWriteCheck: string;
 }
 
+/** Matches `=== TAG ===` with flexible spacing (Gemini often emits `=== TAG===`). */
+function buildTagRegex(tag: string): RegExp {
+  const escapedTag = tag.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(
+    `===\\s*${escapedTag}\\s*===\\s*([\\s\\S]*?)(?====\\s*[A-Z_]+\\s*===|$)`,
+  );
+}
+
+function extractTaggedBlock(content: string, tag: string): string {
+  const match = content.match(buildTagRegex(tag));
+  return match?.[1]?.trim() ?? "";
+}
+
 export function parseCreativeOutput(
   chapterNumber: number,
   content: string,
   countingMode: LengthCountingMode = "zh_chars",
 ): CreativeOutput {
-  const extract = (tag: string): string => {
-    const regex = new RegExp(
-      `=== ${tag} ===\\s*([\\s\\S]*?)(?==== [A-Z_]+ ===|$)`,
-    );
-    const match = content.match(regex);
-    return match?.[1]?.trim() ?? "";
-  };
+  const extract = (tag: string): string => extractTaggedBlock(content, tag);
 
   let chapterContent = extract("CHAPTER_CONTENT");
 
@@ -129,13 +136,7 @@ export function parseWriterOutput(
   genreProfile: GenreProfile,
   countingMode: LengthCountingMode = "zh_chars",
 ): ParsedWriterOutput {
-  const extract = (tag: string): string => {
-    const regex = new RegExp(
-      `=== ${tag} ===\\s*([\\s\\S]*?)(?==== [A-Z_]+ ===|$)`,
-    );
-    const match = content.match(regex);
-    return match?.[1]?.trim() ?? "";
-  };
+  const extract = (tag: string): string => extractTaggedBlock(content, tag);
 
   const chapterContent = extract("CHAPTER_CONTENT");
 

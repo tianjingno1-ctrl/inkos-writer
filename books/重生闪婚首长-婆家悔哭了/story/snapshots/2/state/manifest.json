@@ -3,14 +3,5 @@
   "language": "zh",
   "lastAppliedChapter": 2,
   "projectionVersion": 1,
-  "migrationWarnings": [
-    "H001:status normalized from \"暂缓\" to \"open\"",
-    "H002:status normalized from \"暂缓\" to \"open\"",
-    "H003:status normalized from \"暂缓\" to \"open\"",
-    "H004:status normalized from \"暂缓\" to \"open\"",
-    "H005:status normalized from \"暂缓\" to \"open\"",
-    "H006:status normalized from \"暂缓\" to \"open\"",
-    "H007:status normalized from \"暂缓\" to \"open\"",
-    "H008:status normalized from \"暂缓\" to \"open\""
-  ]
+  "migrationWarnings": []
 }

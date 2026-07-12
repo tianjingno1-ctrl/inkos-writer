@@ -1,0 +1,53 @@
+{
+  "chapter": 3,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "无（与陆家、王德福的阶段性冲突已解决）",
+      "validFromChapter": 3,
+      "validUntilChapter": null,
+      "sourceChapter": 3
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "霍景深",
+      "validFromChapter": 3,
+      "validUntilChapter": null,
+      "sourceChapter": 3
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "等待霍景深到达，正式随军出发",
+      "validFromChapter": 3,
+      "validUntilChapter": null,
+      "sourceChapter": 3
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前位置",
+      "object": "陆家住处（准备离开）",
+      "validFromChapter": 3,
+      "validUntilChapter": null,
+      "sourceChapter": 3
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "无（已彻底摆脱陆家名义与人身控制）",
+      "validFromChapter": 3,
+      "validUntilChapter": null,
+      "sourceChapter": 3
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "主角状态",
+      "object": "释怀安心，行李已收拾，静待出发",
+      "validFromChapter": 3,
+      "validUntilChapter": null,
+      "sourceChapter": 3
+    }
+  ]
+}

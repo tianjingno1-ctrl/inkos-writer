@@ -1,0 +1,53 @@
+{
+  "chapter": 4,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "无（与陆家的直接人身与经济纠缠已在本章彻底斩断）",
+      "validFromChapter": 4,
+      "validUntilChapter": null,
+      "sourceChapter": 4
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "霍景深, 小周",
+      "validFromChapter": 4,
+      "validUntilChapter": null,
+      "sourceChapter": 4
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "随霍景深前往县城，办理随军手续并前往部队",
+      "validFromChapter": 4,
+      "validUntilChapter": null,
+      "sourceChapter": 4
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前位置",
+      "object": "去往县城的路上（吉普车内）",
+      "validFromChapter": 4,
+      "validUntilChapter": null,
+      "sourceChapter": 4
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "路况不佳，到县城仍需两个钟头",
+      "validFromChapter": 4,
+      "validUntilChapter": null,
+      "sourceChapter": 4
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "主角状态",
+      "object": "放松，释然，身体回暖，小手被霍景深握在掌心",
+      "validFromChapter": 4,
+      "validUntilChapter": null,
+      "sourceChapter": 4
+    }
+  ]
+}
