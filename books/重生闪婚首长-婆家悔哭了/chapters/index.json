@@ -98,13 +98,13 @@
   {
     "number": 4,
     "title": "首长到村",
-    "status": "approved",
+    "status": "ready-for-review",
     "wordCount": 1838,
     "createdAt": "2026-07-10T14:42:40.326Z",
-    "updatedAt": "2026-07-10T14:43:34.852Z",
+    "updatedAt": "2026-07-13T06:21:59.462Z",
     "auditIssues": [
-      "[info] 本章中出现了高频AI词汇：‘忽然’（‘村口忽然传来低沉的轰鸣’）。",
-      "[info] ‘霍景深拎起藤条箱，像拎灯草’中的‘像拎灯草’略带书面修饰感，不符合糙汉首长和极简短句的硬朗风格。"
+      "[info] “脊背挺得笔直”在第3章和第4章连续出现，作为主角进入冲突态的标志性动作，略显重复。",
+      "[info] 霍景深在1976年农村大庭广众之下“喂奶糖”的行为极具视觉冲击力和爽感，但围观群众的反应仅停留在“瞪大眼”，略显单薄。"
     ],
     "lengthWarnings": [],
     "lengthTelemetry": {
@@ -177,14 +177,137 @@
   {
     "number": 7,
     "title": "深夜那通电话",
-    "status": "draft",
-    "wordCount": 2886,
+    "status": "ready-for-review",
+    "wordCount": 2697,
     "createdAt": "2026-07-11T14:54:47.060Z",
-    "updatedAt": "2026-07-11T15:02:35.164Z",
+    "updatedAt": "2026-07-13T06:21:38.389Z",
     "auditIssues": [
-      "[info] 文中出现了‘微微’（面上却不显，指尖一蜷）、‘竟然’等AI高频词，且‘仿佛/不禁/宛如/竟然/忽然/猛地’等词汇在3000字内有零星分布，虽未严重超标，但有轻微AI感。",
-      "[warning] 对照当前状态卡与摘要，本章设定了‘凌晨紧急提前出发’、‘突发军情导致行程提前半小时’以及‘小周隔离陆建国’等关键情节。然而在成稿正文中，小周仅口头汇报了‘陆建国昨夜半夜摸出村’、‘大后天集合时间提前到七点’，并未实际发生‘凌晨紧急提前出发’的动作，且‘小周隔离陆建国’（H007 陆建国的下落）在正文中完全没有体现，仅停留在口头线索阶段。这导致本章的‘行动感’和‘紧迫感’比预期偏弱，爽点未完全落地。",
-      "[info] 火车站送别和招待所的场景中，背景人物（如排队的人、老勤务员）功能较为单一，缺乏‘世界不因女主到场才转’的生动细节。老勤务员端着搪瓷缸踱步略显工具化。"
+      "[info] 文中出现了AI高频词‘仿佛’（‘仿佛还留在鼻端’），但整体密度极低，未达到warning阈值。",
+      "[info] 本章开启了核心伏笔‘H007-陆建国的下落’（被截获送往农场）与‘H008-公社内鬼与匿名信’的引子（陆建国深夜与外地口音人接头）。目前状态均为正常open/progressing，无stale或blocked情况，符合结构预期。"
     ]
+  },
+  {
+    "number": 8,
+    "title": "离县！这一走，永不回头",
+    "status": "approved",
+    "wordCount": 3474,
+    "createdAt": "2026-07-13T02:41:05.711Z",
+    "updatedAt": "2026-07-13T05:53:59.295Z",
+    "auditIssues": [
+      "[warning] 职级设定不一致。本章正文中小周称呼霍景深为‘霍营长’，且角色矩阵设定为‘守备营营长’；但本章摘要（Chapter Summary 8）中记录为‘得知霍景深团长职级’。",
+      "[warning] AI标记词‘猛地’在约1500字的篇幅内出现了3次（‘猛地一顿’、‘猛地拔高’、‘猛地一震’），密度超过了每3000字1次的红线。",
+      "[info] 林晚棠在反击小钱时，虽然话术犀利且逻辑严密（利用婚书和老李主任背书），但最终解决问题的关键点在于小周到场后的‘职级压制’（霍营长名头）。",
+      "[info] 关于‘瘦削军嫂’和‘灰黑布包’的伏笔（H008新钩子）引入略显生硬，仅通过林晚棠的‘留了意’带过。",
+      "[warning] 最近3章章节类型持续停留在“推进章”，长篇节奏可能开始固化。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 3324,
+      "postWriterNormalizeCount": 3324,
+      "postReviseCount": 0,
+      "finalCount": 3474,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 64481,
+      "completionTokens": 7941,
+      "totalTokens": 72422
+    }
+  },
+  {
+    "number": 9,
+    "title": "北上的闷罐车",
+    "status": "approved",
+    "wordCount": 2462,
+    "createdAt": "2026-07-13T06:04:48.665Z",
+    "updatedAt": "2026-07-13T06:47:29.212Z",
+    "auditIssues": [
+      "[info] 终稿四处微调已去「猛地」堆叠（肩膀往后缩/蹲下去）；草席与 ch8 一致。",
+      "[info] 本章作为典型的「后效+过渡章」，展示随军生活质量改变（军大衣、细粮、麦乳精），并完成吴招娣布包悬疑蓄压与白泥洼小冲突。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 2000,
+      "softMin": 1728,
+      "softMax": 2272,
+      "hardMin": 1455,
+      "hardMax": 2545,
+      "countingMode": "zh_chars",
+      "writerCount": 2448,
+      "postWriterNormalizeCount": 2448,
+      "postReviseCount": 2462,
+      "finalCount": 2462,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 46102,
+      "completionTokens": 11091,
+      "totalTokens": 57193
+    }
+  },
+  {
+    "number": 10,
+    "title": "邮戳里的毒蛇",
+    "status": "approved",
+    "wordCount": 2161,
+    "createdAt": "2026-07-13T07:42:04.554Z",
+    "updatedAt": "2026-07-13T08:14:36.496Z",
+    "auditIssues": [
+      "[info] 手改终稿：表达瘦身+包线降频；小周交信流程已修；audit 初版 warning 已落地修正。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 2000,
+      "softMin": 1728,
+      "softMax": 2272,
+      "hardMin": 1455,
+      "hardMax": 2545,
+      "countingMode": "zh_chars",
+      "writerCount": 2405,
+      "postWriterNormalizeCount": 2405,
+      "postReviseCount": 2161,
+      "finalCount": 2161,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 35983,
+      "completionTokens": 7757,
+      "totalTokens": 43740
+    }
+  },
+  {
+    "number": 11,
+    "title": "营门接人",
+    "status": "draft",
+    "wordCount": 2330,
+    "createdAt": "2026-07-13T08:40:00.000Z",
+    "updatedAt": "2026-07-13T09:12:00.000Z",
+    "auditIssues": [
+      "[info] 用户扩写版底稿 + 纠错：站台改营门、删下意识/烟火味、霍台词统一。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 2000,
+      "softMin": 1728,
+      "softMax": 2272,
+      "hardMin": 1455,
+      "hardMax": 2545,
+      "countingMode": "zh_chars",
+      "writerCount": 2330,
+      "postWriterNormalizeCount": 2330,
+      "postReviseCount": 2330,
+      "finalCount": 2330,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    }
   }
 ]

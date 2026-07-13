@@ -1,0 +1,105 @@
+{
+  "chapter": 9,
+  "selectedContext": [
+    {
+      "source": "runtime/chapter_memo",
+      "reason": "Carry the planner's chapter memo into governed writing.",
+      "excerpt": "goal=开启随军路途，建立军属圈初步印象并埋下黑布包悬念 | ## 当前任务\n林晚棠在颠簸的卡车车斗内，通过与张嫂交谈初步了解部队家属院规矩，并敏锐察觉同车一名瘦削军嫂黑布包中的异常。\n\n## 读者此刻在等什么\n1) 读者期待林晚棠离开陆家后，在随军路上是否会遇到新的刁难或结交新盟友。\n2) 本章部分兑现：通过张嫂的善意给予女主正面反馈；同时制造新缺口：那个沉重的黑布包到底装了什么？为什么霍景深的职级在张嫂口中变成了“营长”？\n\n## 该兑现的 / 暂不掀的\n- 该兑现：林晚棠对“随军”生活的初步认知 → 兑现到发现军属院并非世外桃源，也有人情世故。\n- 暂不掀：红标包裹的内容 → 压住，这是霍景深留给女主的第一个实物惊喜，留到抵达营地后再拆。\n- 暂不掀：霍景深的真实职级 → 维持“霍营长”称呼，压住“团长”信息差，留到家属院正式入职时揭晓。\n\n## 日常/过渡承担什么任务[开头：车斗环境描写] → 展现七零年代随军的艰苦与女主重获自由的心理对比。\n[中间：与张嫂对话] → 通过老兵家属之口，交代部队家属院的潜规则和霍景深在外的“冷面”名声。[结尾：黑布包悬念] → 引入微悬疑元素，打破平淡的过渡感，为后续安全隐患埋伏笔。## 关键抉择过三连问\n- 主角本章最关键的一次选择：林晚棠在察觉瘦削军嫂异常后，选择观察而非直接询问或帮忙。\n  - 为什么这么做？她深知出门在外“交浅言深”是大忌，且对方神色过于防备。\n  - 符合当前利益吗？符合。保护自己不被卷入未知麻烦是首要任务。\n  - 符合她的人设吗？符合。她重生后性格刚直但冷静，不再是那个容易被利用的“好心人”。\n-对手/配角（瘦削军嫂）本章最关键的一次选择：死死护住黑布包，即便手被勒红也不松手。\n  - 为什么这么做？包里的东西见不得光或极其贵重。\n  - 符合当前利益吗？符合其掩盖秘密的动机。\n  - 符合她的人设吗？符合其惊弓之鸟般的紧绷感。\n\n## 章尾必须发生的改变\n1. 信息改变：林晚棠得知霍景深在部队被称为“霍营长”，与小周之前的口吻产生偏差。\n2. 物理改变：卡车离开县域进入荒凉地带，林晚棠在心理上彻底切断与红旗大队的联系。\n\n## 本章 hook 账\nopen:\n-[new] 职级迷雾 || 理由：张嫂口中的“霍营长”与小周提到的级别不符，制造职级上的反差期待。\n- [new] 补给站的侧目 || 理由：随军卡车停靠时，路人对这批军属的特殊目光，暗示前方路途不平稳。\n\nadvance:\n- H008 \"神秘黑布包\" → 林晚棠听到包里发出沉闷的金属撞击声，且军嫂神色极度惊恐（planted → pressured）\n- H002 \"霍景深职级\" → 张嫂提起“霍营长”当年的立功往事，强化其悍将形象（planted → pressured）\n\nresolve:\n- 无（本章为过渡章节，侧重于埋线与推进）\n\ndefer:\n- H009 \"红标包裹\" → 本章不动。理由：这是霍景深给女主的私人温情，在嘈杂的车斗内拆开不符合仪式感，留待独处。\n\n## 不要做\n1. 禁止霍景深本人出现，连背影也不行，只允许存在于他人的对话或女主的回忆中。\n2. 禁止林晚棠展现“圣母心”去帮瘦削军嫂拎包，必须保持应有的警惕和距离感。\n3. 禁止拆开红标包裹，只能描写包裹的外观和林晚棠对它的心理寄托。\n4. 禁止使用现代词汇描述卡车颠簸，要用“骨头架子都要散了”、“土烟儿直钻嗓子眼”等年代感语词。"
+    },
+    {
+      "source": "story/current_focus.md",
+      "reason": "Current task focus for this chapter.",
+      "excerpt": "| 批次 | 状态 | 说明 |"
+    },
+    {
+      "source": "story/audit_drift.md",
+      "reason": "Carry forward audit drift guidance from the previous chapter without polluting hard state facts.",
+      "excerpt": "> 第8章审计发现以下问题，下一章写作时必须避免："
+    },
+    {
+      "source": "story/current_state.md",
+      "reason": "Preserve hard state facts referenced by the active chapter brief or hard constraints.",
+      "excerpt": "| 字段 | 值 |"
+    },
+    {
+      "source": "story/outline/story_frame.md",
+      "reason": "Preserve canon constraints referenced by the active chapter brief or hard constraints.",
+      "excerpt": "这本书要讲的是一个被旧观念和恶婆家按在泥里磋磨致死的年轻姑娘，重生回到命运拐点后，撕掉“受气包儿媳”的标签，不妥协不内耗，靠前世记忆、爽利性子选对人生伴侣，把一地鸡毛的烂日子过成被人捧着的好日子的故事。命题极其直白：当所有人都默认你该忍气吞声当牛做马时，敢翻脸、敢选不一样的路，就能挣出属于自己的甜。基调是爽利解气的，带着七零年代乡村的烟火气和军婚的踏实感，甜宠不悬浮，打脸不拖沓，完全适配听书用户的情绪需求。本书主角是林晚棠，完整弧线详见 roles/主要角色/林晚棠.md。"
+    },
+    {
+      "source": "story/outline/volume_map.md",
+      "reason": "Anchor the default planning node for this chapter.",
+      "excerpt": "全书共4卷，情绪曲线完全贴合下沉用户的爽点需求：第一卷是重生开局的扬眉吐气篇，前半段压得狠，婆家的磋磨、村支书的偏心都往林晚棠身上砸，后半段爽点密集，从第一次硬怼婆婆、当众打脸村支书，到霍景深露面护短、分家拿钱、办随军手续，情绪一路走高，全程没有憋屈的长段落；第二卷是军属院立足的甜宠升温篇，刚到部队的陌生感、其他军属的闲言碎语、婆家追上门的撒泼是小压抑点，每次都很快被霍景深的护短、林晚棠的反杀化解，甜宠情节占比提升，整体情绪是暖而爽的；第三卷是事业起步的暗线收网篇，林晚棠考供销社编制、和霍景深感情双向奔赴是暖线，陆建国的小动作、敌特的渗透是紧绷线，爽点和甜宠交织，情绪稳中有升；第四卷是圆满收尾篇，所有旧怨了结，婆家得到报应，两个人补办婚礼，情绪全程温暖圆满。"
+    },
+    {
+      "source": "story/chapter_summaries.md#recent_titles",
+      "reason": "Keep recent title history visible to avoid repetitive chapter naming.",
+      "excerpt": "8: 离县，这一走就不回头了 | 7: 深夜那通电话 | 6: 急电催归队 | 5: 一百八十个工分 | 4: 首长到村"
+    },
+    {
+      "source": "story/chapter_summaries.md#recent_mood_type_trail",
+      "reason": "Keep recent mood and chapter-type cadence visible before writing the next chapter.",
+      "excerpt": "8: 痛快、自由、警惕 / 推进章 | 7: 坚毅/反杀/紧迫 / 推进章 | 6: 爽利/紧迫 / 推进章 | 5: 踏实/期待 / 过渡章 | 4: 极度舒适/甜宠护短 / 爆发章"
+    },
+    {
+      "source": "story/chapters#recent_endings",
+      "reason": "Show how recent chapters ended so the writer avoids structural repetition (e.g. 3 consecutive collapse endings).",
+      "excerpt": "ch6: 前路是福是祸还未可知，但该带的东西，她一样都不会落；该守住的东西，她半分都不会让。 | ch7: “来吧。我倒要看看，还能出什么幺蛾子。” | ch8: 那个吃人的红旗大队，那些烂在泥里的过往，从今往后，再也碰不到她了。"
+    },
+    {
+      "source": "story/current_state.md#当前冲突",
+      "reason": "Relevant current-state fact retrieved for the current chapter goal.",
+      "excerpt": "当前冲突 | 与公社内鬼的远程博弈（匿名信事件已化解）"
+    },
+    {
+      "source": "story/current_state.md#当前目标",
+      "reason": "Relevant current-state fact retrieved for the current chapter goal.",
+      "excerpt": "当前目标 | 安全抵达部队驻地，开启随军新生活"
+    },
+    {
+      "source": "story/current_state.md#主角状态",
+      "reason": "Relevant current-state fact retrieved for the current chapter goal.",
+      "excerpt": "主角状态 | 彻底脱离陆家控制，携带防身剪刀与关键证件，情绪释放且警惕"
+    },
+    {
+      "source": "story/current_state.md#当前限制",
+      "reason": "Relevant current-state fact retrieved for the current chapter goal.",
+      "excerpt": "当前限制 | 身处移动的车厢，需应对同车家属的复杂环境"
+    },
+    {
+      "source": "story/chapter_summaries.md#6",
+      "reason": "Relevant episodic memory retrieved for the current chapter goal.",
+      "excerpt": "急电催归队 | 清晨王德福到县办事处盖章，林晚棠办妥爹名下180陪嫁工分划转，王德福欲扣陆家损耗被驳回。霍景深接部队急电须今天下午归队，林随军日子仍为大后天集合；小周下午送霍去火车站，林留县城等候两日。 | 180工分落纸成章；林与陆家经济账彻底了结；夫妻分离启程，节奏绷紧。 | H003 resolved"
+    },
+    {
+      "source": "story/chapter_summaries.md#7",
+      "reason": "Relevant episodic memory retrieved for the current chapter goal.",
+      "excerpt": "深夜那通电话 | 火车站送别霍景深；林晚棠电话反杀王德福，掌握其私分柴油证据；小周隔离陆建国；凌晨紧急提前出发。 | 林晚棠彻底掌控大队部线索；陆建国被抓；行程进入紧急状态。 | H004(勾连)解决; H007/H008开启。"
+    },
+    {
+      "source": "story/chapter_summaries.md#8",
+      "reason": "Relevant episodic memory retrieved for the current chapter goal.",
+      "excerpt": "离县，这一走就不回头了 | 林晚棠在武装部大院遭办事员小钱以匿名信举报为由刁难，林凭借婚书和工分划转书强硬反击；小周及时赶到施压并透露陆建国已被送往农场，林成功登车离县。 | 林晚棠正式离开县城，脱离陆家势力范围；得知霍景深团长职级；结识张嫂。 | H002, H007, 内鬼线 advanced; H008 resolved; 开启军嫂布包新hook"
+    },
+    {
+      "source": "story/pending_hooks.md#H007-陆建国的下落",
+      "reason": "Carry forward unresolved hooks that match the chapter focus.",
+      "excerpt": "character | progressing | 陆建国在县城郊外收容点的情况 | mid-arc | 小周将其物理隔离，是后续陆家反扑或彻底倒台的引线。"
+    },
+    {
+      "source": "story/pending_hooks.md#character-调查出给陈桂-英送信的神秘-人身份",
+      "reason": "Carry forward unresolved hooks that match the chapter focus.",
+      "excerpt": "character | progressing | 揪出公社内鬼并揭示其与敌特关联 | mid-arc | 王德福透露公社有人带话让陈桂英闹事，目标是搅黄军属身份。"
+    },
+    {
+      "source": "story/pending_hooks.md#mystery-揭示霍景深从-吉普车副驾驶-拿出的贴着红",
+      "reason": "Carry forward unresolved hooks that match the chapter focus.",
+      "excerpt": "mystery | progressing | 揭开瘦削军嫂的真实身份及其布包中沉重物品的秘密 | near-term | 二号车斗内一名瘦削军嫂神色极度紧张，死守一个沉得异常的黑灰色布包。"
+    },
+    {
+      "source": "story/pending_hooks.md#mystery-揭示霍景深在-河边出现的真-实目标及敌特",
+      "reason": "Carry forward unresolved hooks that match the chapter focus.",
+      "excerpt": "mystery | progressing | 揭示大队部电话线沉默背后预示的更大风暴 | mid-arc | 霍景深提到有人在背后给陈桂英递梯子，敌特线与陆家线合流。"
+    }
+  ]
+}

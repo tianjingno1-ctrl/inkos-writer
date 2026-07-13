@@ -1,0 +1,54 @@
+{
+  "hooks": [
+    {
+      "hookId": "mystery-揭示霍景深在-河边出现的真-实目标及敌特",
+      "startChapter": 1,
+      "type": "mystery",
+      "status": "progressing",
+      "lastAdvancedChapter": 7,
+      "expectedPayoff": "揭示大队部电话线沉默背后预示的更大风暴",
+      "payoffTiming": "mid-arc",
+      "notes": "霍景深提到有人在背后给陈桂英递梯子，敌特线与陆家线合流。"
+    },
+    {
+      "hookId": "mystery-揭示霍景深从-吉普车副驾驶-拿出的贴着红",
+      "startChapter": 4,
+      "type": "mystery",
+      "status": "progressing",
+      "lastAdvancedChapter": 8,
+      "expectedPayoff": "揭开瘦削军嫂的真实身份及其布包中沉重物品的秘密",
+      "payoffTiming": "near-term",
+      "notes": "二号车斗内一名瘦削军嫂神色极度紧张，死守一个沉得异常的黑灰色布包。"
+    },
+    {
+      "hookId": "character-调查出给陈桂-英送信的神秘-人身份",
+      "startChapter": 6,
+      "type": "character",
+      "status": "progressing",
+      "lastAdvancedChapter": 8,
+      "expectedPayoff": "揪出公社内鬼并揭示其与敌特关联",
+      "payoffTiming": "mid-arc",
+      "notes": "王德福透露公社有人带话让陈桂英闹事，目标是搅黄军属身份。"
+    },
+    {
+      "hookId": "H007-陆建国的下落",
+      "startChapter": 7,
+      "type": "character",
+      "status": "progressing",
+      "lastAdvancedChapter": 8,
+      "expectedPayoff": "陆建国在县城郊外收容点的情况",
+      "payoffTiming": "mid-arc",
+      "notes": "小周将其物理隔离，是后续陆家反扑或彻底倒台的引线。"
+    },
+    {
+      "hookId": "H008-提前出发的危机",
+      "startChapter": 7,
+      "type": "plot",
+      "status": "resolved",
+      "lastAdvancedChapter": 8,
+      "expectedPayoff": "霍景深遇到的“突发情况”真相",
+      "payoffTiming": "near-term",
+      "notes": "凌晨三点提前出发，预示随军之路不太平。"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+layers:
+  - id: L1
+    name: hard_facts
+    precedence: 100
+    scope: global
+  - id: L2
+    name: author_intent
+    precedence: 80
+    scope: book
+  - id: L3
+    name: planning
+    precedence: 60
+    scope: arc
+  - id: L4
+    name: current_task
+    precedence: 70
+    scope: local
+sections:
+  hard:
+    - story_frame
+    - current_state
+    - book_rules
+    - roles
+  soft:
+    - author_intent
+    - current_focus
+    - volume_map
+  diagnostic:
+    - anti_ai_checks
+    - continuity_audit
+    - style_regression_checks
+overrideEdges:
+  - from: L4
+    to: L3
+    allowed: true
+    scope: current_chapter
+  - from: L4
+    to: L2
+    allowed: false
+    scope: current_chapter
+  - from: L4
+    to: L1
+    allowed: false
+    scope: current_chapter
+activeOverrides:
+  - from: L4
+    to: L3
+    target: chapter:10/mustAvoid
+    reason: 亮证打脸第三遍
+  - from: L4
+    to: L3
+    target: chapter:10/mustAvoid
+    reason: 霍景深出场
+  - from: L4
+    to: L3
+    target: chapter:10/mustAvoid
+    reason: 揭布包、拆红标
+  - from: L4
+    to: L3
+    target: chapter:10/mustAvoid
+    reason: 187 工分
+  - from: L4
+    to: L3
+    target: chapter:10/mustAvoid
+    reason: 团长职级
+  - from: L4
+    to: L3
+    target: chapter:10/styleEmphasis
+    reason: 节拍：vol1_ch10-15_revised.md 接章权威
+  - from: L4
+    to: L3
+    target: chapter:10/styleEmphasis
+    reason: 四定律见 book_rules.md
+  - from: L4
+    to: L3
+    target: chapter:10/styleEmphasis
+    reason: 极短段 + 活世界侧写
+  - from: L4
+    to: L3
+    target: chapter:10/styleEmphasis
+    reason: 字数目标 2000
