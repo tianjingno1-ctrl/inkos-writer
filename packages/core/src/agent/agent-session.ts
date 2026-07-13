@@ -36,9 +36,11 @@ import {
   createScriptCreationTool,
   createStoryboardCreationTool,
   createInteractiveFilmCreationTool,
+  createTranslationCreateTool,
   createResearchWebTool,
   createIngestMaterialTool,
   createRetrieveMaterialTool,
+  createImportChaptersTool,
 } from "./agent-tools.js";
 import { createFilmAuthoringTools, filmLLMDepsFromClient } from "./film-authoring-tools.js";
 import { createBookContextTransform } from "./context-transform.js";
@@ -749,14 +751,18 @@ function createAgentToolsForMode(params: {
   readonly playMode?: "open" | "guided";
   readonly playWorldExists: boolean;
 }) {
-  const subAgentTool = createSubAgentTool(params.pipeline, params.bookId, params.projectRoot, { actionPayload: params.actionPayload });
   const lang = params.language === "en" ? "en" : "zh";
+  const subAgentTool = createSubAgentTool(params.pipeline, params.bookId, params.projectRoot, {
+    actionPayload: params.actionPayload,
+    language: lang,
+  });
   const proposalTool = createProposeActionTool(lang, {
     sameSession: params.sessionKind !== "chat",
   });
   const researchTool = createResearchWebTool(params.projectRoot);
   const materialTool = createIngestMaterialTool(params.projectRoot);
   const materialRetrievalTool = createRetrieveMaterialTool(params.projectRoot);
+  const importChaptersTool = createImportChaptersTool(params.pipeline, params.bookId, params.projectRoot);
   const isConfirmed = (
     intent: NonNullable<AgentSessionConfig["requestedIntent"]>,
   ): boolean => {
@@ -765,12 +771,15 @@ function createAgentToolsForMode(params: {
   };
 
   if (params.sessionKind === "chat") {
-    return [proposalTool, researchTool, materialTool, materialRetrievalTool];
+    if (isConfirmed("translation_create")) {
+      return [createTranslationCreateTool(params.projectRoot, { actionPayload: params.actionPayload })];
+    }
+    return [proposalTool, researchTool, materialTool, materialRetrievalTool, importChaptersTool];
   }
 
   if (params.sessionKind === "short") {
     if (isConfirmed("short_run")) {
-      return [createShortFictionRunTool(params.pipeline, params.projectRoot, { actionPayload: params.actionPayload })];
+      return [createShortFictionRunTool(params.pipeline, params.projectRoot, { actionPayload: params.actionPayload, language: lang })];
     }
     if (isConfirmed("generate_cover")) {
       return [createGenerateCoverTool(params.projectRoot, { actionPayload: params.actionPayload })];
@@ -780,21 +789,21 @@ function createAgentToolsForMode(params: {
 
   if (params.sessionKind === "script") {
     if (isConfirmed("script_create")) {
-      return [createScriptCreationTool(params.pipeline, params.projectRoot, { actionPayload: params.actionPayload })];
+      return [createScriptCreationTool(params.pipeline, params.projectRoot, { actionPayload: params.actionPayload, language: lang })];
     }
     return [proposalTool, materialTool, materialRetrievalTool];
   }
 
   if (params.sessionKind === "storyboard") {
     if (isConfirmed("storyboard_create")) {
-      return [createStoryboardCreationTool(params.pipeline, params.projectRoot, { actionPayload: params.actionPayload })];
+      return [createStoryboardCreationTool(params.pipeline, params.projectRoot, { actionPayload: params.actionPayload, language: lang })];
     }
     return [proposalTool, materialTool, materialRetrievalTool];
   }
 
   if (params.sessionKind === "interactive-film") {
     if (isConfirmed("interactive_film_create")) {
-      return [createInteractiveFilmCreationTool(params.pipeline, params.projectRoot, { actionPayload: params.actionPayload })];
+      return [createInteractiveFilmCreationTool(params.pipeline, params.projectRoot, { actionPayload: params.actionPayload, language: lang })];
     }
     return [proposalTool, materialTool, materialRetrievalTool];
   }
@@ -812,6 +821,7 @@ function createAgentToolsForMode(params: {
       llm,
       proposeActionTool: proposalTool,
       confirmedIntent: params.requestedIntent,
+      language: lang,
     });
   }
 
@@ -822,9 +832,9 @@ function createAgentToolsForMode(params: {
     }
     if (params.playWorldExists) {
       return [
-        createPlayEditTool(params.projectRoot, params.sessionId),
-        createPlayReviseTool(params.pipeline, params.projectRoot, params.sessionId),
-        createPlayStepTool(params.pipeline, params.projectRoot, params.sessionId),
+        createPlayEditTool(params.projectRoot, params.sessionId, lang),
+        createPlayReviseTool(params.pipeline, params.projectRoot, params.sessionId, { language: lang }),
+        createPlayStepTool(params.pipeline, params.projectRoot, params.sessionId, { language: lang }),
         materialTool,
         materialRetrievalTool,
       ];
@@ -837,6 +847,7 @@ function createAgentToolsForMode(params: {
       return [createSubAgentTool(params.pipeline, params.bookId, params.projectRoot, {
         actionPayload: params.actionPayload,
         architectCreateOnly: true,
+        language: lang,
       })];
     }
     return [proposalTool, researchTool, materialTool, materialRetrievalTool];
@@ -857,12 +868,13 @@ function createAgentToolsForMode(params: {
     researchTool,
     materialTool,
     materialRetrievalTool,
+    importChaptersTool,
     createGrepTool(params.projectRoot),
     createLsTool(params.projectRoot),
   ];
 
   if (params.sessionKind === "edit") {
-    return bookTools.filter((tool) => !["sub_agent", "generate_cover", "research_web"].includes(tool.name));
+    return bookTools.filter((tool) => !["sub_agent", "generate_cover", "research_web", "import_chapters"].includes(tool.name));
   }
 
   return bookTools;

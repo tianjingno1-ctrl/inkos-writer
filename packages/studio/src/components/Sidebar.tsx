@@ -3,6 +3,7 @@ import { useApi } from "../hooks/use-api";
 import type { SSEMessage } from "../hooks/use-sse";
 import { applyBookCollectionEvent, shouldRefetchBookCollections, shouldRefetchDaemonStatus } from "../hooks/use-book-activity";
 import type { TFunction } from "../hooks/use-i18n";
+import { tr } from "../lib/app-language";
 import { setProjectChatSessionId } from "../pages/chat-page-state";
 import { useChatStore } from "../store/chat";
 import { ConfirmDialog } from "./ConfirmDialog";
@@ -46,6 +47,7 @@ import {
   Clapperboard,
   Rows3,
   Film,
+  Languages,
 } from "lucide-react";
 import { InkosLogo } from "./InkosLogo";
 
@@ -81,6 +83,7 @@ interface Nav {
   toLogs: () => void;
   toGenres: () => void;
   toStyle: () => void;
+  toTranslation: () => void;
   toImport: (tab?: "chapters" | "canon" | "fanfic" | "spinoff" | "imitation") => void;
   toRadar: () => void;
   toDoctor: () => void;
@@ -315,6 +318,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
             <CreateItem icon={<BookCopy size={16} />} label={t("nav.createSpinoff")} onClick={() => nav.toImport("spinoff")} />
             <CreateItem icon={<Wand2 size={16} />} label={t("nav.createImitation")} onClick={() => nav.toImport("imitation")} />
             <CreateItem icon={<FileInput size={16} />} label={t("nav.createContinuation")} onClick={() => nav.toImport("chapters")} />
+            <CreateItem icon={<Languages size={16} />} label={t("nav.createTranslation")} active={activePage === "translation"} onClick={nav.toTranslation} />
             <CreateItem icon={<GitBranch size={16} />} label={t("nav.createBranching")} onClick={() => launchProjectMode("play", "guided")} />
             <CreateItem icon={<Gamepad2 size={16} />} label={t("nav.createFree")} onClick={() => launchProjectMode("play", "open")} />
           </div>
@@ -335,7 +339,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
                   <div className="group/book flex items-center">
                     <button
                       type="button"
-                      aria-label={isExpanded ? `折叠 ${book.title}` : `展开 ${book.title}`}
+                      aria-label={isExpanded ? tr(`折叠 ${book.title}`, `Collapse ${book.title}`) : tr(`展开 ${book.title}`, `Expand ${book.title}`)}
                       onClick={() => toggleBook(book.id)}
                       className="flex h-8 w-7 shrink-0 items-center justify-center rounded-md text-muted-foreground/60 hover:bg-secondary/30 hover:text-foreground transition-colors"
                     >
@@ -396,7 +400,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
                                   }}
                                 >
                                   <Pencil size={14} />
-                                  <span>改名</span>
+                                  <span>{tr("改名", "Rename")}</span>
                                 </DropdownMenuItem>
                                 <DropdownMenuSeparator />
                                 <DropdownMenuItem
@@ -404,7 +408,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
                                   onClick={() => setDeleteTarget({ sessionId: session.sessionId, title: label })}
                                 >
                                   <Trash2 size={14} />
-                                  <span>删除</span>
+                                  <span>{tr("删除", "Delete")}</span>
                                 </DropdownMenuItem>
                               </DropdownMenuContent>
                             </DropdownMenu>
@@ -417,7 +421,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
                         className="w-full flex items-center gap-2 pl-9 pr-2 py-1.5 text-[13px] text-muted-foreground/50 hover:text-foreground transition-colors"
                       >
                         <Plus size={12} />
-                        <span>新建会话</span>
+                        <span>{tr("新建会话", "New session")}</span>
                       </button>
                     </div>
                   </Collapse>
@@ -436,7 +440,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
 
         {/* 互动影游 Section */}
         <div data-testid="film-projects-section">
-          <SectionHeader label="互动影游" expanded={filmsExpanded} onToggle={() => setFilmsExpanded((v) => !v)} />
+          <SectionHeader label={t("nav.createInteractiveFilm")} expanded={filmsExpanded} onToggle={() => setFilmsExpanded((v) => !v)} />
           <Collapse open={filmsExpanded}>
             <div className="space-y-0.5 pt-1">
               {films.map((film) => (
@@ -453,7 +457,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
               ))}
               {films.length === 0 && (
                 <div className="px-3 py-6 text-xs text-muted-foreground/50 italic text-center">
-                  还没有互动影游项目
+                  {tr("还没有互动影游项目", "No interactive film projects yet")}
                 </div>
               )}
             </div>
@@ -521,7 +525,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
                               }}
                             >
                               <Pencil size={14} />
-                              <span>改名</span>
+                              <span>{tr("改名", "Rename")}</span>
                             </DropdownMenuItem>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem
@@ -529,7 +533,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
                               onClick={() => setDeleteTarget({ sessionId: session.sessionId, title: label })}
                             >
                               <Trash2 size={14} />
-                              <span>删除</span>
+                              <span>{tr("删除", "Delete")}</span>
                             </DropdownMenuItem>
                           </DropdownMenuContent>
                         </DropdownMenu>
@@ -542,7 +546,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
                     className="w-full flex items-center gap-2 pl-2 pr-2 py-1.5 text-[13px] text-muted-foreground/50 hover:text-foreground transition-colors"
                   >
                     <Plus size={12} />
-                    <span>新建会话</span>
+                    <span>{tr("新建会话", "New session")}</span>
                   </button>
                 </div>
               </Collapse>
@@ -655,7 +659,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
           className="sm:max-w-[360px] p-4 gap-3"
         >
           <DialogHeader className="space-y-0 gap-0">
-            <DialogTitle className="font-sans text-sm font-medium">重命名会话</DialogTitle>
+            <DialogTitle className="font-sans text-sm font-medium">{tr("重命名会话", "Rename Session")}</DialogTitle>
           </DialogHeader>
           <input
             id="session-rename-input"
@@ -668,7 +672,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
                 void handleRenameConfirm();
               }
             }}
-            placeholder="输入新标题"
+            placeholder={tr("输入新标题", "Enter a new title")}
             className="w-full rounded-md border border-border/60 bg-background px-3 py-1.5 text-sm outline-none focus:border-border"
           />
           <DialogFooter className="gap-1 sm:gap-1">
@@ -680,7 +684,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
               }}
               className="px-3 py-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
-              取消
+              {tr("取消", "Cancel")}
             </button>
             <button
               type="button"
@@ -688,7 +692,7 @@ export function Sidebar({ nav, activePage, sse, t }: {
               disabled={!renameValue.trim()}
               className="px-3 py-1 text-xs font-medium rounded-md bg-foreground text-background hover:opacity-90 transition-opacity disabled:opacity-30"
             >
-              保存
+              {tr("保存", "Save")}
             </button>
           </DialogFooter>
         </DialogContent>
@@ -696,10 +700,13 @@ export function Sidebar({ nav, activePage, sse, t }: {
 
       <ConfirmDialog
         open={deleteTarget !== null}
-        title="删除会话"
-        message={`确认删除“${deleteTarget?.title ?? ""}”吗？该操作只删除这条会话，不影响书籍内容。`}
-        confirmLabel="删除"
-        cancelLabel="取消"
+        title={tr("删除会话", "Delete Session")}
+        message={tr(
+          `确认删除“${deleteTarget?.title ?? ""}”吗？该操作只删除这条会话，不影响书籍内容。`,
+          `Delete "${deleteTarget?.title ?? ""}"? This only removes the session; the book content is not affected.`,
+        )}
+        confirmLabel={tr("删除", "Delete")}
+        cancelLabel={tr("取消", "Cancel")}
         variant="danger"
         onConfirm={() => void handleDeleteConfirm()}
         onCancel={() => setDeleteTarget(null)}
@@ -717,7 +724,7 @@ function getSessionLabel(session: { sessionId: string; title: string | null; mes
     const oneLine = firstUserMsg.replace(/\s+/g, " ");
     return oneLine.length > 20 ? `${oneLine.slice(0, 20)}…` : oneLine;
   }
-  return "新会话";
+  return tr("新会话", "New session");
 }
 
 function formatRelativeTime(sessionId: string): string {
@@ -725,14 +732,14 @@ function formatRelativeTime(sessionId: string): string {
   if (!Number.isFinite(rawTs)) return "";
   const diff = Date.now() - rawTs;
   const minutes = Math.floor(diff / 60_000);
-  if (minutes < 1) return "刚刚";
-  if (minutes < 60) return `${minutes} 分钟`;
+  if (minutes < 1) return tr("刚刚", "just now");
+  if (minutes < 60) return tr(`${minutes} 分钟`, `${minutes}m`);
   const hours = Math.floor(minutes / 60);
-  if (hours < 24) return `${hours} 小时`;
+  if (hours < 24) return tr(`${hours} 小时`, `${hours}h`);
   const days = Math.floor(hours / 24);
-  if (days < 30) return `${days} 天`;
+  if (days < 30) return tr(`${days} 天`, `${days}d`);
   const months = Math.floor(days / 30);
-  return `${months} 个月`;
+  return tr(`${months} 个月`, `${months}mo`);
 }
 
 // Smooth collapse via grid-template-rows 0fr→1fr (content-height-agnostic, no JS measuring).

@@ -1,5 +1,5 @@
 // Models
-export { type BookConfig, type Platform, type Genre, type BookStatus, type FanficMode, BookConfigSchema, PlatformSchema, GenreSchema, BookStatusSchema, FanficModeSchema, normalizePlatformId, normalizePlatformOrOther } from "./models/book.js";
+export { type BookConfig, type Platform, type Genre, type BookStatus, type FanficMode, type ChapterReviewMode, type RevisionGate, BookConfigSchema, PlatformSchema, GenreSchema, BookStatusSchema, FanficModeSchema, normalizePlatformId, normalizePlatformOrOther, resolveChapterReviewMode, resolveRevisionGate } from "./models/book.js";
 export { type ChapterMeta, type ChapterStatus, ChapterMetaSchema, ChapterStatusSchema } from "./models/chapter.js";
 export { type ProjectConfig, type LLMConfig, type NotifyChannel, type DetectionConfig, type QualityGates, type FoundationConfig, type WritingConfig, type AgentLLMOverride, type InputGovernanceMode, type ResearchSearchConfig, ProjectConfigSchema, LLMConfigSchema, AgentLLMOverrideSchema, DetectionConfigSchema, QualityGatesSchema, FoundationConfigSchema, WritingConfigSchema, InputGovernanceModeSchema, ResearchSearchConfigSchema } from "./models/project.js";
 export { type CurrentState, type ParticleLedger, type PendingHooks, type PendingHook, type LedgerEntry } from "./models/state.js";
@@ -201,6 +201,7 @@ export {
 } from "./utils/proxy-fetch.js";
 export { assertSafeBookId, deriveBookIdFromTitle, isSafeBookId } from "./utils/book-id.js";
 export { safeChildPath } from "./utils/path-safety.js";
+export { toPosixPath } from "./utils/posix-path.js";
 export {
   AutomationModeSchema,
   type AutomationMode,
@@ -471,6 +472,7 @@ export { MemoryDB, type Fact, type StoredSummary } from "./state/memory-db.js";
 export { StateValidatorAgent } from "./agents/state-validator.js";
 export { loadRuntimeStateSnapshot, buildRuntimeStateArtifacts, saveRuntimeStateSnapshot, loadNarrativeMemorySeed, loadSnapshotCurrentStateFacts, type RuntimeStateArtifacts, type NarrativeMemorySeed } from "./state/runtime-state-store.js";
 export { splitChapters, type SplitChapter } from "./utils/chapter-splitter.js";
+export * from "./translation/index.js";
 export { countChapterLength, resolveLengthCountingMode, formatLengthCount, buildLengthSpec, defaultChapterLength, DEFAULT_CHAPTER_LENGTH_ZH, DEFAULT_CHAPTER_LENGTH_EN, isOutsideSoftRange, isOutsideHardRange, chooseNormalizeMode, type LengthLanguage } from "./utils/length-metrics.js";
 export { createLogger, createStderrSink, createJsonLineSink, nullSink, type Logger, type LogSink, type LogLevel, type LogEntry } from "./utils/logger.js";
 export { inferLanguage, type WritingLanguage } from "./utils/language.js";
@@ -505,7 +507,7 @@ export { runScriptCreation, runStoryboardCreation, runInteractiveFilmCreation, c
 export { ScriptCreationAgent, StoryboardCreationAgent, InteractiveFilmCreationAgent, renderScriptSpec, renderStoryboardSpec, renderInteractiveFilmSpec, type ScriptCreationInput, type ScriptTargetFormat, type StoryboardCreationInput, type InteractiveFilmCreationInput } from "./agents/script-storyboard.js";
 
 // State
-export { StateManager } from "./state/manager.js";
+export { BookWriteLockError, StateManager } from "./state/manager.js";
 export { bootstrapStructuredStateFromMarkdown } from "./state/state-bootstrap.js";
 export { renderCurrentStateProjection, renderHooksProjection, renderChapterSummariesProjection } from "./state/state-projections.js";
 export { applyRuntimeStateDelta, type RuntimeStateSnapshot } from "./state/state-reducer.js";
@@ -513,6 +515,7 @@ export { validateRuntimeState, type RuntimeStateValidationIssue } from "./state/
 
 // Notify
 export { dispatchNotification, dispatchWebhookEvent, type NotifyMessage } from "./notify/dispatcher.js";
+export type { NotifyFormat } from "./notify/format.js";
 export type { TelegramConfig } from "./notify/telegram.js";
 export type { FeishuConfig } from "./notify/feishu.js";
 export type { WechatWorkConfig } from "./notify/wechat-work.js";
@@ -521,26 +524,29 @@ export type { WebhookConfig, WebhookEvent, WebhookPayload } from "./notify/webho
 export async function sendTelegram(
   config: import("./notify/telegram.js").TelegramConfig,
   message: string,
+  format?: import("./notify/format.js").NotifyFormat,
 ): Promise<void> {
   const transport = await import("./notify/telegram.js");
-  await transport.sendTelegram(config, message);
+  await transport.sendTelegram(config, message, format);
 }
 
 export async function sendFeishu(
   config: import("./notify/feishu.js").FeishuConfig,
   title: string,
   text: string,
+  format?: import("./notify/format.js").NotifyFormat,
 ): Promise<void> {
   const transport = await import("./notify/feishu.js");
-  await transport.sendFeishu(config, title, text);
+  await transport.sendFeishu(config, title, text, format);
 }
 
 export async function sendWechatWork(
   config: import("./notify/wechat-work.js").WechatWorkConfig,
   text: string,
+  format?: import("./notify/format.js").NotifyFormat,
 ): Promise<void> {
   const transport = await import("./notify/wechat-work.js");
-  await transport.sendWechatWork(config, text);
+  await transport.sendWechatWork(config, text, format);
 }
 
 export async function sendWebhook(

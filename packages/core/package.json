@@ -1,6 +1,6 @@
 {
   "name": "@actalk/inkos-core",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "InkOS core engine for story creation agents: governed context, writing, audit, revision, covers, and interactive worlds",
   "keywords": [
     "story-creation-ai-agent",
@@ -55,11 +55,12 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@mariozechner/pi-agent-core": "^0.67.1",
-    "@mariozechner/pi-ai": "^0.67.1",
+    "@mariozechner/pi-agent-core": "0.67.1",
+    "@mariozechner/pi-ai": "0.67.1",
     "@sinclair/typebox": "^0.34.49",
     "dotenv": "^16.4.0",
     "epub-gen-memory": "^1.0.10",
+    "jszip": "3.10.1",
     "js-yaml": "^4.1.1",
     "undici": "6.21.3",
     "unpdf": "^1.6.2",

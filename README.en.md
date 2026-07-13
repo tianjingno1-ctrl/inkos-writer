@@ -3,7 +3,7 @@
   <img src="assets/inkos-text.svg" width="240" height="65" alt="InkOS">
 </p>
 
-<h1 align="center">Story Creation AI Agent<br><sub>Creation system for long-form and short fiction, scripts, interactive film/games, and IP content</sub></h1>
+<h1 align="center">Story Creation AI Agent<br><sub>Creation system for long-form and short fiction, scripts, interactive film/games, IP content, and multilingual translation</sub></h1>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@actalk/inkos"><img src="https://img.shields.io/npm/v/@actalk/inkos.svg?color=cb3837&logo=npm" alt="npm version"></a>
@@ -26,19 +26,22 @@
 
 ---
 
-InkOS is a local AI creation system for long-form novels, standalone short fiction, scripts, storyboards, fan fiction, spinoffs, style imitation, continuation, interactive film projects, and interactive worlds. Studio Chat, CLI, and TUI share the same action surface, so you can discuss ideas, confirm heavy actions, generate work, preview artifacts, research external facts, and edit persistent project files from one place.
+InkOS is an AI Agent system for story creation and multilingual translation: long-form novels, standalone short fiction, scripts, storyboards, fan fiction, spinoffs, style imitation, continuation, interactive film projects, interactive worlds, and long-document translation all start from the same workbench. Studio Chat, CLI, and TUI share the same action surface for discussion, confirmed actions, generation, review, persistent editing, and cross-language delivery.
 
-> 💡 **Give your writing agent a professional data layer first** — writing fiction isn't just about the model; what's usually missing is the source material. Pair InkOS with [**火花数据API (huohuaapi)**](https://huohuaapi.com/): a pay-per-call novel / web-fiction creation data API. Before the agent writes, it can pull sourced material — novel text, chapter structure, character profiles, writing style, and craft methods — instead of relying on prompts alone to fake a "plot outline".
+> 💡 **One key for global frontier models** — pair InkOS with [**kkaiapi**](https://en.kkaiapi.com/): an OpenAI-compatible gateway for Claude, GPT, Gemini, DeepSeek, Kimi, Qwen, GLM, and image models. Add it as a custom service with base URL `https://api.kkaiapi.com/v1`, then switch models in Studio without juggling multiple provider accounts.
 
-## v1.6.2 Chat Attachments, Material Library, and Editable Prompts
+## v1.7.0 Multilingual Translation, Cross-Language Creation, and Long-Task Reliability
 
-v1.6.2 makes Studio Chat a more practical collaboration surface: upload documents, Markdown files, and images; interrupt long-running turns; archive external materials for later retrieval; and tune the prompt packs that guide long-form writing, Play, and interactive-film authoring.
+InkOS 1.7.0 connects creation, collaboration, source reading, revision, and cross-language delivery through the same Agent workbench. Import EPUB, text-based PDF, TXT, or Markdown; choose source and target languages in plain language; then translate by chapter, maintain terminology, review source and translation side by side, and export the complete result. Studio Chat also continues to support attachments, existing-novel import, prompt editing, chapter revision, and abortable long-running tasks.
 
-- **Files and images in Chat**: text / Markdown attachments are injected into the LLM context; image attachments are sent as multimodal input to vision-capable models.
-- **Material archive and retrieval**: external references can be stored in the project material library and retrieved later with evidence traces instead of repeatedly pasting them into chat.
-- **Editable prompt packs**: open **Project Settings → Prompt packs** to inspect and override built-in prompt packs. Project overrides are saved under `prompt/.../*.md` without changing built-in defaults.
-- **Interrupt long tasks**: Studio Chat can abort an in-flight agent turn when a model or provider stalls.
-- **Safer chapter revision from Chat**: rewrite / revise requests now pass the current chat instruction as a one-off reviser brief; if a revision is kept out of disk, InkOS reports the revision gate metrics and remaining issues.
+- **Complete translation workbench**: import EPUB, text-based PDF, TXT, and Markdown; translate by chapter and semantic segment; maintain a glossary, generate review reports, and export TXT, Markdown, or EPUB.
+- **Translation across Studio, Chat, and CLI**: create, run, inspect, review, and export translation projects in Studio; start one from a confirmed Chat action; or use `inkos translate init / run / export` in the CLI.
+- **Cross-language creation**: short fiction, scripts, storyboards, and interactive-film pipelines now have English-native prompt paths. Studio's dynamic copy and CLI language fallback were expanded with them, rather than merely translating menus.
+- **Attachments, material library, and editable prompts**: Chat can read text, Markdown, and images; external references can be archived and retrieved with evidence traces; long-form, Play, and interactive-film prompt packs can be inspected and adjusted in Studio.
+- **Existing novels become real projects**: Chat can import chapters from local files, directories, or attachments, reverse-engineer foundation files, and replay chapter state instead of treating the manuscript as temporary context.
+- **Controllable review, revision, and continuous writing**: strict, lenient, and always revision gates support project- and book-level overrides, with automatic or manual review per book. The CLI adds `inkos auto` and completion/failure notifications, while rejected revisions show before/after metrics and unresolved issues.
+- **Abortable tasks and recoverable write locks**: stop signals propagate through the Agent, writing pipeline, and model request. Locks left by abnormal exits recover automatically, while real concurrent conflicts return `BOOK_BUSY`.
+- **More reliable models, installation, and cross-platform behavior**: MiniMax thinking no longer leaks into prose; dynamic services such as OpenRouter and kkaiapi are no longer blocked by a static model list; npm packages no longer leak `workspace:*` dependencies; action details, notifications, and project paths are more consistent across platforms.
 
 ## v1.6.0 Major Update
 
@@ -165,6 +168,8 @@ Open Studio, then go to **Model Settings**:
 
 Studio uses project service settings and `.inkos/secrets.json`. It may show env-detection hints, but env files do not override the Studio-selected service/model/base URL/API key.
 
+MiniMax uses the official OpenAI-compatible `/v1/chat/completions` endpoint. InkOS disables returned thinking by default for `MiniMax-M3*`; M2.x thinking cannot be disabled by the upstream service.
+
 **Option 2: CLI / daemon / deployment env config**
 
 ```bash
@@ -214,6 +219,31 @@ inkos config show-models        # View current routing
 ```
 
 Agents without explicit overrides fall back to the global model.
+
+**Configuration troubleshooting**
+
+```bash
+inkos doctor
+```
+
+`doctor` prints the current effective config mode, where the service / model / API key come from, and runs an API connectivity check. Common modes:
+
+| Mode | Meaning |
+|------|---------|
+| `studio-project` | Studio runtime: only Studio/project settings and secrets are used |
+| `cli-project` | CLI runtime: Studio settings as the base, with env and CLI flags layered on top |
+| `legacy-env` | Legacy env mode: compatibility with old `.env`-only projects |
+
+If a service test fails, first check that the service, model, and protocol match each other. Google Gemini AI Studio API keys work with the Gemini OpenAI-compatible endpoint; InkOS automatically disables the OpenAI `store` parameter that Google does not support. MiniMax defaults to the official OpenAI-compatible `/v1/chat/completions` endpoint and prefers a working non-streaming transport, avoiding streams that return usage but no text; `MiniMax-M3*` disables returned thinking by default, while M2.x thinking cannot be disabled upstream.
+
+### LLM Configuration Notes
+
+- **Studio / CLI config isolation**: Studio always uses the service page settings and `.inkos/secrets.json`; the CLI, daemon, and deployment environments support env overrides and one-off command flags.
+- **Provider bank capability table**: built-in baseUrl, protocol, models, and compatibility policies for 15 services — Google Gemini, Moonshot, MiniMax, Zhipu (GLM), Bailian (Alibaba Cloud Model Studio), DeepSeek, SiliconFlow, Volcengine, Tencent Hunyuan, Baidu ERNIE (Wenxin), iFlytek Spark, OpenRouter, kkaiapi, Ollama, and CodingPlan.
+- **Model ownership validation**: mismatches like `--service google --model kimi-k2.5` fail immediately, so requests are never sent to the wrong provider.
+- **Google Gemini compatibility fix**: AI Studio API keys work directly with the Gemini OpenAI-compatible endpoint; InkOS automatically disables the OpenAI `store` parameter Google does not support.
+- **MiniMax transport probing**: MiniMax / MiniMax CodingPlan use the official OpenAI-compatible `/v1` entry and automatically pick a working non-streaming transport, working around streams that report usage but return an empty body.
+- **Legacy env compatibility**: the old `INKOS_LLM_BASE_URL + INKOS_LLM_MODEL + INKOS_LLM_API_KEY` combination still works for the CLI; without `INKOS_LLM_SERVICE`, InkOS tries to infer the service from the baseUrl.
 
 ### Current Interaction Entry Points
 
@@ -375,7 +405,7 @@ Different agents can use different models and providers. Writer on Claude (stron
 
 ### Daemon Mode + Notifications
 
-`inkos up` starts an autonomous background loop that writes chapters on a schedule. The pipeline continues through handleable non-critical issues, pausing with reviewable results when human judgment is needed. Notifications via Telegram and Webhook (HMAC-SHA256 signing + event filtering). Logs to `inkos.log` (JSON Lines), `-q` for quiet mode.
+`inkos up` starts an autonomous background loop that writes chapters on a schedule. The pipeline continues through handleable non-critical issues, pausing with reviewable results when human judgment is needed. Notifications via Telegram, Feishu (Lark), WeCom (Enterprise WeChat), and Webhook (HMAC-SHA256 signing + event filtering). Logs to `inkos.log` (JSON Lines), `-q` for quiet mode.
 
 ### Local Model Compatibility
 
@@ -549,8 +579,11 @@ The first image is a local Studio screenshot. The other images are real local ou
 | `inkos eval [id]` | Generate a quality evaluation report (`--json`, chapter ranges) |
 | `inkos consolidate [id]` | Consolidate chapter summaries for long-book context control |
 | `inkos interact` | External-agent / CLI natural-language entry (`--json`, `--message`, `--book`) |
-| `inkos config set-global` | Set global LLM config (~/.inkos/.env) |
+| `inkos config set-global` | Set the global CLI / daemon / deployment LLM env config (`~/.inkos/.env`) |
+| `inkos config show-global` | Show the global config |
+| `inkos config set/show` | View or update project configuration |
 | `inkos config set-model <agent> <model>` | Per-agent model override (`--base-url`, `--provider`, `--api-key-env`) |
+| `inkos config remove-model <agent>` | Remove a per-agent model override (fall back to the default) |
 | `inkos config show-models` | Show current model routing |
 | `inkos doctor` | Diagnose setup issues (API connectivity test + provider compatibility hints) |
 | `inkos detect [id] [n]` | AIGC detection (`--all` for all chapters, `--stats` for statistics) |
@@ -566,12 +599,20 @@ The first image is a local Studio screenshot. The other images are real local ou
 
 `[id]` is auto-detected when the project has only one book. All commands support `--json` for structured output. `draft` / `write next` / `plan chapter` / `compose chapter` accept `--context` for steering, and `--words` overrides the target chapter size. `book create` supports `--brief <file>` to pass a creative brief — the Architect builds from your ideas instead of generating from scratch. `plan chapter` calls the LLM to create chapter intent; `compose chapter` does not require a live LLM, so you can inspect governed inputs before finishing API setup.
 
+The CLI also accepts one-off LLM override flags at runtime: `--service`, `--model`, `--api-key-env`, `--base-url`, `--api-format <chat|responses>`, `--stream`, `--no-stream`. For example:
+
+```bash
+inkos write next --service google --model gemini-2.5-flash
+inkos up --service moonshot --model kimi-k2.5 --api-key-env MOONSHOT_API_KEY
+```
+
 ## Roadmap
 
 - [x] ~~`packages/studio` Web UI workbench (Vite + React + Hono)~~ — shipped, run `inkos` or `inkos studio`
 - [x] ~~Interactive fiction / open worlds (branching choices + free actions + generated images)~~ — shipped in Studio Play
 - [ ] Partial chapter intervention (rewrite half a chapter + cascade truth file updates)
 - [ ] Custom agent plugin system
+- [ ] Platform-format export (Qidian, Fanqie, etc.)
 
 ## Contributing
 
