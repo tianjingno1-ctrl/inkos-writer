@@ -3,311 +3,195 @@
     "number": 1,
     "title": "嫁人第七天",
     "status": "approved",
-    "wordCount": 2296,
-    "createdAt": "2026-07-10T14:13:14.106Z",
-    "updatedAt": "2026-07-10T14:15:39.988Z",
-    "auditIssues": [
-      "[info] 正文中出现了‘下意识’、‘鬼使神差’等微量AI高频过渡词，且存在‘竟然’（‘竟和陈桂英合谋’、‘竟敢砸暖壶’）等词汇，虽未达到每3000字超标的warning线，但仍有去AI味空间。",
-      "[info] 闪回部分（救霍景深、领证）的叙述节奏稍显平缓，略微冲淡了当前灶房对峙的紧张感。"
-    ],
-    "lengthWarnings": [],
-    "lengthTelemetry": {
-      "target": 3000,
-      "softMin": 2591,
-      "softMax": 3409,
-      "hardMin": 2182,
-      "hardMax": 3818,
-      "countingMode": "zh_chars",
-      "writerCount": 2410,
-      "postWriterNormalizeCount": 2410,
-      "postReviseCount": 0,
-      "finalCount": 2410,
-      "normalizeApplied": false,
-      "lengthWarning": false
-    },
-    "tokenUsage": {
-      "promptTokens": 38484,
-      "completionTokens": 9742,
-      "totalTokens": 48226
-    }
+    "wordCount": 2539,
+    "createdAt": "2026-07-13T01:41:55.094Z",
+    "updatedAt": "2026-07-13T01:41:55.094Z",
+    "auditIssues": [],
+    "lengthWarnings": []
   },
   {
     "number": 2,
     "title": "烈属招牌不好使了",
     "status": "approved",
-    "wordCount": 2443,
-    "createdAt": "2026-07-10T14:19:12.206Z",
-    "updatedAt": "2026-07-10T14:19:59.518Z",
-    "auditIssues": [
-      "[info] 文中出现了AI高频词‘竟然’（‘你竟敢砸暖壶！’，注：此句出自第1章引文，但第2章中‘你个丧门星，你敢砸家里的暖水瓶！’已做去AI化修正）。第2章正文中无明显AI高频词，词汇密度合格。",
-      "[info] 第2章整体句子极短，段落形状符合番茄女频的听书友好格式，但部分对话后的动作描写可以更具象化，减少‘冷眼看着’、‘脸色阴沉’等微量情绪词。"
-    ],
-    "lengthWarnings": [],
-    "lengthTelemetry": {
-      "target": 3000,
-      "softMin": 2591,
-      "softMax": 3409,
-      "hardMin": 2182,
-      "hardMax": 3818,
-      "countingMode": "zh_chars",
-      "writerCount": 3827,
-      "postWriterNormalizeCount": 3600,
-      "postReviseCount": 0,
-      "finalCount": 3600,
-      "normalizeApplied": true,
-      "lengthWarning": false
-    },
-    "tokenUsage": {
-      "promptTokens": 46799,
-      "completionTokens": 10267,
-      "totalTokens": 57066
-    }
+    "wordCount": 2806,
+    "createdAt": "2026-07-15T01:40:25.108Z",
+    "updatedAt": "2026-07-15T01:40:25.108Z",
+    "auditIssues": [],
+    "lengthWarnings": []
   },
   {
     "number": 3,
     "title": "公社电话来了",
     "status": "approved",
-    "wordCount": 2323,
-    "createdAt": "2026-07-10T14:22:23.258Z",
-    "updatedAt": "2026-07-10T14:39:37.444Z",
-    "auditIssues": [
-      "[info] 本章中出现了AI高频标记词：‘隐隐’（‘有引擎声隐隐传过来’）、‘颤巍巍’。虽然未达到warning密度，但仍需注意去AI味。",
-      "[info] 陈桂英当场认怂‘还，我还！’的过程略显仓促，缺乏具体的动作外化（如肉疼地掏钱、抠搜的动作或具体的交接物证），导致爽点释放不够饱满。"
-    ],
-    "lengthWarnings": [],
-    "lengthTelemetry": {
-      "target": 3000,
-      "softMin": 2591,
-      "softMax": 3409,
-      "hardMin": 2182,
-      "hardMax": 3818,
-      "countingMode": "zh_chars",
-      "writerCount": 2867,
-      "postWriterNormalizeCount": 2867,
-      "postReviseCount": 0,
-      "finalCount": 2867,
-      "normalizeApplied": false,
-      "lengthWarning": false
-    },
-    "tokenUsage": {
-      "promptTokens": 38148,
-      "completionTokens": 4585,
-      "totalTokens": 42733
-    }
+    "wordCount": 2608,
+    "createdAt": "2026-07-13T01:41:55.094Z",
+    "updatedAt": "2026-07-13T01:41:55.094Z",
+    "auditIssues": [],
+    "lengthWarnings": []
   },
   {
     "number": 4,
     "title": "首长到村",
-    "status": "ready-for-review",
-    "wordCount": 1838,
-    "createdAt": "2026-07-10T14:42:40.326Z",
-    "updatedAt": "2026-07-13T06:21:59.462Z",
-    "auditIssues": [
-      "[info] “脊背挺得笔直”在第3章和第4章连续出现，作为主角进入冲突态的标志性动作，略显重复。",
-      "[info] 霍景深在1976年农村大庭广众之下“喂奶糖”的行为极具视觉冲击力和爽感，但围观群众的反应仅停留在“瞪大眼”，略显单薄。"
-    ],
-    "lengthWarnings": [],
-    "lengthTelemetry": {
-      "target": 3000,
-      "softMin": 2591,
-      "softMax": 3409,
-      "hardMin": 2182,
-      "hardMax": 3818,
-      "countingMode": "zh_chars",
-      "writerCount": 3227,
-      "postWriterNormalizeCount": 3227,
-      "postReviseCount": 0,
-      "finalCount": 3227,
-      "normalizeApplied": false,
-      "lengthWarning": false
-    },
-    "tokenUsage": {
-      "promptTokens": 35248,
-      "completionTokens": 4946,
-      "totalTokens": 40194
-    }
+    "status": "approved",
+    "wordCount": 2183,
+    "createdAt": "2026-07-13T06:27:33.969Z",
+    "updatedAt": "2026-07-13T06:27:33.969Z",
+    "auditIssues": [],
+    "lengthWarnings": []
   },
   {
     "number": 5,
     "title": "一百八十个工分",
     "status": "approved",
-    "wordCount": 2788,
-    "createdAt": "2026-07-11T05:30:00.000Z",
-    "updatedAt": "2026-07-11T14:24:30.907Z",
-    "auditIssues": [
-      "[critical] 工分数据与前章产生严重逻辑断层。第3章及第4章明确提到林晚棠拿回的是‘187个工分’的折现（23.4元），且第4章结尾林晚棠宣言‘再无瓜葛’。但在第5章中，老李称这187个工分只是‘七天进门工分’（逻辑不通，7天不可能有187分），并引出另一笔‘180个陪嫁工分’。这导致读者对主角到底拿回了多少财产、是否已经彻底清账产生认知混乱。",
-      "[warning] 爽点重复且边际效用递减。第4章的高潮是‘拿回工分、当众打脸、坐车离去’，第5章再次使用‘追讨工分’作为冲突点，且解决方式依然是‘霍景深/小周施压+王德福认怂’，情节结构与上一章高度雷同，缺乏新鲜感。",
-      "[info] ‘奶糖’意象使用过频。第4章已有喂糖情节，第5章再次出现‘奶糖甜意’描写及‘给两颗奶糖’的行为，虽然是宠溺细节，但连续两章高度重复，容易让读者产生AI套路感。",
-      "[info] 部分描写略显AI化，如‘甜意顺着喉咙滑下去，和热水的暖意缠在了一起’，此类抽象的情绪升华在文风指南中属于‘禁用’边缘。"
-    ]
+    "wordCount": 3267,
+    "createdAt": "2026-07-13T01:41:55.094Z",
+    "updatedAt": "2026-07-13T01:41:55.094Z",
+    "auditIssues": [],
+    "lengthWarnings": []
   },
   {
     "number": 6,
     "title": "急电催归队",
     "status": "approved",
-    "wordCount": 2740,
-    "createdAt": "2026-07-11T14:28:59.739Z",
-    "updatedAt": "2026-07-11T14:46:03.154Z",
-    "auditIssues": [
-      "[warning] 章节摘要中明确提到‘霍景深接急电得知归队提前，并发现有人私下给陈桂英送信’，但正文仅描写了归队提前，完全漏掉了‘神秘人送信’这一关键信息。这导致伏笔池中新增的 hook_id (character-调查出给陈桂-英送信的神秘-人身份)失去了逻辑支撑点。",
-      "[info] 文中‘忽然’出现2次，‘猛地’出现1次，虽然未超过高频阈值，但在处理‘紧急电报’这一转折点时，动作描写略显单一。",
-      "[info] 林晚棠在面对霍景深突然离去时的反应非常符合‘拎得清’的设定，没有儿女情长，优先询问‘随军手续’，这一点完成度很高。"
-    ],
-    "lengthWarnings": [],
-    "lengthTelemetry": {
-      "target": 3000,
-      "softMin": 2591,
-      "softMax": 3409,
-      "hardMin": 2182,
-      "hardMax": 3818,
-      "countingMode": "zh_chars",
-      "writerCount": 2701,
-      "postWriterNormalizeCount": 2701,
-      "postReviseCount": 0,
-      "finalCount": 2701,
-      "normalizeApplied": false,
-      "lengthWarning": false
-    },
-    "tokenUsage": {
-      "promptTokens": 39489,
-      "completionTokens": 6761,
-      "totalTokens": 46250
-    }
+    "wordCount": 2741,
+    "createdAt": "2026-07-13T01:41:55.094Z",
+    "updatedAt": "2026-07-13T01:41:55.094Z",
+    "auditIssues": [],
+    "lengthWarnings": []
   },
   {
     "number": 7,
     "title": "深夜那通电话",
-    "status": "ready-for-review",
-    "wordCount": 2697,
-    "createdAt": "2026-07-11T14:54:47.060Z",
-    "updatedAt": "2026-07-13T06:21:38.389Z",
-    "auditIssues": [
-      "[info] 文中出现了AI高频词‘仿佛’（‘仿佛还留在鼻端’），但整体密度极低，未达到warning阈值。",
-      "[info] 本章开启了核心伏笔‘H007-陆建国的下落’（被截获送往农场）与‘H008-公社内鬼与匿名信’的引子（陆建国深夜与外地口音人接头）。目前状态均为正常open/progressing，无stale或blocked情况，符合结构预期。"
-    ]
+    "status": "approved",
+    "wordCount": 2807,
+    "createdAt": "2026-07-13T06:27:30.733Z",
+    "updatedAt": "2026-07-13T06:27:30.733Z",
+    "auditIssues": [],
+    "lengthWarnings": []
   },
   {
     "number": 8,
     "title": "离县！这一走，永不回头",
     "status": "approved",
-    "wordCount": 3474,
-    "createdAt": "2026-07-13T02:41:05.711Z",
-    "updatedAt": "2026-07-13T05:53:59.295Z",
-    "auditIssues": [
-      "[warning] 职级设定不一致。本章正文中小周称呼霍景深为‘霍营长’，且角色矩阵设定为‘守备营营长’；但本章摘要（Chapter Summary 8）中记录为‘得知霍景深团长职级’。",
-      "[warning] AI标记词‘猛地’在约1500字的篇幅内出现了3次（‘猛地一顿’、‘猛地拔高’、‘猛地一震’），密度超过了每3000字1次的红线。",
-      "[info] 林晚棠在反击小钱时，虽然话术犀利且逻辑严密（利用婚书和老李主任背书），但最终解决问题的关键点在于小周到场后的‘职级压制’（霍营长名头）。",
-      "[info] 关于‘瘦削军嫂’和‘灰黑布包’的伏笔（H008新钩子）引入略显生硬，仅通过林晚棠的‘留了意’带过。",
-      "[warning] 最近3章章节类型持续停留在“推进章”，长篇节奏可能开始固化。"
-    ],
-    "lengthWarnings": [],
-    "lengthTelemetry": {
-      "target": 3000,
-      "softMin": 2591,
-      "softMax": 3409,
-      "hardMin": 2182,
-      "hardMax": 3818,
-      "countingMode": "zh_chars",
-      "writerCount": 3324,
-      "postWriterNormalizeCount": 3324,
-      "postReviseCount": 0,
-      "finalCount": 3474,
-      "normalizeApplied": false,
-      "lengthWarning": false
-    },
-    "tokenUsage": {
-      "promptTokens": 64481,
-      "completionTokens": 7941,
-      "totalTokens": 72422
-    }
+    "wordCount": 3489,
+    "createdAt": "2026-07-13T05:50:41.432Z",
+    "updatedAt": "2026-07-13T05:50:41.432Z",
+    "auditIssues": [],
+    "lengthWarnings": []
   },
   {
     "number": 9,
     "title": "北上的闷罐车",
     "status": "approved",
-    "wordCount": 2462,
-    "createdAt": "2026-07-13T06:04:48.665Z",
-    "updatedAt": "2026-07-13T06:47:29.212Z",
-    "auditIssues": [
-      "[info] 终稿四处微调已去「猛地」堆叠（肩膀往后缩/蹲下去）；草席与 ch8 一致。",
-      "[info] 本章作为典型的「后效+过渡章」，展示随军生活质量改变（军大衣、细粮、麦乳精），并完成吴招娣布包悬疑蓄压与白泥洼小冲突。"
-    ],
-    "lengthWarnings": [],
-    "lengthTelemetry": {
-      "target": 2000,
-      "softMin": 1728,
-      "softMax": 2272,
-      "hardMin": 1455,
-      "hardMax": 2545,
-      "countingMode": "zh_chars",
-      "writerCount": 2448,
-      "postWriterNormalizeCount": 2448,
-      "postReviseCount": 2462,
-      "finalCount": 2462,
-      "normalizeApplied": false,
-      "lengthWarning": false
-    },
-    "tokenUsage": {
-      "promptTokens": 46102,
-      "completionTokens": 11091,
-      "totalTokens": 57193
-    }
+    "wordCount": 2474,
+    "createdAt": "2026-07-13T08:38:13.592Z",
+    "updatedAt": "2026-07-13T08:38:13.592Z",
+    "auditIssues": [],
+    "lengthWarnings": []
   },
   {
     "number": 10,
     "title": "邮戳里的毒蛇",
     "status": "approved",
-    "wordCount": 2161,
-    "createdAt": "2026-07-13T07:42:04.554Z",
-    "updatedAt": "2026-07-13T08:14:36.496Z",
-    "auditIssues": [
-      "[info] 手改终稿：表达瘦身+包线降频；小周交信流程已修；audit 初版 warning 已落地修正。"
-    ],
-    "lengthWarnings": [],
-    "lengthTelemetry": {
-      "target": 2000,
-      "softMin": 1728,
-      "softMax": 2272,
-      "hardMin": 1455,
-      "hardMax": 2545,
-      "countingMode": "zh_chars",
-      "writerCount": 2405,
-      "postWriterNormalizeCount": 2405,
-      "postReviseCount": 2161,
-      "finalCount": 2161,
-      "normalizeApplied": false,
-      "lengthWarning": false
-    },
-    "tokenUsage": {
-      "promptTokens": 35983,
-      "completionTokens": 7757,
-      "totalTokens": 43740
-    }
+    "wordCount": 2171,
+    "createdAt": "2026-07-13T08:38:18.406Z",
+    "updatedAt": "2026-07-13T08:38:18.406Z",
+    "auditIssues": [],
+    "lengthWarnings": []
   },
   {
     "number": 11,
     "title": "营门接人",
-    "status": "draft",
-    "wordCount": 2330,
-    "createdAt": "2026-07-13T08:40:00.000Z",
-    "updatedAt": "2026-07-13T09:12:00.000Z",
+    "status": "approved",
+    "wordCount": 2243,
+    "createdAt": "2026-07-15T01:40:25.199Z",
+    "updatedAt": "2026-07-15T01:40:25.199Z",
+    "auditIssues": [],
+    "lengthWarnings": []
+  },
+  {
+    "number": 12,
+    "title": "西排二号的钥匙",
+    "status": "approved",
+    "wordCount": 2209,
+    "createdAt": "2026-07-15T06:35:20.231Z",
+    "updatedAt": "2026-07-15T06:35:20.231Z",
+    "auditIssues": [],
+    "lengthWarnings": []
+  },
+  {
+    "number": 13,
+    "title": "爹妈的电报",
+    "status": "approved",
+    "wordCount": 3379,
+    "createdAt": "2026-07-15T07:29:39.593Z",
+    "updatedAt": "2026-07-15T07:29:39.593Z",
+    "auditIssues": [],
+    "lengthWarnings": []
+  },
+  {
+    "number": 14,
+    "title": "孙嫂子讨打",
+    "status": "approved",
+    "wordCount": 2451,
+    "createdAt": "2026-07-15T07:34:54.095Z",
+    "updatedAt": "2026-07-15T08:06:32.236Z",
     "auditIssues": [
-      "[info] 用户扩写版底稿 + 纠错：站台改营门、删下意识/烟火味、霍台词统一。"
+      "[info] 定稿：晒衣场立威（孙嫂子主+吴远侧）；P1布包闷响已去；P3升华已去；极短段排版；用户确认定稿。",
+      "[info] H002/H011 按大纲 defer，非本章义务。"
     ],
     "lengthWarnings": [],
     "lengthTelemetry": {
-      "target": 2000,
-      "softMin": 1728,
-      "softMax": 2272,
-      "hardMin": 1455,
-      "hardMax": 2545,
+      "target": 3000,
+      "softMin": 2500,
+      "softMax": 3400,
+      "hardMin": 2000,
+      "hardMax": 4000,
       "countingMode": "zh_chars",
-      "writerCount": 2330,
-      "postWriterNormalizeCount": 2330,
-      "postReviseCount": 2330,
-      "finalCount": 2330,
+      "writerCount": 2989,
+      "postWriterNormalizeCount": 2989,
+      "postReviseCount": 2451,
+      "finalCount": 2451,
       "normalizeApplied": false,
       "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 42386,
+      "completionTokens": 12559,
+      "totalTokens": 54945
+    },
+    "reviewNote": ""
+  },
+  {
+    "number": 15,
+    "title": "任务前夜",
+    "status": "approved",
+    "wordCount": 1855,
+    "createdAt": "2026-07-15T08:22:14.655Z",
+    "updatedAt": "2026-07-15T09:12:16.361Z",
+    "auditIssues": [
+      "[info] 定稿：用户手改定稿；排版+去AI味P0已做；番茄章名「任务前夜」；红标不拆、红糖水、回来再拆。",
+      "[info] 字数约 1855（目标2200，硬下限内）；H011 progressing defer拆封。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 2200,
+      "softMin": 1900,
+      "softMax": 2500,
+      "hardMin": 1600,
+      "hardMax": 2800,
+      "countingMode": "zh_chars",
+      "writerCount": 2229,
+      "postWriterNormalizeCount": 2229,
+      "postReviseCount": 1855,
+      "finalCount": 1855,
+      "normalizeApplied": false,
+      "lengthWarning": true
+    },
+    "tokenUsage": {
+      "promptTokens": 43008,
+      "completionTokens": 5476,
+      "totalTokens": 48484
     }
   }
 ]

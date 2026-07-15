@@ -1,0 +1,53 @@
+{
+  "chapter": 12,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "林晚棠 VS 军属院内嚼舌根的家属及想截胡房子的背后势力",
+      "validFromChapter": 12,
+      "validUntilChapter": null,
+      "sourceChapter": 12
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "霍景深, 小周, 张嫂",
+      "validFromChapter": 12,
+      "validUntilChapter": null,
+      "sourceChapter": 12
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "在西排二号安顿下来，去张嫂家吃开火饭，逐步理清军属院的人际关系与包裹秘密",
+      "validFromChapter": 12,
+      "validUntilChapter": null,
+      "sourceChapter": 12
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前位置",
+      "object": "军属院西排二号",
+      "validFromChapter": 12,
+      "validUntilChapter": null,
+      "sourceChapter": 12
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "初来乍到，军属院内有人（如王建国妻子及想截胡房子的背后人物）在背后散布谣言、暗中敌对",
+      "validFromChapter": 12,
+      "validUntilChapter": null,
+      "sourceChapter": 12
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "主角状态",
+      "object": "额头沁汗但内心踏实，已成功入住新房，高度警惕红标包裹",
+      "validFromChapter": 12,
+      "validUntilChapter": null,
+      "sourceChapter": 12
+    }
+  ]
+}

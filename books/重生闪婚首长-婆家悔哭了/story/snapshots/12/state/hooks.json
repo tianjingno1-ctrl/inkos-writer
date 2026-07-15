@@ -1,0 +1,34 @@
+{
+  "hooks": [
+    {
+      "hookId": "conflict-找出在登记簿-上写下-暂留",
+      "startChapter": 12,
+      "type": "conflict",
+      "status": "open",
+      "lastAdvancedChapter": 12,
+      "expectedPayoff": "找出在登记簿上写下“暂留”并指使王建国截胡西排二号的背后人物，并在后续冲突中将其打脸解决",
+      "payoffTiming": "near-term",
+      "notes": "王建国在登记簿上将西排二号写了“暂留”，且其妻在背后散布林晚棠拿房不合规的言论，暗示背后有关系户指使。"
+    },
+    {
+      "hookId": "H011",
+      "startChapter": 12,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 12,
+      "expectedPayoff": "揭开吴招娣黑布包/红标包裹的秘密及背后的敌特/公社暗线",
+      "payoffTiming": "mid-arc",
+      "notes": "林晚棠将沉重且有金属异响的红标包裹放在西排二号墙角，用旧抹布盖住防备，因吴招娣的可疑态度决定暂时不拆。"
+    },
+    {
+      "hookId": "H012",
+      "startChapter": 12,
+      "type": "relationship",
+      "status": "open",
+      "lastAdvancedChapter": 12,
+      "expectedPayoff": "霍景深在军属院及营部的威望与职级彻底彰显，夫妻感情升温",
+      "payoffTiming": "mid-arc",
+      "notes": "管房干事王建国见到霍景深的亲笔批复和私章后态度瞬间转变，极度谄媚地交出钥匙，侧面印证了霍景深的威信。"
+    }
+  ]
+}

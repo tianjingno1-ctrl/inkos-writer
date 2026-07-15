@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 2,
+  "language": "zh",
+  "lastAppliedChapter": 12,
+  "projectionVersion": 1,
+  "migrationWarnings": [
+    "H011-红标包裹的秘密:startChapter normalized from \"4/8\" to 0",
+    "H013-原生家庭断亲:startChapter normalized from \"—\" to 0",
+    "H013-原生家庭断亲:lastAdvancedChapter normalized from \"—\" to 0",
+    "H014-陆家远程反扑:lastAdvancedChapter normalized from \"—\" to 0"
+  ]
+}

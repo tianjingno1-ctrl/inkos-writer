@@ -1,0 +1,84 @@
+{
+  "hooks": [
+    {
+      "hookId": "H002-霍景深职级与任务",
+      "startChapter": 1,
+      "type": "mystery",
+      "status": "progressing",
+      "lastAdvancedChapter": 12,
+      "expectedPayoff": "营区/红标关联",
+      "payoffTiming": "mid-arc",
+      "notes": "ch12字条私章侧面压场"
+    },
+    {
+      "hookId": "H011-红标包裹的秘密",
+      "startChapter": 4,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 12,
+      "expectedPayoff": "进营区安顿后拆开",
+      "payoffTiming": "mid-arc",
+      "notes": "ch12靠墙角未拆；ch15预告，ch16+拆"
+    },
+    {
+      "hookId": "H007-陆建国的下落",
+      "startChapter": 7,
+      "type": "character",
+      "status": "deferred",
+      "lastAdvancedChapter": 14,
+      "expectedPayoff": "农场后续",
+      "payoffTiming": "mid-arc",
+      "notes": "ch7送农场"
+    },
+    {
+      "hookId": "H010-公社内鬼与匿名信",
+      "startChapter": 8,
+      "type": "character",
+      "status": "open",
+      "lastAdvancedChapter": 10,
+      "expectedPayoff": "抵达部队后调查",
+      "payoffTiming": "mid-arc",
+      "notes": "ch12–15 defer"
+    },
+    {
+      "hookId": "H012-吴招娣的沉重布包",
+      "startChapter": 8,
+      "type": "mystery",
+      "status": "progressing",
+      "lastAdvancedChapter": 14,
+      "expectedPayoff": "军属院或后续",
+      "payoffTiming": "near-term",
+      "notes": "吴招娣绊倒时布包发出沉重铁器闷响，林晚棠怀疑其装有危险品或违禁铁器，而非寻常家用品。"
+    },
+    {
+      "hookId": "H014-陆家远程反扑",
+      "startChapter": 8,
+      "type": "plot",
+      "status": "deferred",
+      "lastAdvancedChapter": 14,
+      "expectedPayoff": "政治处归档后作反击物证",
+      "payoffTiming": "near-term",
+      "notes": "ch11林交信霍收档"
+    },
+    {
+      "hookId": "H013-原生家庭断亲",
+      "startChapter": 13,
+      "type": "character",
+      "status": "resolved",
+      "lastAdvancedChapter": 13,
+      "expectedPayoff": "ch13电报断亲",
+      "payoffTiming": "mid-arc",
+      "notes": "复电拒付+井台当众算账落地；KR2完成"
+    },
+    {
+      "hookId": "character-营部职级竞争-或家属院风波-孙嫂子言语中",
+      "startChapter": 14,
+      "type": "character",
+      "status": "open",
+      "lastAdvancedChapter": 14,
+      "expectedPayoff": "营部职级竞争或家属院风波",
+      "payoffTiming": "mid-arc",
+      "notes": "孙嫂子言语中透露出对霍景深职级和分房待遇的强烈嫉妒，暗示孙连长与霍景深在营部可能存在竞争关系。"
+    }
+  ]
+}

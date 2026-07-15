@@ -1,0 +1,53 @@
+{
+  "chapter": 14,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "林晚棠 VS 孙嫂子（显性冲突）；林晚棠 VS 吴招娣（隐性怀疑）",
+      "validFromChapter": 14,
+      "validUntilChapter": null,
+      "sourceChapter": 14
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "张嫂（稳固盟友）",
+      "validFromChapter": 14,
+      "validUntilChapter": null,
+      "sourceChapter": 14
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "守好小家，警惕吴招娣异动，等待霍景深归家拆包裹",
+      "validFromChapter": 14,
+      "validUntilChapter": null,
+      "sourceChapter": 14
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前位置",
+      "object": "守备营军属院（晒衣场 -> 西排二号）",
+      "validFromChapter": 14,
+      "validUntilChapter": null,
+      "sourceChapter": 14
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "红标暂不拆；吴招娣线 defer；原生家庭已纸面切割",
+      "validFromChapter": 13,
+      "validUntilChapter": null,
+      "sourceChapter": 13
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "主角状态",
+      "object": "成功立威，心态稳健但保持高度警惕",
+      "validFromChapter": 14,
+      "validUntilChapter": null,
+      "sourceChapter": 14
+    }
+  ]
+}

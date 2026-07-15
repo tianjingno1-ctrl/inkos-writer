@@ -1,0 +1,102 @@
+{
+  "chapter": 14,
+  "plannerInputs": [
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\author_intent.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\current_focus.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\outline\\story_frame.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\outline\\volume_map.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\chapter_summaries.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\book_rules.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\current_state.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\pending_hooks.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\memory.db"
+  ],
+  "composerInputs": [
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\runtime\\chapter-0014.intent.md"
+  ],
+  "selectedSources": [
+    "runtime/chapter_memo",
+    "story/current_focus.md",
+    "story/author_intent.md",
+    "story/current_state.md",
+    "story/outline/story_frame.md#核心冲突-对手定性-前台-后台双层故事",
+    "story/outline/story_frame.md#后台线-敌特-权重-下沉盘适配",
+    "story/outline/story_frame.md#世界观底色",
+    "story/outline/story_frame.md#终局方向-全书-objective",
+    "story/outline/volume_map.md#各卷主题与情绪曲线",
+    "story/outline/volume_map.md#卷间钩子与回收承诺",
+    "story/outline/volume_map.md#各卷-okr",
+    "story/chapter_summaries.md#recent_titles",
+    "story/chapter_summaries.md#recent_mood_type_trail",
+    "story/chapters#recent_endings",
+    "story/current_state.md#当前冲突",
+    "story/current_state.md#当前目标",
+    "story/current_state.md#主角状态",
+    "story/current_state.md#当前限制",
+    "story/chapter_summaries.md#8",
+    "story/chapter_summaries.md#11",
+    "story/chapter_summaries.md#12",
+    "story/pending_hooks.md#H011-红标包裹的秘密",
+    "story/pending_hooks.md#H012-吴招娣的沉重布包",
+    "story/pending_hooks.md#H002-霍景深职级与任务",
+    "story/pending_hooks.md#H014-陆家远程反扑",
+    "story/pending_hooks.md#H010-公社内鬼与匿名信",
+    "story/pending_hooks.md#H007-陆建国的下落"
+  ],
+  "usedSkills": [
+    "longform-writing"
+  ],
+  "promptPacks": [
+    "longform.writer",
+    "longform.reviser",
+    "longform.auditor"
+  ],
+  "contextNeeds": [
+    "author-intent",
+    "current-focus",
+    "chapter-memo",
+    "story-frame",
+    "volume-map",
+    "active-hooks",
+    "episodic-memory"
+  ],
+  "contextTiers": {
+    "protectedSources": [
+      "runtime/chapter_memo",
+      "story/current_focus.md",
+      "story/author_intent.md",
+      "story/current_state.md",
+      "story/outline/story_frame.md#核心冲突-对手定性-前台-后台双层故事",
+      "story/outline/story_frame.md#后台线-敌特-权重-下沉盘适配",
+      "story/outline/story_frame.md#世界观底色",
+      "story/outline/story_frame.md#终局方向-全书-objective",
+      "story/outline/volume_map.md#各卷主题与情绪曲线",
+      "story/outline/volume_map.md#卷间钩子与回收承诺",
+      "story/outline/volume_map.md#各卷-okr",
+      "story/current_state.md#当前冲突",
+      "story/current_state.md#当前目标",
+      "story/current_state.md#主角状态",
+      "story/current_state.md#当前限制",
+      "story/pending_hooks.md#H011-红标包裹的秘密",
+      "story/pending_hooks.md#H012-吴招娣的沉重布包",
+      "story/pending_hooks.md#H002-霍景深职级与任务",
+      "story/pending_hooks.md#H014-陆家远程反扑",
+      "story/pending_hooks.md#H010-公社内鬼与匿名信",
+      "story/pending_hooks.md#H007-陆建国的下落"
+    ],
+    "compressibleSources": [
+      "story/chapter_summaries.md#recent_titles",
+      "story/chapter_summaries.md#recent_mood_type_trail",
+      "story/chapters#recent_endings",
+      "story/chapter_summaries.md#8",
+      "story/chapter_summaries.md#11",
+      "story/chapter_summaries.md#12"
+    ]
+  },
+  "tokenBudget": {
+    "protectedTokens": 7338,
+    "compressibleTokens": 777,
+    "totalSelectedTokens": 8115
+  },
+  "notes": []
+}
