@@ -5,10 +5,10 @@
       "startChapter": 9,
       "type": "mystery",
       "status": "progressing",
-      "lastAdvancedChapter": 18,
+      "lastAdvancedChapter": 17,
       "expectedPayoff": "揭露吴招娣异常身份或破坏行动",
       "payoffTiming": "mid-arc",
-      "notes": "ch16 远侧阴视；ch17 窗缝再一眼不揭露；ch18 回程窗缝一眼、林不躲不对峙；揭破 defer ch19+"
+      "notes": "ch16 远侧阴视；ch17 窗缝再一眼不揭露；揭破 defer ch19+"
     },
     {
       "hookId": "H011",
@@ -24,11 +24,11 @@
       "hookId": "life-供应日抢购",
       "startChapter": 16,
       "type": "life",
-      "status": "resolved",
-      "lastAdvancedChapter": 18,
+      "status": "open",
+      "lastAdvancedChapter": 16,
       "expectedPayoff": "供应日抢到紧俏物（板油等），展现持家",
       "payoffTiming": "near-term",
-      "notes": "ch16 口信下周二；ch18 副食店孙卡位，林凭票排队拿下板油，张嫂李姐半句帮腔；回程私下托小刘留值班号"
+      "notes": "ch16 已口信下周二；ch17 不落地；回收盯 ch18"
     },
     {
       "hookId": "life-寄出家书",
@@ -48,17 +48,17 @@
       "lastAdvancedChapter": 16,
       "expectedPayoff": "参与/助力家委会改选，话语权提升",
       "payoffTiming": "near-term",
-      "notes": "ch16 水房谦接；ch17–18 正文不落地；回收盯 ch19+"
+      "notes": "ch16 水房谦接；ch17 不推进落地；回收盯 ch18–19 或更后"
     },
     {
       "hookId": "life-夜霜打苗",
       "startChapter": 17,
       "type": "life",
-      "status": "progressing",
-      "lastAdvancedChapter": 18,
+      "status": "open",
+      "lastAdvancedChapter": 17,
       "expectedPayoff": "霜后看苗是否挺住 / 盖草帘",
       "payoffTiming": "near-term",
-      "notes": "ch17 末惦记；ch18 清晨盖干草半清；苗是否挺住仍可再看一眼"
+      "notes": "ch17 末惦记夜霜；可 ch18 顺带一眼"
     }
   ]
 }

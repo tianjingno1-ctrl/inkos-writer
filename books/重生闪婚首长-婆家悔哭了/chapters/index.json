@@ -193,5 +193,102 @@
       "completionTokens": 5476,
       "totalTokens": 48484
     }
+  },
+  {
+    "number": 16,
+    "title": "孙嫂子讨了个没趣",
+    "status": "approved",
+    "wordCount": 2560,
+    "createdAt": "2026-07-15T09:33:50.542Z",
+    "updatedAt": "2026-07-16T03:22:49.895Z",
+    "auditIssues": [
+      "[warning] 本章新开了 3 个伏笔，但没有回收任何旧债。"
+    ],
+    "lengthWarnings": [
+      "[info] 定稿后重计 zh_chars≈2560，略低于 softMin 2591，仍在 hardMin 2182 内。"
+    ],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 2741,
+      "postWriterNormalizeCount": 2741,
+      "postReviseCount": 0,
+      "finalCount": 2560,
+      "normalizeApplied": false,
+      "lengthWarning": true
+    },
+    "tokenUsage": {
+      "promptTokens": 37863,
+      "completionTokens": 9912,
+      "totalTokens": 47775
+    }
+  },
+  {
+    "number": 17,
+    "title": "后院种菜",
+    "status": "approved",
+    "wordCount": 2653,
+    "createdAt": "2026-07-16T03:48:19.974Z",
+    "updatedAt": "2026-07-16T06:17:48.464Z",
+    "auditIssues": [
+      "[warning] 这些伏笔已经进入回收/推进压力，但本章没有真正处理：social-家委会改选（近期，可回收）。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 2600,
+      "softMin": 2246,
+      "softMax": 2954,
+      "hardMin": 1891,
+      "hardMax": 3309,
+      "countingMode": "zh_chars",
+      "writerCount": 2544,
+      "postWriterNormalizeCount": 2544,
+      "postReviseCount": 0,
+      "finalCount": 2653,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 39940,
+      "completionTokens": 9476,
+      "totalTokens": 49416
+    }
+  },
+  {
+    "number": 18,
+    "title": "营长不在时使绊",
+    "status": "audit-failed",
+    "wordCount": 2073,
+    "createdAt": "2026-07-16T07:35:50.858Z",
+    "updatedAt": "2026-07-16T09:45:00.000Z",
+    "auditIssues": [
+      "[info] 用户选定C：对照表整表润色落盘；含「纯纯」/质疑票来路等，按用户要求照搬。"
+    ],
+    "lengthWarnings": [
+      "[warning] zh_chars≈2073，刚过 hardMin，仍低于 softMin/目标2600–3000。"
+    ],
+    "lengthTelemetry": {
+      "target": 2800,
+      "softMin": 2419,
+      "softMax": 3181,
+      "hardMin": 2037,
+      "hardMax": 3563,
+      "countingMode": "zh_chars",
+      "writerCount": 2738,
+      "postWriterNormalizeCount": 2738,
+      "postReviseCount": 0,
+      "finalCount": 2073,
+      "normalizeApplied": false,
+      "lengthWarning": true
+    },
+    "tokenUsage": {
+      "promptTokens": 38231,
+      "completionTokens": 7114,
+      "totalTokens": 45345
+    }
   }
 ]

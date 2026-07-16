@@ -169,16 +169,6 @@
       "hookActivity": "life-寄出家书 resolved；H012 progressing（一眼）；H011 defer；供应日/家委会 defer",
       "mood": "踏实、群像暖",
       "chapterType": "群像日常"
-    },
-    {
-      "chapter": 18,
-      "title": "营长不在时使绊",
-      "characters": "林晚棠,张嫂,李红梅,孙秀兰,小刘,吴招娣",
-      "events": "清晨盖草防霜；小刘送副食票与挂面；供应日副食店排队，孙以「营长不在」卡位抢板油，林凭票递柜、张嫂李姐半句帮腔，抢到板油；回程顺路托小刘留值班号并打听营长一句；吴窗缝一眼不揭露。",
-      "stateChanges": "板油入手；值班号已口头托办；孙使绊失败；口碑再固；正文零红标。",
-      "hookActivity": "life-供应日抢购 resolved；life-夜霜打苗 progressing（盖草）；H012 progressing（一眼）；social-家委会改选 open（未落地）；H011 defer",
-      "mood": "爽利、踏实",
-      "chapterType": "小打脸/供应日"
     }
   ]
 }

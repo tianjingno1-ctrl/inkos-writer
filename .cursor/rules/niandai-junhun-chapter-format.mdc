@@ -92,6 +92,7 @@ alwaysApply: false
 4. 写 brief / context：补「接缝必写」一行（见 style_guide · 章间接缝）
 5. inkos write next <bookId> --context "…"   （或手改定稿）
 6. 手改：极短段 + 标点 + 活世界侧写 + 接缝场面化（勿旁白跳切）
+6b. **每次改完正文必报本章 zh_chars 字数**（见 `.cursor/rules/chapter-wordcount-report.mdc`）
 7. 连读上章末 20 行 + 本章前 20 行，确认无断链
 8. inkos audit <bookId> <N>
 9. ★ 定番茄章名 → 改 H1 + 文件名 + index/摘要/focus（见上「章名」）

@@ -1,0 +1,135 @@
+{
+  "chapter": 17,
+  "selectedContext": [
+    {
+      "source": "runtime/chapter_memo",
+      "reason": "Carry the planner's chapter-specific memo into writing and review.",
+      "excerpt": "goal=林晚棠寄出家书并翻整后院荒地，与张嫂建立“有事喊一声”的邻里默契 | ## 当前任务\n林晚棠将压在搪瓷缸下的信交给上门送煤炭收据的通信员寄走，随后向张嫂借锄头翻整后院荒地，并在还工具时将锄头留置在隔墙墙根，完成邻里间的“有事喊一声”的善意互动。\n\n本章的核心事件是“后院借还工具与翻地”，林晚棠、张嫂、吴招娣（远侧）各从自己角度过一次：\n- 林晚棠：只想踏实过日子，种点菜防寒，对邻里的善意接着，对远处的恶意防着。\n- 张嫂：觉得林晚棠是个勤快利落的过日子人，没架子，愿意主动拉一把，结个好邻里。\n- 吴招娣（远侧视角）：在自家后窗冷眼瞧着，看林晚棠这么快就跟张嫂打成一片，心里泛酸，觉得林晚棠是在故意拉拢人心。\n\n## 读者此刻在等什么1) 读者期待林晚棠在随军后的新生活中如何站稳脚跟，以及与霍景深的感情联系。\n2) 本章部分兑现：寄出第一封家书，并展现她踏实过日子的能干样，通过邻里互助建立安全感。\n\n## 该兑现的 / 暂不掀的\n- 该兑现：life-寄出家书 → 兑现到信件交到通信员手中寄走。\n- 暂不掀：H012（吴招娣的异动） → 仅在远侧投来阴冷视线，压住不发，留到第 19 章后揭露。## 日常/过渡承担什么任务\n- [前半段] → 寄信交代。通信员小兵来送煤炭收据，林晚棠顺便托他带信，体现对霍景深的牵挂与独立生活的开始。\n- [后半段] → 后院翻地。通过向张嫂借锄头、隔墙搭话，建立军属院邻里之间温情且务实的互助关系，收尾于工具留置与隔着矮墙的叮嘱。\n\n## 关键抉择过三连问\n- 主角本章最关键的一次选择：选择主动去后院开荒翻地并向张嫂借工具。\n  - 为什么这么做？为了自给自足，也是为了主动融入家属院的日常交往。\n  - 符合当前利益吗？符合，种菜能节省开支，借工具能拉近与张嫂的关系。\n  - 符合他的人设吗？符合她踏实、能干、拎得清的性格。\n- 对手/配角本章最关键的一次选择：张嫂选择主动借出自家锄头，并在林晚棠还工具时说“有事喊一声”。\n  - 为什么这么做？看重林晚棠的勤快和懂礼数，愿意结个善缘。\n  - 符合当前利益吗？符合，军属院里抱团取暖，多一个靠谱的邻居是好事。\n  - 符合他的人设吗？符合张嫂热心肠、爱帮衬但又带点分寸感的性格。\n\n## 章尾必须发生的改变\n- 信息改变：林晚棠成功寄出信件，得知信件送达大体时间。\n- 关系改变：与邻居张嫂的关系从“客套相识”转化为“可以借工具、有事喊一声”的邻里互助关系。\n\n## 本章 hook 账\nopen:\n- [new] H015 \"通信员的口信\" || 理由：通信员接信时提到山里降温，为后续任务环境恶劣埋下担忧伏笔。\n\nadvance:\n- H012 \"吴招娣的阴视\" → 吴招娣在拐角看着林晚棠与张嫂亲近，眼神阴沉（progressing → pressured）\n\nresolve:\n- life-寄出家书 → 林晚棠将信交给通信员（clear）\n\ndefer:\n- H011\"红标拆封\" → 本章不提及，理由：约定霍景深任务归来后再拆。\n- life-供应日抢购→ 本章不落地，理由：时间未到下周二。\n- social-家委会改选 →本章不推进，理由：林晚棠刚来，需先观察，不宜操之过急。\n\n## 不要做\n- 禁止写第 18 章的任何内容。\n- 禁止出现觉悟大战，不要让林晚棠或张嫂发表高大上的奉献演讲。\n- 忽略 H013 邮路与 H014 碎铁丝，绝不写入正文。- 禁止使用上帝视角，吴招娣的窥视只能通过林晚棠的余光或视线察觉来写。"
+    },
+    {
+      "source": "story/current_focus.md",
+      "reason": "Carry the next-chapter steering and short-horizon focus.",
+      "excerpt": "# 当前聚焦\n\n## InkOS 必遵（写 ch16+ 时优先于旧 volume_map / vol1_chapters）\n\n1. **章纲权威**：`outline/vol1_ch16-25_revised.md`（方案甲 · ch25 结卷1）\n2. **写 ch16–19**：只执行该文件对应章 + 对应 `runtime/ch*-rewrite-brief.md`（有则优先）\n3. **红标**：霍归来前（ch16–19）**正文零提及**；勿因 H011「逾期」提前拆/提\n4. **禁止照抄**：`vol1_chapters.md` 旧 ch16「分房+嚼舌根」（已在 ch12/14）；陈桂英追营在 **ch23–24**，勿提前\n5. **开写**：必须带 `--context`，禁止裸 `write next`\n\n## 近期进度\n\n| 批次 | 状态 | 说明 |\n|------|------|------|\n| **A–F** | ✅ | ch1–15 定稿 |\n| **G ch16–25 大纲** | ✅ | `vol1_ch16-25_revised.md` |\n| **H InkOS 可执行垫片** | ✅ | brief + focus 必遵 + volume_map 指针 + write 命令 |\n\n| 章 | 标题 | 状态 |\n|----|------|------|\n| 1–15 | （略） | approved |\n| 16 | 孙嫂子讨了个没趣 | approved |\n| 17 | （占位）翻地互助 · 群像暖 | brief 已按审计修订；待 plan/write |\n\n## 下一步\n\n1. **plan / write ch17**（命令见 `runtime/ch17-write-context.md`）\n2. 排版 → 审逻辑 → 去 AI 味 → 定番茄章名 → approve\n\n## 写作约束\n\n- 接章：ch16 正文 + `vol1_ch16-25_revised.md` ch17（乙加料）\n- 章间接缝 / 定章名：见 `style_guide.md`\n- 经济账：禁 187；职级：霍营长；霍不在禁当面职级压场\n- 四定律：`book_rules.md`"
+    },
+    {
+      "source": "story/author_intent.md",
+      "reason": "Bind long-horizon user intent and prevent model defaults from overriding the book direction.",
+      "excerpt": "# brief-for-architect · 重生闪婚首长军婚书\r\n\r\n> **任务**：从零生成完整地基（story_frame / volume_map / roles / book_rules / pending_hooks）。  \r\n> **权威约束**：本 brief + `CH01-04-LOCK.md` + `book_rules-draft.md` + `roles-draft.md` 优先级高于自由发挥。\r\n\r\n---\r\n\r\n## 基础信息\r\n\r\n- **书名**：《重生闪婚首长，婆家悔哭了》\r\n- **bookId**：`重生闪婚首长-婆家悔哭了`\r\n- **平台**：番茄女生\r\n- **题材**：七零年代 · 重生 · 婆媳/婆家 · 闪婚军婚 · 先婚后爱甜宠 · 世情壳\r\n- **篇幅**：80–120 万字，单章 2500–3500 字（听书友好）\r\n- **POV**：第三人称限知女主林晚棠\r\n- **目标读者**：35–55 岁下沉女性；婆媳/婚姻痛点、爱听书杀时间\r\n\r\n---\r\n\r\n## 核心卖点（一句话）\r\n\r\n「这一世我不忍了」+「嫁对人了，首长护短」——改命与被宠双爽。\r\n\r\n---\r\n\r\n## 对标与已验证结构（来自扫榜拆解）\r\n\r\n数据来源：`oh-story-exp/扫榜/番茄女频_年代军婚世情_20260708/黄金三章对照拆解.md`\r\n\r\n| 对标书 | 在读 | 本书取什么 |\r\n|--------|------|------------|\r\n| 《重生嫁人16天，我将婆家闹翻天》 | 46.9 万 | 嫁人第 N 天时间锚；第 1 章章末物理反击；第 3 章村干部 público 打脸 |\r\n| 《灵泉空间，荒年带娃找首长爹认亲》 | 44.8 万 | 霍骁式首长人设（被讹诈但不渣、后来护短）；先婚后爱回忆立人设 |\r\n\r\n**组合公式**：《16天》的 público 打脸时机 + 《灵泉空间》的首长爹系宠 —— **闪婚放书名，正文第 1 章闪回讲清；首长第 3 章末来信/电话，第 4 章本人露面护短。**\r\n\r\n---\r\n\r\n## 硬性设定（不可违反）\r\n\r\n### 金手指\r\n\r\n- **无空间、无灵泉、无系统**\r\n- 女主优势 = 重生记忆 + 性格转变 + 话术/一次狠活（武力中等，不靠咏春卸骨）\r\n\r\n### 闪婚理由（已定 B1）\r\n\r\n- **救人 + 政审窗口**：林晚棠在河边救下霍景深及其勤务兵小周；武装部干事协查规定「干部进村入户须登记家庭关系，未婚单独入村公社另批至少耽误三天」，霍景深三日后必须归队\r\n- 未婚干部入村易引闲话、妨碍查案；公社后院民政+武装部**当场办证**\r\n- 林晚棠动机：陆家当晚就要锁柴房门，闪婚是**合法脱身**\r\n- 双方于县武装部/公社登记处领证，手续合规\r\n- 陆家（卖身那家）以为她「嫁差了、丢人、没彩礼」\r\n\r\n### 感情线\r\n\r\n- 双洁；先婚后爱；爹系首长**只护她一人**\r\n- 禁止纯虐女主；甜宠从第 4 章首长露面后开始给明确反馈\r\n- 禁止男主前三章本人出场（仅闪回、第 3 章末来信/电话）\r\n\r\n### 娃线\r\n\r\n- **不要萌宝**（C1 已定）：不加养崽线，避免标签堆叠\r\n\r\n### 标签边界\r\n\r\n- **要**：重生、婆媳、虐渣打脸、先婚后爱、军婚/随军、双洁\r\n- **不要**：空间、灵泉、真千金、萌宝、系统\r\n\r\n---\r\n\r\n## ch1–4 已定节拍（禁止 architect 修改）\r\n\r\n详见 `notes/niandai-junhun-create/CH01-04-LOCK.md`。\r\n\r\n摘要：\r\n\r\n| 章 | 功能 | 爽点 |\r\n|----|------|------|\r\n| 1 | 受气日常 → 重生嫁人第 7 天 → 闪婚闪回（救人+政审）→ 章末第一次硬反击 | 代入 + 首击 |\r\n| 2 | 婆婆道德绑架 + 话术反杀 → 埋村干部/部队要来 | 私域打脸 + 蓄力 |\r\n| 3 | 村干部 público 场指控 → 当众举证 → 章末首长来信/电话 | público 打脸 + 安全感钩子 |\r\n| 4 | 首长本人露面 + 当众护短 + 第一次甜宠反馈 | 爹系宠落地 |\r\n\r\n---\r\n\r\n## 时代锚（七零）\r\n\r\n- **时间**：1976 年，嫁人第 7 天（与书名一致）\r\n- story_frame 须织入：物价（煤油灯、工分、布票）、政策语感（成分、烈士属、公社/大队）、军改前夕部队政审\r\n- book_rules 须写清年代限制（法律、婚姻、军婚手续不可穿帮）\r\n\r\n---\r\n\r\n## 主要角色（architect 可扩写，不可改核心）\r\n\r\n见 `roles-draft.md`。核心四人：\r\n\r\n- **林晚棠**（女主）：受气包儿媳 → 重生后不软，话术 + 一次狠活\r\n- **霍景深**（男主）：糙汉首长，少言护短，先婚后爱\r\n- **陈桂英**（婆婆）：道德绑架型，用烈士属/分家/彩礼话术\r\n- **陆建国**（陆家小叔子）：吸血型，要钱要粮\r\n\r\n---\r\n\r\n## volume_map 要求\r\n\r\n第一卷（约 1–30 章）须覆盖：\r\n\r\n1. ch1–4：黄金开篇（见 LOCK）\r\n2. ch5–10：与陆家分家/脱离控制线；村干部二次来犯；首长寄物资/派人\r\n3. ch11–20：随军手续；军属院初适应；陆家追到部队闹（第二次 público 打脸）\r\n4. ch21–30：霍景深职级揭晓；林晚棠在军属圈立足；陆家悔哭伏笔\r\n\r\n节奏原则：2–3 章一个小爽点；章章有硬结果； público 打脸每 10 章至少一次。\r\n\r\n---\r\n\r\n## pending_hooks 要求\r\n\r\n建书态全部 `open`，startChapter=0。建议包含：\r\n\r\n| 建议 ID | 内容 |\r\n|---------|------|\r\n| H001 | 前世林晚棠如何惨死（陆家磋磨/阴婚卖钱） |\r\n| H002 | 霍景深真实职级与政审任务 |\r\n| H003 | 陈桂英侵吞的陪嫁工分/进门所得证据（180 陪嫁工分爹名下 + 七天工分） |\r\n| H004 | 村干部与婆家的利益勾连 |\r\n| H005 | 随军后陆家追到部队 |\r\n| H006 | 霍景深为何当年被「讹诈」结婚却后来真心 |\r\n\r\n---\r\n\r\n## architect 禁止\r\n\r\n- 添加空间/灵泉/系统/萌宝\r\n- 修改 ch1–4 LOCK 事件链\r\n- 让男主前 3 章本人出场\r\n- 前三章只受气不打脸\r\n- 闪婚理由写成狗血误会（必须救人+政审硬理由）"
+    },
+    {
+      "source": "story/audit_drift.md",
+      "reason": "Carry forward audit drift guidance from the previous chapter without polluting hard state facts.",
+      "excerpt": "# 审计纠偏\n\n## 审计纠偏（自动生成，下一章写作前参照）\n\n> 旧第17章误写稿《水房里的交锋》已删除，不参照其审计条目。  \n> 写新 ch17 时优先对照：`runtime/ch17-rewrite-brief.md`（翻地互助 · 禁打脸抢节奏 · 零红标）。"
+    },
+    {
+      "source": "story/current_state.md",
+      "reason": "Preserve hard state facts referenced by the active chapter brief or hard constraints.",
+      "excerpt": "# 当前状态\r\n\r\n| 字段 | 值 |\r\n| --- | --- |\r\n| 当前章节 | 16（已定稿；下一章待写 17） |\r\n| 当前位置 | 西排二号 |\r\n| 主角状态 | 独居能扛；结识张嫂+李红梅；与孙交恶；对吴留心眼 |\r\n| 当前目标 | 翻后院荒地种耐寒菜；把圈子从「开芽」推到「可调用」 |\r\n| 当前限制 | 霍进山约半个月未归；正文禁提红标 |\r\n| 当前敌我 | 友：张嫂、李红梅；敌/刺：孙秀兰；暗：吴招娣 |\r\n| 当前冲突 | 邻里酸气已压一寸；下一章以互助暖场为主，不大战 |"
+    },
+    {
+      "source": "story/outline/story_frame.md#核心冲突-对手定性-前台-后台双层故事",
+      "reason": "Preserve world rules, core conflict, tone, and non-negotiable canon anchors relevant to the task.",
+      "excerpt": "## 核心冲突、对手定性、前台/后台双层故事\n核心矛盾是两种生存逻辑的对撞：林晚棠信奉“我的日子我做主，谁欺负我我就怼回去”，而以陈桂英为代表的旧秩序信奉“儿媳就得听婆家教唆，女人嫁出去就是婆家的私产”，两者从林晚棠重生的第一秒就注定要彻底撕破脸。显性对手是陈桂英母子，拿烈属身份当免死金牌，贪得无厌要吸干林晚棠的血汗；结构性对手是七零年代乡村默认的“婆权大于天”的陋俗，以及徇私护短的村治生态，所有人都觉得林晚棠反抗婆家是大逆不道。\n前台故事是读者每章能直接摸到的爽点链：林晚棠刚重生的头7天就硬怼婆家、当众打脸徇私的村干部、拿到首长的护短承诺、分家拿回血汗钱、随军去部队、在军属院立足、击退追到部队撒泼的婆家、靠自己的能力找到工作，每3章一个小爽点，每10章一次公开打脸，所有情绪都有落地的出口。后台故事是藏在所有冲突背后的暗线：霍景深那次紧急政审，本质是部队在清剿混进地方的边境敌特残留，当时林晚棠救的勤务兵身上带着关键情报，霍景深急着领证除了政审要求，也有打掩护、保护救命恩人的考量；而陈桂英的小儿子陆建国早就被敌特分子收买，婆家三番五次找林晚棠的麻烦，背后也有敌特想破坏军属声誉、干扰霍景深任务的推手——每一次前台的撒泼闹事，都可以有后台暗线齿轮转动，但**前台永远以打脸与甜宠为主，后台不得抢戏**。"
+    },
+    {
+      "source": "story/outline/story_frame.md#世界观底色",
+      "reason": "Preserve world rules, core conflict, tone, and non-negotiable canon anchors relevant to the task.",
+      "excerpt": "## 世界观底色\n故事锚定在1976年的南方丘陵公社，所有细节都贴合时代逻辑：工分是硬通货，布票、糖票比钱还金贵，夜里照明靠煤油灯，大队的事村支书说了算但没人敢惹穿军装的人，军婚受法律严格保护，破坏军婚要坐牢，烈士家属有优待但不能拿着名头讹人，政审极其严格，个人身份档案跟着人走一辈子。没有任何超自然金手指，林晚棠的所有优势都来自前世活过一世的记忆，知道婆家什么时候要作妖，知道霍景深的为人和未来的发展，会干农活、嘴皮子爽利、真被惹急了敢拼命，没有凭空来的武功、物资或者预知未来的系统。全书采用第三人称限知女主视角，所有叙事都围绕林晚棠的所见所闻展开，不跳上帝视角，不提前剧透读者女主不知道的信息。"
+    },
+    {
+      "source": "story/outline/story_frame.md#终局方向-全书-objective",
+      "reason": "Preserve world rules, core conflict, tone, and non-negotiable canon anchors relevant to the task.",
+      "excerpt": "## 终局方向 + 全书 Objective\n最后一个镜头是大年三十的傍晚，林晚棠穿着霍景深给她买的藏青色呢子大衣，站在部队家属院的门口接刚出任务回来的霍景深，远处陈桂英穿着打补丁的破棉袄，缩着脖子想混进家属院讨好处，被哨兵直接拦在警戒线外，她手里攥着刚拿到的供销社正式职工录用通知书，兜里揣着霍景深给她留的奶糖，回头笑的时候霍景深伸手给她拢了拢被风吹散的围巾，细碎的雪落在两个人的肩头，连风都是暖的。全书 Objective：林晚棠从被婆家磋磨致死的受气包，成为受部队认可的优秀军属、有正式编制的供销社职工，让作恶的陆家彻底落魄悔不当初，和霍景深相守过上安稳踏实的好日子。"
+    },
+    {
+      "source": "story/outline/volume_map.md#各卷主题与情绪曲线",
+      "reason": "Select the current arc/chapter planning section without injecting the entire long outline.",
+      "excerpt": "### 各卷主题与情绪曲线\n全书共4卷，情绪曲线完全贴合下沉用户的爽点需求：第一卷是重生开局的扬眉吐气篇，前半段压得狠，婆家的磋磨、村支书的偏心都往林晚棠身上砸，后半段爽点密集，从第一次硬怼婆婆、当众打脸村支书，到霍景深露面护短、分家拿钱、办随军手续，情绪一路走高，全程没有憋屈的长段落；第二卷是军属院立足的甜宠升温篇，刚到部队的陌生感、其他军属的闲言碎语、婆家追上门的撒泼是小压抑点，每次都很快被霍景深的护短、林晚棠的反杀化解，甜宠情节占比提升，整体情绪是暖而爽的；第三卷是事业起步的暗线收网篇，林晚棠考供销社编制、和霍景深感情双向奔赴是暖线，陆建国的小动作、敌特的渗透是紧绷线，爽点和甜宠交织，情绪稳中有升；第四卷是圆满收尾篇，所有旧怨了结，婆家得到报应，两个人补办婚礼，情绪全程温暖圆满。\n\n> **章级细纲**：第一卷 ch1–15 见正文 + `outline/vol1_ch10-15_revised.md`；**ch16–25 见 `outline/vol1_ch16-25_revised.md`（方案甲 · ch25 结卷1）**。`vol1_chapters.md` ch16+ 旧表已过期。ch3 **计划**完成公众身份核实与口头分家定调；ch4 定义为「首长露面 + 甜宠 + 分家落地」，不重复大队部公众。\n\n> **敌特线**：卷1–2 仅伏笔（见 story_frame 后台线权重）；卷3 升为主线之一；禁止卷1 开谍战专章。"
+    },
+    {
+      "source": "story/outline/volume_map.md#节奏原则",
+      "reason": "Select the current arc/chapter planning section without injecting the entire long outline.",
+      "excerpt": "### 节奏原则\n1. 大高潮每25章一次，全部安排在每卷末尾，且都是公开场合打脸，所有在场的人都能亲眼看见结果，爽点完全落地，适配听书用户的情绪需求；2. 高压打脸段连续最多3章，必须插1章甜宠日常或生活细节，比如霍景深给林晚棠买奶糖、炖鸡汤、给她暖手，缓解紧绷感的同时推进感情线，不会让读者觉得累；3. 每章章末至少留1个钩子，主钩子最多悬3章必须兑现，比如前一章说婆家第二天要来找事，后两章内必须写出事的场面和打脸结果，不会让读者等太久；4. 主线信息前1/3释放30%（婆家的恶、闪婚的表层原因），中段释放50%（政审的真实目的、敌特的线索），后1/3释放20%（前世惨死的真相、霍景深的心意），不会提前剧透也不会到最后都讲不清楚；5. 小爽点每3章一个，全部是林晚棠怼人、拿好处、被霍景深宠的内容，必须落在章末300字以内，方便听书用户抓核心爽点；6. 感情线每10章有一次实质推进，从一开始的客气、到留饭、牵手、拥抱、表白、办婚礼，进度清晰不拖沓，没有反复拉扯的狗血误会。"
+    },
+    {
+      "source": "story/chapter_summaries.md#recent_titles",
+      "reason": "Keep recent title history visible to avoid repetitive chapter naming.",
+      "excerpt": "16: 孙嫂子讨了个没趣 | 15: 任务前夜 | 14: 孙嫂子讨打 | 13: 爹妈的电报 | 12: 西排二号的钥匙"
+    },
+    {
+      "source": "story/chapter_summaries.md#recent_mood_type_trail",
+      "reason": "Keep recent mood and chapter-type cadence visible before writing the next chapter.",
+      "excerpt": "16: 稳健、爽利 / 日常+小爽 | 15: 踏实、甜宠 / 甜宠日常 | 14: 爽利、踏实 / 私域打脸/半公开小爽 | 13: 硬冷、小高潮、收束踏实 / 私域打脸/小高潮 | 12: 立足、小爽、踏实 / 过渡+群像+小爽"
+    },
+    {
+      "source": "story/chapters#recent_endings",
+      "reason": "Show how recent chapters ended so the writer avoids structural repetition (e.g. 3 consecutive collapse endings).",
+      "excerpt": "ch14: 嗓子里的燥热被压了下去，心里那股子刚跟人对质完的劲头也慢慢平复了。 | ch15: 她回到桌前，端起那杯还没喝完的红糖水，一口气喝了下去。 | ch16: 她翻了个身，不一会儿就睡着了。"
+    },
+    {
+      "source": "runtime/hook_debt#H012",
+      "reason": "含原始种子文本的叙事债务简报。",
+      "excerpt": "H012（mystery，备忘引用旧债，已开8章） | 读者承诺：揭露吴招娣异常身份或破坏行动 | 种于第9章：ch9 北上的闷罐车 - 卡斗北行，整理霍景深行李（大衣/麦乳精/细粮/粮票）；张嫂述霍营长一等功与猫耳洞；吴招娣黑布包金属异响；白泥洼补给站汉子递眼神讹寄存费，林亮随军证明、张嫂与小周压场化解；吴招娣偷看林；继续北上。 | 推进于第16章：ch16 孙嫂子讨了个没趣 - 霍走后数日：开火独居；张嫂拉领煤见李红梅；孙秀兰刺守空房，林以军属话术反杀，李姐补刀；回程吴招娣远侧阴视；水房李姐透供应日与家委会改选，林谦接；写信压搪瓷缸，拟翻后院荒地。"
+    },
+    {
+      "source": "story/current_state.md#当前冲突",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "当前冲突 | 与孙秀兰的邻里摩擦（显性），吴招娣的暗中敌意（隐性）"
+    },
+    {
+      "source": "story/current_state.md#当前目标",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "当前目标 | 在军属院立足，准备翻地种菜，警惕吴招娣"
+    },
+    {
+      "source": "story/current_state.md#主角状态",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "主角状态 | 生活步入正轨，心态稳健，社交圈初步开启"
+    },
+    {
+      "source": "story/chapter_summaries.md#12",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "西排二号的钥匙 | 军属院门口霍景深说明营部有事、当面交张嫂带认路领钥匙后回营；张嫂引路进院。管房干事王建国刁难推东排偏房、扣西排二号；林出示随军证明与霍字条私章，张嫂帮腔，王改口发钥匙。林入住西排二号，红标靠墙未拆；张嫂约晚上开火做饭。 | 林晚棠获得西排二号钥匙并正式入住；与张嫂建立邻里信任；霍威信以字条/交托侧面压场（分房本人未再出场）；王建国怂退。 | H002 advanced; H011/H012 defer"
+    },
+    {
+      "source": "story/chapter_summaries.md#14",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "孙嫂子讨打 | 晒衣场：张嫂提断亲余波；孙嫂子以不孝/分房挑衅；林抬营部复电与规矩反杀，点分房按职级；张嫂帮腔；闲话收声；吴远侧未掺和；回屋红标靠墙未拆。 | 院内口碑立住；与孙嫂子交恶；与张嫂更稳；红标仍不拆。 | H012 defer; H011 defer"
+    },
+    {
+      "source": "story/chapter_summaries.md#15",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "任务前夜 | 深夜西排二号：林洗漱安顿；霍军靴敲门进门；红糖水实利宠；张嫂转述晒衣场，霍肯定未抬职级压场；交代明晨带队进山约半个月、托张嫂；红标只定「这趟回来再拆」不拆；交营部/小周联络条；揉发顶离门，林喝干红糖水。 | 夫妻客气向亲近挪半步；红标拆封时机锁定任务归来；霍出任务林院内留守。 | H011 progressing；H012 defer"
+    },
+    {
+      "source": "story/chapter_summaries.md#16",
+      "reason": "Retrieve older chapter summaries, state facts, and volume summaries that are relevant but may be semantically compressed.",
+      "excerpt": "日子是自己过的 | 林晚棠清晨领煤球，结识干练的李红梅，并以“军属觉悟”话术反击孙秀兰的嘲讽；回程察觉吴招娣的阴冷注视；饭后在水房再次偶遇李红梅并获知家委会改选消息。 | 结识关键盟友李红梅；确立院内“硬茬”形象；对吴招娣产生防备心；开启独居生活节奏。 | H012 advanced; H011 mentioned"
+    },
+    {
+      "source": "story/pending_hooks.md#H012",
+      "reason": "Preserve active hook evidence and hook debt that the current chapter must honor.",
+      "excerpt": "mystery | progressing | 揭露吴招娣异常身份或破坏行动 | mid-arc | ch16 远侧阴视；ch17 至多再一眼不揭露；揭破 defer ch19+"
+    },
+    {
+      "source": "story/pending_hooks.md#life-供应日抢购",
+      "reason": "Preserve active hook evidence and hook debt that the current chapter must honor.",
+      "excerpt": "life | open | 供应日抢到紧俏物（板油等），展现持家 | near-term | ch16 已口信下周二；ch17 不落地；回收盯 ch18 或其后供应日场面"
+    },
+    {
+      "source": "story/pending_hooks.md#social-家委会改选",
+      "reason": "Preserve active hook evidence and hook debt that the current chapter must honor.",
+      "excerpt": "social | open | 参与/助力家委会改选，话语权提升 | near-term | ch16 水房谦接；ch17 不推进落地；回收盯 ch18–19 或更后"
+    },
+    {
+      "source": "story/pending_hooks.md#life-寄出家书",
+      "reason": "Preserve active hook evidence and hook debt that the current chapter must honor.",
+      "excerpt": "life | open | 信交通信员寄出 | near-term | ch16 信压搪瓷缸；ch17 必落清债"
+    },
+    {
+      "source": "story/pending_hooks.md#H011",
+      "reason": "Preserve active hook evidence and hook debt that the current chapter must honor.",
+      "excerpt": "mystery | open | 霍归来后当面拆红标（partial→再揭） | mid-arc | ch15 约定回来再拆；ch16–19 正文零提及；ch20 钩 / ch21 拆"
+    }
+  ]
+}

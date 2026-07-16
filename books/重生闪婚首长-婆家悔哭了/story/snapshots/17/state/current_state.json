@@ -1,0 +1,53 @@
+{
+  "chapter": 17,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "邻里暖场已立；ch18 起「营长不在」使绊",
+      "validFromChapter": 17,
+      "validUntilChapter": null,
+      "sourceChapter": 17
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "友：张嫂、李红梅；刺：孙秀兰；暗：吴招娣",
+      "validFromChapter": 17,
+      "validUntilChapter": null,
+      "sourceChapter": 17
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "守住独居日子；应对营长不在时的使绊；可选供应日抢购",
+      "validFromChapter": 17,
+      "validUntilChapter": null,
+      "sourceChapter": 17
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前位置",
+      "object": "西排二号",
+      "validFromChapter": 17,
+      "validUntilChapter": null,
+      "sourceChapter": 17
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "霍进山未归；正文禁提红标；霍本人默认不出场救场",
+      "validFromChapter": 17,
+      "validUntilChapter": null,
+      "sourceChapter": 17
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "主角状态",
+      "object": "信已寄；煤球条子在手；后院已翻并下苗；与张嫂、李姐约定可喊人；对吴留心",
+      "validFromChapter": 17,
+      "validUntilChapter": null,
+      "sourceChapter": 17
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "hooks": [
+    {
+      "hookId": "H012",
+      "startChapter": 16,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 16,
+      "expectedPayoff": "揭露吴招娣敌特身份或破坏行动",
+      "payoffTiming": "mid-arc",
+      "notes": "吴招娣用阴沉如毒蛇的眼神盯着林晚棠，敌意半公开化，林晚棠已产生警惕。"
+    },
+    {
+      "hookId": "life-林晚棠在供应-日抢购紧俏物-展现持家能力",
+      "startChapter": 16,
+      "type": "life",
+      "status": "open",
+      "lastAdvancedChapter": 16,
+      "expectedPayoff": "林晚棠在供应日抢购紧俏物资，展现持家能力",
+      "payoffTiming": "near-term",
+      "notes": "李红梅提醒下周有副食店供应日。"
+    },
+    {
+      "hookId": "social-林晚棠通过改-选进入家委会-提升院内话语",
+      "startChapter": 16,
+      "type": "social",
+      "status": "open",
+      "lastAdvancedChapter": 16,
+      "expectedPayoff": "林晚棠通过改选进入家委会，提升院内话语权",
+      "payoffTiming": "near-term",
+      "notes": "李红梅透露家属委员会即将改选，且张嫂已向其推荐林晚棠。"
+    }
+  ]
+}

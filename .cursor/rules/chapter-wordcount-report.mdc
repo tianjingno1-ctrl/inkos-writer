@@ -1,0 +1,22 @@
+---
+description: 改完章节正文后必须汇报汉字字数
+globs: books/**/chapters/*.md
+alwaysApply: false
+---
+
+# 章文字数汇报（改完必报）
+
+每次改动 `books/*/chapters/*.md` 正文（润色、排版、扩写、删句、定稿落盘等）并回复用户时：
+
+1. **当场重计**本章汉字字数（`zh_chars`：正文汉字，不含标题行 `# 第N章…`）
+2. **在回复里明确写出**：本章约 **N** 字
+3. 若本书/brief 有目标区间（如 2600–3000），顺带一句：相对目标偏高/偏低/差不多
+
+不要只说「字数持平」而不给数字。未改正文则不必报。
+
+计数示例（Node）：
+
+```js
+const t = fs.readFileSync(path, 'utf8').replace(/^#.*\n/, '');
+[...t].filter(c => /\p{Script=Han}/u.test(c)).length
+```
