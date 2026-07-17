@@ -1,53 +1,53 @@
 {
-  "chapter": 18,
+  "chapter": 20,
   "facts": [
     {
       "subject": "protagonist",
-      "predicate": "当前冲突",
-      "object": "ch18 供应日孙卡位使绊已压下（凭票排队+邻里半句帮腔）；吴招娣仍远侧窥视",
-      "validFromChapter": 18,
-      "validUntilChapter": null,
-      "sourceChapter": 18
-    },
-    {
-      "subject": "protagonist",
-      "predicate": "当前敌我",
-      "object": "友：张嫂、李红梅、通信员小刘；刺：孙秀兰；暗：吴招娣",
-      "validFromChapter": 18,
-      "validUntilChapter": null,
-      "sourceChapter": 18
-    },
-    {
-      "subject": "protagonist",
-      "predicate": "当前目标",
-      "object": "守住独居日子；巩固院内口碑；等待霍景深归来",
-      "validFromChapter": 18,
-      "validUntilChapter": null,
-      "sourceChapter": 18
-    },
-    {
-      "subject": "protagonist",
       "predicate": "当前位置",
-      "object": "西排二号",
-      "validFromChapter": 18,
+      "object": "西排二号屋里（叙述用屋里/灶房，勿刷门牌）",
+      "validFromChapter": 20,
       "validUntilChapter": null,
-      "sourceChapter": 18
-    },
-    {
-      "subject": "protagonist",
-      "predicate": "当前限制",
-      "object": "霍进山未归；正文禁提红标；霍本人默认不出场救场",
-      "validFromChapter": 18,
-      "validUntilChapter": null,
-      "sourceChapter": 18
+      "sourceChapter": 20
     },
     {
       "subject": "protagonist",
       "predicate": "主角状态",
-      "object": "供应日抢到板油；副食票与挂面在手；后院菜地已盖干草；已顺路托小刘按营长留号找值班（口头、未宣称办完）；对吴招娣留心",
-      "validFromChapter": 18,
+      "object": "霍景深夜里急归进门当面重逢；任务已成；热水毛巾糖水实利；红标仍未提/未拆",
+      "validFromChapter": 20,
       "validUntilChapter": null,
-      "sourceChapter": 18
+      "sourceChapter": 20
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "写 ch21：从重逢余温接到墙角红标，当面拆（partial）",
+      "validFromChapter": 20,
+      "validUntilChapter": null,
+      "sourceChapter": 20
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "ch21 起才提红标；禁一次说完政审/敌特；禁脏信抢戏（脏压 ch23）；家委会不决选",
+      "validFromChapter": 20,
+      "validUntilChapter": null,
+      "sourceChapter": 20
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "友：霍景深、张嫂、李红梅、小刘；刺：孙秀兰；暗：吴招娣",
+      "validFromChapter": 20,
+      "validUntilChapter": null,
+      "sourceChapter": 20
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "红标待拆；院内闲话余波；远程脏压尚未入驻",
+      "validFromChapter": 20,
+      "validUntilChapter": null,
+      "sourceChapter": 20
     }
   ]
 }

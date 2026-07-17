@@ -260,17 +260,15 @@
   },
   {
     "number": 18,
-    "title": "营长不在时使绊",
-    "status": "audit-failed",
-    "wordCount": 2073,
+    "title": "票齐了，拿好",
+    "status": "approved",
+    "wordCount": 2664,
     "createdAt": "2026-07-16T07:35:50.858Z",
-    "updatedAt": "2026-07-16T09:45:00.000Z",
+    "updatedAt": "2026-07-17T03:27:59.392Z",
     "auditIssues": [
-      "[info] 用户选定C：对照表整表润色落盘；含「纯纯」/质疑票来路等，按用户要求照搬。"
+      "[info] 定稿：番茄章名《票齐了，拿好》；删吴偷看；口语微顺；活世界补字；凭票+邻里半句；私下值班号；零红标。"
     ],
-    "lengthWarnings": [
-      "[warning] zh_chars≈2073，刚过 hardMin，仍低于 softMin/目标2600–3000。"
-    ],
+    "lengthWarnings": [],
     "lengthTelemetry": {
       "target": 2800,
       "softMin": 2419,
@@ -280,15 +278,78 @@
       "countingMode": "zh_chars",
       "writerCount": 2738,
       "postWriterNormalizeCount": 2738,
-      "postReviseCount": 0,
-      "finalCount": 2073,
+      "postReviseCount": 2664,
+      "finalCount": 2664,
       "normalizeApplied": false,
-      "lengthWarning": true
+      "lengthWarning": false
     },
     "tokenUsage": {
       "promptTokens": 38231,
       "completionTokens": 7114,
       "totalTokens": 45345
+    }
+  },
+  {
+    "number": 19,
+    "title": "油渣挂面香",
+    "status": "approved",
+    "wordCount": 2942,
+    "createdAt": "2026-07-17T03:05:54.116Z",
+    "updatedAt": "2026-07-17T03:58:09.986Z",
+    "auditIssues": [
+      "[info] 定稿：番茄章名《油渣挂面香》；接缝碗柜顶；去AI味标准包；零红标；家委会半格谦退；将近半月。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 2600,
+      "softMin": 2246,
+      "softMax": 2954,
+      "hardMin": 1891,
+      "hardMax": 3309,
+      "countingMode": "zh_chars",
+      "writerCount": 3876,
+      "postWriterNormalizeCount": 3876,
+      "postReviseCount": 2942,
+      "finalCount": 2942,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 43281,
+      "completionTokens": 11736,
+      "totalTokens": 55017
+    }
+  },
+  {
+    "number": 20,
+    "title": "说好延期，他怎么连夜赶回来了",
+    "status": "approved",
+    "wordCount": 2410,
+    "createdAt": "2026-07-17T07:36:00.611Z",
+    "updatedAt": "2026-07-17T08:23:21.205Z",
+    "auditIssues": [
+      "[info] 定稿：番茄章名《说好延期，他怎么连夜赶回来了》；假延期+耳闻+进门重逢；零红标；「仿佛」已删。"
+    ],
+    "lengthWarnings": [],
+    "reviewNote": "{\"kind\":\"state-degraded\",\"baseStatus\":\"audit-failed\",\"injectedIssues\":[\"[warning] 状态校验不可用：Error: State validator returned invalid response\"]}",
+    "lengthTelemetry": {
+      "target": 2600,
+      "softMin": 2246,
+      "softMax": 2954,
+      "hardMin": 1891,
+      "hardMax": 3309,
+      "countingMode": "zh_chars",
+      "writerCount": 2638,
+      "postWriterNormalizeCount": 2638,
+      "postReviseCount": 0,
+      "finalCount": 2638,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 39362,
+      "completionTokens": 15817,
+      "totalTokens": 55179
     }
   }
 ]

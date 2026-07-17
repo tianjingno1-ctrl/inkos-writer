@@ -1,0 +1,82 @@
+{
+  "hooks": [
+    {
+      "hookId": "H012",
+      "startChapter": 9,
+      "type": "mystery",
+      "status": "progressing",
+      "lastAdvancedChapter": 17,
+      "expectedPayoff": "揭露吴招娣异常身份或破坏行动",
+      "payoffTiming": "mid-arc",
+      "notes": "ch16 远侧阴视；ch17 窗缝再一眼；ch18–20 未出场；揭破 defer",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "H011",
+      "startChapter": 12,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 15,
+      "expectedPayoff": "霍归来后当面拆红标（partial→再揭）",
+      "payoffTiming": "mid-arc",
+      "notes": "ch15 约定回来再拆；ch16–20 正文零提及已守；**ch21 开篇钩+当面拆**（partial）",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "life-供应日抢购",
+      "startChapter": 16,
+      "type": "life",
+      "status": "resolved",
+      "lastAdvancedChapter": 18,
+      "expectedPayoff": "供应日抢到紧俏物（板油等），展现持家",
+      "payoffTiming": "near-term",
+      "notes": "ch18 副食店孙卡位，林凭票拿下板油；已结",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "life-寄出家书",
+      "startChapter": 16,
+      "type": "life",
+      "status": "resolved",
+      "lastAdvancedChapter": 17,
+      "expectedPayoff": "信交通信员寄出",
+      "payoffTiming": "near-term",
+      "notes": "ch17 已交小刘寄出；已结",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "social-家委会改选",
+      "startChapter": 16,
+      "type": "social",
+      "status": "pressured",
+      "lastAdvancedChapter": 19,
+      "expectedPayoff": "参与/助力家委会改选，话语权提升",
+      "payoffTiming": "near-term",
+      "notes": "ch19 谦退未决选；ch20 未展开；继续 pressured",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "life-夜霜打苗",
+      "startChapter": 17,
+      "type": "life",
+      "status": "progressing",
+      "lastAdvancedChapter": 18,
+      "expectedPayoff": "霜后看苗是否挺住 / 盖草帘",
+      "payoffTiming": "near-term",
+      "notes": "ch18 盖干草半清；ch19–20 未专写；继续 defer",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    }
+  ]
+}

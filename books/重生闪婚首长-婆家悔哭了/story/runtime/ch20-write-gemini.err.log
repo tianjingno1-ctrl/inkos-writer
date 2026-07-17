@@ -1,0 +1,17 @@
+(node:18736) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+INFO  [inkos] 阶段：准备章节输入
+INFO  [inkos] 阶段：撰写章节草稿
+INFO  [writer] 阶段 1：创作正文（第20章）
+INFO  [writer] 阶段 2：状态结算（第20章，2638字）
+INFO  [writer] 阶段 2a：提取第20章事实
+INFO  [writer] 阶段 2b：把观察结果回写到真相文件
+WARN  [writer] 后写校验：第20章 1 个错误，0 个警告
+WARN  [writer] [error] 禁止句式: 出现了「不是……而是……」句式
+INFO  [inkos] 阶段：写完即停（手动审查模式）
+INFO  [inkos] [promotion] 2 hook(s) promoted after chapter 20
+INFO  [inkos] 阶段：落盘最终章节
+INFO  [inkos] 阶段：生成最终真相文件
+INFO  [inkos] 阶段：校验真相文件变更
+WARN  [state-validator] State validation failed: Error: State validator returned invalid response
+WARN  [inkos] State validation error for chapter 20: Error: State validator returned invalid response

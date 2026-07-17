@@ -1,0 +1,27 @@
+[inkos-tongapi] model=gpt-5.5
+(node:3744) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+INFO  [inkos] 阶段：准备章节输入
+INFO  [inkos] 阶段：撰写章节草稿
+INFO  [writer] 阶段 1：创作正文（第20章）
+INFO  [writer] 阶段 2：状态结算（第20章，3379字）
+INFO  [writer] 阶段 2a：提取第20章事实
+INFO  [writer] 阶段 2b：把观察结果回写到真相文件
+WARN  [writer] 后写校验：第20章 1 个错误，2 个警告
+WARN  [writer] [error] 章节号指称: 正文中出现了章节号指称："第20章"。角色不知道自己在第几章。
+WARN  [writer] [warning] 作者说教: 出现说教词："显然"
+WARN  [writer] [warning] 连续短段: 连续出现5个不足35字的短段，容易形成短句堆砌。
+INFO  [inkos] 阶段：写完即停（手动审查模式）
+INFO  [inkos] [promotion] 2 hook(s) promoted after chapter 20
+INFO  [inkos] 阶段：落盘最终章节
+INFO  [inkos] 阶段：生成最终真相文件
+WARN  [inkos] 第20章经过一次字数归一化后仍超出硬区间（1891-3309，实际 3379）。
+INFO  [inkos] 阶段：校验真相文件变更
+WARN  [inkos] 状态校验：第20章发现 4 条警告
+WARN  [inkos]   [hook_anomaly] H011（红标/霍归来后拆）在旧池中仍为 open，且旧备注指向 ch21 开篇钩+拆；本章正文确实零提及、未解决，新增 hooks 中却消失，建议保留为 defer/open。
+WARN  [inkos]   [hook_anomaly] H012（吴招娣异常身份）旧池仍为 progressing/defer，本章未推进也未解决，新增 hooks 中消失，属于未标 resolved 的伏笔丢失。
+WARN  [inkos]   [hook_anomaly] social-家委会改选 旧状态为 pressured、未决选，本章未展开也未解决，新增 hooks 中消失，建议继续 defer。
+WARN  [inkos]   [hook_anomaly] life-夜霜打苗 旧状态为 progressing，本章未专写苗情也未解决，新增 hooks 中消失，建议继续 defer 或明确归档理由。
+WARN  [inkos] [paragraph] 连续出现5个不足35字的短段，容易形成短句堆砌。
+INFO  [inkos] 阶段：同步记忆索引
+INFO  [inkos] 阶段：更新章节索引与快照

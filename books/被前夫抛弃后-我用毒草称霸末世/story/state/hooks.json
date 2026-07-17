@@ -1,0 +1,113 @@
+{
+  "hooks": [
+    {
+      "hookId": "H001",
+      "startChapter": 0,
+      "type": "物品",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "120",
+      "payoffTiming": "slow-burn",
+      "notes": "父亲留下的黑色保险箱，内含系统进阶密匙",
+      "dependsOn": [],
+      "paysOffInArc": "第4卷",
+      "coreHook": true,
+      "halfLifeChapters": 80,
+      "promoted": true
+    },
+    {
+      "hookId": "H002",
+      "startChapter": 0,
+      "type": "人物",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "25",
+      "payoffTiming": "immediate",
+      "notes": "许蔓诈死后的陈建宇视角：他以为许蔓坠入尸潮",
+      "dependsOn": [],
+      "paysOffInArc": "第1卷",
+      "coreHook": true,
+      "halfLifeChapters": 10,
+      "promoted": true
+    },
+    {
+      "hookId": "H003",
+      "startChapter": 5,
+      "type": "系统",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "45",
+      "payoffTiming": "near-term",
+      "notes": "变异毒蜂后的幼虫：未来领地的空中防御力量",
+      "dependsOn": [],
+      "paysOffInArc": "第2卷",
+      "coreHook": false,
+      "halfLifeChapters": 20,
+      "promoted": false
+    },
+    {
+      "hookId": "H004",
+      "startChapter": 15,
+      "type": "阴谋",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "160",
+      "payoffTiming": "endgame",
+      "notes": "陈建宇私吞的许家海外信托物资点位置",
+      "dependsOn": [
+        "H001"
+      ],
+      "paysOffInArc": "第5卷",
+      "coreHook": true,
+      "halfLifeChapters": 100,
+      "promoted": true
+    },
+    {
+      "hookId": "H005",
+      "startChapter": 30,
+      "type": "情感",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "90",
+      "payoffTiming": "mid-arc",
+      "notes": "程砚之的严重失眠症与许蔓安神花的初次感应",
+      "dependsOn": [],
+      "paysOffInArc": "第3卷",
+      "coreHook": false,
+      "halfLifeChapters": 40,
+      "promoted": false
+    },
+    {
+      "hookId": "H006",
+      "startChapter": 50,
+      "type": "世界",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "180",
+      "payoffTiming": "endgame",
+      "notes": "“地球肺部重启”实验真相：末世爆发的根源",
+      "dependsOn": [
+        "H001"
+      ],
+      "paysOffInArc": "第6卷",
+      "coreHook": true,
+      "halfLifeChapters": 120,
+      "promoted": true
+    },
+    {
+      "hookId": "H007",
+      "startChapter": 10,
+      "type": "伏笔",
+      "status": "open",
+      "lastAdvancedChapter": 0,
+      "expectedPayoff": "150",
+      "payoffTiming": "slow-burn",
+      "notes": "陈家小姑子偷走的许蔓项链，其实是GPS信标",
+      "dependsOn": [],
+      "paysOffInArc": "第5卷",
+      "coreHook": false,
+      "halfLifeChapters": 80,
+      "promoted": false
+    }
+  ]
+}
