@@ -1,0 +1,53 @@
+{
+  "chapter": 26,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "备考实力 vs 名额「早有谱」传闻；供销社线刚启动",
+      "validFromChapter": 26,
+      "validUntilChapter": null,
+      "sourceChapter": 26
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "友：霍景深（材料/口子）、张嫂；刺：院内/公社盯肥缺者（泛化）；暗：H012 中年男人未揭",
+      "validFromChapter": 26,
+      "validUntilChapter": null,
+      "sourceChapter": 26
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "写 ch27：名额风声与闲话（竞争压力可见；林不退）",
+      "validFromChapter": 26,
+      "validUntilChapter": null,
+      "sourceChapter": 26
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前位置",
+      "object": "屋里/灶房（叙述勿刷门牌）",
+      "validFromChapter": 26,
+      "validUntilChapter": null,
+      "sourceChapter": 26
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "本章未考核/未录取；吴具名留给 ch27；禁揭 H012；禁复读拆红标/定情",
+      "validFromChapter": 26,
+      "validUntilChapter": null,
+      "sourceChapter": 26
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "主角状态",
+      "object": "拆袋看清招工条件；盖章推荐表在手；霍便条「不急」；已开练算盘备考",
+      "validFromChapter": 26,
+      "validUntilChapter": null,
+      "sourceChapter": 26
+    }
+  ]
+}

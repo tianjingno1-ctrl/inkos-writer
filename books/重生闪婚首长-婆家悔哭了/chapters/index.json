@@ -351,5 +351,239 @@
       "completionTokens": 15817,
       "totalTokens": 55179
     }
+  },
+  {
+    "number": 21,
+    "title": "你说过，等回来亲手拆",
+    "status": "approved",
+    "wordCount": 1798,
+    "createdAt": "2026-07-20T02:00:12.405Z",
+    "updatedAt": "2026-07-20T02:32:01.467Z",
+    "auditIssues": [
+      "[info] 定稿：番茄章名《你说过，等回来亲手拆》；同夜拆红标（军功章+合影+未寄信）partial；盒交林；无次日孙线；手改+去AI味P0已落。",
+      "[info] H011 partial；家委会/H012/夜霜未推进。",
+      "[info] audit 另记：禁用词「伟岸」；少量气质总结（透着股子沉静/黏糊劲儿）—未改（用户未要求压味）。"
+    ],
+    "lengthWarnings": [
+      "[info] 定稿后重计 zh_chars≈1798，低于 softMin 2246 / hardMin 1891；用户未要求补字，保留现稿。"
+    ],
+    "lengthTelemetry": {
+      "target": 2600,
+      "softMin": 2246,
+      "softMax": 2954,
+      "hardMin": 1891,
+      "hardMax": 3309,
+      "countingMode": "zh_chars",
+      "writerCount": 3675,
+      "postWriterNormalizeCount": 3675,
+      "postReviseCount": 0,
+      "finalCount": 1798,
+      "normalizeApplied": false,
+      "lengthWarning": true
+    },
+    "tokenUsage": {
+      "promptTokens": 43336,
+      "completionTokens": 10076,
+      "totalTokens": 53412
+    }
+  },
+  {
+    "number": 22,
+    "title": "腕间的温度",
+    "status": "approved",
+    "wordCount": 1702,
+    "createdAt": "2026-07-20T02:53:24.597Z",
+    "updatedAt": "2026-07-20T03:33:41.107Z",
+    "auditIssues": [
+      "[info] 定稿（补字后）：《腕间的温度》；表+牵手+热水靴+收帘看苗+送柴交待+帮衬张嫂；无孙举报。",
+      "[info] 夜霜微推进；家委会/H011未主推。",
+      "[info] audit：AI高频词0；「轮廓分明/心跳加速」类型词可接受。"
+    ],
+    "lengthWarnings": [
+      "[info] zh_chars≈1702，低于 softMin 2246 / hardMin 1891；用户确认不另注水。"
+    ],
+    "lengthTelemetry": {
+      "target": 2600,
+      "softMin": 2246,
+      "softMax": 2954,
+      "hardMin": 1891,
+      "hardMax": 3309,
+      "countingMode": "zh_chars",
+      "writerCount": 2627,
+      "postWriterNormalizeCount": 2627,
+      "postReviseCount": 0,
+      "finalCount": 1702,
+      "normalizeApplied": false,
+      "lengthWarning": true
+    },
+    "tokenUsage": {
+      "promptTokens": 40961,
+      "completionTokens": 8310,
+      "totalTokens": 49271
+    }
+  },
+  {
+    "number": 23,
+    "title": "送柴人的口信",
+    "status": "approved",
+    "wordCount": 3177,
+    "createdAt": "2026-07-20T03:43:06.749Z",
+    "updatedAt": "2026-07-20T08:16:06.754Z",
+    "auditIssues": [
+      "[info] 定稿校正：带话人为中年男人托陈桂英口气，非陆建国现身；180工分县里已划清，未重开H003；未报警，保卫科登记+明日再说钩ch24。",
+      "[info] 节奏：蓄压（送柴带话）→备案→营门对峙→霍护短半格收束未结案。",
+      "[info] 文风：规避伟岸等禁用；列表式对话为有意排版。",
+      "[info] 番茄章名《送柴人的口信》保留。"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 4636,
+      "postWriterNormalizeCount": 4636,
+      "postReviseCount": 0,
+      "finalCount": 3177,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 43832,
+      "completionTokens": 14302,
+      "totalTokens": 58134
+    }
+  },
+  {
+    "number": 24,
+    "title": "这检讨书，你得按个手印",
+    "status": "approved",
+    "wordCount": 2193,
+    "createdAt": "2026-07-20T08:44:44.799Z",
+    "updatedAt": "2026-07-20T09:01:04.196Z",
+    "auditIssues": [
+      "[info] 文中使用了‘摩挲’、‘嘀嘀咕咕’、‘指指点点’、‘戛然而止’等网文高频词汇。",
+      "[info] 赵干事在处理过程中两次使用了‘拍桌子’来震慑，动作略显重复。",
+      "[info] ‘林晚棠吐出一口气，看着远处连绵的营房’略带文艺腔，与整体快节奏的动作推进稍有出入。",
+      "[info] 检测到3句连续以相同开头的句子，呈现列表式AI生成结构"
+    ],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 3237,
+      "postWriterNormalizeCount": 3237,
+      "postReviseCount": 0,
+      "finalCount": 2193,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 39448,
+      "completionTokens": 7798,
+      "totalTokens": 47246
+    }
+  },
+  {
+    "number": 25,
+    "title": "这名分，谁也越不过去",
+    "status": "approved",
+    "wordCount": 2823,
+    "createdAt": "2026-07-20T09:16:18.842Z",
+    "updatedAt": "2026-07-20T09:47:52.971Z",
+    "auditIssues": [
+      "[info] 本章中王德福因徇私舞弊和勾结陆家被撤职，这极大地推进了公社暗线。但上一章末尾强烈暗示的‘托老余带话的中年男人’（敌特/幕后黑手线索）在本章王德福倒台的狂欢中略被冲淡，林晚棠在拿到通报时，未在内心或口头上将王德福与该‘中年男人’进行关联思考。",
+      "[info] 文中出现了2次‘微微’（‘脸擦得微微发红’、‘指甲微微陷入纸里’）。虽然密度极低（远低于warning阈值），但为了追求极致的‘去AI味’，可进一步精简。"
+    ],
+    "lengthWarnings": [
+      "第25章经过一次字数归一化后仍超出硬区间（2182-3818，实际 3921）。"
+    ],
+    "lengthTelemetry": {
+      "target": 3000,
+      "softMin": 2591,
+      "softMax": 3409,
+      "hardMin": 2182,
+      "hardMax": 3818,
+      "countingMode": "zh_chars",
+      "writerCount": 3921,
+      "postWriterNormalizeCount": 3921,
+      "postReviseCount": 0,
+      "finalCount": 2823,
+      "normalizeApplied": false,
+      "lengthWarning": true
+    },
+    "tokenUsage": {
+      "promptTokens": 45760,
+      "completionTokens": 9389,
+      "totalTokens": 55149
+    }
+  },
+  {
+    "number": 26,
+    "title": "不急，我可等不及",
+    "status": "approved",
+    "wordCount": 2234,
+    "createdAt": "2026-07-21T01:56:48.468Z",
+    "updatedAt": "2026-07-21T03:10:00.000Z",
+    "auditIssues": [],
+    "lengthWarnings": [],
+    "lengthTelemetry": {
+      "target": 2800,
+      "softMin": 2419,
+      "softMax": 3181,
+      "hardMin": 2037,
+      "hardMax": 3563,
+      "countingMode": "zh_chars",
+      "writerCount": 2818,
+      "postWriterNormalizeCount": 2818,
+      "postReviseCount": 2234,
+      "finalCount": 2234,
+      "normalizeApplied": false,
+      "lengthWarning": false
+    },
+    "tokenUsage": {
+      "promptTokens": 44138,
+      "completionTokens": 12411,
+      "totalTokens": 56549
+    }
+  },
+  {
+    "number": 27,
+    "title": "想抢饭碗？凭本事来拿",
+    "status": "approved",
+    "wordCount": 1837,
+    "createdAt": "2026-07-21T04:17:09.270Z",
+    "updatedAt": "2026-07-21T09:51:00.000Z",
+    "auditIssues": [
+      "[info] 定稿：《想抢饭碗？凭本事来拿》；井台闲话+吴口风半格+孙酸+林短怼+李姐帮+回屋练盘；无夜威胁/报名/新算盘；H012未揭。"
+    ],
+    "lengthWarnings": [
+      "[info] zh_chars≈1837，低于 softMin 2419 / hardMin 2037；用户确认定稿不另注水。"
+    ],
+    "lengthTelemetry": {
+      "target": 2800,
+      "softMin": 2419,
+      "softMax": 3181,
+      "hardMin": 2037,
+      "hardMax": 3563,
+      "countingMode": "zh_chars",
+      "writerCount": 4761,
+      "postWriterNormalizeCount": 4761,
+      "postReviseCount": 1837,
+      "finalCount": 1837,
+      "normalizeApplied": false,
+      "lengthWarning": true
+    },
+    "tokenUsage": {
+      "promptTokens": 45930,
+      "completionTokens": 131852,
+      "totalTokens": 177782
+    }
   }
 ]

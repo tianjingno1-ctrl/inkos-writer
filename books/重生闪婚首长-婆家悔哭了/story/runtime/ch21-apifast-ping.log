@@ -1,0 +1,30 @@
+﻿=== apifast Gemini ping (curl) ===
+time: 2026-07-20 09:43:08
+base: https://api.apifast.tech/v1
+model: gemini-2.5-pro
+key_prefix: sk-bIg1F...
+key_len: 51
+note: previous Invoke-WebRequest hung past TimeoutSec; retry with curl.exe
+dns: FAIL 无法将“Join-String”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。
+tcp443: TcpTestSucceeded=True PingSucceeded=False
+models_curl_exit: 0 ms=193
+models_curl_out: {"data":[{"id":"gemini-2.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gemini-2.0-flash-exp","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["openai"]},{"id":"gemini-2.5-flash-preview-09-2025","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gemini-2.5-flash-preview-05-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gemini-2.5-flash-preview-04-17-search","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gemini-2.0-pro-exp-02-05-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_typ...
+chat_curl_exit: 26 ms=39
+chat_curl_out: curl.exe : curl: Failed to open C:\Users\22877\AppData\Local\Temp\apifast-chat-body.json
+所在位置 C:\Users\22877\AppData\Local\Temp\ps-script-1abdc362-1ee7-4b84-9134-57758c4a06cc.ps1:141 字符: 15
++ ... hatResult = & curl.exe -sS -m 45 -w "`nCURLMETA http_code=%{http_code ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (curl: Failed to...-chat-body.json:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+curl: option --data-binary: error encountered when reading a file
+curl: try 'curl --help' for more information
+
+=== end 2026-07-20 09:43:17 ===
+
+=== chat retry 2026-07-20 09:44:52 ===
+chat_curl_exit: 0 ms=8384
+chat_curl_out: {"id":"chatcmpl-202607200144530238233348268d9d6HELNqRWU","model":"gemini-2.5-pro","object":"chat.completion","created":1784511894,"choices":[{"index":0,"message":{"role":"assistant","content":"OK"},"finish_reason":"stop"}],"usage":{"prompt_tokens":6,"completion_tokens":74,"total_tokens":80,"billing_usage":{"source":"gemini_chat","semantic":"gemini","gemini_usage_metadata":{"promptTokenCount":6,"toolUsePromptTokenCount":0,"candidatesTokenCount":1,"totalTokenCount":80,"thoughtsTokenCount":73,"cachedContentTokenCount":0,"promptTokensDetails":[{"modality":"TEXT","tokenCount":6}],"toolUsePromptTokensDetails":[],"candidatesTokensDetails":[{"modality":"TEXT","tokenCount":1}]}},"prompt_tokens_details":{"cached_tokens":0,"text_tokens":6,"audio_tokens":0,"image_tokens":0},"completion_tokens_details":{"text_tokens":1,"audio_tokens":0,"image_tokens":0,"reasoning_tokens":73},"input_tokens":0,"output_tokens":0,"input_tokens_details":null,"claude_cache_creation_5_m_tokens":0,"claude_cache_creation_1_h_tokens":0}}
+CURLMETA http_code=200 time_total=8.339207
+
+=== end chat retry 2026-07-20 09:45:01 ===

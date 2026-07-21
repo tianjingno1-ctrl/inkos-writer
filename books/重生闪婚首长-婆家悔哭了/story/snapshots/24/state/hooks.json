@@ -1,0 +1,97 @@
+{
+  "hooks": [
+    {
+      "hookId": "H012",
+      "startChapter": 9,
+      "type": "mystery",
+      "status": "progressing",
+      "lastAdvancedChapter": 24,
+      "expectedPayoff": "揭开指点陈桂英的中年男人身份（疑为敌特或吴招娣同伙）",
+      "payoffTiming": "near-term",
+      "notes": "ch23 带话=中年男人托陈口气；ch24 章末再钉「老余说的中年男人」；身份未揭，勿在 ch25 揭完",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false,
+      "promoted": true
+    },
+    {
+      "hookId": "H011",
+      "startChapter": 12,
+      "type": "mystery",
+      "status": "progressing",
+      "lastAdvancedChapter": 21,
+      "expectedPayoff": "当面拆红标后仍可再揭（信全文/暗线）",
+      "payoffTiming": "mid-arc",
+      "notes": "ch21 partial；ch22–24 未再主拆",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false,
+      "promoted": true
+    },
+    {
+      "hookId": "life-寄出家书",
+      "startChapter": 16,
+      "type": "life",
+      "status": "resolved",
+      "lastAdvancedChapter": 17,
+      "expectedPayoff": "信交通信员寄出",
+      "payoffTiming": "near-term",
+      "notes": "已结",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "life-供应日抢购",
+      "startChapter": 16,
+      "type": "life",
+      "status": "resolved",
+      "lastAdvancedChapter": 18,
+      "expectedPayoff": "供应日抢到紧俏物（板油等），展现持家",
+      "payoffTiming": "near-term",
+      "notes": "已结",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "social-家委会改选",
+      "startChapter": 16,
+      "type": "social",
+      "status": "progressing",
+      "lastAdvancedChapter": 24,
+      "expectedPayoff": "林晚棠通过实际行动或家委会改选扭转“买来媳妇”的负面名声",
+      "payoffTiming": "near-term",
+      "notes": "ch19 谦退；ch24 检讨落档后院内「买来」闲话仍发酵；继续 pressured",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "life-夜霜打苗",
+      "startChapter": 17,
+      "type": "life",
+      "status": "progressing",
+      "lastAdvancedChapter": 22,
+      "expectedPayoff": "霜后看苗是否挺住 / 盖草帘",
+      "payoffTiming": "near-term",
+      "notes": "ch18 盖草；ch22 收帘看苗「还能长」；ch23–24 未主推",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "conflict-陈桂英营门对峙",
+      "startChapter": 23,
+      "type": "conflict",
+      "status": "resolved",
+      "lastAdvancedChapter": 24,
+      "expectedPayoff": "保卫科教育留档+检讨按印；陈被带走",
+      "payoffTiming": "immediate",
+      "notes": "ch24 赵干事主场；B1 不坐牢；字据老余+备案；180 县里已划清；霍牵手护短；钩中年男人→H012",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    }
+  ]
+}

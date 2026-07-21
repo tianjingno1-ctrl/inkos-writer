@@ -1,0 +1,22 @@
+(node:32644) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+INFO  [inkos] 阶段：准备章节输入
+INFO  [inkos] 阶段：撰写章节草稿
+INFO  [writer] 阶段 1：创作正文（第22章）
+INFO  [writer] 阶段 2：状态结算（第22章，2627字）
+INFO  [writer] 阶段 2a：提取第22章事实
+INFO  [writer] 阶段 2b：把观察结果回写到真相文件
+WARN  [writer] 后写校验：第22章 0 个错误，2 个警告
+WARN  [writer] [warning] 转折词密度: 转折/惊讶标记词共2次（上限1次/2709字），明细："仿佛"×1、"忽然"×1
+WARN  [writer] [warning] 作者说教: 出现说教词："不言而喻"
+WARN  [writer] 伏笔健康：第22章发现 1 条警告
+WARN  [writer] [warning] 伏笔债务: 这些伏笔已经进入回收/推进压力，但本章没有真正处理：H011（中程，已逾期）、life-夜霜打苗（近期，已逾期）。
+INFO  [inkos] 阶段：写完即停（手动审查模式）
+INFO  [inkos] 阶段：落盘最终章节
+INFO  [inkos] 阶段：生成最终真相文件
+INFO  [inkos] 阶段：校验真相文件变更
+WARN  [inkos] 状态校验：第22章发现 2 条警告
+WARN  [inkos]   [minor] 章节文本中提到“孙嫂子昨儿个去大队部的事”，在军属院语境下，举报通常指向“营部”或“家委会”，此处“大队部”疑似沿用农村背景词汇，建议统一为部队行政单位。
+WARN  [inkos]   [consistency] 霍景深赠送随身军表并日间牵手的情节，有力支撑了状态卡中“打破客气隔阂”与“获得极大安全感”的描述。[hook] 新增Hook“揭开孙秀兰背后的路子”与文中林晚棠的提醒及霍景深的表态（该换的换，该清的清）高度契合，伏笔埋设自然。
+INFO  [inkos] 阶段：同步记忆索引
+INFO  [inkos] 阶段：更新章节索引与快照

@@ -1,0 +1,94 @@
+{
+  "chapter": 24,
+  "plannerInputs": [
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\author_intent.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\current_focus.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\outline\\story_frame.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\outline\\volume_map.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\chapter_summaries.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\book_rules.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\current_state.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\pending_hooks.md",
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\memory.db"
+  ],
+  "composerInputs": [
+    "D:\\蜜蜂族\\工作台\\writer\\inkos\\books\\重生闪婚首长-婆家悔哭了\\story\\runtime\\chapter-0024.intent.md"
+  ],
+  "selectedSources": [
+    "runtime/chapter_memo",
+    "story/current_focus.md",
+    "story/author_intent.md",
+    "story/current_state.md",
+    "story/outline/story_frame.md#核心冲突-对手定性-前台-后台双层故事",
+    "story/outline/story_frame.md#世界观底色",
+    "story/outline/story_frame.md#终局方向-全书-objective",
+    "story/outline/volume_map.md#各卷主题与情绪曲线",
+    "story/chapter_summaries.md#recent_titles",
+    "story/chapter_summaries.md#recent_mood_type_trail",
+    "story/chapters#recent_endings",
+    "story/current_state.md#当前目标",
+    "story/current_state.md#当前冲突",
+    "story/current_state.md#主角状态",
+    "story/current_state.md#当前限制",
+    "story/chapter_summaries.md#11",
+    "story/chapter_summaries.md#21",
+    "story/chapter_summaries.md#22",
+    "story/chapter_summaries.md#23",
+    "story/pending_hooks.md#conflict-陈桂英营门对峙",
+    "story/pending_hooks.md#life-夜霜打苗",
+    "story/pending_hooks.md#H011",
+    "story/pending_hooks.md#H012"
+  ],
+  "usedSkills": [
+    "longform-writing"
+  ],
+  "promptPacks": [
+    "longform.writer",
+    "longform.reviser",
+    "longform.auditor"
+  ],
+  "contextNeeds": [
+    "author-intent",
+    "current-focus",
+    "chapter-memo",
+    "story-frame",
+    "volume-map",
+    "active-hooks",
+    "episodic-memory"
+  ],
+  "contextTiers": {
+    "protectedSources": [
+      "runtime/chapter_memo",
+      "story/current_focus.md",
+      "story/author_intent.md",
+      "story/current_state.md",
+      "story/outline/story_frame.md#核心冲突-对手定性-前台-后台双层故事",
+      "story/outline/story_frame.md#世界观底色",
+      "story/outline/story_frame.md#终局方向-全书-objective",
+      "story/outline/volume_map.md#各卷主题与情绪曲线",
+      "story/current_state.md#当前目标",
+      "story/current_state.md#当前冲突",
+      "story/current_state.md#主角状态",
+      "story/current_state.md#当前限制",
+      "story/pending_hooks.md#conflict-陈桂英营门对峙",
+      "story/pending_hooks.md#life-夜霜打苗",
+      "story/pending_hooks.md#H011",
+      "story/pending_hooks.md#H012"
+    ],
+    "compressibleSources": [
+      "story/chapter_summaries.md#recent_titles",
+      "story/chapter_summaries.md#recent_mood_type_trail",
+      "story/chapters#recent_endings",
+      "story/chapter_summaries.md#11",
+      "story/chapter_summaries.md#21",
+      "story/chapter_summaries.md#22",
+      "story/chapter_summaries.md#23"
+    ]
+  },
+  "tokenBudget": {
+    "protectedTokens": 5861,
+    "compressibleTokens": 826,
+    "totalSelectedTokens": 6687
+  },
+  "notes": []
+}

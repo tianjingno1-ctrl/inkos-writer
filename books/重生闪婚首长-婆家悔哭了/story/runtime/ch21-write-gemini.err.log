@@ -1,0 +1,7 @@
+(node:24268) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+INFO  [inkos] 阶段：准备章节输入
+INFO  [inkos] 阶段：撰写章节草稿
+INFO  [writer] 阶段 1：创作正文（第21章）
+INFO  [writer] 阶段 2：状态结算（第21章，2466字）
+INFO  [writer] 阶段 2a：提取第21章事实

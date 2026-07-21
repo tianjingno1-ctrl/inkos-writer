@@ -1,0 +1,53 @@
+{
+  "chapter": 24,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "院内流言压力；H012 中年男人未揭；卷末公开口径待落地",
+      "validFromChapter": 24,
+      "validUntilChapter": null,
+      "sourceChapter": 24
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "友：霍景深、保卫科赵干事（留档背书）；暗：托话中年男人；刺：院内闲话",
+      "validFromChapter": 24,
+      "validUntilChapter": null,
+      "sourceChapter": 24
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "写 ch25 结卷1：营长公开口径 + 王德福撤职/停职消息",
+      "validFromChapter": 24,
+      "validUntilChapter": null,
+      "sourceChapter": 24
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前位置",
+      "object": "营区路边/西排一带（陈桂英已上车送走）",
+      "validFromChapter": 24,
+      "validUntilChapter": null,
+      "sourceChapter": 24
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "勿把卷2陈桂英大清算提前；中年男人身份勿在 ch25 揭完；禁重开 H003/H008；禁复读拆红标/定情主戏",
+      "validFromChapter": 24,
+      "validUntilChapter": null,
+      "sourceChapter": 24
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "主角状态",
+      "object": "持有盖章检讨书；陈桂英保卫科教育留档后被带走；院内「买来媳妇」闲话仍在",
+      "validFromChapter": 24,
+      "validUntilChapter": null,
+      "sourceChapter": 24
+    }
+  ]
+}

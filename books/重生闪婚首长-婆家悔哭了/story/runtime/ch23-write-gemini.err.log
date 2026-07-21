@@ -1,0 +1,33 @@
+(node:51992) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+INFO  [inkos] 阶段：准备章节输入
+INFO  [inkos] 阶段：撰写章节草稿
+INFO  [writer] 阶段 1：创作正文（第23章）
+INFO  [writer] 阶段 2：状态结算（第23章，4636字）
+INFO  [writer] 阶段 2a：提取第23章事实
+INFO  [writer] 阶段 2b：把观察结果回写到真相文件
+WARN  [writer] 后写校验：第23章 0 个错误，3 个警告
+WARN  [writer] [warning] 转折词密度: 转折/惊讶标记词共3次（上限1次/4766字），明细："猛地"×3
+WARN  [writer] [warning] 作者说教: 出现说教词："显然"
+WARN  [writer] [warning] 连续了字: 检测到8句连续包含"了"字，节奏拖沓
+WARN  [writer] 伏笔健康：第23章发现 1 条警告
+WARN  [writer] [warning] 伏笔债务: 这些伏笔已经进入回收/推进压力，但本章没有真正处理：H011（中程，已逾期）、social-家委会改选（近期，已逾期）、life-夜霜打苗（近期，已逾期）。
+INFO  [inkos] 阶段：写完即停（手动审查模式）
+INFO  [inkos] 阶段：落盘最终章节
+INFO  [inkos] 阶段：生成最终真相文件
+WARN  [inkos] 第23章经过一次字数归一化后仍超出硬区间（2182-3818，实际 4636）。
+INFO  [inkos] 阶段：校验真相文件变更
+[inkos] LLM 流式响应无文本内容 (usage=10059+369)
+INFO  [inkos] streaming 30s, 0 chars (0 CJK)
+WARN  [inkos] 状态校验：第23章发现 3 条警告
+WARN  [inkos]   [contradiction] 陆建国在第8章已被送往农场（处于收容/劳改状态），但在第23章文本中却能自由出现在公社车站并拦截送柴人，存在严重的时空与逻辑冲突。
+WARN  [inkos]   [contradiction] 180个陪嫁工分在第6章已明确办妥划转并彻底了结（H003已标记为resolved），但第23章文本中林晚棠仍声称“180个陪嫁工分被陈桂英死死攥在手里”，且新设Hook要求“陆家被迫归还180工分”，与前文历史设定直接冲突。
+WARN  [inkos]   [unsupported_change] 伏笔池中 `social-家委会改选` 状态变更为 `progressing`，但第23章正文中完全没有提及家委会改选的相关情节。
+WARN  [inkos] 状态校验失败，正在仅重试结算层（第23章）
+INFO  [writer] 阶段 2a：提取第23章事实
+INFO  [writer] 阶段 2b：把观察结果回写到真相文件
+WARN  [inkos] 状态校验重试后，第23章仍有 2 条警告
+WARN  [inkos]   [minor] H003 明确了第6章的工分划转在实际执行层面仍被陈桂英阻碍，属于合理的剧情补全与冲突升级。
+WARN  [inkos]   [temporal] 章节内完成了从中午（送柴）到傍晚（闹事）的时间跨度转换，叙述逻辑通顺。[logic] 主角在冲突爆发前先通过老余获取书面证言并向家属科报备，为 State Card 中“冷静反击”和“组织备案”状态提供了充分的叙事支撑。
+INFO  [inkos] 阶段：同步记忆索引
+INFO  [inkos] 阶段：更新章节索引与快照

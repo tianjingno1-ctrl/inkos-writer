@@ -1,0 +1,110 @@
+{
+  "hooks": [
+    {
+      "hookId": "H012",
+      "startChapter": 9,
+      "type": "mystery",
+      "status": "progressing",
+      "lastAdvancedChapter": 24,
+      "expectedPayoff": "揭开指点陈桂英的中年男人身份（疑为敌特或吴招娣同伙）",
+      "payoffTiming": "near-term",
+      "notes": "ch23–24 已钉；ch25–26 未揭、勿与王德福撤职/供销社备考强行并案",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false,
+      "promoted": true
+    },
+    {
+      "hookId": "H011",
+      "startChapter": 12,
+      "type": "mystery",
+      "status": "progressing",
+      "lastAdvancedChapter": 21,
+      "expectedPayoff": "当面拆红标后仍可再揭（信全文/暗线）",
+      "payoffTiming": "mid-arc",
+      "notes": "ch21 partial；ch22–26 未再主拆",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false,
+      "promoted": true
+    },
+    {
+      "hookId": "life-寄出家书",
+      "startChapter": 16,
+      "type": "life",
+      "status": "resolved",
+      "lastAdvancedChapter": 17,
+      "expectedPayoff": "信交通信员寄出",
+      "payoffTiming": "near-term",
+      "notes": "已结",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "life-供应日抢购",
+      "startChapter": 16,
+      "type": "life",
+      "status": "resolved",
+      "lastAdvancedChapter": 18,
+      "expectedPayoff": "供应日抢到紧俏物（板油等），展现持家",
+      "payoffTiming": "near-term",
+      "notes": "已结",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "social-家委会改选",
+      "startChapter": 16,
+      "type": "social",
+      "status": "progressing",
+      "lastAdvancedChapter": 25,
+      "expectedPayoff": "林晚棠通过实际行动或家委会改选扭转“买来媳妇”的负面名声",
+      "payoffTiming": "near-term",
+      "notes": "ch25 公开口径后闲话成本升；仍未决选；ch26 未专推",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "life-夜霜打苗",
+      "startChapter": 17,
+      "type": "life",
+      "status": "progressing",
+      "lastAdvancedChapter": 25,
+      "expectedPayoff": "霜后看苗是否挺住 / 盖草帘",
+      "payoffTiming": "near-term",
+      "notes": "ch25 开篇掀帘掐土「还能扎根」；ch26 未专推",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "conflict-陈桂英营门对峙",
+      "startChapter": 23,
+      "type": "conflict",
+      "status": "resolved",
+      "lastAdvancedChapter": 24,
+      "expectedPayoff": "保卫科教育留档+检讨按印；陈被带走",
+      "payoffTiming": "immediate",
+      "notes": "ch24 已结",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    },
+    {
+      "hookId": "life-供销社招工",
+      "startChapter": 25,
+      "type": "life",
+      "status": "progressing",
+      "lastAdvancedChapter": 26,
+      "expectedPayoff": "供销社招工推进/应考落地",
+      "payoffTiming": "near-term",
+      "notes": "ch26：拆袋看清条件；盖章推荐表在手；张嫂泛化口风（肥缺/门路/名额早有谱）；林开练算盘备考。吴具名未出，留给 ch27。",
+      "dependsOn": [],
+      "paysOffInArc": "",
+      "coreHook": false
+    }
+  ]
+}

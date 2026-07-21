@@ -1,0 +1,53 @@
+{
+  "chapter": 23,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "当前冲突",
+      "object": "陈桂英营门对峙未结；远程脏压已上台面",
+      "validFromChapter": 23,
+      "validUntilChapter": null,
+      "sourceChapter": 23
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前敌我",
+      "object": "友：霍景深、张嫂、李红梅、王干事、保卫股；敌：陈桂英（营门）；暗：吴招娣",
+      "validFromChapter": 23,
+      "validUntilChapter": null,
+      "sourceChapter": 23
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前目标",
+      "object": "写 ch24：营门账明日再说 / 保卫股登记后续",
+      "validFromChapter": 23,
+      "validUntilChapter": null,
+      "sourceChapter": 23
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前位置",
+      "object": "营区大门口（对峙收束，未结案）",
+      "validFromChapter": 23,
+      "validUntilChapter": null,
+      "sourceChapter": 23
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "当前限制",
+      "object": "本章未结案；禁复读拆红标/定情主戏；禁孙大队部举报续；禁 H014 邮戳重演",
+      "validFromChapter": 23,
+      "validUntilChapter": null,
+      "sourceChapter": 23
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "主角状态",
+      "object": "已立字据+家属科备案；当众钉死「买来的」并甩实锤；腕上军表",
+      "validFromChapter": 23,
+      "validUntilChapter": null,
+      "sourceChapter": 23
+    }
+  ]
+}
